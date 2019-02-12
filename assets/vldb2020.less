@@ -1,0 +1,449 @@
+@import "fluidable";
+//-- Basic Color Scheme
+@color-white: #f3f3f2;
+@color-black: #180614;
+@color-red: #a22041;
+@color-violet: #9d5b8b;
+@color-blue: #5654a2;
+@color-green: #3b7960;
+@color-lightgreen: #938b4b;
+@color-orange: #f8b500;
+//
+//--Main Font
+@main-font: museo, serif;
+@main-font-weight: 300;
+@main-font-weight-strong: 500;
+@main-font-weight-thin: 100;
+//--
+//-- Frot for VLDB Logo
+@logo-font: @main-font;
+@logo-font-weight: 900;
+@logo-smallfont-weight: 100;
+@logo-font-size: 150px;
+@logo-font-color: @color-white;
+@logo-smallfont-size: 16px;
+//--
+//-- Menu Bar
+@menu-bgcolor: @color-white;
+@submenu-bgcolor: #393f4c;
+@menu-shadowcolor: rgba(0, 0, 0, 0.4);
+@menu-lineheight: 8px;
+@color-conference: @color-red;
+@color-contributions: @color-violet;
+@color-contributions-dark: darken(@color-contributions, 30%);
+@color-sponsorship: @color-blue;
+@color-sponsorship-dark: darken(@color-sponsorship, 30%);
+@color-information: @color-green;
+@color-information-dark: darken(@color-information, 30%);
+@color-4authors: @color-lightgreen;
+@color-4authors-dark: darken(@color-4authors, 30%);
+@color-4participants: @color-orange;
+@color-4participants-dark: darken(@color-4participants, 30%);
+//--
+//-- Top Page Settings
+@topmask-opacity: 0.6;
+@topmask-color: #203744;
+@topcontents-bgcolor: @color-red;
+@topcontents-accolor: @color-green;
+@topscrollbtn-width: 50px;
+@topscrollbtn-height: @topscrollbtn-width * 1.2;
+@topscrollbtn-amination: cubic-bezier(0.30, 2.40, 0.85, 2.50);
+@topscrollbtn-color: @color-white;
+//--
+//-- Z Indeies
+@z-menu: 100;
+@z-submenu: 90;
+@z-submask: 80;
+@z-bg: -100;
+@z-bgmask: -99;
+@z-social-icon:10;
+@z-contents: 0;
+//--
+//-- Categories
+@categories: conference, contirbutions, sponsorship, information, 4authors, 4participants;
+@categories-color:@color-conference,@color-contributions,@color-sponsorship,@color-information,@color-4authors,@color-4participants;
+// --
+// -- FONT
+@font-bungee:{
+    font-family: bungee, sans-serif;
+    font-weight: 400;//500
+    font-style: normal;
+}
+@font-museo:{
+    font-family: museo, serif;
+    font-weight: 100;//300,500,700,900
+    font-style: normal;//italic
+}
+.font-univia(@weight:400,@style:normal){
+    font-family: univia-pro, sans-serif;
+    font-weight: @weight;//200,400,700,900
+    font-style: @style;
+}
+@font-industry:{
+    font-family: industry, sans-serif;
+    font-weight: 400;//700
+    font-style: normal;//italic
+}
+@font-adso:{
+    font-family: adso, sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
+
+//
+//
+//
+
+html, div, body, article {
+    margin: 0;
+}
+
+html {
+    font-size: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+body {
+    font-family: @main-font;
+    font-weight: @main-font-weight;
+    font-style: normal;
+}
+
+.bgcol-conference {
+    background-color: @color-conference;
+}
+
+.bgcol-contributions {
+    background-color: @color-contributions;
+}
+
+.bgcol-sponsorship {
+    background-color: @color-sponsorship;
+}
+
+.bgcol-information {
+    background-color: @color-information;
+}
+
+.bgcol-4authors {
+    background-color: @color-4authors;
+}
+
+.bgcol-4participants {
+    background: @color-4participants;
+}
+
+.bgcol-contributions-dark {
+    background: @color-contributions-dark;
+}
+
+.bgcol-sponsorship-dark {
+    background-color: @color-sponsorship-dark;
+}
+
+.bgcol-information-dark {
+    background-color: @color-information-dark;
+}
+
+.bgcol-4authors-dark {
+    background-color: @color-4authors-dark;
+}
+
+.bgcol-4participants-dark {
+    background: @color-4participants-dark;
+}
+
+.logo-font {
+    font-family: @logo-font;
+    font-weight: @logo-font-weight;
+    font-style: normal;
+}
+
+strong {
+    font-weight: @main-font-weight-strong;
+}
+
+ul.venue {
+    list-style: none;
+}
+
+svg.toppage-wrap {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    text-anchor: middle;
+    font-family: @logo-font;
+    font-weight: @logo-font-weight;
+    font-style: normal;
+    font-size: @logo-font-size;
+    z-index: @z-bgmask;
+}
+
+svg.toppage-wrap .textoutline {
+    stroke: @logo-font-color;
+    stroke-width: 4px;
+    stroke-linejoin: round;
+    fill: none;
+}
+
+svg.toppage-wrap .smalltext {
+    font-size: @logo-smallfont-size;
+    letter-spacing: 0px;
+    font-weight: @logo-smallfont-weight;
+    stroke: none;
+    fill: @logo-font-color;
+}
+
+svg.toppage-wrap #textVLDB {
+    letter-spacing: 15px;
+}
+
+svg.toppage-wrap #text2020 {
+    letter-spacing: 25px;
+}
+
+svg.toppage-wrap #textTokyo {
+    letter-spacing: -1px;
+}
+
+svg.toppage-wrap mask rect {
+    fill: rgba(255, 255, 255, @topmask-opacity);
+}
+
+svg.toppage-wrap>rect {
+    fill: @topmask-color;
+    -webkit-mask: url(#mask);
+    mask: url(#mask);
+}
+
+#toppage-video {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    transform: translateX(calc((100% - 100vw) / 2));
+    z-index: @z-bg;
+}
+
+#toppage-cnt {
+    position: absolute;
+    left: 0px;
+    top: calc(100vh - @topscrollbtn-height);
+    width: 100vw;
+    z-index: @z-contents;
+}
+
+#toppage-toggle:checked~#toppage-cnt {
+    transform: translateY(calc(-100vh + @topscrollbtn-height));
+    transition: transform 0.8s cubic-bezier(.34, -0.29, .38, .8);
+}
+
+#toppage-toggle~#toppage-cnt {
+    transform: translateY(0);
+    transition: transform 0.8s cubic-bezier(.55, .02, .69, 1.15);
+}
+
+@menu-bar: {
+    position: fixed;
+    background-color: @menu-bgcolor;
+    box-shadow: 3px 3px 3px @menu-shadowcolor;
+    height: @topscrollbtn-height;
+    width: calc(50vw - @topscrollbtn-width / 2);
+    text-align: center;
+    color: @submenu-bgcolor;
+    font-size: 0.9rem;
+    line-height: @topscrollbtn-height - @menu-lineheight;
+    z-index: @z-menu;
+    user-select:none;
+}
+
+;
+#left-menu-bar {
+    @menu-bar();
+    right: 100vw;
+}
+
+#right-menu-bar {
+    @menu-bar();
+    left: 100vw;
+}
+
+@submenu-panel: {
+    position: fixed;
+    bottom: 100vh;
+    width: calc(50vw + @topscrollbtn-width / 2);
+    text-align: center;
+    .font-univia();
+    color: @color-white;
+    font-size: 0.9rem;
+    z-index: @z-submenu;
+    user-select:none;
+    @media screen and (max-width: @screenTablet) {
+        width: 100vw;
+    }
+}
+
+;
+.left-submenu-panel {
+    @submenu-panel();
+    left: 0px;
+}
+
+.right-submenu-panel {
+    @submenu-panel();
+    right: 0px;
+}
+
+.right-submenu-panel>a, .left-submenu-panel>a{
+    color: @color-white;
+    text-decoration: none;
+}
+label.menu-item>a{
+    color: @color-black;
+    text-decoration: none;
+}
+
+.submenu-mask {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: fadeout(@topmask-color, 20%);
+    z-index: @z-submask;
+    opacity: 0;
+    display: none;
+    transition: all 1s;
+}
+
+.menu-item {
+    height: @topscrollbtn-height - @menu-lineheight;
+    font-family: adso, sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    cursor: pointer;
+}
+
+.menu-line {
+    height: @menu-lineheight;
+    opacity: 0;
+    transition: all 1s;
+    cursor: pointer;
+}
+
+.menu-item:hover~.menu-line, .category-active:checked~.menu-line {
+    height: @menu-lineheight;
+    opacity: 1;
+}
+
+.submenu-item {
+    padding-top: 16px;
+    padding-bottom: 16px;
+    cursor: pointer;
+    opacity: 0.7;
+}
+
+.submenu-item:not(.link-disable):hover {
+    opacity: 1;
+}
+
+@submenu-close: {
+    position: relative;
+    top: 0px;
+    width: @topscrollbtn-width;
+    height: @topscrollbtn-height;
+    color: @color-white;
+    cursor: pointer;
+    transform: rotate(180deg);
+}
+
+;
+.right-submenu-panel .submenu-close {
+    @submenu-close();
+    left: 0px;
+    @media screen and (max-width: @screenTablet) {
+        left: calc(50vw - @topscrollbtn-width / 2);
+    }
+}
+
+.left-submenu-panel .submenu-close {
+    @submenu-close();
+    left: calc(50vw - @topscrollbtn-width / 2);
+}
+
+#toppage-toggle:checked~#left-menu-bar {
+    transform: translateX(calc(50vw - @topscrollbtn-width / 2));
+    transition: transform 0.8s cubic-bezier(.34, -0.29, .38, .8);
+}
+
+#toppage-toggle~#left-menu-bar {
+    transform: translateX(0);
+    transition: transform 0.8s cubic-bezier(.55, .02, .69, 1.15);
+}
+
+#toppage-toggle:checked~#right-menu-bar {
+    transform: translateX(calc(-1* (50vw - @topscrollbtn-width / 2)));
+    transition: transform 0.8s cubic-bezier(.34, -0.29, .38, .8);
+}
+
+#toppage-toggle~#right-menu-bar {
+    transform: translateX(0);
+    transition: transform 0.8s cubic-bezier(.55, .02, .69, 1.15);
+}
+
+.scroll-cnt {
+    position: relative;
+    top: 0px;
+    left: 50%;
+    width: @topscrollbtn-width;
+    height: @topscrollbtn-height;
+    margin-left: -@topscrollbtn-width/2;
+    color: @color-white;
+    cursor: pointer;
+}
+
+svg.scroll-btn>polyline {
+    fill: none;
+    stroke: @topscrollbtn-color;
+    stroke-width: 60px;
+    stroke-linejoin: round;
+    stroke-linecap: round;
+}
+
+svg.scroll-btn>circle {
+    fill: @topscrollbtn-color;
+    stroke: none;
+}
+
+svg.scroll-btn #dot1 {
+    animation: bounce 1.3s @topscrollbtn-amination infinite;
+    animation-delay: 0s;
+}
+
+svg.scroll-btn #dot2 {
+    animation: bounce 1.3s @topscrollbtn-amination infinite;
+    animation-delay: 0.1s;
+}
+
+svg.scroll-btn #dot3 {
+    animation: bounce 1.3s @topscrollbtn-amination infinite;
+    animation-delay: 0.2s;
+}
+
+@keyframes bounce {
+    from, to {
+        transform: translateY(0px) scaleY(.98);
+    }
+    80% {
+        transform: translateY(-100px) scaleY(1.02);
+    }
+}
+
+.link-disable {
+    cursor: not-allowed;
+    opacity: 0.3;
+}
+
+@import "vldb2020-contents";

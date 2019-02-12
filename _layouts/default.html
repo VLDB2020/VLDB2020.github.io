@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    {% include head.html %}
+</head>
+
+<body>
+    {% include menu.html %}
+    {% include submenu.html %}
+    {% include logo.html %}
+    {% include video.html %}
+    <div id="toppage-cnt" class="{{ page.category }}">
+        {% include close.html %}
+        <div id="contents-body">
+            <header class="contents-header">
+                {% include header.html %}
+            </header>
+            <main id="barba-wrapper">
+                <div class="barba-container" x-category="{{ page.category }}">
+                    <article>
+                        {{ content }}
+                    </article>
+                </div>
+            </main>
+            <footer class="contents-footer">
+                {% include footer.html %}
+            </footer>
+        </div>
+    </div>
+</body>
+
+</html>

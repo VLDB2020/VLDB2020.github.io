@@ -1,0 +1,79 @@
+<input type="checkbox" id="toppage-toggle" style="display:none;">
+<input type="radio" name="submenu-active" class="submenu-active" value="conference" id="submenu-conference" style="display:none;">
+<input type="radio" name="submenu-active" class="submenu-active" value="contributions" id="submenu-contributions"
+    style="display:none;">
+<input type="radio" name="submenu-active" class="submenu-active" value="sponsorship" id="submenu-sponsorship" style="display:none;">
+<input type="radio" name="submenu-active" class="submenu-active" value="information" id="submenu-information" style="display:none;">
+<input type="radio" name="submenu-active" class="submenu-active" value="4authors" id="submenu-4authors" style="display:none;">
+<input type="radio" name="submenu-active" class="submenu-active" value="4participants" id="submenu-4participants"
+    style="display:none;">
+<div id="left-menu-bar" class="container">
+    <div class="col-group">
+        <div class="col-mb-4">
+            <input type="radio" name="category-active" value="conference" class="category-active" id="category-conference"
+                style="display:none;"{% if page.category == "conference" %} checked{% endif %}>
+            <label x-category="conference" class="menu-item submenu-toggle">
+                <a href="./">
+                    <div id="menu-top" class="col-mb-12">
+                        <i class="fas fa-university"></i><span class="hide-phone logo-font">&emsp;VLDB2020</span>
+                    </div>
+                </a>
+            </label>
+            <div class="col-mb-12 menu-line bgcol-conference"></div>
+        </div>
+        <div class="col-mb-4">
+            <input type="radio" name="category-active" value="contributions" class="category-active" id="category-contributions"
+                style="display:none;"{% if page.category == "contributions" %} checked{% endif %}>
+            <label x-category="contributions" class="menu-item submenu-toggle">
+                <div class="col-mb-12 ">
+                    <i class="fas fa-bullhorn"></i><span class="hide-phone">&emsp;Contributions</span>
+                </div>
+            </label>
+            <div class="col-mb-12 menu-line bgcol-contributions"></div>
+        </div>
+        <div class="col-mb-4">
+            <input type="radio" name="category-active" value="sponsorship" class="category-active" id="category-sponsorship"
+                style="display:none;"{% if page.category == "sponsorship" %} checked{% endif %}>
+            <label x-category="sponsorship" class="menu-item submenu-toggle">
+                <div class="col-mb-12">
+                    <i class="fas far fa-handshake"></i><span class="hide-phone">&emsp;Sponsorship</span>
+                </div>
+            </label>
+            <div class="col-mb-12 menu-line bgcol-sponsorship"></div>
+        </div>
+    </div>
+</div>
+<div id="right-menu-bar">
+    <div class="col-group">
+        <div class="col-mb-4">
+            <input type="radio" name="category-active" value="information" class="category-active" id="category-information"
+                style="display:none;"{% if page.category == "information" %} checked{% endif %}>
+            <label x-category="information" class="menu-item submenu-toggle">
+                <div class="col-mb-12">
+                    <i class="fas fa-info"></i><span class="hide-phone">&emsp;Information</span>
+                </div>
+            </label>
+            <div class="col-mb-12 menu-line bgcol-information"></div>
+        </div>
+        <div class="col-mb-4">
+            <input type="radio" name="category-active" value="4authors" class="category-active" id="category-4authors"
+                style="display:none;"{% if page.category == "4authors" %} checked{% endif %}>
+            <label x-category="4authors" class="menu-item submenu-toggle">
+                <div class="col-mb-12">
+                    <i class="fas fa-pen-fancy"></i><span class="hide-phone">&emsp;for Authors</span>
+                </div>
+            </label>
+            <div class="col-mb-12 menu-line bgcol-4authors"></div>
+        </div>
+        <div class="col-mb-4">
+            <input type="radio" name="category-active" value="4participants" class="category-avtive" id="category-4participants"
+                style="display:none;"{% if page.category == "4participants" %} checked{% endif %}>
+            <label x-category="4participants" class="menu-item submenu-toggle">
+                <div class="col-mb-12">
+                    <i class="fas fas fas fa-plane-arrival"></i><span class="hide-phone">&emsp;for Participants</span>
+                </div>
+            </label>
+            <div class="col-mb-12 menu-line bgcol-information"></div>
+        </div>
+    </div>
+</div>
