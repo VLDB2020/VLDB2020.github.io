@@ -3,3 +3,4 @@ markdown:            kramdown
 highlighter:         rouge
 permalink:           none
 url:                 https://vldb2020.org
+google_analytics:    UA-135547218-1
