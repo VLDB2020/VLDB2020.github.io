@@ -106,6 +106,19 @@ each(@selectors, {
     .font-univia(400);
 }
 
+.important-dates {
+    border-bottom: 1px solid @color-forauthors-dark;
+    margin-bottom: 5px;
+}
+
+.important-dates .id-head{
+    font-weight:@main-font-weight-strong
+}
+
+.important-dates .id-col{
+
+}
+
 each(@categories, {
     #toppage-cnt.@{value} #contents-body .contents-header, #toppage-cnt.@{value} #contents-body .contents-footer{
         background-color: extract(@categories-color, @index);

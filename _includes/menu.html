@@ -4,8 +4,8 @@
     style="display:none;">
 <input type="radio" name="submenu-active" class="submenu-active" value="sponsorship" id="submenu-sponsorship" style="display:none;">
 <input type="radio" name="submenu-active" class="submenu-active" value="information" id="submenu-information" style="display:none;">
-<input type="radio" name="submenu-active" class="submenu-active" value="4authors" id="submenu-4authors" style="display:none;">
-<input type="radio" name="submenu-active" class="submenu-active" value="4participants" id="submenu-4participants"
+<input type="radio" name="submenu-active" class="submenu-active" value="forauthors" id="submenu-forauthors" style="display:none;">
+<input type="radio" name="submenu-active" class="submenu-active" value="forparticipants" id="submenu-forparticipants"
     style="display:none;">
 <div id="left-menu-bar" class="container">
     <div class="col-group">
@@ -56,24 +56,24 @@
             <div class="col-mb-12 menu-line bgcol-information"></div>
         </div>
         <div class="col-mb-4">
-            <input type="radio" name="category-active" value="4authors" class="category-active" id="category-4authors"
-                style="display:none;"{% if page.category == "4authors" %} checked{% endif %}>
-            <label x-category="4authors" class="menu-item submenu-toggle">
+            <input type="radio" name="category-active" value="forauthors" class="category-active" id="category-forauthors"
+                style="display:none;"{% if page.category == "forauthors" %} checked{% endif %}>
+            <label x-category="forauthors" class="menu-item submenu-toggle">
                 <div class="col-mb-12">
                     <i class="fas fa-pen-fancy"></i><span class="hide-phone">&emsp;for Authors</span>
                 </div>
             </label>
-            <div class="col-mb-12 menu-line bgcol-4authors"></div>
+            <div class="col-mb-12 menu-line bgcol-forauthors"></div>
         </div>
         <div class="col-mb-4">
-            <input type="radio" name="category-active" value="4participants" class="category-avtive" id="category-4participants"
-                style="display:none;"{% if page.category == "4participants" %} checked{% endif %}>
-            <label x-category="4participants" class="menu-item submenu-toggle">
+            <input type="radio" name="category-active" value="forparticipants" class="category-avtive" id="category-forparticipants"
+                style="display:none;"{% if page.category == "forparticipants" %} checked{% endif %}>
+            <label x-category="forparticipants" class="menu-item submenu-toggle">
                 <div class="col-mb-12">
                     <i class="fas fas fas fa-plane-arrival"></i><span class="hide-phone">&emsp;for Participants</span>
                 </div>
             </label>
-            <div class="col-mb-12 menu-line bgcol-4participants"></div>
+            <div class="col-mb-12 menu-line bgcol-forparticipants"></div>
         </div>
     </div>
 </div>

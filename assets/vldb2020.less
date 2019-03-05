@@ -35,10 +35,10 @@
 @color-sponsorship-dark: darken(@color-sponsorship, 30%);
 @color-information: @color-green;
 @color-information-dark: darken(@color-information, 30%);
-@color-4authors: @color-lightgreen;
-@color-4authors-dark: darken(@color-4authors, 30%);
-@color-4participants: @color-orange;
-@color-4participants-dark: darken(@color-4participants, 30%);
+@color-forauthors: @color-lightgreen;
+@color-forauthors-dark: darken(@color-forauthors, 30%);
+@color-forparticipants: @color-orange;
+@color-forparticipants-dark: darken(@color-forparticipants, 30%);
 //--
 //-- Top Page Settings
 @topmask-opacity: 0.6;
@@ -60,8 +60,8 @@
 @z-contents: 0;
 //--
 //-- Categories
-@categories: conference, contirbutions, sponsorship, information, 4authors, 4participants;
-@categories-color:@color-conference,@color-contributions,@color-sponsorship,@color-information,@color-4authors,@color-4participants;
+@categories: conference, contributions, sponsorship, information, forauthors, forparticipants;
+@categories-color:@color-conference,@color-contributions,@color-sponsorship,@color-information,@color-forauthors,@color-forparticipants;
 // --
 // -- FONT
 @font-bungee:{
@@ -110,6 +110,13 @@ body {
     font-style: normal;
 }
 
+article {
+    font-size: 0.8em;
+    line-height: 1.6em;
+    text-justify: inter-ideograph;
+    text-align: justify;
+}
+
 .bgcol-conference {
     background-color: @color-conference;
 }
@@ -126,12 +133,12 @@ body {
     background-color: @color-information;
 }
 
-.bgcol-4authors {
-    background-color: @color-4authors;
+.bgcol-forauthors {
+    background-color: @color-forauthors;
 }
 
-.bgcol-4participants {
-    background: @color-4participants;
+.bgcol-forparticipants {
+    background: @color-forparticipants;
 }
 
 .bgcol-contributions-dark {
@@ -146,12 +153,12 @@ body {
     background-color: @color-information-dark;
 }
 
-.bgcol-4authors-dark {
-    background-color: @color-4authors-dark;
+.bgcol-forauthors-dark {
+    background-color: @color-forauthors-dark;
 }
 
-.bgcol-4participants-dark {
-    background: @color-4participants-dark;
+.bgcol-forparticipants-dark {
+    background: @color-forparticipants-dark;
 }
 
 .logo-font {
