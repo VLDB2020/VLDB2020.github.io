@@ -4,7 +4,7 @@ title: Conference Officers
 category: information
 ---
 
-# VLDB2020 Conference Officers
+# VLDB2020: Conference Officers
 
 ## Honorary Chair
 
@@ -33,18 +33,18 @@ category: information
 ## Sponsorship Chairs
 
 * Mohamed Mokbel (University of Minnesota)
-* Europe: Vasilis Vassalos (National Technical University of Athens)
+* Vasilis Vassalos (National Technical University of Athens)
 * Xiaoyong Du (Renmin University of China)
 
 ## Treasury Committee
 
-* Toshiyuki Amagasa&dagger; (University of Tsukuba)
+* Toshiyuki Amagasa (University of Tsukuba) <span class="h-font">Chair</span>
 * Atsuyuki Morishima (University of Tsukuba)
 * Nobutaka Suzuki (University of Tsukuba)
 
 ## Web Committee
 
-* Shohei Yokoyama&dagger; (Tokyo Metropolitan University)
+* Shohei Yokoyama (Tokyo Metropolitan University) <span class="h-font">Chair</span>
 * Akiyoshi Matono (Advanced Industrial Science and Technology)
 * Kyoung-Sook Kim (Advanced Industrial Science and Technology)
 * Steven Lynden (Advanced Industrial Science and Technology)

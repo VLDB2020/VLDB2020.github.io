@@ -4,7 +4,7 @@ title: Conference Overview
 category: information
 ---
 
-# VLDB 2020: Overivew
+# VLDB2020: Overivew
 
 VLDB is a premier annual international forum for data management and database researchers, vendors, practitioners, application developers, and users. The VLDB 2020 conference will feature research talks, tutorials, demonstrations, and workshops. It will cover issues in data management, database and information systems research, since they are the technological cornerstones of the emerging applications of the 21st century.
 

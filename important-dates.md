@@ -20,7 +20,7 @@ category: forauthors
 </div>
 <div class="col-group important-dates">
     <div class="col-3 id-head">Submission Deadline</div>
-    <div class="col-9 id-col">1st of every month 5 p.m. PST, until March 2019</div>
+    <div class="col-9 id-col">1st of every month 5 p.m. PST, until March 2020</div>
 </div>
 <div class="col-group important-dates">
     <div class="col-3 id-head">Notification</div>

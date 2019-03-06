@@ -4,13 +4,13 @@ title: Research Track
 category: contributions
 ---
 
-# VLDB 2020: Call for Contributions
+# VLDB2020: Call for Contributions
 
 ## Research Track
 
-VLDB 2020 invites submissions of original research papers to Volume 13 of the Proceedings of the VLDB Endowment (PVLDB). Papers accepted by June 15, 2020 will form the Research Track of the 2020 VLDB conference, together with any rollover papers from Volume 11. Papers accepted to Volume 12 after June 15, 2020 will be rolled over to the 2020 VLDB conference.
+VLDB 2020 invites submissions of original research papers to Volume 13 of the Proceedings of the VLDB Endowment (PVLDB). Papers accepted by June 15, 2020 will form the Research Track of the 2020 VLDB conference, together with any rollover papers from Volume 12. Papers accepted to Volume 13 after June 15, 2020 will be rolled over to the 2021 VLDB conference.
 
-The annual VLDB conference is a premier annual international forum for database researchers, vendors, practitioners, application developers, and users. PVLDB, established in 2008, is a scholarly journal for short and timely research papers, with a journal-style review and quality assurance process. PVLDB is distinguished by a monthly submission process with rapid reviews. PVLDB issues are published regularly throughout the year. Your paper will appear in PVLDB soon after acceptance, and possibly in advance of the VLDB conference. All papers accepted in time will be published in PVLDB Vol. 12 and also presented at the VLDB 2020 conference. At least one author of every accepted paper is expected to attend the VLDB 2020 conference.
+The annual VLDB conference is a premier annual international forum for database researchers, vendors, practitioners, application developers, and users. PVLDB, established in 2008, is a scholarly journal for short and timely research papers, with a journal-style review and quality assurance process. PVLDB is distinguished by a monthly submission process with rapid reviews. PVLDB issues are published regularly throughout the year. Your paper will appear in PVLDB soon after acceptance, and possibly in advance of the VLDB conference. All papers accepted in time will be published in PVLDB Vol. 13 and also presented at the VLDB 2020 conference. At least one author of every accepted paper is expected to attend the VLDB 2020 conference.
 
 PVLDB is the only submission channel for research papers to appear in the VLDB 2020 conference. Please see the submission guidelines for paper submission instructions. The submission process for other VLDB 2020 tracks is different, and is described in their respective calls for papers.
 
@@ -42,7 +42,7 @@ Since we recognize that research papers come in different flavors, every paper w
     - papers that discuss the development or use of open resources (including data or metadata, benchmarks, evaluation tools, or other resources) that benefit the research community or evaluation of research ideas, or
     - papers that focus on relevant problems or phenomena and through analysis and/or experimentation provide insights on the nature or characteristics of these phenomena.
     
-    <small>We encourage authors of accepted E&A papers, at the time of the publication, to make available all the experimental data and, whenever possible, the related software. For papers that identify negative or contradictory results for published results by third parties, the Program Committee may ask the third party to comment on the submission and even request a short rebuttal/explanation to be published along with the submission in the event of acceptance. In order to be finally accepted with the E&A category of the research track, a successful participation at the reproducibility mechanism provided by PVLDB is mandatory.</small>
+We encourage authors of accepted E&A papers, at the time of the publication, to make available all the experimental data and, whenever possible, the related software. For papers that identify negative or contradictory results for published results by third parties, the Program Committee may ask the third party to comment on the submission and even request a short rebuttal/explanation to be published along with the submission in the event of acceptance. In order to be finally accepted with the E&A category of the research track, a successful participation at the reproducibility mechanism provided by PVLDB is mandatory.
 
 - ***Vision Papers:*** Vision papers outline futuristic information systems and architectures or anticipate new challenges. Submissions would describe novel projects that are in an early stage but hold out the strong promise of eventual high impact. The focus should be on the key insight behind the project (e.g., a new set of ground rules or a novel technology), as well as explaining how the key insight can be leveraged in building a system. The paper must describe what the success criteria are for the vision project. The length of a submission within the Vision Papers category is restricted to 6 pages (see submission guidelines for details).
 

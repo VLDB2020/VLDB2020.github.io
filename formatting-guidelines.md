@@ -4,7 +4,7 @@ title: Formatting Guidelines
 category: forauthors
 ---
 
-# VLDB 2020: Formatting Guidelines
+# VLDB2020: Formatting Guidelines
 
 ## Generation Information
 
@@ -29,7 +29,6 @@ All papers submitted to PVLDB and the VLDB Conference, irrespective of track, mu
 - contain no citations in the Abstract.
 - contain the same Abstract as the one submitted to [CMT](https://cmt3.research.microsoft.com/VLDB2020/).
 
-
 <!--
 ## Important Notice
 
@@ -37,7 +36,7 @@ For research track papers that belong to a special category (Vision, Innovative 
 VLDB is a ***single-blind*** conference. Therefore, authors MUST include their names and affiliations on the manuscript cover page.
 -->
 
-# Copyright and Camera Ready Information
+## Copyright and Camera Ready Information
 
 All papers accepted for the VLDB 2020 Conference will be published in the Proceedings of the VLDB Endowment (PVLDB) Volume 13. It is the authors' responsibility to ensure that their submissions adhere strictly to the VLDB format detailed above. Please follow the process below to submit the final camera-ready copy of your accepted paper. You must complete this process by the 5th of the month following the acceptance notification date.
 
