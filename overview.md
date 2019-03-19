@@ -22,4 +22,6 @@ VLDB 2020 will take place in Tokyo, Japan, from August 30th to September 4th, 20
     <li><span class="fa-li"><i class="fas fa-phone"></i></span>+81 3 3344 0111</li>
 </ul>
 
-<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12961.879870821!2d139.6943636!3d35.6900509!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x51d797d25c62db8d!2z5Lqs546L44OX44Op44K244Ob44OG44Or!5e0!3m2!1sja!2sjp!4v1550158606434" width="800" height="600" frameborder="0" style="border:0" allowfullscreen></iframe>
+<div class="google-map">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12961.879870821!2d139.6943636!3d35.6900509!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x51d797d25c62db8d!2z5Lqs546L44OX44Op44K244Ob44OG44Or!5e0!3m2!1sja!2sjp!4v1550158606434" width="800" height="600" frameborder="0" style="border:0" allowfullscreen></iframe>
+</div>
