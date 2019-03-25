@@ -98,7 +98,8 @@ each(@selectors, {
 }
 #contents-body article h2,
 #contents-body article h3,
-#contents-body article h4 {
+#contents-body article h4,
+#contents-body .h-font {
     .font-univia(700);
 }
 #contents-body article h5,
@@ -117,6 +118,21 @@ each(@selectors, {
 
 .important-dates .id-col{
 
+}
+
+.google-map {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 75%;
+    overflow: hidden;
+}
+.google-map iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
 }
 
 each(@categories, {

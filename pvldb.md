@@ -87,7 +87,7 @@ category: information
 * Murat Kantarcioglu (University of Texas at Dallas)
 * Verena Kantere (University of Ottawa)
 * Pinar Karagoz (Middle East Technical University)
-* Manos Karpathiotakis (EPFL)
+* Manos Karpathiotakis (Facebook)
 * Batya Kenig (University of Washington)
 * Oliver Kennedy (University at Buffalo)
 * Arijit Khan (Nanyang Technological University)
