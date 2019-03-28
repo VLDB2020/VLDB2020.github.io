@@ -1,4 +1,7 @@
 (() => {
+    const e = 'helpdesk';
+    const mail = 'vldb2020.org';
+
     let currentPlaybackRate = { value: 1 };
     document.getElementById("toppage-toggle").addEventListener('change', (event) => {
         if (event.target.checked) {
@@ -139,7 +142,13 @@
     }
     document.getElementById('submenu-mask').addEventListener('click', maskClear);
 
-
+    const pourContactEmailAddress = () => {
+        const contacts = document.querySelectorAll('.contactaddress');
+        for (var i = 0; i < contacts.length; i++) {
+            contacts[i].innerHTML = '<a href="mai' + 'lto:' + e + '@' + mail + '">' + e + '@' + mail + '</a>';
+        }
+    }
+    pourContactEmailAddress();
 
     const updateSocialShare = () => {
         const socialShare = document.getElementsByClassName('social-icon');
@@ -205,9 +214,9 @@
         const category = container.attributes['x-category'].value;
         document.getElementById('toppage-cnt').setAttribute('class', category);
         document.querySelector('input[name="category-active"][value="' + category + '"]').checked = true;
-
         document.getElementById("contents-body").scrollTop = 0;
         updateSocialShare();
+        pourContactEmailAddress();
     });
     Barba.Prefetch.init();
 
