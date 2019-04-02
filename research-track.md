@@ -37,16 +37,16 @@ PVLDB welcomes original research papers on a broad range of topics related to al
 We made the following major revisions:
 
 * Among the types of papers, we abolished Innovative Systems and Application Papers.
-* The maximum length of a Vision Paper is reduced to 6 pages.
+* The suggested limit for vision papers is 6 pages but longer vision papers will also be accepted (up to the strict limit of 12 pages + references).
 * For Regular Research Papers, we explicitly distinguish four paper flavors (Foundations Papers, Algorithms Papers, System Papers, and Information System Architecture Papers).
 
 ### 4. Three Categories of Papers
 
 There are three categories of papers in the research track.
 
-* ***Regular Research Papers***
-* ***Experiment and Analysis Papers***
-* ***Vision Papers*** (6 pages)
+* ***Regular Research Papers*** (12 pages excluding references)
+* ***Experiment and Analysis Papers*** (12 pages excluding references)
+* ***Vision Papers*** (6 to 12 pages excluding references, shorter papers encouraged)
 
 For Experiment and Analysis Papers and Vision Papers, you need to append the category tag as a suffix to the title of the paper such as “Data Management in the Year 3000 [Vision]”. The details of Experiment and Analysis Papers and Vision Papers are given below.
 
@@ -63,7 +63,7 @@ We encourage authors of accepted E&A papers, at the time of the publication, to 
 
 #### 4.2 Vision Papers
 
-Vision papers outline futuristic information systems and architectures or anticipate new challenges. Submissions would describe novel projects that are in an early stage but hold out the strong promise of eventual high impact. The focus should be on the key insight behind the project (e.g., a new set of ground rules or a novel technology), as well as explaining how the key insight can be leveraged in building a system. The paper must describe what the success criteria are for the vision project. The length of a submission within the Vision Papers category is restricted to 6 pages (see submission guidelines for details).
+Vision papers outline futuristic information systems and architectures or anticipate new challenges. Submissions would describe novel projects that are in an early stage but hold out the strong promise of eventual high impact. The focus should be on the key insight behind the project (e.g., a new set of ground rules or a novel technology), as well as explaining how the key insight can be leveraged in building a system. The paper must describe what the success criteria are for the vision project. The length of a submission within the Vision Papers category is 6 to 12 pages excluding references (see submission guidelines for details).
 
 ### 5. Four Flavors of Regular Research Papers
 
