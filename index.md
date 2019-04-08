@@ -8,7 +8,7 @@ category: conference
 
 <ul class="fa-ul">
     <li><span class="fa-li"><i class="fas fa-globe-asia"></i></span>Tokyo Japan</li>
-    <li><span class="fa-li"><i class="far fa-calendar-alt"></i></span>August 30 <i class="fas fa-arrow-right"></i> September 4, 2020</li>
+    <li><span class="fa-li"><i class="far fa-calendar-alt"></i></span>Monday, August 31 <i class="fas fa-arrow-right"></i>Friday, September 4, 2020</li>
 </ul>
 
 VLDB is a premier annual international forum for data management and database researchers, vendors, practitioners, application developers, and users. The VLDB 2020 conference will feature research talks, tutorials, demonstrations, and workshops. It will cover issues in data management,  database and information systems research, since they are the technological cornerstones of the emerging applications of the 21st century.
