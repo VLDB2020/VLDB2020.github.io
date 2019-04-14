@@ -85,7 +85,7 @@ category: information
 ## Sponsorship Committee Chairs
 
 * Xiaoyong Du (Renmin University)
-* Mohamed Mokbel (Hamad Bin Khalifa University)
+* Mohamed Mokbel (Qatar Computing Research Institute)
 * Vasilis Vassalos (Athens University of Economics and Business)
 
 ## Publicity Committee Chair
@@ -115,7 +115,7 @@ category: information
 * Jun Miyazaki (Tokyo Institute of Technology): <span class="h-font">Chair</span>
 * Masato Oguchi (Ochanomizu University)
 * Masashi Toyoda (University of Tokyo)
-* Chiemi Watanabe (University of Tsukuba)
+* Chiemi Watanabe (Tsukuba University of Technology)
 
 ## Registration Chairs 
 
