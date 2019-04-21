@@ -124,6 +124,6 @@ category: information
 
 ## Domestic Advisory Board
 
-* Miyuki Nakano (Advanced Institute of Industrial Technology)
+* Miyuki Nakano (Tsuda University)
 * Haruo Yokota (Tokyo Institute of Technology)
 * Masatoshi Yoshikawa (Kyoto University)
