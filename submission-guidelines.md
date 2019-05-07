@@ -8,7 +8,7 @@ category: forauthors
 
 ## Generation Information
 
-Papers are to be formatted according to the conference's camera-ready format, as embodied in the document templates. The maximum research paper length is **12 pages (<u>6 pages for vision papers</u>); all the content, including any appendices but excluding the references, must fit on 12 pages. Only the references can extend a paper beyond the 12 page limit**, and there is no limit on the number of pages used for them. The conference management tool for the submission of abstracts and papers is accessible at:
+Papers are to be formatted according to the conference's camera-ready format, as embodied in the document templates. The maximum research paper length is **12 pages (<u>6-12 pages for vision papers</u>); all the content, including any appendices but excluding the references, must fit on 12 pages. Only the references can extend a paper beyond the 12 page limit**, and there is no limit on the number of pages used for them. The conference management tool for the submission of abstracts and papers is accessible at:
 [https://cmt3.research.microsoft.com/VLDB2020/](https://cmt3.research.microsoft.com/VLDB2020/)
 
 ## Submission Process
