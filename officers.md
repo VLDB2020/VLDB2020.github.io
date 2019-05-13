@@ -45,7 +45,7 @@ category: information
 * Aditya Parameswaran (University of California, Berkeley)
 * Andy Pavlo (Carnegie Mellon University)
 * Xiaokui Xiao (National University of Singapore)
-* Jeffrey Xu Yu (City University of Hong Kong)
+* Jeffrey Xu Yu (The Chinese University of Hong Kong)
 * Meihui Zhang (Beijing Institute of Technology)
 * Jingren Zhou (Alibaba Group)
 
