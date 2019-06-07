@@ -36,7 +36,7 @@ To minimize biases in the evaluation process, we use CMT's conflict management s
 
 You have a conflict with X:
 
-- If you and X have worked in the same university or company in the past two years, or will be doing so in the next months on account of an accepted job offer. Different campuses do not count as the same university for this purpose -- UC Berkeley does not have a conflict with UC Santa Barbara.
+- If you and X have worked in the same university or company in the past two years, or will be doing so in the next six months on account of an accepted job offer. Different campuses do not count as the same university for this purpose -- UC Berkeley does not have a conflict with UC Santa Barbara.
 - If you and X have collaborated recently, as evidenced in a joint publication or jointly organized event in the past two years, or are collaborating now.
 - If you are the PhD thesis advisor of X or vice versa, irrespective of how long ago this was.
 - If X is a relative or close personal friend.

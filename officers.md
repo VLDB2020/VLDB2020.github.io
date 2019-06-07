@@ -115,6 +115,7 @@ category: information
 * Jun Miyazaki (Tokyo Institute of Technology): <span class="h-font">Chair</span>
 * Masato Oguchi (Ochanomizu University)
 * Masashi Toyoda (University of Tokyo)
+* Saneyasu Yamaguchi (Kogakuin University)
 * Chiemi Watanabe (Tsukuba University of Technology)
 
 ## Registration Chairs 
