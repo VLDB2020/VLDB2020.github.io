@@ -14,14 +14,27 @@
 @main-font-weight: 300;
 @main-font-weight-strong: 500;
 @main-font-weight-thin: 100;
+
+//--Logo Font
+@font-face{
+    font-family: 'Powerpuff';
+    src: url('./powerpuff.otf') format('opentype');
+}
+@font-face{
+    font-family: 'Katakana';
+    src: url('./electroharmonix.ttf') format('truetype');
+}
+
+
 //--
 //-- Frot for VLDB Logo
-@logo-font: @main-font;
-@logo-font-weight: 900;
+@logo-font: 'Powerpuff';
+@logo-sub-font: 'Katakana';
+@logo-font-weight: normal;
 @logo-smallfont-weight: 100;
-@logo-font-size: 150px;
+@logo-font-size: 190px;
 @logo-font-color: @color-white;
-@logo-smallfont-size: 16px;
+@logo-smallfont-size: 18px;
 //--
 //-- Menu Bar
 @menu-bgcolor: @color-white;
@@ -195,23 +208,24 @@ svg.toppage-wrap .textoutline {
 }
 
 svg.toppage-wrap .smalltext {
+    font-family: @logo-sub-font;
     font-size: @logo-smallfont-size;
     letter-spacing: 0px;
-    font-weight: @logo-smallfont-weight;
+    _font-weight: @logo-smallfont-weight;
     stroke: none;
     fill: @logo-font-color;
 }
 
 svg.toppage-wrap #textVLDB {
-    letter-spacing: 15px;
+    letter-spacing: 10px;
 }
 
 svg.toppage-wrap #text2020 {
-    letter-spacing: 25px;
+    letter-spacing: 9px;
 }
 
 svg.toppage-wrap #textTokyo {
-    letter-spacing: -1px;
+    letter-spacing: 0px;
 }
 
 svg.toppage-wrap mask rect {

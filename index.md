@@ -4,7 +4,7 @@ title: 46th International Conference on Very Large Data Bases
 category: conference
 ---
 
-# <small>46th International Conference on </small>Very Large Data Bases
+<img src="assets/media/vldb2020-banner.svg" width="100%">
 
 <ul class="fa-ul">
     <li><span class="fa-li"><i class="fas fa-globe-asia"></i></span>Tokyo Japan</li>
