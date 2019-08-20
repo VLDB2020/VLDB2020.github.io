@@ -109,7 +109,7 @@ category: information
 * Shuai Ma (Beihang University)
 * Nikos Mamoulis (University of Ioannina)
 * Ioana Manolescu (INRIA)
-* Essam Mansour (Qatar Computing Research Institute)
+* Essam Mansour (Concordia University, Canada)
 * Ryan Marcus (Brandeis University)
 * Sergey Melnik (Google)
 * Mohamed Mokbel (Qatar Computing Research Institute)
