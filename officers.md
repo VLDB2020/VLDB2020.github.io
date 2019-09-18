@@ -25,7 +25,7 @@ category: information
 
 ## Program Committee Chairs
 
-* Magdalena Balazinska (Unversity of Washington)
+* Magdalena Balazinska (University of Washington)
 * Xiaofang Zhou (University of Queensland)
 
 ## Associate Editors
