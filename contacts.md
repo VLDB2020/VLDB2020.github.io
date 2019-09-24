@@ -8,6 +8,8 @@ category: information
 
 ## General Information
 
+> This email address accepts general questions regarding the VLDB2020 organization. **Questions regarding paper submission are not accepted.**
+
 <ul class="fa-ul">
     <li><span class="fa-li"><i class="far fa-envelope"></i></span><strong><span class="contactaddress">e-mail address</span></strong></li>
 </ul>
