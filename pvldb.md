@@ -151,7 +151,7 @@ category: information
 * A. Erdem Sariyuce (University at Buffalo)
 * Mohamed Sarwat (Arizona State University)
 * Maximilian Schleich (University of Oxford)
-* Mohamed Sharaf (Univeristy of Queensland)
+* Mohamed Sharaf (United Arab Emirates University)
 * Yanyan Shen (Shanghai Jiao Tong University)
 * Kyuseok Shim (Seoul National University)
 * Prashant Shiralkar (Amazon)
