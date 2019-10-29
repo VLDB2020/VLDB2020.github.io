@@ -9,7 +9,7 @@ category: sponsorship
 ## Diamond
 
 <div class="col-group">
-    <div class="col-12" style="padding:6px;"><a href="https://www.cygames.co.jp/en/"><img src="assets/logo/logo_cygames.svg" width="100%"></a></div>
+    <div class="col-12" style="padding:6px;"><a href="http://research.cygames.co.jp/"><img src="assets/logo/logo_cygames.svg" width="100%"></a></div>
 </div>
 
 ## Platinum
