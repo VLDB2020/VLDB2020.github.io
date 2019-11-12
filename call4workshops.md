@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Call for Workshop
+title: Call for Workshops
 category: contributions
 ---
 
