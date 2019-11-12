@@ -41,6 +41,11 @@ Proposals must be in pdf, **not exceeding 8 pages**, and including the following
 
 Proposal evaluation criteria include relevance to VLDB, scientific quality, quality of proposed organization, evidence of interest (e.g., previous submission and attendance counts), long-term vision, diversity considerations (of all forms including, e.g., affiliation, geography, gender, race, seniority, etc.), and difference from other proposals.
 
+## Additional Information
+
+Accepted workshops will be scheduled considering the preferred date and duration, the workshop topics, and the number of available slots.
+The organizers of accepted workshops are required to announce the workshop and call for papers, solicit submissions, conduct the review process, compose a workshop program, and organize the proceedings. Workshop programs must comply with a joint catering schedule, and workshop programs must be published 15 days prior to the early registration deadline for VLDB 2020.
+
 ## Contact (Workshops Program Chairs)
 
 * Contact email: [vldb2020-workshops@googlegroups.com](vldb2020-workshops@googlegroups.com)
