@@ -18,7 +18,7 @@ All VLDB 2020 workshops will be "serviced", meaning that logistics such as regis
 
 ## Submission Guidelines
 
-Workshop proposals should be submitted via e-mail (**[mailto:vldb2020-workshops@googlegroups.com](vldb2020-workshops@googlegroups.com)**) to VLDB 2020 workshops co-chairs, Wook-Shin Han, Makoto Onizuka, and Nesime Tatbul with "**VLDB 2020 Workshop Proposal**" in the e-mail subject. Workshop organizers with special requirements should contact the workshops co-chairs as soon as possible; such requests will be considered on a case-by-case basis.
+Workshop proposals should be submitted via e-mail (**[vldb2020-workshops@googlegroups.com](mailto:vldb2020-workshops@googlegroups.com)**) to VLDB 2020 workshops co-chairs, Wook-Shin Han, Makoto Onizuka, and Nesime Tatbul with "**VLDB 2020 Workshop Proposal**" in the e-mail subject. Workshop organizers with special requirements should contact the workshops co-chairs as soon as possible; such requests will be considered on a case-by-case basis.
 
 Proposals must be in pdf, **not exceeding 8 pages**, and including the following (in the order given):
 * workshop title
@@ -48,7 +48,7 @@ The organizers of accepted workshops are required to announce the workshop and c
 
 ## Contact (Workshop Co-Chairs)
 
-* Contact email: [mailto:vldb2020-workshops@googlegroups.com](vldb2020-workshops@googlegroups.com)
+* Contact email: [vldb2020-workshops@googlegroups.com](mailto:vldb2020-workshops@googlegroups.com)
    * Wook-Shin Han (POSTECH)
    * Makoto Onizuka (Osaka University)
    * Nesime Tatbul (Intel Labs and MIT)
