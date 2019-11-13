@@ -1,10 +1,10 @@
 ---
 layout: default
-title: Call for Workshops
+title: Call for Contributions - Workshops
 category: contributions
 ---
 
-# VLDB2020: Call for Workshops
+# VLDB2020: Call for Contributions - Workshops
 
 ## Information
 
@@ -46,7 +46,7 @@ Proposal evaluation criteria include relevance to VLDB, scientific quality, qual
 Accepted workshops will be scheduled considering the preferred date and duration, the workshop topics, and the number of available slots.
 The organizers of accepted workshops are required to announce the workshop and call for papers, solicit submissions, conduct the review process, compose a workshop program, and organize the proceedings. Workshop programs must comply with a joint catering schedule, and workshop programs must be published 15 days prior to the early registration deadline for VLDB 2020.
 
-## Contact (Workshop Co-Chairs)
+## Workshops Co-Chairs
 
 * Contact email: [vldb2020-workshops@googlegroups.com](mailto:vldb2020-workshops@googlegroups.com)
    * Wook-Shin Han (POSTECH)
