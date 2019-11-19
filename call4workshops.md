@@ -52,3 +52,4 @@ The organizers of accepted workshops are required to announce the workshop and c
    * Wook-Shin Han (POSTECH)
    * Makoto Onizuka (Osaka University)
    * Nesime Tatbul (Intel Labs and MIT)
+   
