@@ -10,7 +10,7 @@ category: forauthors
 
 
 <div class="col-group important-dates">
-    <div class="col-3 id-head">Chair</div>
+    <div class="col-3 id-head">Co-Chairs</div>
     <div class="col-9 id-col">Magdalena Balazinska (University of Washington)<br>
     Xiaofang Zhou (University of Queensland)</div>
 </div>
@@ -43,13 +43,39 @@ TBD
 
 TBD
 
-## Panels
+## Panel Proposals
 
-TBD
+<div class="col-group important-dates">
+    <div class="col-3 id-head">Co-Chairs</div>
+    <div class="col-9 id-col">Anastasia Ailamaki (<a href="mailto:anastasia.ailamaki@epfl.ch">anastasia.ailamaki@epfl.ch</a>)<br>
+Surajit Chaudhuri (<a href="mailto:surajitc@microsoft.com">surajitc@microsoft.com</a>)</div>
+</div>
+<div class="col-group important-dates">
+    <div class="col-3 id-head">Submission Deadline</div>
+    <div class="col-9 id-col">February 28, 2020 (5 p.m. PST)</div>
+</div>
+<div class="col-group important-dates">
+    <div class="col-3 id-head">Notification</div>
+    <div class="col-9 id-col">April 30, 2020</div>
+</div>
 
 ## Workshop Proposals
 
-TBD
+<div class="col-group important-dates">
+    <div class="col-3 id-head">Co-Chairs</div>
+    <div class="col-9 id-col">Wook-Shin Han (POSTECH)<br>
+Makoto Onizuka (Osaka University)<br>
+Nesime Tatbul (Intel Labs and MIT)<br>
+ <i class="far fa-envelope"></i>Contacts: (<a href="mailto:vldb2020-workshops@googlegroups.com">vldb2020-workshops@googlegroups.com</a>)</div>
+</div>
+<div class="col-group important-dates">
+    <div class="col-3 id-head">Submission Deadline</div>
+    <div class="col-9 id-col">January 10, 2020 (5 p.m. PST)</div>
+</div>
+<div class="col-group important-dates">
+    <div class="col-3 id-head">Notification</div>
+    <div class="col-9 id-col">February 2, 2020</div>
+</div>
 
 ## PhD Workshop Track
 
