@@ -47,3 +47,10 @@ category: sponsorship
     <div class="col-2" style="padding:6px 3px 6px 3px;"><img src="assets/logo/logo_unknown.svg" width="100%"></div>
     <div class="col-2" style="padding:6px 6px 6px 3px;"><img src="assets/logo/logo_unknown.svg" width="100%"></div>
 </div>
+
+## Institutional Sponsors
+
+<div class="col-group">
+    <div class="col-6" style="padding:6px 3px 6px 6px;"><a href="https://www.nict.go.jp/en/index.html"><img src="assets/logo/logo_nict.svg" width="100%"></a></div>
+    <div class="col-6" style="padding:6px 6px 6px 3px;"><img src="assets/logo/logo_unknown.svg" width="100%"></div>
+</div>
