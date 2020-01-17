@@ -62,7 +62,7 @@ category: information
 
 ## Demo Chairs
 
-* Yasuhiro Fujiwara (NTT Software Innovation Center)
+* Yasuhiro Fujiwara (NTT Communication Science Laboratories)
 * Ioana Manolescu (INRIA)
 * Ying Zhang (University of Technology, Sydney)
 
