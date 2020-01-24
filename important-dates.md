@@ -91,7 +91,34 @@ Ioana Manolescu (<a href="mailto:ioana.manolescu@inria.fr">ioana.manolescu@inria
 
 ## Tutorials
 
-TBD
+<div class="col-group important-dates">
+    <div class="col-3 id-head">Call For Proposals</div>
+    <div class="col-9 id-col"><a href="https://vldb2020.org/call4tutorials.html">https://vldb2020.org/call4tutorials.html</a></div>
+</div>
+<div class="col-group important-dates">
+    <div class="col-3 id-head">Co-Chairs</div>
+    <div class="col-9 id-col">
+        Michael J. Carey (University of California, Irvine)<br>
+        Renée J. Miller (Northeastern University)
+    </div>
+</div>
+<div class="col-group important-dates">
+    <div class="col-3 id-head">Submission Deadline</div>
+    <div class="col-9 id-col">12 March 2020 (5 p.m. PST)</div>
+</div>
+<div class="col-group important-dates">
+    <div class="col-3 id-head">Notification</div>
+    <div class="col-9 id-col">April 16, 2020</div>
+</div>
+<div class="col-group important-dates">
+    <div class="col-3 id-head">Camera-ready abstract overview due</div>
+    <div class="col-9 id-col">June 4, 2020</div>
+</div>
+<div class="col-group important-dates">
+    <div class="col-3 id-head">Slides availability</div>
+    <div class="col-9 id-col">August 12, 2020</div>
+</div>
+
 
 ## Panel Proposals
 

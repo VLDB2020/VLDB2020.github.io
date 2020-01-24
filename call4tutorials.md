@@ -12,7 +12,7 @@ VLDB 2020 invites submissions for tutorial proposals on all topics of potential 
 
 ## Important Dates
 
-* Submission deadline: **12 March 2020 (5 p.m. PST)**
+* Submission deadline: **March 12 2020 (5 p.m. PST)**
 * Notification: **April 16, 2020**
 * Camera-ready abstract overview due: **June 4, 2020**
 * Slides availability: **August 12, 2020**
@@ -46,4 +46,4 @@ If the proposal is accepted, at least one of the authors listed in the proposal 
 ## Tutorial Chairs
 
 * Michael J. Carey (University of California, Irvine)
-* RenÃ©e J. Miller (Northeastern University)
+* Renée J. Miller (Northeastern University)
