@@ -137,4 +137,27 @@ Nesime Tatbul (Intel Labs and MIT)<br>
 
 ## PhD Workshop Track
 
-TBD
+<div class="col-group important-dates">
+    <div class="col-3 id-head">Call For Paper</div>
+    <div class="col-9 id-col"><a href="https://vldb2020.org/phd-workshop.html">https://vldb2020.org/phd-workshop.html</a></div>
+</div>
+<div class="col-group important-dates">
+    <div class="col-3 id-head">Co-Chairs</div>
+    <div class="col-9 id-col">
+        Ziawasch Abedjan (TU Berlin)<br>
+        Katja Hose (Aalborg University)
+    </div>
+</div>
+<div class="col-group important-dates">
+    <div class="col-3 id-head">Submission Deadline</div>
+    <div class="col-9 id-col">April 15, 2020 (5 p.m. PST)</div>
+</div>
+<div class="col-group important-dates">
+    <div class="col-3 id-head">Notification</div>
+    <div class="col-9 id-col">May 20, 2020</div>
+</div>
+<div class="col-group important-dates">
+    <div class="col-3 id-head">Camera-ready copy due</div>
+    <div class="col-9 id-col">June 10, 2020</div>
+</div>
+
