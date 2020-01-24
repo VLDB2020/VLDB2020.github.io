@@ -23,7 +23,7 @@ Submissions to the industrial track are required to include all author names and
 
 All deadlines below are 5 PM Pacific Time.
 
-- Paper submission: Monday, February 24, 2020
+- Paper submission: Wednesday, February 26, 2020
 - Notification of accept/reject/revision: Thursday, April 23, 2020 
 - Revision submission: Thursday, May 21, 2020
 - Final notification of accept/reject: Thursday, June 4, 2020 

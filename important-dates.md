@@ -46,23 +46,23 @@ category: forauthors
 </div>
 <div class="col-group important-dates">
     <div class="col-3 id-head">Submission Deadline</div>
-    <div class="col-9 id-col">Monday, February 24, 2020, PST</div>
+    <div class="col-9 id-col">Wednesday, February 26, 2020, 5pm Pacific Time</div>
 </div>
 <div class="col-group important-dates">
     <div class="col-3 id-head">First Notification</div>
-    <div class="col-9 id-col">Thursday, April 23, 2020, PST</div>
+    <div class="col-9 id-col">Thursday, April 23, 2020</div>
 </div>
 <div class="col-group important-dates">
     <div class="col-3 id-head">Revision Submission</div>
-    <div class="col-9 id-col">Thursday, May 21, 2020, PST</div>
+    <div class="col-9 id-col">Thursday, May 21, 2020, 5pm Pacific Time</div>
 </div>
 <div class="col-group important-dates">
     <div class="col-3 id-head">Final Notification</div>
-    <div class="col-9 id-col">Thursday, June 4, 2020, PST</div>
+    <div class="col-9 id-col">Thursday, June 4, 2020</div>
 </div>
 <div class="col-group important-dates">
     <div class="col-3 id-head">Camera-ready Deadline</div>
-    <div class="col-9 id-col">Monday, June 15, 2020, PST</div>
+    <div class="col-9 id-col">Monday, June 15, 2020, 5pm Pacific Time</div>
 </div>
 
 ## Demonstrations
