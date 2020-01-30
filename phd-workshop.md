@@ -48,5 +48,15 @@ We plan to publish the workshop proceedings with all accepted papers in the CEUR
 
 ## 8. PhD Workshop PC Members
 
-***TBA***
-
+* Abolfazl Asudeh (UIC)
+* Matthias Bohm (TU Graz)
+* Raul Castro Fernandez (University of Chicago)
+* Hannes Muhleisen (CWI)
+* Stefan Manegold (CWI)
+* Fatemeh Nargesian (University of Rochester)
+* Paolo Papotti (Eurecom)
+* Jorge Arnulfo Quiane Ruiz (TU Berlin)
+* Tilmann Rabl (HPI)
+* Ralf Schenkel (University of Trier)
+* Matthias Weidlich (HU Berlin)
+* Eugene Wu (Columbia University)

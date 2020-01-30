@@ -28,7 +28,7 @@ PVLDB uses a novel review process designed to promote timely submission, review,
 
 - For research track papers that belong to a special category (Vision, and Experiments and Analyses), authors MUST append the category tag as a SUFFIX to the title of the paper. For example, "Data Management in the Year 3000 [Vision]". This must be done both in the paper file and in the CMT submission title.
 - VLDB is a single-blind conference. Therefore, authors MUST include their names and affiliations on the manuscript cover page.
-- IMPORTANT CHANGE: A change to the style file has been implemented in August. Please use the provided style file as it contains a uniform way to cite a PVLBD paper.
+- IMPORTANT CHANGE: A change to the style file has been implemented in August. Please use the provided style file as it contains a uniform way to cite a PVLDB paper.
 
 ## Conflict
 
