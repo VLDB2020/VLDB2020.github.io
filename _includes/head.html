@@ -4,24 +4,25 @@
 
 <title>{{ page.title }} - VLDB2020 Tokyo</title>
 
-<link rel="stylesheet" href="//use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
-    crossorigin="anonymous">
+<link rel="stylesheet" href="//use.fontawesome.com/releases/v5.7.1/css/all.css"
+    integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 <link rel="stylesheet" href="//use.typekit.net/swd6kdu.css">
-<link rel="stylesheet/less" type="text/css" href="assets/vldb2020.less" />
-<!-- link rel="stylesheet/less" type="text/css" href="assets/fluidable.less" -->
+<link rel="stylesheet/less" type="text/css" href="{% link assets/vldb2020.less %}" />
+<!-- link rel="stylesheet/less" type="text/css" href="{% link assets/fluidable.less%}" -->
 <script src="//cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/3.9.0/less.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/barba.js/1.0.0/barba.min.js"></script>
 <script src="//cdn.jsdelivr.net/npm/animejs@3.0.1/lib/anime.min.js"></script>
-<script src="assets/vldb2020.js" defer></script>
+<script src="{% link assets/vldb2020.js %}" defer></script>
 <!-- link rel="icon" href="images/favicon.png"-->
 <link rel="canonical" href="https://vldb2020.org/">
 
 <meta property="og:title" content="{{ page.title }} - VLDB2020 Tokyo">
 <meta property="og:type" content="website">
 <meta property="og:url" content="{{ site.url }}{{ page:url }}">
-<meta property="og:image" content="{{ site.url }}/assets/media/ogp-photo.jpg">
+<meta property="og:image" content="{% link assets/media/ogp-photo.jpg %}">
 <meta property="og:image:type" content="image/jpeg">
 <meta property="og:image:width" content="1600">
 <meta property="og:image:height" content="960" />
-<meta property="og:description" content="VLDB is a premier annual international forum for data management. VLDB 2020 will take place in Tokyo, Japan, from August 30th to September 4th, 2020.">
+<meta property="og:description"
+    content="VLDB is a premier annual international forum for data management. VLDB 2020 will take place in Tokyo, Japan, from August 30th to September 4th, 2020.">

@@ -157,8 +157,9 @@ each(@categories, {
 
         #toppage-cnt.@{value} blockquote {
             padding:0px 10px;
-            border: 1px solid;
+            border: 3px solid;
             border-color:extract(@categories-color, @index);
+            background-color:fadeout(extract(@categories-color, @index), 90%);
         }
     }
 
