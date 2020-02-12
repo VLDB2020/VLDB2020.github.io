@@ -9,14 +9,14 @@ category: sponsorship
 ## Diamond
 
 <div class="col-group">
-    <div class="col-12" style="padding:6px;"><a href="http://research.cygames.co.jp/"><img src="assets/logo/logo_cygames.svg" width="100%"></a></div>
+    <div class="col-12" style="padding:6px;"><a href="https://research.cygames.co.jp/"><img src="assets/logo/logo_cygames.svg" width="100%"></a></div>
 </div>
 
 ## Platinum
 
 <div class="col-group">
-    <div class="col-6" style="padding:6px 3px 6px 6px;"><a href="http://www.hitachi.com/"><img src="assets/logo/logo_hitachi.svg" width="100%"></a></div>
-    <div class="col-6" style="padding:6px 6px 6px 3px;"><img src="assets/logo/logo_unknown.svg" width="100%"></div>
+    <div class="col-6" style="padding:6px 3px 6px 6px;"><a href="https://www.hitachi.com/"><img src="assets/logo/logo_hitachi.svg" width="100%"></a></div>
+    <div class="col-6" style="padding:6px 6px 6px 3px;"><a href="https://recruit-tech.co.jp/"><img src="assets/logo/logo_r_tech.svg" width="100%"></a></div>
 </div>
 
 

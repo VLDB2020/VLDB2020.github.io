@@ -14,7 +14,7 @@ The Industrial Track of VLDB 2020 covers all aspects of innovative commercial or
 
 ### 2. Submission Guidelines
 
-We accept full papers (up to 12 pages + references) and extended abstracts (up to 4 pages + references). The papers should be prepared using the VLDB 2020 paper formatting guidelines. Papers must be submitted electronically, in pdf format, by February 24, 2020, 5 PM Pacific Time at the conference submission site: <https://cmt3.research.microsoft.com/VLDB2020>. 
+We accept full papers (up to 12 pages + references) and extended abstracts (up to 4 pages + references). The papers should be prepared using the VLDB 2020 paper formatting guidelines. Papers must be submitted electronically, in pdf format, by February 26, 2020, 5 PM Pacific Time at the conference submission site: <https://cmt3.research.microsoft.com/VLDB2020>. 
 The conference submission site will be open on February 1, 2020.
 
 Submissions to the industrial track are required to include all author names and affiliations.  Any changes to authorship after paper acceptance will require approval by the industrial track chairs. Authors are encouraged to contact the industrial track chairs if they need clarification regarding the suitability of their work to this track.
