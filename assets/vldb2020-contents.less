@@ -174,7 +174,13 @@ each(@categories, {
             background-color:fadeout(extract(@categories-color, @index), 90%);
         }
         #toppage-cnt.@{value} .badge {
+            color: lighten(extract(@categories-color, @index), 70%);
             background-color: extract(@categories-color, @index);
+        }
+        .submenu-panel.@{value} .badge{
+            color: darken(extract(@categories-color, @index), 70%);
+            font-weight: bold;
+            background-color: lighten(extract(@categories-color, @index), 30%);
         }
     }
 

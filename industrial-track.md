@@ -4,18 +4,19 @@ title: Industrial Track
 category: contributions
 ---
 
-# VLDB2020: Call for Contributions
+# VLDB2020: Call for Contributions <span class="badge"> Deadline Extended!</span>
 
 ## Industrial Track
 
 ### 1. Overview
 
-The Industrial Track of VLDB 2020 covers all aspects of innovative commercial or industrial-strength data management systems and solutions.  We also welcome novel real-world applications of data management systems and experience in applying recent research advances to real-world problems. We require that at least one of the authors has a non-academic affiliation. 
+The Industrial Track of VLDB 2020 covers all aspects of innovative commercial or industrial-strength data management systems and solutions.  We also welcome novel real-world applications of data management systems and experience in applying recent research advances to real-world problems. We require that at least one of the authors has a non-academic affiliation.
 
 ### 2. Submission Guidelines
 
-We accept full papers (up to 12 pages + references) and extended abstracts (up to 4 pages + references). The papers should be prepared using the VLDB 2020 paper formatting guidelines. Papers must be submitted electronically, in pdf format, by February 26, 2020, 5 PM Pacific Time at the conference submission site: <https://cmt3.research.microsoft.com/VLDB2020>. 
-The conference submission site will be open on February 1, 2020.
+We accept full papers (up to 12 pages + references) and extended abstracts (up to 4 pages + references). The papers should be prepared using the VLDB 2020 paper formatting guidelines.
+
+In response to several reasonable requests, we have extended the paper submission deadline to March 3, 2020. However, we require authors to submit an abstract of their paper by February 26, 2020, to enable assignment of papers to reviewers.  Papers must be submitted electronically, in pdf format, at the conference submission site: <https://cmt3.research.microsoft.com/VLDB2020>. The conference submission site is open.
 
 Submissions to the industrial track are required to include all author names and affiliations.  Any changes to authorship after paper acceptance will require approval by the industrial track chairs. Authors are encouraged to contact the industrial track chairs if they need clarification regarding the suitability of their work to this track.
 
@@ -40,7 +41,7 @@ All deadlines below are 5 PM Pacific Time.
 
 - Allison Holloway (Oracle, USA)
 - Altigran da Silva (Universidade Federal do Amazonas, Brazil)
-- Amit Rustagi (Viome, USA) 
+- Amit Rustagi (Viome, USA)
 - Anja Gruenheid (Google Inc., USA)
 - Azza Abouzied (New York University Abu Dhabi, United Arab Emirates)
 - Danica Porobic (Oracle, USA)
