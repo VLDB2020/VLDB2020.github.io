@@ -174,7 +174,7 @@ each(@categories, {
             background-color:fadeout(extract(@categories-color, @index), 90%);
         }
         #toppage-cnt.@{value} .badge {
-            background-color: fadeout(extract(@categories-color, @index), 90%);
+            background-color: extract(@categories-color, @index);
         }
     }
 
