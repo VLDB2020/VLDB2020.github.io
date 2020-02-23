@@ -23,8 +23,9 @@ Submissions to the industrial track are required to include all author names and
 
 All deadlines below are 5 PM Pacific Time.
 
-- Paper submission: Wednesday, February 26, 2020
-- Notification of accept/reject/revision: Thursday, April 23, 2020 
+- Abstract submission: Wednesday, February 26, 2020
+- Paper submission: Tuesday, March 3, 2020 <span class="badge">Extended!</span>
+- Notification of accept/reject/revision: Thursday, April 23, 2020
 - Revision submission: Thursday, May 21, 2020
 - Final notification of accept/reject: Thursday, June 4, 2020 
 - Camera-ready deadline: Monday, June 15, 2020
@@ -37,4 +38,33 @@ All deadlines below are 5 PM Pacific Time.
 
 ### 5. Industrial Track PC Members
 
-**TBD**
+- Allison Holloway (Oracle, USA)
+- Altigran da Silva (Universidade Federal do Amazonas, Brazil)
+- Amit Rustagi (Viome, USA) 
+- Anja Gruenheid (Google Inc., USA)
+- Azza Abouzied (New York University Abu Dhabi, United Arab Emirates)
+- Danica Porobic (Oracle, USA)
+- Entong Shen (Amazon Web Services, USA)
+- Fabrizio Silvestri (Facebook, United Kingdom)
+- Fatma Ozcan (IBM Research - Almaden, USA)
+- Feifei Li (Alibaba Group, China)
+- Guoliang Li (Tsinghua University, China)
+- Heiko Schuldt (University of Basel, Switzerland) 
+- Irini Fundulaki (ICS FORTH, Greece)
+- Jana Giceva (TU Munich, Germany) 
+- Jianguo Wang (Amazon Web Services, USA)
+- Johannes Gehrke (Microsoft, USA)
+- Meihui Zhang (Beijing Institute of Technology, China)
+- Monica Scannapieco (ISTAT, Italy)
+- Norman May (SAP SE, Germany)
+- Olga Poppe (Microsoft, USA)
+- Roberto Zicari (Goethe University Frankfurt, Germany)
+- Russell Sears (Apple, USA)
+- Sameer Agarwal (Facebook, USA)
+- Sang Cha (Seoul National University, South Korea)
+- Sihem Amer-Yahia (CNRS, France)
+- Songtao Guo (LinkedIn, USA)
+- Sonia Bergamaschi (Università di Modena e Reggio Emilia, Italy)
+- Wolfram Wingerath (Baqend, Germany)
+- Yaron Kanza (AT&T Labs-Research, USA)
+- Yasushi Sakurai (Osaka University, Japan)

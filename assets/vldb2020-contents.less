@@ -146,6 +146,18 @@ each(@selectors, {
     height: 100%;
 }
 
+.badge {
+    padding: 3px 6px;
+    margin-right: 8px;
+    margin-left: 1px;
+    font-size: 75%;
+    color: white;
+    border-radius: 6px;
+    box-shadow: 0 0 3px #ddd;
+    white-space: nowrap;
+    background-color: black;
+}
+
 each(@categories, {
         #toppage-cnt.@{value} #contents-body .contents-header, #toppage-cnt.@{value} #contents-body .contents-footer {
             background-color: extract(@categories-color, @index);
@@ -160,6 +172,9 @@ each(@categories, {
             border: 3px solid;
             border-color:extract(@categories-color, @index);
             background-color:fadeout(extract(@categories-color, @index), 90%);
+        }
+        #toppage-cnt.@{value} .badge {
+            background-color: fadeout(extract(@categories-color, @index), 90%);
         }
     }
 
