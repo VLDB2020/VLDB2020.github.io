@@ -10,7 +10,7 @@ category: information
 
 * PhD Workshop
 * [Accelerating Analytics and Data Management Systems Using Modern Processor and Storage Architectures (ADMS 2020)](http://www.adms-conf.org)
-* Applied AI for Database Systems and Applications (AIDB 2020)
+* [Applied AI for Database Systems and Applications (AIDB 2020)](https://sites.google.com/view/aidb2020)
 * [From Data Integration to Knowledge Graphs: Challenges and Experiences (DI2KG 2020)](http://di2kg.inf.uniroma3.it/2020/)
 * [The 1st Workshop on Distributed Infrastructure, Systems, Programming and AI (DISPA 2020)](https://sites.google.com/site/dispa2020)
 * Polystore systems for heterogeneous data in multiple databases with privacy and security assurances (Poly 2020)
