@@ -4,7 +4,7 @@ title: Call for Demonstration Proposals
 category: contributions
 ---
 
-# VLDB2020: Call for Contributions - Demonstrations
+# VLDB2020: Call for Contributions - Demonstrations <span class="badge">Deadline Extended!</span>
 
 ## Information
 
@@ -12,9 +12,9 @@ VLDB 2020 invites submissions for demo proposals on any topic of interest, broad
 
 ## Important Dates
 
-* Proposal submission deadline:  18 March 2020 (5 p.m. PST)
-* Notification of acceptance: 20 May 2020
-* Camera-ready copy due:  15 June 2020
+* Proposal submission deadline: <s>18</s>** 25 March 2020 (5 p.m. PST)** <span class="badge">Extended!</span>
+* Notification of acceptance: **20 May 2020**
+* Camera-ready copy due:  **15 June 2020**
 
 ## Demo Proposals
 

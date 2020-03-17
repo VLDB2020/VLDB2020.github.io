@@ -81,8 +81,8 @@ category: forauthors
 Ioana Manolescu (<a href="mailto:ioana.manolescu@inria.fr">ioana.manolescu@inria.fr</a>)<br>Ying Zhang  (<a href="mailto:Ying.Zhang@uts.edu.au">Ying.Zhang@uts.edu.au</a>)</div>
 </div>
 <div class="col-group important-dates">
-    <div class="col-3 id-head">Submission Deadline</div>
-    <div class="col-9 id-col">March  18, 2020 (5 p.m. PST)</div>
+    <div class="col-3 id-head">Submission Deadline <span class="badge">Extended!</span></div>
+    <div class="col-9 id-col">March  25, 2020 (5 p.m. PST)</div>
 </div>
 <div class="col-group important-dates">
     <div class="col-3 id-head">Notification</div>
