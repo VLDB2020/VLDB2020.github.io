@@ -12,7 +12,8 @@ VLDB 2020 invites submissions for demo proposals on any topic of interest, broad
 
 ## Important Dates
 
-* Proposal submission deadline: <s>March 25</s> **June 1 2020 (5 p.m. PST)** <span class="badge">Extended!</span>
+* Proposal submission deadline: <s>March 25</s> **April
+ 1 2020 (5 p.m. PST)** <span class="badge">Extended!</span>
 * Notification of acceptance: <s>May 20</a> **June 4, 2020**<span class="badge">Extended!</span>
 * Camera-ready copy due:  **June 15 2020**
 
