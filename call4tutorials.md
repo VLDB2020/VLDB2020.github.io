@@ -13,7 +13,7 @@ VLDB 2020 invites submissions for tutorial proposals on all topics of potential 
 ## Important Dates
 
 * Submission deadline: **March <s>12</s> 19, 2020 (5 p.m. PST)** <span class="badge">Extended!</span>
-* Notification: **April 16, 2020**
+* Notification: **<s>April</s> May 16, 2020** <span class="badge">Postponed</span>
 * Camera-ready abstract overview due: **June 4, 2020**
 * Slides availability: **August 12, 2020**
 
