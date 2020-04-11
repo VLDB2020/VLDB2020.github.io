@@ -180,13 +180,13 @@ Nesime Tatbul (Intel Labs and MIT)<br>
 </div>
 <div class="col-group important-dates">
     <div class="col-3 id-head">Submission Deadline</div>
-    <div class="col-9 id-col">April 15, 2020 (5 p.m. PST)</div>
+    <div class="col-9 id-col">April <s>15</s> 22, 2020 (5 p.m. PST) <span class="badge">Extended!</span></div>
 </div>
 <div class="col-group important-dates">
     <div class="col-3 id-head">Notification</div>
-    <div class="col-9 id-col">May 20, 2020</div>
+    <div class="col-9 id-col">May <s>20</s> 27, 2020 <span class="badge">Postponed</span></div>
 </div>
 <div class="col-group important-dates">
     <div class="col-3 id-head">Camera-ready copy due</div>
-    <div class="col-9 id-col">June 10, 2020</div>
+    <div class="col-9 id-col">June <s>10</s> 17, 2020 <span class="badge">Postponed</span></div>
 </div>

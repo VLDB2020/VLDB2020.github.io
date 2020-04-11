@@ -15,9 +15,9 @@ VLDB 2020 welcomes submissions from PhD students at any stage of their PhD work.
 
 ### 2. Important Dates
 
-* Submission Deadline: **April 15, 2020 (5 p.m. PST)**
-* Notification of acceptance: **May 20, 2020**
-* Camera-ready copy due: **June 10, 2020**
+* Submission Deadline: **April <s>15</s> 22, 2020 (5 p.m. PST)** <span class="badge">Extended!</span>
+* Notification of acceptance: **May <s>20</s> 27, 2020** <span class="badge">Postponed</span>
+* Camera-ready copy due: **June <s>10</s> 17, 2020** <span class="badge">Postponed</span>
 
 ### 3. Submission Guidelines
 
