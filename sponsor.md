@@ -24,6 +24,7 @@ category: sponsorship
 </div>
 <div class="col-group">
     <div class="col-6" style="padding:6px 6px 6px 3px;"><a href="https://megagon.ai/"><img src="assets/logo/logo_megagon_labs.svg" width="100%"></a></div>
+    <div class="col-6" style="padding:6px 3px 6px 6px;"><img src="assets/logo/logo_empty.svg" width="100%"></div>
 </div>
 
 ## Gold
@@ -36,9 +37,13 @@ category: sponsorship
 <div class="col-group">
     <div class="col-4" style="padding:6px 3px 6px 6px;"><a href="https://linecorp.com/en"><img src="assets/logo/logo_line.svg" width="100%"></a></div>
     <div class="col-4" style="padding:6px 3px 6px 3px;"><a href="https://research.fb.com/"><img src="assets/logo/logo_facebook.svg" width="100%"></a></div>
-    <div class="col-4" style="padding:6px 3px 6px 6px;"><img src="assets/logo/logo_unknown.svg" width="100%"></div>
+    <div class="col-4" style="padding:6px 3px 6px 6px;"><a href="https://www.mongodb.com/"><img src="assets/logo/logo_mongodb.svg" width="100%"></a></div>
 </div>
-
+<div class="col-group">
+    <div class="col-4" style="padding:6px 3px 6px 6px;"><a href="https://www.tencent.com/"><img src="assets/logo/logo_tencent.svg" width="100%"></a></div>
+    <div class="col-4" style="padding:6px 3px 6px 3px;"><a href="http://www.toshiba.co.jp/worldwide/index.html"><img src="assets/logo/logo_toshiba.svg" width="100%"></a></div>
+    <div class="col-4" style="padding:6px 3px 6px 6px;"><img src="assets/logo/logo_empty.svg" width="100%"></div>
+</div>
 ## Silver
 
 <div class="col-group">
@@ -62,17 +67,17 @@ category: sponsorship
 ## Noverty Sponsor
 
 <div class="col-group">
-    <div class="col-2" style="padding:6px 3px 6px 6px;"><img src="assets/logo/logo_unknown.svg" width="100%"></div>
-    <div class="col-2" style="padding:6px 3px 6px 3px;"><img src="assets/logo/logo_unknown.svg" width="100%"></div>
-    <div class="col-2" style="padding:6px 3px 6px 3px;"><img src="assets/logo/logo_unknown.svg" width="100%"></div>
-    <div class="col-2" style="padding:6px 3px 6px 3px;"><img src="assets/logo/logo_unknown.svg" width="100%"></div>
-    <div class="col-2" style="padding:6px 3px 6px 3px;"><img src="assets/logo/logo_unknown.svg" width="100%"></div>
-    <div class="col-2" style="padding:6px 6px 6px 3px;"><img src="assets/logo/logo_unknown.svg" width="100%"></div>
+    <div class="col-2" style="padding:6px 3px 6px 6px;"><a href="https://www.twosigma.com/"><img src="assets/logo/logo_two_sigma.svg" width="100%"></a></div>
+    <div class="col-2" style="padding:6px 3px 6px 3px;"><img src="assets/logo/logo_empty.svg" width="100%"></div>
+    <div class="col-2" style="padding:6px 3px 6px 3px;"><img src="assets/logo/logo_empty.svg" width="100%"></div>
+    <div class="col-2" style="padding:6px 3px 6px 3px;"><img src="assets/logo/logo_empty.svg" width="100%"></div>
+    <div class="col-2" style="padding:6px 3px 6px 3px;"><img src="assets/logo/logo_empty.svg" width="100%"></div>
+    <div class="col-2" style="padding:6px 6px 6px 3px;"><img src="assets/logo/logo_empty.svg" width="100%"></div>
 </div>
 
 ## Institutional Sponsors
 
 <div class="col-group">
     <div class="col-6" style="padding:6px 3px 6px 6px;"><a href="https://www.nict.go.jp/en/index.html"><img src="assets/logo/logo_nict.svg" width="100%"></a></div>
-    <div class="col-6" style="padding:6px 6px 6px 3px;"><img src="assets/logo/logo_unknown.svg" width="100%"></div>
+    <div class="col-6" style="padding:6px 6px 6px 3px;"><img src="assets/logo/logo_empty.svg" width="100%"></div>
 </div>
