@@ -6,10 +6,7 @@
 </head>
 
 <body>
-    {% include menu.html %}
-    {% include submenu.html %}
-    {% include logo.html %}
-    {% include video.html %}
+    {% include menu.html %} {% include submenu.html %} {% include logo.html %} {% include video.html %}
     <div id="toppage-cnt" class="{{ page.category }}">
         {% include close.html %}
         <div id="contents-body">
@@ -18,6 +15,7 @@
             </header>
             <main id="barba-wrapper">
                 <div class="barba-container" x-category="{{ page.category }}">
+                    {% include alert.html %}
                     <article>
                         {{ content }}
                     </article>
