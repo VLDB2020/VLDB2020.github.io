@@ -41,7 +41,6 @@ All deadlines below are 5 PM Pacific Time.
 
 - Allison Holloway (Oracle, USA)
 - Altigran da Silva (Universidade Federal do Amazonas, Brazil)
-- Amit Rustagi (Viome, USA)
 - Anja Gruenheid (Google Inc., USA)
 - Azza Abouzied (New York University Abu Dhabi, United Arab Emirates)
 - Danica Porobic (Oracle, USA)
