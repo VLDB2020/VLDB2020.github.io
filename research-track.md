@@ -10,7 +10,7 @@ category: contributions
 
 ### 1. Overview
 
-<div class="updated">
+<div class="updated" x-title="Updated!">
 VLDB 2020 invites submissions of original research papers to Volume 13 of the Proceedings of the VLDB Endowment (PVLDB).
 
 The last three deadlines for submitting revision papers have been updated and are:
