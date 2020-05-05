@@ -13,6 +13,15 @@ Papers are to be formatted according to the conference's camera-ready format, as
 
 ## Submission Process
 
+<div class="updated" x-title="NOTE:">
+The last three deadlines for submitting revision papers have been updated and are:
+    <ul>
+        <li>May 20th 2020 [Papers submitted by this deadline and accepted will be presented at VLDB'20]</li>
+        <li>June 15th 2020 [Papers submitted by this deadline and accepted will be presented at VLDB'20]</li>
+        <li>July 15th 2020 [Papers submitted by this deadline and accepted will be rolled over to VLDB'21]</li>
+    </ul>
+</div>
+
 PVLDB uses a novel review process designed to promote timely submission, review, and revision of scholarly results. The process will be carried out over 12 submission deadlines during the year preceding the VLDB 2020 conference. The basic cycle will operate as follows:
 
 - A Rolling Deadline occurs on the 1st of each month, 5:00 PM Pacific Time (Daylight Savings observed according to US calendar). This deadline is strict and no extensions will be granted.

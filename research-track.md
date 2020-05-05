@@ -10,7 +10,16 @@ category: contributions
 
 ### 1. Overview
 
-VLDB 2020 invites submissions of original research papers to Volume 13 of the Proceedings of the VLDB Endowment (PVLDB). Papers accepted by June 15, 2020 will form the Research Track of the 2020 VLDB conference, together with any rollover papers from Volume 12. Papers accepted to Volume 13 after June 15, 2020 will be rolled over to the 2021 VLDB conference.
+<div class="updated" x-title="Updated!">
+VLDB 2020 invites submissions of original research papers to Volume 13 of the Proceedings of the VLDB Endowment (PVLDB).
+
+The last three deadlines for submitting revision papers have been updated and are:
+<ul>
+    <li>May 20th 2020 [Papers submitted by this deadline and accepted will be presented at VLDB'20]</li>
+    <li>June 15th 2020 [Papers submitted by this deadline and accepted will be presented at VLDB'20]</li>
+    <li>July 15th 2020 [Papers submitted by this deadline and accepted will be rolled over to VLDB'21]</li>
+</ul>
+</div>
 
 The annual VLDB conference is a premier annual international forum for database researchers, vendors, practitioners, application developers, and users. PVLDB, established in 2008, is a scholarly journal for short and timely research papers, with a journal-style review and quality assurance process. PVLDB is distinguished by a monthly submission process with rapid reviews. PVLDB issues are published regularly throughout the year. Your paper will appear in PVLDB soon after acceptance, and possibly in advance of the VLDB conference. All papers accepted in time will be published in PVLDB Vol. 13 and also presented at the VLDB 2020 conference. At least one author of every accepted paper is expected to attend the VLDB 2020 conference.
 
