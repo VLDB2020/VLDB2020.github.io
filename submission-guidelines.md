@@ -13,6 +13,15 @@ Papers are to be formatted according to the conference's camera-ready format, as
 
 ## Submission Process
 
+<div class="updated" x-title="NOTE:">
+The last three deadlines for submitting revision papers have been updated and are:
+    <ul>
+        <li>May 20th 2020 [Papers submitted by this deadline and accepted will be presented at VLDB'20]</li>
+        <li>June 15th 2020 [Papers submitted by this deadline and accepted will be presented at VLDB'20]</li>
+        <li>July 15th 2020 [Papers submitted by this deadline and accepted will be rolled over to VLDB'21]</li>
+    </ul>
+</div>
+
 PVLDB uses a novel review process designed to promote timely submission, review, and revision of scholarly results. The process will be carried out over 12 submission deadlines during the year preceding the VLDB 2020 conference. The basic cycle will operate as follows:
 
 - A Rolling Deadline occurs on the 1st of each month, 5:00 PM Pacific Time (Daylight Savings observed according to US calendar). This deadline is strict and no extensions will be granted.
@@ -20,13 +29,7 @@ PVLDB uses a novel review process designed to promote timely submission, review,
 - For each submission cycle, the CMT site will be open for submissions from the 20th of the previous month. For example, the submissions for February 2020 will be accepted from January 20th onwards.
 - Initial reviews will usually be available on the 15th of the next month following the submission deadline, and they will include notice of acceptance, rejection, or revision requests.
 - For revision requests, the reviews will be specific with regard to the expectations from the revision, and only one revision is permitted.
-
-<div class="updated">
-<ul>
-    <li>Authors may take up to three months to produce a revised submission. The last three revisions deadlines will be May 15th, June 15, and July 15 2020. June 15th is the final revision deadline for consideration to present at VLDB 2020; submissions received after this deadline will roll over to VLDB 2021.</li>
-</ul>
-</div>
-
+-Authors may take up to three months to produce a revised submission. The last three revisions deadlines will be May 15th, June 15, and July 15 2020. June 15th is the final revision deadline for consideration to present at VLDB 2020; submissions received after this deadline will roll over to VLDB 2021.
 - The final reviews of revised papers will usually be available by the 15th of the month following the revision submission.
 - While all attempts will be made to adhere to the schedule mentioned above, authors are advised that reviewing turnaround times may be subject to fluctuations.
 
