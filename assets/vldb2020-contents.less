@@ -182,6 +182,22 @@ each(@categories, {
             font-weight: bold;
             background-color: lighten(extract(@categories-color, @index), 30%);
         }
+        #toppage-cnt.@{value} .updated {
+            padding-left:15px;
+            padding-right:15px;
+            padding-bottom:10px;
+            background-color: fadein(lighten(extract(@categories-color, @index), 40%),70%);
+        }
+        #toppage-cnt.@{value} .updated::before{
+            .font-univia(900,italic);
+            color:extract(@categories-color, @index);
+            opacity:.5;
+            margin-bottom:20px;
+            text-align:right;
+            font-size:1.6em;
+            display:block;
+            content:attr(x-title);
+        }
     }
 
 );
