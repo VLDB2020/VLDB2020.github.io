@@ -15,7 +15,7 @@ VLDB 2020 invites submissions of original research papers to Volume 13 of the Pr
 
 The last three deadlines for submitting revision papers have been updated and are:
 <ul>
-    <li>May 20th 2020 [Papers submitted by this deadline and accepted will be presented at VLDB'20]</li>
+    <li>May <b>25th</b> 2020 [Papers submitted by this deadline and accepted will be presented at VLDB'20]</li>
     <li>June 15th 2020 [Papers submitted by this deadline and accepted will be presented at VLDB'20]</li>
     <li>July 15th 2020 [Papers submitted by this deadline and accepted will be rolled over to VLDB'21]</li>
 </ul>
