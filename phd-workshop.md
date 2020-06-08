@@ -37,8 +37,7 @@ Authors of accepted papers should incorporate the changes suggested by the revie
 
 > Proceedings of the VLDB 2020 PhD Workshop, August 31st, 2020. Tokyo, Japan. Copyright (C) 2020 for this paper by its authors. Copying permitted for private and academic purposes.
 
-Also, please fill out and sign the [copyright form](assets/files/VLDB_2020_PhD_Workshop_Copyright_Form.pdf) and upload it to the CMT system together with the final version of the paper by 17 June 2020.
-
+Also, please fill out and sign the <a class="no-barba" href="assets/files/VLDB_2020_PhD_Workshop_Copyright_Form.pdf">copyright form</a> and upload it to the CMT system together with the final version of the paper by 17 June 2020.
 
 ### 6. Further Information
 
