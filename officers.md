@@ -110,6 +110,10 @@ category: information
 * Steven Lynden (National Institute of Advanced Industrial Science and Technology)
 * Akiyoshi Matono (National Institute of Advanced Industrial Science and Technology)
 
+## Sponsor Website Chairs
+* Sajjad Rahnama (University of California, Davis)
+* Mohammad Sadoghi (University of California, Davis)
+
 ## Local Arrangement Committee
 
 * Jun Miyazaki (Tokyo Institute of Technology): <span class="h-font">Chair</span>
