@@ -66,7 +66,7 @@ category: forauthors
 </div>
 <div class="col-group important-dates">
     <div class="col-3 id-head">Camera-ready Deadline</div>
-    <div class="col-9 id-col">Monday, June 15, 2020, 5pm Pacific Time</div>
+    <div class="col-9 id-col">Monday, July 15, 2020, 5pm Pacific Time <span class="badge">Extended!</span></div>
 </div>
 
 ## Demonstrations

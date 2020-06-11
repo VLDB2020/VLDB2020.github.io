@@ -6,10 +6,6 @@ category: information
 
 # VLDB2020: Accepted Papers
 
-## Research Track
-
-TBD
-
 ## PhD Workshop
 
 1. Complex Event Processing in Data Management Systems for the Internet of Things, Ariane Ziehn (DFKI GmbH)
@@ -25,3 +21,11 @@ TBD
 1. Secure Data Processing at Scale, Kajetan Jeremi Maliszewski (Technische Universitat Berlin)
 1. Unsupervised Subsequence Anomaly Detection in Large Sequences, Paul Boniol (Universite de Paris)
 1. Elastic Query Processing on Function as a Service Platforms, Thomas Bodner (Hasso Plattner Institute)
+
+## Industrial Track
+
+TBD
+
+## Demo Track
+
+TBD
