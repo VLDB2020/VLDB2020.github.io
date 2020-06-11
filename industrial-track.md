@@ -29,7 +29,7 @@ All deadlines below are 5 PM Pacific Time.
 - Notification of accept/reject/revision: Thursday, April 23, 2020
 - Revision submission: Thursday, May 21, 2020
 - Final notification of accept/reject: Thursday, June 4, 2020 
-- Camera-ready deadline: Monday, June 15, 2020
+- Camera-ready deadline: Monday, July 15, 2020 <span class="badge">Extended!</span>
 
 ### 4. Industrial Track PC Chairs
 
