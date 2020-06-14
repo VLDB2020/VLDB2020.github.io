@@ -66,7 +66,7 @@ category: forauthors
 </div>
 <div class="col-group important-dates">
     <div class="col-3 id-head">Camera-ready Deadline</div>
-    <div class="col-9 id-col">Wednesday, July 15, 2020, 5pm Pacific Time <span class="badge">Extended!</span></div>
+    <div class="col-9 id-col"><s>Monday, June</s> Wednesday, July 15, 2020, 5pm Pacific Time <span class="badge">Extended!</span></div>
 </div>
 
 ## Demonstrations
@@ -90,7 +90,7 @@ Ioana Manolescu (<a href="mailto:ioana.manolescu@inria.fr">ioana.manolescu@inria
 </div>
 <div class="col-group important-dates">
     <div class="col-3 id-head">Camera-ready Deadline <span class="badge">Extended!</span></div>
-    <div class="col-9 id-col">July 15, 2020</div>
+    <div class="col-9 id-col"><s>June</s> July 15, 2020</div>
 </div>
 
 ## Tutorials
