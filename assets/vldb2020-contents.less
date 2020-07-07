@@ -119,16 +119,18 @@ each(@selectors, {
     .font-univia(400);
 }
 
-.important-dates {
+.important-dates,.whatsnew {
     border-bottom: 1px solid @color-forauthors-dark;
     margin-bottom: 5px;
 }
 
-.important-dates .id-head {
+.important-dates .id-head,
+.whatsnew .id-head {
     font-weight: @main-font-weight-strong
 }
 
-.important-dates .id-col {}
+.important-dates .id-col,
+.whatsnew .id-col {}
 
 .google-map {
     position: relative;
@@ -212,6 +214,10 @@ each(@categories, {
             border: 3px solid;
             border-color:extract(@categories-color, @index);
             background-color:fadeout(extract(@categories-color, @index), 90%);
+        }
+        #toppage-cnt.@{value} s{
+            text-decoration: line-through solid extract(@categories-color, @index);
+            color: fadeout(@color-black,50%);
         }
         #toppage-cnt.@{value} .badge {
             color: lighten(extract(@categories-color, @index), 70%);

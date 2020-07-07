@@ -6,7 +6,7 @@ category: sponsorship
 
 # VLDB2020: Sponsors
 
-## Diamond
+## Platinum Diamond
 
 <div class="col-group">
     <div class="col-12" style="padding:6px;"><a href="https://research.cygames.co.jp/"><img src="assets/logo/logo_cygames.svg" width="100%"></a></div>
@@ -45,6 +45,7 @@ category: sponsorship
      <div class="col-4" style="padding:6px 3px 6px 6px;"><a href="https://www.treasuredata.com/"><img src="assets/logo/logo_arm_td.svg" width="100%"></a></div>
     <div class="col-4" style="padding:6px 6px 6px 3px;"><a href="https://about.yahoo.co.jp/info/en/company/"><img src="assets/logo/logo_yahoo_j.svg" width="100%"></a></div>    
 </div>
+
 ## Silver
 
 <div class="col-group">

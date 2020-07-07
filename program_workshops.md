@@ -8,7 +8,7 @@ category: information
 
 ## August 31, 2020
 
-* PhD Workshop
+* [PhD Workshop](https://vldb2020.org/phd-workshop.html)
 * [Accelerating Analytics and Data Management Systems Using Modern Processor and Storage Architectures (ADMS 2020)](http://www.adms-conf.org)
 * [Applied AI for Database Systems and Applications (AIDB 2020)](https://sites.google.com/view/aidb2020)
 * [From Data Integration to Knowledge Graphs: Challenges and Experiences (DI2KG 2020)](http://di2kg.inf.uniroma3.it/2020/)
