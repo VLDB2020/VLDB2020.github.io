@@ -22,6 +22,8 @@ category: information
 
 ## Venue
 
+> Due to COVID-19, the VLDB Conference 2020 will be held as an **online virtual conference**.
+
 <ul class="fa-ul">
     <li><span class="fa-li"><i class="fas fa-hotel"></i></span><strong>Keio Plaza Hotel
             Tokyo</strong></li>
