@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Preliminary Conference Timetable
-category: conference
+category: forparticipants
 ---
 
 # VLDB2020: Preliminary Conference Timetable
