@@ -68,6 +68,7 @@
 @z-menu: 100;
 @z-submenu: 90;
 @z-submask: 80;
+@z-btnprg: 70;
 @z-bg: -100;
 @z-bgmask: -99;
 @z-social-icon:10;
@@ -97,15 +98,15 @@
     font-weight: @weight;//200,400,700,900
     font-style: @style;
 }
-@font-industry:{
+.font-industry(@weight:400,@style:normal){
     font-family: industry, sans-serif;
-    font-weight: 400;//700
-    font-style: normal;//italic
+    font-weight: @weight;//700
+    font-style: @style;//italic
 }
-@font-adso:{
+.font-adso(@weight:500,@style:normal){
     font-family: adso, sans-serif;
-    font-weight: 500;
-    font-style: normal;
+    font-weight: @weight;
+    font-style: @style;
 }
 
 //
@@ -346,9 +347,7 @@ label.menu-item>a{
 
 .menu-item {
     height: @topscrollbtn-height - @menu-lineheight;
-    font-family: adso, sans-serif;
-    font-weight: 500;
-    font-style: normal;
+    .font-adso();
     cursor: pointer;
 }
 
@@ -502,6 +501,33 @@ svg.scroll-btn #dot3 {
     margin:1rem;
     text-align:justify;
     text-justify: inter-word;
+}
+
+.program_btn{
+    position: absolute;
+    top:100vh;
+    left:0px;
+    height:40px;
+    width:180px;
+    margin-top:-70px;
+    text-align:center;
+    z-index:@z-btnprg;
+    background-color: @color-forparticipants;
+    box-shadow: 3px 3px 3px @menu-shadowcolor;
+    transition: all 0.5s;
+}
+.program_btn:hover{
+    background-color: @color-forparticipants-dark;   
+}
+
+.prgram_btn div,
+.program_btn a{
+    padding :10px;
+    line-height:40px;
+    font-size:1em;
+    color: @color-white;
+    .font-industry();
+    text-decoration: none;
 }
 
 @import "vldb2020-contents";
