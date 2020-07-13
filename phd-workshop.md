@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Research Track
+title: PhD Workshop
 category: contributions
 ---
 

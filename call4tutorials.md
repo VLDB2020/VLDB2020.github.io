@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Call for Contributions - Workshops
+title: Call for Contributions - Tutorials
 category: contributions
 ---
 
