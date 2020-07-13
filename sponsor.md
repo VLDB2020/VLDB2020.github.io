@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Out Sponsors
+title: Our Sponsors
 category: sponsorship
 ---
 
@@ -39,7 +39,7 @@ category: sponsorship
     <div class="col-3" style="padding:.5%;"><a href="https://linecorp.com/en"><img src="assets/logo/logo_line.svg" width="100%"></a></div>  
 </div>
 <div class="col-group">
-    <div class="col-3" style="padding:.5%;"><a href="#"><img src="assets/logo/logo_microsoft.svg" width="100%"></a></div>  
+    <div class="col-3" style="padding:.5%;"><a href="https://www.microsoft.com/research"><img src="assets/logo/logo_microsoft.svg" width="100%"></a></div>  
     <div class="col-3" style="padding:.5%;"><a href="https://www.mongodb.com/"><img src="assets/logo/logo_mongodb.svg" width="100%"></a></div>
     <div class="col-3" style="padding:.5%;"><a href="https://www.tencent.com/"><img src="assets/logo/logo_tencent.svg" width="100%"></a></div>
     <div class="col-3" style="padding:.5%;"><a href="http://www.toshiba.co.jp/worldwide/index.html"><img src="assets/logo/logo_toshiba.svg" width="100%"></a></div>

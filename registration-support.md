@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Out Sponsors
+title: Registration Support
 category: forparticipants
 ---
 
