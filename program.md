@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: program
 title: VLDB2020 Program
 category: forparticipants
 ---
