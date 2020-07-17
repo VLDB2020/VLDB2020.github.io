@@ -1,9 +1,12 @@
 (() => {
     const onLoadFn = () => {
         if (document.querySelector("#programTimeCircle > svg") !== null) {
-
+            let timer = null;
             document.getElementById("CircleBody").style.transformOrigin = "297.637795px 297.637795px";
             let start = () => {
+                if (!document.getElementById("CircleBody")) {
+                    clearInterval(timer);
+                }
                 var h = (new Date()).getUTCHours();
                 var m = (new Date()).getUTCMinutes();
                 var r = (h * 60 + m) * (360 / (24 * 60));
@@ -11,7 +14,7 @@
                 r = o + r > 360 ? o + r - 360 : o + r;
                 document.getElementById("CircleBody").style.transform = 'rotate(-' + r + 'deg)';
             }
-            setInterval(start, 6000);
+            timer = setInterval(start, 6000);
             start();
         }
         if (document.getElementById("programFrame") !== null) {
