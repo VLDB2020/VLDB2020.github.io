@@ -1,6 +1,8 @@
 (() => {
     const onLoadFn = () => {
         if (document.querySelector("#programTimeCircle > svg") !== null) {
+
+            document.getElementById("CircleBody").style.transformOrigin = "297.637795px 297.637795px";
             let start = () => {
                 var h = (new Date()).getUTCHours();
                 var m = (new Date()).getUTCMinutes();
