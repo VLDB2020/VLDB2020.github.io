@@ -1,6 +1,6 @@
 (() => {
     const onLoadFn = () => {
-        if (document.getElementById("programTimeCircle") !== null) {
+        if (document.querySelector("#programTimeCircle > svg") !== null) {
             let start = () => {
                 var h = (new Date()).getUTCHours();
                 var m = (new Date()).getUTCMinutes();
