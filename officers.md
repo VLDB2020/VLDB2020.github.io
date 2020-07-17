@@ -103,6 +103,14 @@ category: information
 * Atsuyuki Morishima (University of Tsukuba)
 * Nobutaka Suzuki (University of Tsukuba)
 
+## Technical Committee
+- Oliver Kennedy (University at Buffalo): <span class="h-font">Chair</span>
+- Jun Miyazaki (Tokyo Institute of Technology): <span class="h-font">Chair</span>
+- Kazuo Goda (University of Tokyo)
+- Shingo Otsuka (Kanagawa Institute of Technology)
+- Kento Sugiura (Nagoya University)
+
+
 ## Web and SNS Committee 
 
 * Shohei Yokoyama (Tokyo Metropolitan University): <span class="h-font">Chair</span>
@@ -116,8 +124,7 @@ category: information
 
 ## Local Arrangement Committee
 
-* Jun Miyazaki (Tokyo Institute of Technology): <span class="h-font">Chair</span>
-* Masato Oguchi (Ochanomizu University)
+* Masato Oguchi (Ochanomizu University): <span class="h-font">Chair</span>
 * Masashi Toyoda (University of Tokyo)
 * Saneyasu Yamaguchi (Kogakuin University)
 * Chiemi Watanabe (Tsukuba University of Technology)
