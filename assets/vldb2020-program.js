@@ -1,6 +1,14 @@
 (() => {
     const onLoadFn = () => {
         if (document.getElementById("programTimeCircle") !== null) {
+            let start = () => {
+                var h = (new Date()).getUTCHours();
+                var m = (new Date()).getUTCMinutes();
+                var r = (h * 60 + m) * (360 / (24 * 60));
+                var o = 9 * (360 / 24);
+                r = o + r > 360 ? o + r - 360 : o + r;
+                document.getElementById("CircleBody").style.transform = 'rotate(-' + r + 'deg)';
+            }
             setInterval(start, 6000);
             start();
         }

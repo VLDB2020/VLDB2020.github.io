@@ -1,15 +1,6 @@
-<svg id="programTimeCircle" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 595.27559 595.27559">
-<script>
-function start(){
-    var h = (new Date()).getUTCHours();
-    var m = (new Date()).getUTCMinutes();
-    var r = (h*60 + m)*(360/(24*60));
-    var o = 9 * (360/24);
-    r = o + r > 360 ? o + r - 360 : o + r;
-     document.getElementById("CircleBody").style.transform = 'rotate(-' + r + 'deg)';
-}
-</script>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 595.27559 595.27559">
 <defs><style>
+/*
 #CircleBody {
     transform-origin: 297.637795px 297.637795px;
     animation-duration: 60s;
@@ -19,8 +10,6 @@ function start(){
     animation-iteration-count: infinite;
     animation-play-state: paused;
 }
-
-/*
 #CircleBody:hover{
     animation-play-state: running;
     cursor:progress;
