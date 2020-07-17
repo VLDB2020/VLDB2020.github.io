@@ -1,0 +1,138 @@
+#programFrame{
+    font-size:.8em;
+}
+#programFrame>div {
+    padding: .5em;
+}
+@color-white: #f3f3f2;
+@color-black: #180614;
+@blocks: Workshop, Block1, Block2, Block3, Block4;
+@bg-colors: #4c5f84,#E9531A,#F5B616,#2696D4,#78B32B;
+.Block(){
+    text-shadow: 1px 0 5px black;
+    font-family: museo, serif;
+    font-weight: 900;
+    font-style: normal;
+}
+each(@blocks,{
+    #programFrame .@{value} {
+        background-color: extract(@bg-colors, @index);
+        color: @color-white;
+        .Block;
+    }
+});
+
+@color-oral: #a1d7f0;
+@color-demo: #ee90b3;
+@color-tutrial: #3cd4b4;
+@color-prenary: #4365db;
+@color-japan:#e60033;
+@color-sponsor:#a7d28d;
+@color-round-table:#cab8d9;
+@color-party:#9a0d7c;
+@color-free:#4e454a;
+@color-time:#bcbace;
+.font-museo(@weight:100,@style:normal){
+    font-family: museo, serif;
+    font-weight: @weight;//300,500,700,900
+    font-style: @style;//italic
+}
+.font-univia(@weight:400,@style:normal){
+    font-family: univia-pro, sans-serif;
+    font-weight: @weight;//200,400,700,900
+    font-style: @style;
+}
+#programFrame{
+    text-align:start;
+    .time{
+        background-color:@color-time;
+        .font-univia
+    }
+    .A ,.B,.C,.D,.E,.F{
+        background-color:@color-oral;
+        .font-museo(700);
+        div.sessionId{
+            background-color:darken(@color-oral,20%);
+            text-align:center;
+        }
+    }
+    .A.repeat ,.B.repeat,.C.repeat,.D.repeat,.E.repeat,.F.repeat{
+        background-color: lighten(@color-oral,8%);
+        .font-museo(300,italic);
+    }
+    .a,.b,.c,.d,.e{
+        background-color:@color-demo;
+        .font-museo(700);
+        div.sessionId{
+            background-color:darken(@color-demo,20%);
+            text-align:center;
+        }
+    }
+    .a.repeat,.b.repeat,.c.repeat,.d.repeat,.e.repeat{
+        background-color:lighten(@color-demo,10%);
+        .font-museo(300,italic);
+    }
+    .T{
+        background-color:@color-tutrial;
+        .font-museo(700);
+        div.sessionId{
+            background-color:darken(@color-tutrial,20%);
+            text-align:center;
+        }
+    }
+    .P{
+        background-color:@color-prenary;
+        color: @color-white;
+        .font-museo(700);
+        div.sessionId{
+            background-color:darken(@color-prenary,20%);
+            text-align:center;
+        }
+    }
+    .J{
+        background-color:@color-japan; 
+        color: white;
+        .font-museo(700);
+        div.sessionId{
+            background-color:white;
+            color:@color-japan;
+            text-align:center;
+        }
+    }
+    .S{
+        background-color:@color-sponsor;
+        color: @color-black;
+        .font-museo(700);
+        div.sessionId{
+            background-color:darken(@color-sponsor,20%);
+            text-align:center;
+        }
+    }
+    .R,.r{
+        background-color:@color-round-table;
+        color: @color-black;
+        .font-museo(700);
+        div.sessionId{
+            background-color:darken(@color-round-table,20%);
+            text-align:center;
+        }
+    }
+    .Q{
+        background-color:@color-party;
+        color: @color-white;
+        .font-museo(700);
+        div.sessionId{
+            background-color:darken(@color-party,20%);
+            text-align:center;
+        }
+    }
+    .Z{
+        background-color:@color-free;
+        color: @color-white;
+        .font-museo(300);
+        div.sessionId{
+            background-color:darken(@color-free,20%);
+            text-align:center;
+        }
+    }
+}
