@@ -1,5 +1,9 @@
 (() => {
     const onLoadFn = () => {
+        if (document.getElementById("programTimeCircle") !== null) {
+            setInterval(start, 6000);
+            start();
+        }
         if (document.getElementById("programFrame") !== null) {
             const frBreak = 2;
             const frSession = 3;
