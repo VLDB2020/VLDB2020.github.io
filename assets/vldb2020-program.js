@@ -109,20 +109,12 @@
                         url_inquiry: (s.inherit == "" || s.url_inquiry != "") ? s.url_inquiry : h.url_inquiry,
                     };
                 });
-                console.log(session);
-                for (let slot in roomIdx) {
-                    let nRoom = roomIdx[slot];
-                    if (nRoom == 1) {
-                        console.log("Prenary: ", slot, nRoom);
-                    }
-                }
                 let gridIdx = [];
                 let templateRows = [];
                 let i = 1;
                 let block = "";
                 let extra = [];
                 timeslot.forEach((t, idx) => {
-                    console.log(t);
                     if (block != t.block) {
                         if (extra.length != 0) {
                             extra.push({
@@ -155,6 +147,16 @@
                     templateRows.push(frSession + "fr");
                     i++;
                 });
+                if (i != 0) {
+                    extra.push({
+                        gridRowStart: extra[extra.length - 1].gridRowEnd,
+                        gridRowEnd: i,
+                        gridColumnStart: 1,
+                        gridColumnEnd: 2,
+                        class: extra[extra.length - 1].title,
+                        title: ""
+                    });
+                }
                 console.log("maxParallel", maxParallel);
                 const nSlots = Object.keys(series).length;
                 console.log("numberOfSlots", nSlots);
