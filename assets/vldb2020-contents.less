@@ -174,7 +174,7 @@ each(@selectors, {
     font-weight: 400;
     line-height: 1;
     margin: 0px;
-    padding: .2em .8em;
+    padding: .8em .8em;
     text-decoration: none;
     text-align: center;
     text-transform: uppercase;
@@ -193,7 +193,8 @@ each(@colors,{
         transition: all 150ms ease-in-out;
         
         &:hover {
-          box-shadow: 0 0 10px 0 extract(@colors-color, @index) inset, 0 0 10px 4px extract(@colors-color, @index);
+            color: extract(@colors-color, @index);
+            box-shadow: 0 0 10px 0 extract(@colors-color, @index) inset, 0 0 10px 4px extract(@colors-color, @index);
         }
       }
       
