@@ -7,6 +7,6 @@ category: forparticipants
 # VLDB2020: Conference Program
 
 
-* [VLDB2020 Preliminary Conference Timetable](program_timetable.html)
+* [VLDB2020 Conference Time Zone Conversion Chart](program_timetable.html)
 
 <div id="programFrame"></div>
