@@ -282,6 +282,8 @@
                     div.style.gridRowEnd = gridIdx[s.timeslotIdx] + 2 + ((s.span > 2) ? (s.span - 1) * 2 : 0);
                     div.style.gridColumnStart = 1 + s.roomIdx;
                     div.classList.add(s.room);
+                    div.classList.add('session');
+
                     if (s.inherit != "") {
                         div.classList.add("repeat");
                     }
@@ -301,8 +303,11 @@
                     span.appendChild(document.createTextNode(s.id));
                     div.appendChild(span);
                     div.appendChild(document.createTextNode(" " + s.title));
+                    let dur = document.createElement("div");
+                    dur.classList.add("sessionDuration");
+                    dur.appendChild(document.createTextNode(moment.duration(Number(s.duration), "minutes").humanize(false, { m: 500 })));
+                    div.appendChild(dur);
                     base.appendChild(div);
-
                     let mask = document.createElement("div");
                     mask.id = "detail_" + s.id;
                     mask.style.gridRowStart = blockMask[s.slot].gridRowStart;

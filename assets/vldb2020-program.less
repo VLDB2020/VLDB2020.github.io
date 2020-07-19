@@ -118,7 +118,7 @@ each(@blocks,{
             margin: 1em 0;
             display: inline-flex;
             flex-wrap: wrap;
-            gap: 1em;
+                gap: 1em;
             div.paper{
                 flex:1;
                 div.button{
@@ -210,5 +210,13 @@ each(@blocks,{
     div:nth-child(2){
         margin:0 1em;
         .font-industry(); 
+    }
+}
+.session{
+    text-align:start;
+    .sessionDuration{
+        .font-industry();
+        color:unset;
+        opacity:70%; 
     }
 }
