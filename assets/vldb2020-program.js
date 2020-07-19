@@ -282,7 +282,7 @@
                     div.style.gridRowEnd = gridIdx[s.timeslotIdx] + 2 + ((s.span > 2) ? (s.span - 1) * 2 : 0);
                     div.style.gridColumnStart = 1 + s.roomIdx;
                     div.classList.add(s.room);
-                    div.classList.add('session');
+                    div.classList.add('cell');
 
                     if (s.inherit != "") {
                         div.classList.add("repeat");
