@@ -20,6 +20,7 @@ each(@blocks,{
     #programFrame .@{value} {
         background-color: extract(@bg-colors, @index);
         color: @color-white;
+        size:1.5em;
         .Block;
     }
 });
@@ -61,7 +62,6 @@ each(@blocks,{
     font-weight: @weight;
     font-style: @style;
 }
-
 
 .session(@color:@color-white,@bgcolor:@color-free,@weight:500,@style:normal){
     background-color:@bgcolor;
@@ -200,4 +200,15 @@ each(@blocks,{
 }
 .mask{
     display:none;
+}
+.blockFolder{
+    display:flex;
+    font-size:1.2em;
+    div:first-child {
+        margin-right: auto;
+    }
+    div:nth-child(2){
+        margin:0 1em;
+        .font-industry(); 
+    }
 }

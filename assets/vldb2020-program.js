@@ -1,11 +1,13 @@
 (() => {
+    let timers = {};
+    const DETAIL = false;
     const onLoadFn = () => {
         if (document.querySelector("#programTimeCircle > svg") !== null) {
-            let timer = null;
             document.getElementById("CircleBody").style.transformOrigin = "297.637795px 297.637795px";
             let start = () => {
                 if (!document.getElementById("CircleBody")) {
-                    clearInterval(timer);
+                    clearInterval(timers["circle"]);
+                    timers["circle"] = null;
                     return;
                 }
                 var h = (new Date()).getUTCHours();
@@ -15,20 +17,40 @@
                 r = o + r > 360 ? o + r - 360 : o + r;
                 document.getElementById("CircleBody").style.transform = 'rotate(-' + r + 'deg)';
             }
-            timer = setInterval(start, 6000);
+            timers["circle"] = setInterval(start, 6000);
             start();
+        } else {
+            if (timers["circle"] && timers["circle"] != null) {
+                console.log("Clear timer for disc");
+                clearInterval(timers["circle"]);
+                timers["circle"] = null;
+            }
         }
         if (document.getElementById("programFrame") !== null) {
             const frBreak = 2;
             const frSession = 3;
             const frTime = 1;
-            var link = document.createElement('link');
-            link.rel = 'stylesheet/less';
-            link.type = 'text/css';
-            link.href = '/assets/vldb2020-program.less';
-            document.getElementsByTagName('HEAD')[0].appendChild(link);
-            less.sheets.push(document.querySelector('link[href="/assets/vldb2020-program.less"]'));
-            less.refresh();
+            let start = () => {
+                let countdowns = document.querySelectorAll(".countdown");
+                countdowns.forEach((cd) => {
+                    let t = moment(Number(cd.getAttribute("x-timestamp")));
+                    var duration = moment.duration(t.diff(moment())).humanize(true, { M: 12, w: 8, d: 28, h: 24, m: 60, s: 10 });
+                    t.innerHTML = duration;
+                });
+            }
+            timers["session"] = setInterval(start, 30000);
+            if (!document.getElementById('programFrameLess')) {
+                var link = document.createElement('link');
+                link.id = 'programFrameLess';
+                link.rel = 'stylesheet/less';
+                link.type = 'text/css';
+                link.href = '/assets/vldb2020-program.less';
+                document.getElementsByTagName('HEAD')[0].appendChild(link);
+                less.sheets.push(document.querySelector('link[href="/assets/vldb2020-program.less"]'));
+                less.refresh();
+            } else {
+                console.log('Skip load .less for a session table');
+            }
             let files = [
                 'https://s.vldb2020.org/VLDB2020session.json',
                 'https://s.vldb2020.org/VLDB2020timeslot.json',
@@ -46,12 +68,11 @@
                 let timeslotIdx = {}
                 const timeslot = response[1].map((i, idx) => {
                     timeslotIdx[i.slot] = idx;
-                    return { slot: i.slot, start: Date.parse(i.start), block: i.block }
+                    return { slot: i.slot, start: Date.parse(i.start), day: i.day, block: i.block }
                 });
                 let papers = {};
                 response[2].forEach((p) => {
                     if (!papers.hasOwnProperty(p.session)) {
-                        console.log("add session", p.session);
                         papers[p.session] = [];
                     }
                     papers[p.session].push(p);
@@ -59,8 +80,13 @@
                 let showModal = (id) => {
                     document.getElementById("detail_" + id).style.display = "block";
                     let top = document.getElementById("detail_" + id).getBoundingClientRect().top;
-                    document.getElementById("contents-body").scrollTo(0, document.getElementById("contents-body").scrollTop + top - 120);
-                    console.log("Scroll to ", top);
+                    //document.getElementById("contents-body").scrollTo(0, document.getElementById("contents-body").scrollTop + top - 120);
+                    anime({
+                        targets: '#contents-body',
+                        scrollTop: document.getElementById("contents-body").scrollTop + top - 120,
+                        duration: 1500,
+                        easing: 'easeInOutSine'
+                    });
                 };
                 let hideModal = (id) => {
                     document.getElementById(id).style.display = "none";
@@ -151,7 +177,7 @@
                                 gridRowEnd: i,
                                 gridColumnStart: 1,
                                 gridColumnEnd: 2,
-                                class: extra[extra.length - 1].title,
+                                class: extra[extra.length - 1].class,
                                 title: "",
                                 anchor: false
                             });
@@ -159,13 +185,16 @@
                         }
                         templateRows.push(frBreak + "fr");
                         i++;
+                        let st = moment(t.start);
+                        let date = st.format("dddd, MMMM Do YYYY, h:mm a");
+                        var duration = moment.duration(st.diff(moment())).humanize(true, { M: 12, w: 8, d: 28, h: 24, m: 60, s: 60 });
                         extra.push({
                             gridRowStart: i,
                             gridRowEnd: i + 1,
                             gridColumnStart: 1,
                             gridColumnEnd: maxParallel + 2,
                             class: t.block,
-                            title: t.block,
+                            title: "<div>" + t.day + " " + t.block + "</div><div>(" + date + ")</div><div class=\"countdown\" x-timestamp=\"" + t.start + "\">Start " + duration + "</div>",
                             anchor: true
                         });
                         templateRows.push(frTime + "fr");
@@ -192,7 +221,7 @@
                         gridRowEnd: i,
                         gridColumnStart: 1,
                         gridColumnEnd: 2,
-                        class: extra[extra.length - 1].title,
+                        class: extra[extra.length - 1].class,
                         title: ""
                     });
                     stackSlot = [];
@@ -212,14 +241,16 @@
                     div.style.gridRowEnd = e.gridRowEnd;
                     div.style.gridColumnStart = e.gridColumnStart;
                     div.style.gridColumnEnd = e.gridColumnEnd;
-                    //div.style.backgroundColor = ;
                     div.classList.add(e.class);
                     if (e.anchor) {
                         let anchor = document.createElement("a");
-                        anchor.setAttribute("neme", e.title);
+                        anchor.setAttribute("neme", e.class);
                         div.appendChild(anchor);
                     }
-                    div.appendChild(document.createTextNode((e.title)));
+                    let t = document.createElement("div");
+                    t.classList.add("blockFolder");
+                    t.innerHTML = e.title;
+                    div.appendChild(t);
                     base.appendChild(div);
                 });
                 let ts = {};
@@ -232,7 +263,8 @@
                     div.classList.add("time");
                     let st = moment(t.start);
                     let utc = moment.utc(t.start);
-                    let str = st.format("dddd, MMMM Do YYYY, h:mm a Z") + " [" + utc.format("h:mm a") + " UTC]";
+                    let date = st.format("DD") == utc.format("DD") ? "" : utc.format("ddd, MMM Do, ");
+                    let str = st.format("dddd, MMMM Do YYYY, h:mm a") + " [" + date + utc.format("h:mm a") + " UTC]";
                     div.appendChild(document.createTextNode(str));
                     ts[idx] = {
                         moment: st,
@@ -258,10 +290,12 @@
                     } else {
                         div.style.gridColumnEnd = maxParallel + 2;
                     }
-                    div.addEventListener("click", (e) => {
-                        showModal(e.currentTarget.id);
-                        e.stopPropagation();
-                    });
+                    if (DETAIL) {
+                        div.addEventListener("click", (e) => {
+                            showModal(e.currentTarget.id);
+                            e.stopPropagation();
+                        });
+                    }
                     let span = document.createElement("div");
                     span.classList.add("sessionId");
                     span.appendChild(document.createTextNode(s.id));
@@ -284,11 +318,12 @@
                     i.setAttribute("target", "detail_" + s.id);
                     i.classList.add("fas");
                     i.classList.add("fa-window-close");
-                    i.addEventListener("click", (e) => {
-                        console.log(e.target.getAttribute("target"));
-                        hideModal(e.target.getAttribute("target"));
-                        e.stopPropagation();
-                    });
+                    if (DETAIL) {
+                        i.addEventListener("click", (e) => {
+                            hideModal(e.target.getAttribute("target"));
+                            e.stopPropagation();
+                        });
+                    }
                     d.appendChild(i);
                     maskTime.appendChild(d);
                     maskTime.appendChild(document.createElement("div").appendChild(document.createTextNode(ts[s.slot].str + " " + s.duration + " minutes")));
@@ -306,7 +341,6 @@
                         description += "<p><b>Announce:</b> " + s.announce + "</p>";
                     }
                     maskDescription.innerHTML = description;
-                    maskDescription.appendChild(document.createTextNode("Hello" + s.announce));
 
                     let maskButtons = document.createElement("div");
                     //"url_conference":"#","url_chat":"#","url_inquiry"
@@ -367,11 +401,13 @@
                         });
                         mask.appendChild(maskPapers);
                     } else {
-                        console.log("No Paper", s.id);
+                        //console.log("No Paper", s.id);
                     }
-                    mask.addEventListener("click", (e) => {
-                        e.stopPropagation();
-                    });
+                    if (DETAIL) {
+                        mask.addEventListener("click", (e) => {
+                            e.stopPropagation();
+                        });
+                    }
                     maskStock.push(mask);
                 }
                 maskStock.forEach((mask) => {
@@ -379,6 +415,12 @@
                     base.appendChild(mask);
                 })
             });
+        } else {
+            if (timers["session"] && timers["session"] != null) {
+                console.log("Clear timer for session table");
+                clearInterval(timers["session"]);
+                timers["session"] = null;
+            }
         }
     };
     Barba.Dispatcher.on('transitionCompleted', onLoadFn);
