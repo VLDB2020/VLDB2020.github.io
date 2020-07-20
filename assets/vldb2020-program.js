@@ -271,7 +271,7 @@
                     let date = st.format("DD") == utc.format("DD") ? "" : utc.format("ddd, MMM Do, ");
                     let str = st.format("dddd, MMMM Do YYYY, h:mm a") + " [" + date + utc.format("h:mm a") + " UTC]";
                     div.appendChild(document.createTextNode(str));
-                    ts[idx] = {
+                    ts[t.slot] = {
                         moment: st,
                         utc: utc,
                         str: str
