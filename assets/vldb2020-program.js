@@ -87,7 +87,7 @@
                     });
                     tl.add({
                         targets: "#detail_" + id,
-                        opacity: '100%',
+                        opacity: ['0%', '100%'],
                     }).add({
                         targets: '#contents-body',
                         scrollTop: document.getElementById("contents-body").scrollTop + top - 120,
