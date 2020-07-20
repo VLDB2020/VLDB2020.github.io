@@ -81,11 +81,16 @@
                     document.getElementById("detail_" + id).style.display = "block";
                     let top = document.getElementById("detail_" + id).getBoundingClientRect().top;
                     //document.getElementById("contents-body").scrollTo(0, document.getElementById("contents-body").scrollTop + top - 120);
-                    anime({
+                    var tl = anime.timeline({
+                        easing: 'easeInOutSine',
+                        duration: 750
+                    });
+                    tl.add({
+                        targets: "#detail_" + id,
+                        opacity: '100%',
+                    }).add({
                         targets: '#contents-body',
                         scrollTop: document.getElementById("contents-body").scrollTop + top - 120,
-                        duration: 1500,
-                        easing: 'easeInOutSine'
                     });
                 };
                 let hideModal = (id) => {
