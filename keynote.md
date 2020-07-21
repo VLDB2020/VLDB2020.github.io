@@ -49,7 +49,7 @@ TBD
 </div>
 <div class="col-group important-dates">
     <div class="col-2 id-head">Repeat</div>
-    <div class="col-10 id-col timeUTC">2020-09-03T23:00:00Z</div>
+    <div class="col-10 id-col timeUTC">2020-09-04T00:00:00Z</div>
 </div>
 
 ### Abstract
