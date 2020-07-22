@@ -53,8 +53,8 @@
                     cd.innerHTML = "Start " + createDuration(Number(cd.getAttribute("x-timestamp")));
                 });
                 let nowTime = document.querySelectorAll(".nowTime");
+                let gap = Number(document.getElementById("utcOffset").value) * 60;
                 nowTime.forEach((nt) => {
-                    let gap = Number(document.getElementById("utcOffset").value) * 60;
                     nt.innerHTML = moment().utcOffset(gap).format("dddd, MMMM Do YYYY, h:mm a");
                 });
             }
@@ -68,11 +68,11 @@
                 });
                 //e.stopPropagation();
             });
-            timers["session"] = setInterval(start, 30000);
-            start();
             if (utcOffset) {
                 utcOffset.value = (moment().utcOffset()) / 60;
             }
+            timers["session"] = setInterval(start, 30000);
+            start();
             if (!document.getElementById('programFrameLess')) {
                 var link = document.createElement('link');
                 link.id = 'programFrameLess';
