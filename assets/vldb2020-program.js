@@ -1,6 +1,6 @@
 (() => {
     let timers = {};
-    const DETAIL = true;
+    const DETAIL = false;
     const onLoadFn = () => {
         if (document.querySelector("#programTimeCircle > svg") !== null) {
             document.getElementById("CircleBody").style.transformOrigin = "297.637795px 297.637795px";
