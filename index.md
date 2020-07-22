@@ -16,7 +16,7 @@ VLDB is a premier annual international forum for data management and database re
 ## VLDB 2020 Updates
 
 <div class="col-group whatsnew">
-    <div class="col-2 id-head">July 23th</div>
+    <div class="col-2 id-head">July 22nd</div>
     <div class="col-10 id-col"><span class="badge"><i class="far fa-newspaper"></i></span> <a href="program.html">Program Structure</a> is now available.</div>
 </div>
 <div class="col-group whatsnew">
