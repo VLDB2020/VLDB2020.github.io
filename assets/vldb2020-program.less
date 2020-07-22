@@ -1,0 +1,241 @@
+#programFrame{
+    font-size:.8em;
+    line-height: 1.5em;
+}
+#programFrame>div {
+    padding: .5em;
+}
+
+@color-white: #f3f3f2;
+@color-black: #180614;
+@blocks: Workshop, Block1, Block2, Block3, Block4;
+@bg-colors: #4c5f84,#E9531A,#F5B616,#2696D4,#78B32B;
+.Block(){
+    text-shadow: 1px 0 5px black;
+    font-family: museo, serif;
+    font-weight: 900;
+    font-style: normal;
+}
+each(@blocks,{
+    #programFrame .@{value} {
+        background-color: extract(@bg-colors, @index);
+        color: @color-white;
+        size:1.5em;
+        .Block;
+    }
+});
+@color-oral: #a1d7f0;
+@color-demo: #ee90b3;
+@color-tutrial: #3cd4b4;
+@color-vldbj: #716246;
+@color-prenary: #4365db;
+@color-japan:#e60033;
+@color-sponsor:#a7d28d;
+@color-round-table:#cab8d9;
+@color-party:#9a0d7c;
+@color-workshop:#f8f4e6;
+@color-free:#4e454a;
+@color-time:#bcbace;
+
+
+.font-museo(@weight:100,@style:normal,@color:@color-white){
+    color:@color;
+    font-family: museo, serif;
+    font-weight: @weight;//300,500,700,900
+    font-style: @style;//italic
+};
+.font-univia(@weight:400,@style:normal,@color:@color-white){
+    color:@color;
+    font-family: univia-pro, sans-serif;
+    font-weight: @weight;//200,400,700,900
+    font-style: @style;
+};
+
+.font-industry(@weight:400,@style:normal,@color:@color-white){
+    color:@color;
+    font-family: industry, sans-serif;
+    font-weight: @weight;//700
+    font-style: @style;//italic
+}
+.font-adso(@weight:500,@style:normal,@color:@color-white){
+    color:@color;
+    font-family: adso, sans-serif;
+    font-weight: @weight;
+    font-style: @style;
+}
+
+.session(@color:@color-white,@bgcolor:@color-free,@weight:500,@style:normal){
+    background-color:@bgcolor;
+    .font-museo(@weight,@style,@color);
+    div.sessionId{
+        background-color:darken(@bgcolor,20%);
+        text-align:center;
+    };
+
+    &:hover{
+        background-color:saturate(@bgcolor,30%);
+        cursor: pointer;
+    };
+    &.repeat{
+        background-color:lighten(@bgcolor,10%);
+        .font-museo(300,italic,@color);
+    }
+    &.mask{
+        &:hover{
+            cursor:unset;
+        }
+        .time{
+            padding:1em;
+            margin-bottom: 1em;
+        }
+        .title{
+            padding:1em 2em;
+            border-top:2px @color solid;
+            border-left:2px @color solid;
+            border-right:2px @color solid;
+            background-color:darken(@bgcolor,20%);
+            border-radius: 1em 1em 0 0;
+        }
+        .description{
+            padding:2em;
+            border-left:2px @color solid;
+            border-right:2px @color solid;
+            background-color:desaturate(@bgcolor,30%);
+        }
+        .buttons{
+            padding:2em;
+            border-bottom:2px @color solid;
+            border-left:2px @color solid;
+            border-right:2px @color solid;
+            display:flex;
+            border-radius: 0 0 1em 1em;
+            background-color:screen(@bgcolor,#aaa);
+            a{
+                flex-grow:1;
+                margin: 6px;
+            }
+        }
+        .paperbox{
+            margin: 1em 0;
+            display: inline-flex;
+            flex-wrap: wrap;
+                gap: 1em;
+            div.paper{
+                flex:1;
+                div.button{
+                    border-top:2px @color solid;
+                    border-left:2px @color solid;
+                    border-right:2px @color solid;
+                    border-bottom:unset;
+                    background-color:screen(@bgcolor,#aaa);
+                    border-radius: 1em 1em 0 0;
+                    padding:1em;
+                    display:flex;
+                    a.btn{
+                        flex-grow:1;
+                    }
+                }
+                div.title{
+                    border-top:unset;
+                    border-left:2px @color solid;
+                    border-right:2px @color solid;
+                    border-bottom:unset;
+                    border-radius: unset;
+                    background-color:darken(@bgcolor,20%);
+                    padding:1em .5em;
+                }
+                div.abstract{
+                    border-top:unset;
+                    border-bottom:2px @color solid;
+                    border-left:2px @color solid;
+                    border-right:2px @color solid;
+                    background-color:desaturate(@bgcolor,30%);
+                    border-radius: 0 0 1em 1em;
+                    padding:1em .5em;
+                    height:auto;
+                }
+            }    
+        }
+    }
+    
+};
+
+.NONE{
+    display:none;
+}
+._1,._2,._3,._4,._5,._6,._7{
+    .session(@color-black,@color-workshop);
+}
+.A,.B,.C,.D,.E,.F{
+    .session(@color-black,@color-oral);
+};
+.a,.b,.c,.d,.e{
+    .session(@color-black,@color-demo);
+};
+.T{
+    .session(@color-white,@color-tutrial);
+}
+.P{
+    .session(@color-white,@color-prenary,700);
+}
+.V{
+    .session(@color-white,@color-vldbj);
+}
+.J{
+    .session(@color-white,@color-japan,900);
+}
+.r,.R{
+    .session(@color-black,@color-round-table);
+}
+.Q{
+    .session(@color-white,@color-party);
+}
+.S{
+    .session(@color-black,@color-sponsor);
+}
+.Z{
+    .session(@color-white,@color-free);
+}
+#timeZone{
+    background-color:lighten(@color-free,50%);
+    .nowTime{
+        background-color: @color-free;
+        padding:1px;
+        .font-industry();      
+    }
+}
+.time{
+    background-color: @color-free;
+    .font-industry();   
+    display:flex;
+    font-size:1.2em;
+    div:first-child {
+        margin-right: auto;
+        cursor: pointer;
+    }
+}
+.mask{
+    display:none;
+    opacity :0;
+    z-index:60;
+}
+.blockFolder{
+    display:flex;
+    font-size:1.2em;
+    div:first-child {
+        margin-right: auto;
+    }
+    div:nth-child(2){
+        margin:0 1em;
+        .font-industry(); 
+    }
+}
+.cell{
+    z-index:50;
+    text-align:start;
+    .sessionDuration{
+        .font-industry();
+        color:unset;
+        opacity:70%; 
+    }
+}

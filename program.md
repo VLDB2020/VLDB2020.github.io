@@ -1,11 +1,18 @@
 ---
 layout: default
-title: VLDB2020 Program
+title: VLDB2020 Program Structure
 category: forparticipants
 ---
 
-# Program
+# VLDB2020: Conference Program Structure
 
-> Currently, only preliminary conference timetable are published. Please check this website regularly for updates.
 
-* [VLDB2020 Preliminary Conference Timetable](program_timetable.html)
+* [VLDB2020 Conference Time Zone Conversion Chart](program_timetable.html)
+
+
+<div id="timeZone">
+The Estimated UTC Offset is <input type="number" id="utcOffset" name="utcOffset" value="0" min="-12" max="14" step="0.25"> hours.<br>
+Your local time: <span class="nowTime"></span>
+</div>
+
+<div id="programFrame"></div>
