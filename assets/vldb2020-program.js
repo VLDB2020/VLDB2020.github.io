@@ -65,7 +65,6 @@
                 dateTime.forEach((div) => {
                     let st = Number(div.getAttribute('x-timestamp'));
                     div.innerHTML = createDateTimeString(st, div.hasAttribute('x-timeutc') && div.getAttribute('x-timeutc') == 'yes');
-                    console.log(div.innerHTML);
                 });
                 //e.stopPropagation();
             });

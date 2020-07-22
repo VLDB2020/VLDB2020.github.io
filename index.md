@@ -17,7 +17,7 @@ VLDB is a premier annual international forum for data management and database re
 
 <div class="col-group whatsnew">
     <div class="col-2 id-head">July 23th</div>
-    <div class="col-10 id-col"><span class="badge"></span> <a href="program.html">Program Structure</a> is now available.</div>
+    <div class="col-10 id-col"><span class="badge"><i class="far fa-newspaper"></i></span> <a href="program.html">Program Structure</a> is now available.</div>
 </div>
 <div class="col-group whatsnew">
     <div class="col-2 id-head">July 20th</div>
@@ -25,7 +25,7 @@ VLDB is a premier annual international forum for data management and database re
 </div>
 <div class="col-group whatsnew">
     <div class="col-2 id-head">July 07th</div>
-    <div class="col-10 id-col"> <a href="program_timetable.html">Conference Time Zone Conversion Chart</a> is now available.</div>
+    <div class="col-10 id-col"><span class="badge"><i class="far fa-clock"></i></span><a href="program_timetable.html">Conference Time Zone Conversion Chart</a> is now available.</div>
 </div>
 <div class="col-group whatsnew">
     <div class="col-2 id-head">June 30th</div>
