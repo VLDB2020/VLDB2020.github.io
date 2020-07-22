@@ -30,15 +30,50 @@
             const frBreak = 2;
             const frSession = 3;
             const frTime = 1;
+            let createDuration = (timestamp) => {
+                let target = moment(timestamp);
+                let gap = Number(document.getElementById("utcOffset").value) * 60;
+                let now = moment().utcOffset(gap);
+                return moment.duration(target.diff(now)).humanize(true, { M: 12, w: 8, d: 28, h: 24, m: 60, s: 60 });
+            }
+            let createDateTimeSpan = (timestamp, appendUTC = false) => {
+                return '<span x-datetime="yes" x-timestamp="' + timestamp + '" x-timeutc="' + (appendUTC ? "yes" : "no") + '">' + createDateTimeString(timestamp, appendUTC) + "</span>";;
+            };
+            let createDateTimeString = (timestamp, appendUTC = false) => {
+                let gap = Number(document.getElementById("utcOffset").value) * 60;
+                let localtime = moment(timestamp).utcOffset(gap);
+                let utc = moment.utc(timestamp);
+                let date = localtime.format("DD") == utc.format("DD") ? "" : utc.format("ddd, MMM Do, ");
+                let str = localtime.format("dddd, MMMM Do YYYY, h:mm a") + (appendUTC ? (" [" + date + utc.format("h:mm a") + " UTC]") : "");
+                return str;
+            };
             let start = () => {
                 let countdowns = document.querySelectorAll(".countdown");
                 countdowns.forEach((cd) => {
-                    let t = moment(Number(cd.getAttribute("x-timestamp")));
-                    var duration = moment.duration(t.diff(moment())).humanize(true, { M: 12, w: 8, d: 28, h: 24, m: 60, s: 10 });
-                    t.innerHTML = duration;
+                    cd.innerHTML = "Start " + createDuration(Number(cd.getAttribute("x-timestamp")));
+                });
+                let nowTime = document.querySelectorAll(".nowTime");
+                nowTime.forEach((nt) => {
+                    let gap = Number(document.getElementById("utcOffset").value) * 60;
+                    nt.innerHTML = moment().utcOffset(gap).format("dddd, MMMM Do YYYY, h:mm a");
                 });
             }
+            let utcOffset = document.getElementById("utcOffset");
+            utcOffset.addEventListener("change", (e) => {
+                start();
+                let dateTime = document.querySelectorAll("span[x-datetime='yes']");
+                dateTime.forEach((div) => {
+                    let st = Number(div.getAttribute('x-timestamp'));
+                    div.innerHTML = createDateTimeString(st, div.hasAttribute('x-timeutc') && div.getAttribute('x-timeutc') == 'yes');
+                    console.log(div.innerHTML);
+                });
+                //e.stopPropagation();
+            });
             timers["session"] = setInterval(start, 30000);
+            start();
+            if (utcOffset) {
+                utcOffset.value = (moment().utcOffset()) / 60;
+            }
             if (!document.getElementById('programFrameLess')) {
                 var link = document.createElement('link');
                 link.id = 'programFrameLess';
@@ -191,15 +226,14 @@
                         templateRows.push(frBreak + "fr");
                         i++;
                         let st = moment(t.start);
-                        let date = st.format("dddd, MMMM Do YYYY, h:mm a");
-                        var duration = moment.duration(st.diff(moment())).humanize(true, { M: 12, w: 8, d: 28, h: 24, m: 60, s: 60 });
+                        var duration = createDuration(t.start);
                         extra.push({
                             gridRowStart: i,
                             gridRowEnd: i + 1,
                             gridColumnStart: 1,
                             gridColumnEnd: maxParallel + 2,
                             class: t.block,
-                            title: "<div>" + t.day + " " + t.block + "</div><div>(" + date + ")</div><div class=\"countdown\" x-timestamp=\"" + t.start + "\">Start " + duration + "</div>",
+                            title: "<div>" + t.day + " " + t.block + "</div><div>(" + createDateTimeSpan(t.start) + ")</div><div class=\"countdown\" x-duration=\"yes\" x-timestamp=\"" + t.start + "\">Start " + duration + "</div>",
                             anchor: true
                         });
                         templateRows.push(frTime + "fr");
@@ -266,14 +300,9 @@
                     div.style.gridColumnStart = 2;
                     div.style.gridColumnEnd = maxParallel + 2;
                     div.classList.add("time");
-                    let st = moment(t.start);
-                    let utc = moment.utc(t.start);
-                    let date = st.format("DD") == utc.format("DD") ? "" : utc.format("ddd, MMM Do, ");
-                    let str = st.format("dddd, MMMM Do YYYY, h:mm a") + " [" + date + utc.format("h:mm a") + " UTC]";
-                    div.appendChild(document.createTextNode(str));
+                    let str = createDateTimeSpan(t.start, true);
+                    div.innerHTML = str;
                     ts[t.slot] = {
-                        moment: st,
-                        utc: utc,
                         str: str
                     }
                     base.appendChild(div);
@@ -336,7 +365,9 @@
                     }
                     d.appendChild(i);
                     maskTime.appendChild(d);
-                    maskTime.appendChild(document.createElement("div").appendChild(document.createTextNode(ts[s.slot].str + " " + s.duration + " minutes")));
+                    let t = document.createElement("div");
+                    t.innerHTML = ts[s.slot].str + " " + s.duration + " minutes"
+                    maskTime.appendChild(t);
                     let maskTitle = document.createElement("div");
                     maskTitle.classList.add("title");
                     maskTitle.appendChild(document.createTextNode("[" + s.id + "] " + s.title));

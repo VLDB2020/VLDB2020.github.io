@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Preliminary Conference Timetable
+title: Conference Time Zone Conversion Chart
 category: forparticipants
 ---
 
