@@ -90,4 +90,5 @@ $RECYCLE.BIN/
 # End of https://www.gitignore.io/api/macos,linux,jekyll,windows,visualstudiocode
 
 vscode-wsl-mount-home.txt
+start-jekyll.txt
 _src
