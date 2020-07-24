@@ -5,3 +5,5 @@ category: forparticipants
 ---
 
 # VLDB2020:  Guide For Session Chairs
+
+<div class="VLDB2020Instructions chair"></div>
