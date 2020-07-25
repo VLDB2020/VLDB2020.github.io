@@ -1,6 +1,6 @@
 (() => {
     let timers = {};
-    const DETAIL = true;
+    const DETAIL = false;
     const onLoadFn = () => {
         if (document.querySelectorAll(".VLDB2020Instructions") !== null) {
             let md = {
