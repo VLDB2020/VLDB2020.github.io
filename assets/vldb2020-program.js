@@ -2,6 +2,79 @@
     let timers = {};
     const DETAIL = true;
     const onLoadFn = () => {
+        if (document.querySelectorAll(".programTimeTable") !== null) {
+            let myUtcOffset = moment().utcOffset() / 60;
+            console.log("My UTC Offset is " + myUtcOffset);
+            let tzDivs = document.querySelectorAll(".utcTZ");
+            tzDivs.forEach((tzDiv) => {
+                let gap;
+                if (tzDiv.hasAttribute("x-gap")) {
+                    gap = Number(tzDiv.getAttribute("x-gap"));
+                } else {
+                    gap = 0;
+                }
+                if (gap >= -12 && gap <= 14) {
+                    if (myUtcOffset == gap) {
+                        tzDiv.classList.add("myTZ");
+                    }
+                    gap = moment()
+                        .utcOffset(gap * 60)
+                        .format("Z");
+                    tzDiv.innerHTML =
+                        '<a href="https://en.wikipedia.org/wiki/UTC' +
+                        gap +
+                        '">UTC' +
+                        gap +
+                        "</a>";
+                }
+            });
+            tzDivs = document.querySelectorAll(".utcGap");
+            tzDivs.forEach((tzDiv) => {
+                let gap = Number(tzDiv.getAttribute("x-gap"));
+                if (tzDiv.hasAttribute("x-gap")) {
+                    let gap = Number(tzDiv.getAttribute("x-gap"));
+                } else {
+                    let gap = 0;
+                }
+                if (tzDiv.hasAttribute("x-block")) {
+                    if (myUtcOffset == gap) {
+                        tzDiv.classList.add("myTZ");
+                    }
+                    let start, end;
+                    switch (tzDiv.getAttribute("x-block")) {
+                        case "1":
+                            start = moment("2020-09-01T08:00:00Z");
+                            end = moment("2020-09-01T13:00:00Z");
+                            break;
+                        case "2":
+                            start = moment("2020-09-01T15:00:00Z");
+                            end = moment("2020-09-01T20:00:00Z");
+                            break;
+                        case "3":
+                            start = moment("2020-09-01T21:00:00Z");
+                            end = moment("2020-09-02T01:00:00Z");
+                            break;
+                        default:
+                            start = moment("2020-09-02T03:00:00Z");
+                            end = moment("2020-09-02T08:00:00Z");
+                    }
+                    if (gap >= -12 && gap <= 14) {
+                        tzDiv.innerHTML =
+                            '<span class="block' +
+                            tzDiv.getAttribute("x-block") +
+                            '">' +
+                            tzDiv.getAttribute("x-block") +
+                            "</span><span>" +
+                            start.utcOffset(gap * 60).format("hh:mm a") +
+                            ' <i class="fas fa-long-arrow-alt-right"></i> ' +
+                            end.utcOffset(gap * 60).format("h:mm a") +
+                            '</span><span class="block' +
+                            tzDiv.getAttribute("x-block") +
+                            '">&nbsp;&nbsp;</span>';
+                    }
+                }
+            });
+        }
         if (document.querySelectorAll(".VLDB2020Instructions") !== null) {
             let md = {
                 atendee: "https://vldb2020.org/instructions/guide-attendee.md",
