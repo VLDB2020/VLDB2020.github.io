@@ -1,6 +1,6 @@
 (() => {
     let timers = {};
-    const DETAIL = false;
+    const DETAIL = true;
     const onLoadFn = () => {
         if (document.querySelectorAll(".VLDB2020Instructions") !== null) {
             let md = {
@@ -392,6 +392,7 @@
                 const base = document.getElementById("programFrame");
                 base.style.display = "grid";
                 base.style.width = "100%";
+                base.style.xOverflow = "hidden";
                 base.style.gap = "5px";
                 base.style.gridTemplateColumns =
                     "20px " + "1fr ".repeat(maxParallel).trim();

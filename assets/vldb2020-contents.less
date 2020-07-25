@@ -1,15 +1,15 @@
 @contents-padding: 1.5vw;
 
-#contents-body>header,
-#contents-body>main,
-#contents-body>footer {
+#contents-body > header,
+#contents-body > main,
+#contents-body > footer {
     margin: auto;
     padding: @contents-padding;
-    width: 90vw;
-    max-width: 800px;
+    width: 95vw;
+    max-width: 850px;
 }
 
-#contents-body>main {
+#contents-body > main {
     background-color: fadeout(@color-white, 3%);
 }
 
@@ -33,7 +33,7 @@
     text-align: center;
     line-height: $height;
     cursor: pointer;
-}
+};
 
 .contents-header a.social-icon {
     @social-icon();
@@ -72,7 +72,7 @@ each(@selectors, {
 
 .contents-footer #footer-left {
     color: @color-white;
-    font-size: .7rem;
+    font-size: 0.7rem;
     .font-univia(200);
 }
 
@@ -100,7 +100,6 @@ each(@selectors, {
 
 #contents-body article {
     color: @color-black;
-
 }
 
 #contents-body article h1 {
@@ -119,18 +118,20 @@ each(@selectors, {
     .font-univia(400);
 }
 
-.important-dates,.whatsnew {
+.important-dates,
+.whatsnew {
     border-bottom: 1px solid @color-forauthors-dark;
     margin-bottom: 5px;
 }
 
 .important-dates .id-head,
 .whatsnew .id-head {
-    font-weight: @main-font-weight-strong
+    font-weight: @main-font-weight-strong;
 }
 
 .important-dates .id-col,
-.whatsnew .id-col {}
+.whatsnew .id-col {
+}
 
 .google-map {
     position: relative;
@@ -174,15 +175,15 @@ each(@selectors, {
     font-weight: 400;
     line-height: 1;
     margin: 0px;
-    padding: .8em .8em;
+    padding: 0.8em 0.8em;
     text-decoration: none;
     text-align: center;
     text-transform: uppercase;
     .font-univia(900);
     &:hover,
     &:focus {
-      color: #fff;
-      outline: 0;
+        color: #fff;
+        outline: 0;
     }
 }
 each(@colors,{
@@ -248,4 +249,3 @@ each(@categories, {
     }
 
 );
-
