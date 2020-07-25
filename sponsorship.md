@@ -18,7 +18,8 @@ category: sponsorship
             <s>VLDB 2020 offers two categories of sponsorships. Basic Sponsors includes Diamond, Platinum+, Platinum, Gold, Silver, and Bronze Sponsors. Special Sponsors includes specific event support, exhibition, etc. VLDB 2020 Sponsorships and Exhibitions Prospectus are available from the following links. Please check the details of sponsorships. Contact info is also included in the documents.</s>
         </p>
         <ul>
-            <li><a class="no-barba" href="assets/files/sponsorship_brochure.pdf">VLDB 2020 Sponsorship Prospectus</a> <span class="badge">updated: June 30, 2020</span></li>
+            <li><a class="no-barba" href="assets/files/sponsorship_brochure.pdf">VLDB 2020 Sponsorship Prospectus (English)</a> <span class="badge">updated: July 9, 2020</span></li>
+            <li><a class="no-barba" href="assets/files/sponsorship_brochure_jp.pdf">VLDB 2020 Sponsorship Prospectus (Japanese)</a> <span class="badge">updated: July 10, 2020</span></li>
             <!-- li><a class="no-barba" href="assets/files/sponsorship_en.pdf">English version</a> (updated: Oct. 28, 2019)</li>
             <li><a class="no-barba" href="assets/files/sponsorship_jp.pdf">Japanese version</a></li -->
         </ul>
