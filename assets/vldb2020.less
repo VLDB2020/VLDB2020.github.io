@@ -3,7 +3,7 @@
 @color-white: #f3f3f2;
 @color-black: #180614;
 @color-red: #a22041;
-@color-pink: #FE019A;
+@color-pink: #fe019a;
 @color-violet: #9d5b8b;
 @color-blue: #5654a2;
 @color-green: #3b7960;
@@ -17,20 +17,19 @@
 @main-font-weight-thin: 100;
 
 //--Logo Font
-@font-face{
-    font-family: 'Powerpuff';
-    src: url('./powerpuff.otf') format('opentype');
+@font-face {
+    font-family: "Powerpuff";
+    src: url("./powerpuff.otf") format("opentype");
 }
-@font-face{
-    font-family: 'Katakana';
-    src: url('./electroharmonix.ttf') format('truetype');
+@font-face {
+    font-family: "Katakana";
+    src: url("./electroharmonix.ttf") format("truetype");
 }
-
 
 //--
 //-- Frot for VLDB Logo
-@logo-font: 'Powerpuff';
-@logo-sub-font: 'Katakana';
+@logo-font: "Powerpuff";
+@logo-sub-font: "Katakana";
 @logo-font-weight: normal;
 @logo-smallfont-weight: 100;
 @logo-font-size: 190px;
@@ -61,7 +60,7 @@
 @topcontents-accolor: @color-green;
 @topscrollbtn-width: 50px;
 @topscrollbtn-height: @topscrollbtn-width * 1.2;
-@topscrollbtn-amination: cubic-bezier(0.30, 2.40, 0.85, 2.50);
+@topscrollbtn-amination: cubic-bezier(0.3, 2.4, 0.85, 2.5);
 @topscrollbtn-color: @color-white;
 //--
 //-- Z Indeies
@@ -71,39 +70,42 @@
 @z-btnprg: 70;
 @z-bg: -100;
 @z-bgmask: -99;
-@z-social-icon:10;
+@z-social-icon: 10;
 @z-contents: 0;
 //--
 //-- Color Palette
-@colors: red,pink,violet,blue,green,lightgreen,orange;
-@colors-color: @color-red,@color-pink,@color-violet,@color-blue,@color-green,@color-lightgreen,@color-orange;
+@colors: red, pink, violet, blue, green, lightgreen, orange;
+@colors-color: @color-red, @color-pink, @color-violet, @color-blue, @color-green,
+    @color-lightgreen, @color-orange;
 //--
 //-- Categories
-@categories: conference, contributions, sponsorship, information, forauthors, forparticipants;
-@categories-color: @color-conference,@color-contributions,@color-sponsorship,@color-information,@color-forauthors,@color-forparticipants;
+@categories: conference, contributions, sponsorship, information, forauthors,
+    forparticipants;
+@categories-color: @color-conference, @color-contributions, @color-sponsorship,
+    @color-information, @color-forauthors, @color-forparticipants;
 // --
 // -- FONT
-@font-bungee:{
+@font-bungee: {
     font-family: bungee, sans-serif;
-    font-weight: 400;//500
+    font-weight: 400; //500
     font-style: normal;
-}
-.font-museo(@weight:100,@style:normal){
+};
+.font-museo(@weight:100,@style:normal) {
     font-family: museo, serif;
-    font-weight: @weight;//300,500,700,900
-    font-style: @style;//italic
+    font-weight: @weight; //300,500,700,900
+    font-style: @style; //italic
 }
-.font-univia(@weight:400,@style:normal){
+.font-univia(@weight:400,@style:normal) {
     font-family: univia-pro, sans-serif;
-    font-weight: @weight;//200,400,700,900
+    font-weight: @weight; //200,400,700,900
     font-style: @style;
 }
-.font-industry(@weight:400,@style:normal){
+.font-industry(@weight:400,@style:normal) {
     font-family: industry, sans-serif;
-    font-weight: @weight;//700
-    font-style: @style;//italic
+    font-weight: @weight; //700
+    font-style: @style; //italic
 }
-.font-adso(@weight:500,@style:normal){
+.font-adso(@weight:500,@style:normal) {
     font-family: adso, sans-serif;
     font-weight: @weight;
     font-style: @style;
@@ -113,7 +115,10 @@
 //
 //
 
-html, div, body, article {
+html,
+div,
+body,
+article {
     margin: 0;
 }
 
@@ -238,7 +243,7 @@ svg.toppage-wrap mask rect {
     fill: rgba(255, 255, 255, @topmask-opacity);
 }
 
-svg.toppage-wrap>rect {
+svg.toppage-wrap > rect {
     fill: @topmask-color;
     -webkit-mask: url(#mask);
     mask: url(#mask);
@@ -262,14 +267,14 @@ svg.toppage-wrap>rect {
     z-index: @z-contents;
 }
 
-#toppage-toggle:checked~#toppage-cnt {
+#toppage-toggle:checked ~ #toppage-cnt {
     transform: translateY(calc(-100vh + @topscrollbtn-height));
-    transition: transform 0.8s cubic-bezier(.34, -0.29, .38, .8);
+    transition: transform 0.8s cubic-bezier(0.34, -0.29, 0.38, 0.8);
 }
 
-#toppage-toggle~#toppage-cnt {
+#toppage-toggle ~ #toppage-cnt {
     transform: translateY(0);
-    transition: transform 0.8s cubic-bezier(.55, .02, .69, 1.15);
+    transition: transform 0.8s cubic-bezier(0.55, 0.02, 0.69, 1.15);
 }
 
 @menu-bar: {
@@ -283,10 +288,9 @@ svg.toppage-wrap>rect {
     font-size: 0.9rem;
     line-height: @topscrollbtn-height - @menu-lineheight;
     z-index: @z-menu;
-    user-select:none;
-}
+    user-select: none;
+};
 
-;
 #left-menu-bar {
     @menu-bar();
     right: 100vw;
@@ -306,13 +310,12 @@ svg.toppage-wrap>rect {
     color: @color-white;
     font-size: 0.9rem;
     z-index: @z-submenu;
-    user-select:none;
+    user-select: none;
     @media screen and (max-width: @screenTablet) {
         width: 100vw;
     }
-}
+};
 
-;
 .left-submenu-panel {
     @submenu-panel();
     left: 0px;
@@ -323,11 +326,12 @@ svg.toppage-wrap>rect {
     right: 0px;
 }
 
-.right-submenu-panel>a, .left-submenu-panel>a{
+.right-submenu-panel > a,
+.left-submenu-panel > a {
     color: @color-white;
     text-decoration: none;
 }
-label.menu-item>a{
+label.menu-item > a {
     color: @color-black;
     text-decoration: none;
 }
@@ -358,14 +362,15 @@ label.menu-item>a{
     cursor: pointer;
 }
 
-.menu-item:hover~.menu-line, .category-active:checked~.menu-line {
+.menu-item:hover ~ .menu-line,
+.category-active:checked ~ .menu-line {
     height: @menu-lineheight;
     opacity: 1;
 }
 
 .submenu-item {
-    padding-top: 16px;
-    padding-bottom: 16px;
+    padding-top: 12px;
+    padding-bottom: 12px;
     cursor: pointer;
     opacity: 0.7;
 }
@@ -382,9 +387,8 @@ label.menu-item>a{
     color: @color-white;
     cursor: pointer;
     transform: rotate(180deg);
-}
+};
 
-;
 .right-submenu-panel .submenu-close {
     @submenu-close();
     left: 0px;
@@ -398,24 +402,24 @@ label.menu-item>a{
     left: calc(50vw - @topscrollbtn-width / 2);
 }
 
-#toppage-toggle:checked~#left-menu-bar {
+#toppage-toggle:checked ~ #left-menu-bar {
     transform: translateX(calc(50vw - @topscrollbtn-width / 2));
-    transition: transform 0.8s cubic-bezier(.34, -0.29, .38, .8);
+    transition: transform 0.8s cubic-bezier(0.34, -0.29, 0.38, 0.8);
 }
 
-#toppage-toggle~#left-menu-bar {
+#toppage-toggle ~ #left-menu-bar {
     transform: translateX(0);
-    transition: transform 0.8s cubic-bezier(.55, .02, .69, 1.15);
+    transition: transform 0.8s cubic-bezier(0.55, 0.02, 0.69, 1.15);
 }
 
-#toppage-toggle:checked~#right-menu-bar {
-    transform: translateX(calc(-1* (50vw - @topscrollbtn-width / 2)));
-    transition: transform 0.8s cubic-bezier(.34, -0.29, .38, .8);
+#toppage-toggle:checked ~ #right-menu-bar {
+    transform: translateX(calc(-1 * (50vw - @topscrollbtn-width / 2)));
+    transition: transform 0.8s cubic-bezier(0.34, -0.29, 0.38, 0.8);
 }
 
-#toppage-toggle~#right-menu-bar {
+#toppage-toggle ~ #right-menu-bar {
     transform: translateX(0);
-    transition: transform 0.8s cubic-bezier(.55, .02, .69, 1.15);
+    transition: transform 0.8s cubic-bezier(0.55, 0.02, 0.69, 1.15);
 }
 
 .scroll-cnt {
@@ -424,12 +428,12 @@ label.menu-item>a{
     left: 50%;
     width: @topscrollbtn-width;
     height: @topscrollbtn-height;
-    margin-left: -@topscrollbtn-width/2;
+    margin-left: -@topscrollbtn-width / 2;
     color: @color-white;
     cursor: pointer;
 }
 
-svg.scroll-btn>polyline {
+svg.scroll-btn > polyline {
     fill: none;
     stroke: @topscrollbtn-color;
     stroke-width: 60px;
@@ -437,7 +441,7 @@ svg.scroll-btn>polyline {
     stroke-linecap: round;
 }
 
-svg.scroll-btn>circle {
+svg.scroll-btn > circle {
     fill: @topscrollbtn-color;
     stroke: none;
 }
@@ -458,8 +462,9 @@ svg.scroll-btn #dot3 {
 }
 
 @keyframes bounce {
-    from, to {
-        transform: translateY(0px) scaleY(.98);
+    from,
+    to {
+        transform: translateY(0px) scaleY(0.98);
     }
     80% {
         transform: translateY(-100px) scaleY(1.02);
@@ -472,60 +477,78 @@ svg.scroll-btn #dot3 {
 }
 
 // ALERT BAR
-.alert-bar{
-    background-color:#f9ff8a;
-    padding:10px;
+.alert-bar {
+    background-color: #f9ff8a;
+    padding: 10px;
 }
-.alert-bar .stripe{
-    background-image: linear-gradient(45deg, #e2eb36 25%, #36494d 25%, #36494d 50%, #e2eb36 50%, #e2eb36 75%, #36494d 75%, #36494d 100%);
+.alert-bar .stripe {
+    background-image: linear-gradient(
+        45deg,
+        #e2eb36 25%,
+        #36494d 25%,
+        #36494d 50%,
+        #e2eb36 50%,
+        #e2eb36 75%,
+        #36494d 75%,
+        #36494d 100%
+    );
     background-size: 56.57px 56.57px;
 }
 
-.alert-bar .body{
-    margin:1rem;
-    text-align:justify;
+.alert-bar .body {
+    margin: 1rem;
+    text-align: justify;
     text-justify: inter-word;
 }
 
 // ALERT BAR
-.warning-bar{
-    background-color:lighten(#F10C45,25%);
-    padding:2px;
-    font-size:.75em;
+.warning-bar {
+    background-color: lighten(#f10c45, 25%);
+    padding: 2px;
+    font-size: 0.75em;
 }
-.warning-bar .stripe{
-    background-image: linear-gradient(45deg, #F10C45 25%, #4A0100 25%, #4A0100 50%, #F10C45 50%, #F10C45 75%, #4A0100 75%, #4A0100 100%);
+.warning-bar .stripe {
+    background-image: linear-gradient(
+        45deg,
+        #f10c45 25%,
+        #4a0100 25%,
+        #4a0100 50%,
+        #f10c45 50%,
+        #f10c45 75%,
+        #4a0100 75%,
+        #4a0100 100%
+    );
     background-size: 56.57px 56.57px;
 }
 
-.warning-bar .body{
-    margin:.7rem;
-    text-align:justify;
+.warning-bar .body {
+    margin: 0.7rem;
+    text-align: justify;
     text-justify: inter-word;
 }
 
-.program_btn{
+.program_btn {
     position: absolute;
-    top:100vh;
-    left:0px;
-    height:40px;
-    width:180px;
-    margin-top:-70px;
-    text-align:center;
-    z-index:@z-btnprg;
+    top: 100vh;
+    left: 0px;
+    height: 40px;
+    width: 180px;
+    margin-top: -70px;
+    text-align: center;
+    z-index: @z-btnprg;
     background-color: @color-forparticipants;
     box-shadow: 3px 3px 3px @menu-shadowcolor;
     transition: all 0.5s;
 }
-.program_btn:hover{
-    background-color: @color-forparticipants-dark;   
+.program_btn:hover {
+    background-color: @color-forparticipants-dark;
 }
 
 .prgram_btn div,
-.program_btn a{
-    padding :10px;
-    line-height:40px;
-    font-size:1em;
+.program_btn a {
+    padding: 10px;
+    line-height: 40px;
+    font-size: 1em;
     color: @color-white;
     .font-industry();
     text-decoration: none;
