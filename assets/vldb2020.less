@@ -554,4 +554,50 @@ svg.scroll-btn #dot3 {
     text-decoration: none;
 }
 
+@bg-colors: #e9531a, #f5b616, #2696d4, #78b32b;
+
+.programTimeTable {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    text-align: center;
+    .block1 {
+        background-color: extract(@bg-colors, 1);
+        color: @color-white;
+        font-size: 1.5em;
+    }
+    .block2 {
+        background-color: extract(@bg-colors, 2);
+        color: @color-white;
+        font-size: 1.5em;
+    }
+    .block3 {
+        background-color: extract(@bg-colors, 3);
+        color: @color-white;
+        font-size: 1.5em;
+    }
+    .block4 {
+        background-color: extract(@bg-colors, 4);
+        color: @color-white;
+        font-size: 1.5em;
+    }
+    .utcTZ {
+        border-bottom: @color-orange 2px dotted;
+    }
+    .utcGap {
+        border-bottom: @color-orange 2px dotted;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        span {
+            display: block;
+            justify-content: flex-start;
+        }
+    }
+    .myTZ {
+        background: lighten(@color-orange, 20%);
+        & + .tucGap {
+            background: lighten(@color-orange, 10%);
+        }
+    }
+}
 @import "vldb2020-contents";
