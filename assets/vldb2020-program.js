@@ -64,10 +64,13 @@
                             tzDiv.getAttribute("x-block") +
                             '">' +
                             tzDiv.getAttribute("x-block") +
-                            "</span> " +
+                            "</span><span>" +
                             start.utcOffset(gap * 60).format("hh:mm a") +
                             ' <i class="fas fa-long-arrow-alt-right"></i> ' +
-                            end.utcOffset(gap * 60).format("h:mm a");
+                            end.utcOffset(gap * 60).format("h:mm a") +
+                            '</span><span class="block' +
+                            tzDiv.getAttribute("x-block") +
+                            '">&nbsp;&nbsp;</span>';
                     }
                 }
             });
@@ -201,7 +204,7 @@
                     div.innerHTML = createDateTimeString(
                         st,
                         div.hasAttribute("x-timeutc") &&
-                        div.getAttribute("x-timeutc") == "yes"
+                            div.getAttribute("x-timeutc") == "yes"
                     );
                 });
                 //e.stopPropagation();

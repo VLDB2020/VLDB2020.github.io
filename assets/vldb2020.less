@@ -555,6 +555,7 @@ svg.scroll-btn #dot3 {
 }
 
 @bg-colors: #e9531a, #f5b616, #2696d4, #78b32b;
+
 .programTimeTable {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
@@ -584,6 +585,13 @@ svg.scroll-btn #dot3 {
     }
     .utcGap {
         border-bottom: @color-orange 2px dotted;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        span {
+            display: block;
+            justify-content: flex-start;
+        }
     }
     .myTZ {
         background: lighten(@color-orange, 20%);
