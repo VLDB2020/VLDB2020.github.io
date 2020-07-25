@@ -201,7 +201,7 @@
                     div.innerHTML = createDateTimeString(
                         st,
                         div.hasAttribute("x-timeutc") &&
-                            div.getAttribute("x-timeutc") == "yes"
+                        div.getAttribute("x-timeutc") == "yes"
                     );
                 });
                 //e.stopPropagation();
