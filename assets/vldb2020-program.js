@@ -2,6 +2,71 @@
     let timers = {};
     const DETAIL = true;
     const onLoadFn = () => {
+        if (document.getElementById("programFlat") !== null) {
+            const params = new URLSearchParams(window.location.search);
+            let start = () => {
+                let countdowns = document.querySelectorAll(".countdown");
+                countdowns.forEach((cd) => {
+                    cd.innerHTML =
+                        "Start " +
+                        createDuration(Number(cd.getAttribute("x-timestamp")));
+                });
+                let nowTime = document.querySelectorAll(".nowTime");
+                let gap =
+                    Number(document.getElementById("utcOffset").value) * 60;
+                nowTime.forEach((nt) => {
+                    nt.innerHTML = moment()
+                        .utcOffset(gap)
+                        .format("dddd, MMMM Do YYYY, h:mm a");
+                });
+            };
+            let utcOffset = document.getElementById("utcOffset");
+            if (utcOffset) {
+                utcOffset.addEventListener("change", (e) => {
+                    start();
+                    e.stopPropagation();
+                });
+                utcOffset.value = moment().utcOffset() / 60;
+                let nowTime = document.querySelectorAll(".nowTime");
+                let gap = moment().utcOffset();
+                c.forEach((nt) => {
+                    nt.innerHTML = moment()
+                        .utcOffset(gap)
+                        .format("dddd, MMMM Do YYYY, h:mm a");
+                });
+                timers["session"] = setInterval(start, 30000);
+            }
+            let filter_paper = [];
+            let filter_session = [];
+            if (params.has("p")) {
+                filter_paper = params.get("p").split("!");
+                let s = {};
+                filter_paper.forEach((p) => {
+                    s[p.split("-")[0]] = true;
+                });
+                filter_session = Object.keys(s);
+            } else if (params.has("s")) {
+                filter_session = params.get("s").split("!");
+            }
+            console.log("paper", filter_paper);
+            console.log("session", filter_session);
+            let files = [
+                "https://s.vldb2020.org/VLDB2020session.json",
+                "https://s.vldb2020.org/VLDB2020timeslot.json",
+                "https://s.vldb2020.org/VLDB2020paper.json",
+            ];
+            Promise.all(
+                files.map(async (file) => {
+                    const response = await fetch(file);
+                    console.log(response);
+                    return response.json();
+                })
+            ).then((response) => {
+                let sessions = response[0];
+                let timeslots = response[1];
+                let papers = response[2];
+            });
+        }
         if (document.querySelectorAll(".programTimeTable") !== null) {
             let myUtcOffset = moment().utcOffset() / 60;
             console.log("My UTC Offset is " + myUtcOffset);
@@ -90,15 +155,10 @@
                         instruction.getAttribute("x-for") &&
                         md.hasOwnProperty(instruction.getAttribute("x-for"))
                     ) {
-                        console.log(
-                            instruction.getAttribute("x-for"),
-                            md[instruction.getAttribute("x-for")]
-                        );
                         fetch(md[instruction.getAttribute("x-for")]).then(
                             (response) => {
                                 console.log(response);
                                 response.text().then((t) => {
-                                    console.log("text", t);
                                     instruction.innerHTML = marked(t);
                                 });
                             }
@@ -228,7 +288,7 @@
                 );
                 less.refresh();
             } else {
-                console.log("Skip load .less for a session table");
+                console.log("Skip loading .less for a session table");
             }
             let files = [
                 "https://s.vldb2020.org/VLDB2020session.json",
@@ -238,6 +298,7 @@
             Promise.all(
                 files.map(async (file) => {
                     const response = await fetch(file);
+                    console.log(response);
                     return response.json();
                 })
             ).then((response) => {
@@ -254,12 +315,25 @@
                         block: i.block,
                     };
                 });
+                let index = new FlexSearch({
+                    doc: {
+                        id: "idx",
+                        field: ["title", "author", "description"],
+                    },
+                });
                 let papers = {};
+                let paperIdx = [];
                 response[2].forEach((p) => {
+                    p["idx"] = paperIdx.length;
                     if (!papers.hasOwnProperty(p.session)) {
                         papers[p.session] = [];
                     }
+                    paperIdx.push({
+                        session: p.session,
+                        order: papers[p.session].length,
+                    });
                     papers[p.session].push(p);
+                    index.add(p);
                 });
                 let showModal = (id) => {
                     document.getElementById("detail_" + id).style.display =
@@ -267,7 +341,6 @@
                     let top = document
                         .getElementById("detail_" + id)
                         .getBoundingClientRect().top;
-                    //document.getElementById("contents-body").scrollTo(0, document.getElementById("contents-body").scrollTop + top - 120);
                     var tl = anime.timeline({
                         easing: "easeInOutSine",
                         duration: 750,
@@ -470,6 +543,131 @@
                 base.style.gridTemplateColumns =
                     "20px " + "1fr ".repeat(maxParallel).trim();
                 base.style.gridTemplateRows = templateRows.join(" ");
+                let div = document.createElement("div");
+                div.style.gridRowStart = 1;
+                div.style.gridRowEnd = 2;
+                div.style.gridColumnStart = 1;
+                div.style.gridColumnEnd = maxParallel + 2;
+                div.style.alignSelf = "center";
+                div.style.display = "flex";
+                div.style.flexWrap = "wrap";
+                div.classList.add("search");
+                let sLabel = document.createElement("div");
+                sLabel.style.flex = "1";
+                sLabel.style.alignSelf = "center";
+                sLabel.innerHTML =
+                    '<nobr><i class="fas fa-highlighter"></i> Keyword Marker:</nobr>';
+                let sInput = document.createElement("input");
+                sInput.style.flex = "5";
+                sInput.setAttribute("type", "text");
+                sInput.setAttribute(
+                    "placeholder",
+                    "Enter keywords you're interested in"
+                );
+                let timerSearch = null;
+                let searchResult = (results) => {
+                    document
+                        .querySelectorAll("#programFrame .selected")
+                        .forEach((session) => {
+                            session.classList.remove("selected");
+                        });
+                    sResult.innerHTML = "";
+                    sHidden.value = "";
+                    if (results.length == 0) {
+                        sResult.innerHTML = "&nbsp;";
+                        sButton.classList.add("btn-disabled");
+                    } else {
+                        sButton.classList.remove("btn-disabled");
+                        let sIDs = {};
+                        let papers = [];
+                        results.forEach((result) => {
+                            document
+                                .getElementById(result.session)
+                                .classList.add("selected");
+                            papers.push(result.pid);
+                            sIDs[result.session] = true;
+                        });
+                        sHidden.value = papers.join("!");
+                        sResult.appendChild(
+                            document.createTextNode(
+                                results.length +
+                                    " entr" +
+                                    (results.length > 1 ? "ies are" : "y is") +
+                                    " found in "
+                            )
+                        );
+                        for (let s in sIDs) {
+                            let span = document.createElement("span");
+                            span.classList.add("markedSession");
+                            span.appendChild(document.createTextNode(s));
+                            span.addEventListener("click", (e) => {
+                                let top = document
+                                    .getElementById(s)
+                                    .getBoundingClientRect().top;
+                                anime({
+                                    easing: "easeInOutSine",
+                                    duration: 1500,
+                                    targets: "#contents-body",
+                                    scrollTop:
+                                        top -
+                                        80 -
+                                        document
+                                            .getElementById("left-menu-bar")
+                                            .getBoundingClientRect().height,
+                                });
+                                e.stopPropagation();
+                            });
+                            sResult.appendChild(span);
+                        }
+                    }
+                };
+                sInput.addEventListener("input", () => {
+                    if (timerSearch) {
+                        clearTimeout(timerSearch);
+                    }
+                    timerSearch = setTimeout(() => {
+                        timerSearch = null;
+                        console.log("Search", sInput.value);
+                        let results = index.search({
+                            query: sInput.value,
+                            field: ["title", "author", "description"],
+                            bool: "or",
+                        });
+                        searchResult(results);
+                    }, 1000);
+                });
+                let sButton = document.createElement("a");
+                sButton.id = "searchButton";
+                sButton.style.flex = "1";
+                sButton.classList.add("btn");
+                sButton.classList.add("btn-green");
+                sButton.classList.add("btn-small");
+                sButton.classList.add("btn-disabled");
+                sButton.disabled = true;
+                sButton.innerHTML = "<nobr>More Details<nobr>";
+                sButton.addEventListener("click", (e) => {
+                    if (sHidden.value != "") {
+                        location.href =
+                            "program-flat.html?p=" +
+                            encodeURIComponent(sHidden.value);
+                        console.log(sHidden.value);
+                    }
+                    e.stopPropagation();
+                });
+                let sResult = document.createElement("div");
+                sResult.style.flexBasis = "100%";
+                sResult.innerHTML = "&nbsp;";
+                let sHidden = document.createElement("input");
+                sHidden.id = "searchResult";
+                sHidden.value = "";
+                sHidden.setAttribute("type", "hidden");
+                div.appendChild(sLabel);
+                div.appendChild(sInput);
+                div.appendChild(sHidden);
+                div.appendChild(sButton);
+                div.appendChild(sResult);
+                base.appendChild(div);
+
                 extra.forEach((e) => {
                     let div = document.createElement("div");
                     div.style.gridRowStart = e.gridRowStart;

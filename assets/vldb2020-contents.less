@@ -186,6 +186,12 @@ each(@selectors, {
         outline: 0;
     }
 }
+
+.btn-small {
+    font-size: 0.8em;
+    padding: 0.4em 0.8em;
+}
+
 each(@colors,{
     .btn-@{value} {
         border-color: extract(@colors-color, @index);
@@ -197,8 +203,16 @@ each(@colors,{
             color: extract(@colors-color, @index);
             box-shadow: 0 0 10px 0 extract(@colors-color, @index) inset, 0 0 10px 4px extract(@colors-color, @index);
         }
-      }
-      
+    }    
+    .btn-@{value}.btn-disabled {
+        border-color: Greyscalee(extract(@colors-color, @index));
+        box-shadow: 0 0 40px 40px Greyscale(extract(@colors-color, @index)) inset, 0 0 0 0 Greyscale(extract(@colors-color, @index));
+        cursor: no-drop;
+        &:hover {
+            color: unset;
+            box-shadow: unset;
+        }
+    } 
 });
 
 each(@categories, {
