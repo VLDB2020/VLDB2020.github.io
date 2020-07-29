@@ -29,7 +29,7 @@
                 utcOffset.value = moment().utcOffset() / 60;
                 let nowTime = document.querySelectorAll(".nowTime");
                 let gap = moment().utcOffset();
-                c.forEach((nt) => {
+                nowTime.forEach((nt) => {
                     nt.innerHTML = moment()
                         .utcOffset(gap)
                         .format("dddd, MMMM Do YYYY, h:mm a");
@@ -48,8 +48,9 @@
             } else if (params.has("s")) {
                 filter_session = params.get("s").split("!");
             }
-            console.log("paper", filter_paper);
-            console.log("session", filter_session);
+            //console.log("paper", filter_paper);
+            //console.log("session", filter_session);
+            const full = filter_paper.length == 0 && filter_session == 0;
             let files = [
                 "https://s.vldb2020.org/VLDB2020session.json",
                 "https://s.vldb2020.org/VLDB2020timeslot.json",
@@ -58,13 +59,49 @@
             Promise.all(
                 files.map(async (file) => {
                     const response = await fetch(file);
-                    console.log(response);
+                    //console.log(response);
                     return response.json();
                 })
             ).then((response) => {
-                let sessions = response[0];
-                let timeslots = response[1];
-                let papers = response[2];
+                let raw_sessions = response[0];
+                let raw_timeslots = response[1];
+                let raw_papers = response[2];
+                let papers = {};
+                let timeslots = [];
+                let sessions = [];
+                raw_papers.forEach((p) => {
+                    if (!papers.hasOwnProperty(p.session)) {
+                        papers[p.session] = [];
+                    }
+                    papers[p.session][Number(p.order)] = p;
+                });
+                raw_timeslots.forEach((t) => {
+                    timeslots.push({
+                        slot: t.slot,
+                        start: moment(t.start),
+                        day: t.day,
+                        block: t.block,
+                    });
+                });
+                raw_sessions.forEach((s) => {
+                    if (s.room != "NONE") {
+                        if (!sessions.hasOwnProperty(s.slot)) {
+                            sessions[s.slot] = [];
+                        }
+                        sessions[s.slot].push(s);
+                    }
+                });
+                timeslots.forEach((timeslot) => {
+                    sessions[timeslot.slot].forEach((session) => {
+                        if (papers.hasOwnProperty(session.id)) {
+                            papers[session.id].forEach((paper, idx) => {
+                                if (full || filter_paper.includes(paper.pid)) {
+                                    console.log(idx, paper);
+                                }
+                            });
+                        }
+                    });
+                });
             });
         }
         if (document.querySelectorAll(".programTimeTable") !== null) {
@@ -157,7 +194,7 @@
                     ) {
                         fetch(md[instruction.getAttribute("x-for")]).then(
                             (response) => {
-                                console.log(response);
+                                //console.log(response);
                                 response.text().then((t) => {
                                     instruction.innerHTML = marked(t);
                                 });
