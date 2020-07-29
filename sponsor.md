@@ -29,7 +29,7 @@ category: sponsorship
 </div>
 <div class="col-group">
     <div class="col-4" style="padding:0px;"><a href="https://recruit-tech.co.jp/"><img src="assets/logo/logo_r_tech.svg" width="100%"></a></div>
-     <div class="col-4" style="padding:0px;"><img src="assets/logo/logo_empty.svg" width="100%"></div> 
+    <div class="col-4" style="padding:0px;"><img src="assets/logo/logo_oracle.svg" width="100%"></div> 
     <div class="col-4" style="padding:0px;"><img src="assets/logo/logo_empty.svg" width="100%"></div> 
 </div>
 
