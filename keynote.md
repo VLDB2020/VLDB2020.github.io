@@ -72,7 +72,6 @@ In this talk I hope to convince you that the data management community should pl
     <div class="col-9">Julia Stoyanovich is an Assistant Professor at New York University in the Department of Computer Science and Engineering at the Tandon School of Engineering, and the Center for Data Science.  Julia's research focuses on responsible data management and analysis practices: on operationalizing fairness, diversity, transparency, and data protection in all stages of the data acquisition and processing lifecycle. She established the Data, Responsibly consortium (<a href="https://dataresponsibly.github.io/">https://dataresponsibly.github.io/</a>), and served on the New York City Automated Decision Systems Task Force, by appointment from Mayor de Blasio.
 
 Julia developed and is teaching courses on Responsible Data Science at NYU (<a href="https://dataresponsibly.github.io/courses/">https://dataresponsibly.github.io/courses/</a>) In addition to data ethics, she works on management and analysis of preference data, and on querying large evolving graphs. She holds M.S. and Ph.D. degrees in Computer Science from Columbia University, and a B.S. in Computer Science and in Mathematics and Statistics from the University of Massachusetts at Amherst. Julia's work has been funded by the NSF, BSF and by industry. She is a recipient of an NSF CAREER award and of an NSF/CRA CI Fellowship. </div>
-
 </div>
 
 ## Keynote 3
