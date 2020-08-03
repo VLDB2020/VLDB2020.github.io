@@ -14,7 +14,14 @@ category: conference
 VLDB is a premier annual international forum for data management and database researchers, vendors, practitioners, application developers, and users. The VLDB 2020 conference will feature research talks, tutorials, demonstrations, and workshops. It will cover issues in data management, database and information systems research, since they are the technological cornerstones of the emerging applications of the 21st century.
 
 ## VLDB 2020 Updates
-
+<div class="col-group whatsnew">
+    <div class="col-2 id-head">August 3rd</div>
+    <div class="col-10 id-col"><span class="badge">New!"</span> <a href="registration.html">Paper Registration</a> has started.</div>
+</div>
+<div class="col-group whatsnew">
+    <div class="col-2 id-head">August 3rd</div>
+    <div class="col-10 id-col"><span class="badge">New!!</span> <a href="vldb-endowment-awards.html">2020 VLDB Endowment Awards</a></div>
+</div>
 <div class="col-group whatsnew">
     <div class="col-2 id-head">July 29th</div>
     <div class="col-10 id-col"><span class="badge">Updated!</span> <a href="keynote.html">Keynote Speakers</a></div>

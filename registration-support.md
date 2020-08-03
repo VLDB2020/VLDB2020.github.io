@@ -24,7 +24,7 @@ Preference will be given to applicants who demonstrate keen interest in database
 
 ## Application Process
 
-Applicants should fill in the form at https://forms.gle/TRcsQgsX5SZiuwSt7 by 5 August 2020. Should you have any problems with opening the links or filling in the forms, please contact us via bin.cui @ pku.edu.cn. Selected candidates will be informed by 15 August 2020. Persons applying for the VLDB Registration support are advised to not register before hearing from us.
+Applicants should fill in the form at [https://forms.gle/TRcsQgsX5SZiuwSt7](https://forms.gle/TRcsQgsX5SZiuwSt7) by 5 August 2020. Should you have any problems with opening the links or filling in the forms, please contact us via bin.cui @ pku.edu.cn. Selected candidates will be informed by 15 August 2020. Persons applying for the VLDB Registration support are advised to not register before hearing from us.
 Please note: Applications of US students will be automatically assessed also for the NSF-funded registration grant. US-students do not need to follow a separate application process.
 
 ## SPEND Committee VLDB Endowment
