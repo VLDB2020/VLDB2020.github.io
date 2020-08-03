@@ -291,6 +291,10 @@ each(@categories, {
         img{
             display:block;
         }
+        .talk{
+            background-color:fadeout(extract(@categories-color, @index),80%);
+            padding:5px;
+        }
         .footer{
             background-color:extract(@categories-color, @index);
             color:@color-white;
