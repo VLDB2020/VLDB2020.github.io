@@ -9,7 +9,7 @@ category: information
 <div class="col-group">
     <div class="portrait col-6">
         <div class="header">2020 VLDB Early Career Research Contribution Award</div>
-        <div class="name">Meihui Zhang</div>
+        <div class="name">Meihui Zhang<br><small>(Beijing Institute of Technology)</small></div>
         <img src="/assets/portrait/MeihuiZhang.jpg"  style="width:100%">
         <div class="talk">
             <div class="col-group important-dates">
@@ -25,7 +25,7 @@ category: information
     </div>
     <div class="portrait col-6">
         <div class="header">2020 VLDB Women in Database Research Award</div>
-        <div class="name">Anastasia Ailamaki</div>
+        <div class="name">Anastasia Ailamaki<br><small>(EPFL)</small></div>
         <img src="/assets/portrait/AnastasiaAilamaki.jpg" style="width:100%">
         <div class="talk">
             <div class="col-group important-dates">
@@ -61,7 +61,7 @@ category: information
                 <div class="col-10 id-col timeUTC">2020-09-04T03:00:00Z</div>
             </div>
         </div>
-        <div class="footer"><a class="icon" href="https://dl.acm.org/doi/abs/10.14778/1920841.1920886"><i class="fas fa-file-download"></i></a>Dremel: interactive analysis of web-scale datasets, <br>Proceedings of the VLDB Endowment, 3(1-2), September 2010, pp.330–339. </div>
+        <div class="footer"><a class="icon" href="https://dl.acm.org/doi/abs/10.14778/1920841.1920886"><i class="fas fa-file-download"></i></a><large>Dremel: interactive analysis of web-scale datasets</large><br>Proceedings of the VLDB Endowment, 3(1-2), September 2010, pp.330–339. </div>
     </div>
 </div>
  
