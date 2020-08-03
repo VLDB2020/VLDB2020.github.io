@@ -246,6 +246,31 @@ each(@categories, {
             display:block;
             content:attr(x-title);
         }
+        table {
+            th{
+                background-color:extract(@categories-color, @index);
+                color:@color-white;
+                padding:10px;
+                border:0px;
+                &:first-child{
+                    border-radius: 10px 0px 0px 0px;
+                }
+                &:last-child{
+                    border-radius: 0px 10px 0px 0px;
+                }
+            }
+            tr{
+                td {
+                    padding:10px 20px;
+                }
+                &:nth-child(odd){
+                    background-color:lighten(extract(@categories-color, @index),50%);
+                }
+                &:nth-child(even){
+                    background-color:lighten(extract(@categories-color, @index),30%);
+                }
+            }
+        }
     }
 
 );
