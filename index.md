@@ -20,7 +20,7 @@ VLDB is a premier annual international forum for data management and database re
 </div>
 <div class="col-group whatsnew">
     <div class="col-2 id-head">August 3rd</div>
-    <div class="col-10 id-col"><span class="badge">New!!</span> <a href="keynote.html">2020 VLDB Endowment Awards</a></div>
+    <div class="col-10 id-col"><span class="badge">New!!</span> <a href="vldb-endowment-awards.md">2020 VLDB Endowment Awards</a></div>
 </div>
 <div class="col-group whatsnew">
     <div class="col-2 id-head">July 29th</div>
