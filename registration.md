@@ -19,7 +19,7 @@ Paper registration for VLDB 2020 will start on August 3, 2020 and will close on 
 
 *) If conditions are met, registration will be free (0 JPY). Please see items 3 and 4 below for details.
 
-**Notes**
+## Notes
 
 1. Each paper must be accompanied by **one paper** registration.
 1. **[Paper ID]** For the registration, your **paper ID** is required:
