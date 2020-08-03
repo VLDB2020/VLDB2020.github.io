@@ -11,6 +11,11 @@
 @color-link: #1e50a2;
 @blocks: Workshop, Block1, Block2, Block3, Block4;
 @bg-colors: #4c5f84, #e9531a, #f5b616, #2696d4, #78b32b;
+
+//-- Color Palette for Program Button
+@linkcolors: conference, chat, inquiry, video;
+@linkcolors-color: #017dd4, #edb625, #6f7769, #d02525;
+
 .Block() {
     text-shadow: 1px 0 5px black;
     font-family: museo, serif;
@@ -289,3 +294,26 @@ each(@blocks,{
         }
     }
 }
+
+each(@linkcolors,{
+    .btn-@{value} {
+        border-color: extract(@linkcolors-color, @index);
+        color: @color-white;
+        box-shadow: 0 0 40px 40px extract(@linkcolors-color, @index) inset, 0 0 0 0 extract(@linkcolors-color, @index);
+        transition: all 150ms ease-in-out;
+        
+        &:hover {
+            color: extract(@linkcolors-color, @index);
+            box-shadow: 0 0 10px 0 extract(@linkcolors-color, @index) inset, 0 0 10px 4px extract(@linkcolors-color, @index);
+        }
+    }    
+    .btn-@{value}.btn-disabled {
+        border-color: Greyscalee(extract(@linkcolors-color, @index));
+        box-shadow: 0 0 40px 40px Greyscale(extract(@linkcolors-color, @index)) inset, 0 0 0 0 Greyscale(extract(@linkcolors-color, @index));
+        cursor: no-drop;
+        &:hover {
+            color: unset;
+            box-shadow: unset;
+        }
+    } 
+});

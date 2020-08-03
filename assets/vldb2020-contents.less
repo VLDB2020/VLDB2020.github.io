@@ -215,29 +215,6 @@ each(@colors,{
     } 
 });
 
-each(@linkcolors,{
-    .btn-@{value} {
-        border-color: extract(@linkcolors-color, @index);
-        color: @color-white;
-        box-shadow: 0 0 40px 40px extract(@linkcolors-color, @index) inset, 0 0 0 0 extract(@linkcolors-color, @index);
-        transition: all 150ms ease-in-out;
-        
-        &:hover {
-            color: extract(@linkcolors-color, @index);
-            box-shadow: 0 0 10px 0 extract(@linkcolors-color, @index) inset, 0 0 10px 4px extract(@linkcolors-color, @index);
-        }
-    }    
-    .btn-@{value}.btn-disabled {
-        border-color: Greyscalee(extract(@linkcolors-color, @index));
-        box-shadow: 0 0 40px 40px Greyscale(extract(@linkcolors-color, @index)) inset, 0 0 0 0 Greyscale(extract(@linkcolors-color, @index));
-        cursor: no-drop;
-        &:hover {
-            color: unset;
-            box-shadow: unset;
-        }
-    } 
-});
-
 each(@categories, {
     
         #toppage-cnt.@{value} #contents-body .contents-header, #toppage-cnt.@{value} #contents-body .contents-footer {

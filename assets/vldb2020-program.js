@@ -3,7 +3,7 @@
     const DETAIL = true;
     const buttonTitles = {
         conference: "Virtual Conference Room",
-        chat: "Slack",
+        chat: "Slack Channel",
         inquiry: "Support",
         video: "Pre-recorded Video",
     };
@@ -307,7 +307,7 @@
                     div.innerHTML = createDateTimeString(
                         st,
                         div.hasAttribute("x-timeutc") &&
-                            div.getAttribute("x-timeutc") == "yes"
+                        div.getAttribute("x-timeutc") == "yes"
                     );
                 });
                 //e.stopPropagation();
@@ -636,9 +636,9 @@
                         sResult.appendChild(
                             document.createTextNode(
                                 results.length +
-                                    " entr" +
-                                    (results.length > 1 ? "ies are" : "y is") +
-                                    " found in "
+                                " entr" +
+                                (results.length > 1 ? "ies are" : "y is") +
+                                " found in "
                             )
                         );
                         for (let s in sIDs) {
