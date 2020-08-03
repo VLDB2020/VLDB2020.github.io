@@ -1,6 +1,6 @@
 (() => {
     let timers = {};
-    const DETAIL = true;
+    const DETAIL = false;
     const onLoadFn = () => {
         if (document.querySelectorAll(".programTimeTable") !== null) {
             let myUtcOffset = moment().utcOffset() / 60;
@@ -204,7 +204,7 @@
                     div.innerHTML = createDateTimeString(
                         st,
                         div.hasAttribute("x-timeutc") &&
-                            div.getAttribute("x-timeutc") == "yes"
+                        div.getAttribute("x-timeutc") == "yes"
                     );
                 });
                 //e.stopPropagation();
