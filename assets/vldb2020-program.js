@@ -6,6 +6,7 @@
         chat: "Slack Channel",
         inquiry: "Support",
         video: "Pre-recorded Video",
+        workshop: "Click here to see the program of the workshop"
     };
     const onLoadFn = () => {
         if (document.getElementById("programFlat") !== null) {
@@ -57,10 +58,11 @@
             //console.log("paper", filter_paper);
             //console.log("session", filter_session);
             const full = filter_paper.length == 0 && filter_session == 0;
+            const alwaysnew = "?v" + (new Date());
             let files = [
-                "https://tokyo.vldb2020.org/VLDB2020session.json",
-                "https://tokyo.vldb2020.org/VLDB2020timeslot.json",
-                "https://tokyo.vldb2020.org/VLDB2020paper.json",
+                "https://tokyo.vldb2020.org/VLDB2020session.json" + alwaysnew,
+                "https://tokyo.vldb2020.org/VLDB2020timeslot.json" + alwaysnew,
+                "https://tokyo.vldb2020.org/VLDB2020paper.json" + alwaysnew,
             ];
             Promise.all(
                 files.map(async (file) => {
@@ -333,10 +335,11 @@
             } else {
                 console.log("Skip loading .less for a session table");
             }
+            const alwaysnew = "?v" + (new Date());
             let files = [
-                "https://tokyo.vldb2020.org/VLDB2020session.json",
-                "https://tokyo.vldb2020.org/VLDB2020timeslot.json",
-                "https://tokyo.vldb2020.org/VLDB2020paper.json",
+                "https://tokyo.vldb2020.org/VLDB2020session.json" + alwaysnew,
+                "https://tokyo.vldb2020.org/VLDB2020timeslot.json" + alwaysnew,
+                "https://tokyo.vldb2020.org/VLDB2020paper.json" + alwaysnew,
             ];
             Promise.all(
                 files.map(async (file) => {
@@ -428,15 +431,7 @@
                     series[s.slot].push(s.id);
                     roomIdx[s.slot]++;
                     maxParallel = Math.max(series[s.slot].length, maxParallel);
-                    let h = {
-                        duration: "",
-                        title: "",
-                        announce: "",
-                        chair: "",
-                        url_conference: "",
-                        url_chat: "",
-                        url_inquiry: "",
-                    };
+                    let h = {};
                     if (s.inherit != "") {
                         if (session.hasOwnProperty(s.inherit)) {
                             h = session[s.inherit];
@@ -444,6 +439,7 @@
                             console.warn("No Original Session", s.inherit);
                         }
                     }
+                    console.log("URLS", s.urls);
                     session[s.id] = {
                         id: s.id,
                         slot: s.slot,
@@ -823,19 +819,20 @@
                     maskTitle.appendChild(
                         document.createTextNode("[" + s.id + "] " + s.title)
                     );
-
                     let maskDescription = document.createElement("div");
                     maskDescription.classList.add("description");
-                    let description = "<p><b>Chair:</b> " + s.chair + "</p>";
-                    if (s.description && s.description != "") {
-                        description += "<p>" + s.description + "</p>";
+                    let description = "";
+                    if (s.chair && s.chair != "") {
+                        description += "<p><b>Chair:</b> " + s.chair + "</p>";
                     }
                     if (s.announce && s.announce != "") {
                         description +=
                             "<p><b>Announce:</b> " + s.announce + "</p>";
                     }
+                    if (s.description && s.description != "") {
+                        description += "<p>" + s.description + "</p>";
+                    }
                     maskDescription.innerHTML = description;
-
                     const button = (target, go, key, id) => {
                         const url =
                             "//tokyo.vldb2020.org/?tg=" +
@@ -860,51 +857,24 @@
                         return btn;
                     };
                     let maskButtons = document.createElement("div");
+                    let isWorkshop = false;
                     s.urls.forEach((go) => {
+                        console.log("button", go);
                         maskButtons.appendChild(
                             button("session", go, "id", s["id"])
                         );
-                    });
-                    /*
-                    for (let key in s) {
-                        let value = s[key];
-                        const found = key.match(/url_([a-z]+)$/);
-                        if (found != null) {
-                            maskButtons.appendChild(
-                                button("session", found[1], "id", s["id"])
-                            );
+                        if (go == "workshop") {
+                            isWorkshop = true;
                         }
-                    }*/
-                    //"url_conference":"#","url_chat":"#","url_inquiry"
+                    });
                     maskButtons.classList.add("buttons");
-                    //maskButtons.appendChild(document.createTextNode(s.url_inquiry));
-                    /*
-                    let btnConference = document.createElement("a");
-                    btnConference.classList.add("btn");
-                    btnConference.classList.add("btn-green");
-                    btnConference.href = s.url_conference;
-                    btnConference.appendChild(
-                        document.createTextNode("Virtual Conference Room")
-                    );
-                    maskButtons.appendChild(btnConference);
-                    let btnChat = document.createElement("a");
-                    btnChat.classList.add("btn");
-                    btnChat.classList.add("btn-orange");
-                    btnChat.href = s.url_chat;
-                    btnChat.appendChild(document.createTextNode("Chat Room"));
-                    maskButtons.appendChild(btnChat);
-                    let btnInquiry = document.createElement("a");
-                    btnInquiry.classList.add("btn");
-                    btnInquiry.classList.add("btn-pink");
-                    btnInquiry.href = s.url_inquiry;
-                    btnInquiry.appendChild(document.createTextNode("Inquiry"));
-                    maskButtons.appendChild(btnInquiry);
-                    */
                     mask.appendChild(maskTime);
                     mask.appendChild(maskTitle);
-                    mask.appendChild(maskDescription);
+                    if (!isWorkshop) {
+                        mask.appendChild(maskDescription);
+                    }
                     mask.appendChild(maskButtons);
-                    if (papers[s.id] && papers[s.id].length > 0) {
+                    if (!isWorkshop && papers[s.id] && papers[s.id].length > 0) {
                         let maskPapers = document.createElement("div");
                         maskPapers.classList.add("paperbox");
                         let paperCard = (paper) => {
@@ -922,17 +892,6 @@
                                     button("paper", go, "pid", paper["pid"])
                                 );
                             });
-                            /*
-                            let btnVideo = document.createElement("a");
-                            btnVideo.classList.add("btn");
-                            btnVideo.classList.add("btn-red");
-                            btnVideo.appendChild(
-                                document.createTextNode("Prerecorded Video")
-                            );
-                            btnVideo.href = paper.url_video;
-                                
-                            pButton.appendChild(btnVideo);
-                            */
                             pTitle.appendChild(
                                 document.createTextNode(paper.title)
                             );
