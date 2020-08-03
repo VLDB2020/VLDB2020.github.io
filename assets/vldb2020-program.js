@@ -1,6 +1,12 @@
 (() => {
     let timers = {};
     const DETAIL = true;
+    const buttonTitles = {
+        conference: "Virtual Conference Room",
+        chat: "Slack",
+        inquiry: "Support",
+        video: "Pre-recorded Video",
+    };
     const onLoadFn = () => {
         if (document.getElementById("programFlat") !== null) {
             const params = new URLSearchParams(window.location.search);
@@ -52,9 +58,9 @@
             //console.log("session", filter_session);
             const full = filter_paper.length == 0 && filter_session == 0;
             let files = [
-                "https://s.vldb2020.org/VLDB2020session.json",
-                "https://s.vldb2020.org/VLDB2020timeslot.json",
-                "https://s.vldb2020.org/VLDB2020paper.json",
+                "https://tokyo.vldb2020.org/VLDB2020session.json",
+                "https://tokyo.vldb2020.org/VLDB2020timeslot.json",
+                "https://tokyo.vldb2020.org/VLDB2020paper.json",
             ];
             Promise.all(
                 files.map(async (file) => {
@@ -328,9 +334,9 @@
                 console.log("Skip loading .less for a session table");
             }
             let files = [
-                "https://s.vldb2020.org/VLDB2020session.json",
-                "https://s.vldb2020.org/VLDB2020timeslot.json",
-                "https://s.vldb2020.org/VLDB2020paper.json",
+                "https://tokyo.vldb2020.org/VLDB2020session.json",
+                "https://tokyo.vldb2020.org/VLDB2020timeslot.json",
+                "https://tokyo.vldb2020.org/VLDB2020paper.json",
             ];
             Promise.all(
                 files.map(async (file) => {
@@ -467,6 +473,8 @@
                             s.inherit == "" || s.chair != ""
                                 ? s.chair
                                 : h.chair,
+                        urls: s.inherit == "" || s.urls != "" ? s.urls : h.urls,
+                        /*,
                         url_conference:
                             s.inherit == "" || s.url_conference != ""
                                 ? s.url_conference
@@ -478,7 +486,7 @@
                         url_inquiry:
                             s.inherit == "" || s.url_inquiry != ""
                                 ? s.url_inquiry
-                                : h.url_inquiry,
+                                : h.url_inquiry,*/
                     };
                 });
                 let gridIdx = [];
@@ -685,7 +693,7 @@
                 sButton.addEventListener("click", (e) => {
                     if (sHidden.value != "") {
                         location.href =
-                            "program-flat.html?p=" +
+                            "program_flat.html?p=" +
                             encodeURIComponent(sHidden.value);
                         console.log(sHidden.value);
                     }
@@ -828,10 +836,49 @@
                     }
                     maskDescription.innerHTML = description;
 
+                    const button = (target, go, key, id) => {
+                        const url =
+                            "//tokyo.vldb2020.org/?tg=" +
+                            target +
+                            "&go=" +
+                            go +
+                            "&id=" +
+                            key +
+                            "!" +
+                            id;
+                        let btn = document.createElement("a");
+                        btn.classList.add("btn");
+                        btn.classList.add("btn-" + go);
+                        btn.href = url;
+                        btn.appendChild(
+                            document.createTextNode(
+                                buttonTitles.hasOwnProperty(go)
+                                    ? buttonTitles[go]
+                                    : go
+                            )
+                        );
+                        return btn;
+                    };
                     let maskButtons = document.createElement("div");
+                    s.urls.forEach((go) => {
+                        maskButtons.appendChild(
+                            button("session", go, "id", s["id"])
+                        );
+                    });
+                    /*
+                    for (let key in s) {
+                        let value = s[key];
+                        const found = key.match(/url_([a-z]+)$/);
+                        if (found != null) {
+                            maskButtons.appendChild(
+                                button("session", found[1], "id", s["id"])
+                            );
+                        }
+                    }*/
                     //"url_conference":"#","url_chat":"#","url_inquiry"
                     maskButtons.classList.add("buttons");
                     //maskButtons.appendChild(document.createTextNode(s.url_inquiry));
+                    /*
                     let btnConference = document.createElement("a");
                     btnConference.classList.add("btn");
                     btnConference.classList.add("btn-green");
@@ -852,6 +899,7 @@
                     btnInquiry.href = s.url_inquiry;
                     btnInquiry.appendChild(document.createTextNode("Inquiry"));
                     maskButtons.appendChild(btnInquiry);
+                    */
                     mask.appendChild(maskTime);
                     mask.appendChild(maskTitle);
                     mask.appendChild(maskDescription);
@@ -869,6 +917,12 @@
                             let pAbstract = document.createElement("div");
                             pAbstract.classList.add("abstract");
 
+                            paper.urls.forEach((go) => {
+                                pButton.appendChild(
+                                    button("paper", go, "pid", paper["pid"])
+                                );
+                            });
+                            /*
                             let btnVideo = document.createElement("a");
                             btnVideo.classList.add("btn");
                             btnVideo.classList.add("btn-red");
@@ -876,8 +930,9 @@
                                 document.createTextNode("Prerecorded Video")
                             );
                             btnVideo.href = paper.url_video;
-
+                                
                             pButton.appendChild(btnVideo);
+                            */
                             pTitle.appendChild(
                                 document.createTextNode(paper.title)
                             );
