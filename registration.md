@@ -15,7 +15,7 @@ Paper registration for VLDB 2020 will start on August 3, 2020 and will close on 
 | Category | Rate |
 |:--------:|:----:|
 | Research/Industrial/Demo Paper | 30,000 JPY * |
-| Workshop Paper                 | 10,000 JPT * |
+| Workshop Paper                 | 10,000 JPY * |
 
 *) If conditions are met, registration will be free (0 JPY). Please see items 3 and 4 below for details.
 
