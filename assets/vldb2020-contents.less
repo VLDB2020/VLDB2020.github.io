@@ -212,50 +212,124 @@ each(@colors,{
 });
 
 each(@categories, {
-    
-        #toppage-cnt.@{value} #contents-body .contents-header, #toppage-cnt.@{value} #contents-body .contents-footer {
-            background-color: extract(@categories-color, @index);
-        }
 
-        #toppage-cnt.@{value} .menu-btn svg.scroll-btn>rect {
-            fill:extract(@categories-color, @index);
-        }
+    #toppage-cnt.@{value} #contents-body .contents-header, #toppage-cnt.@{value} #contents-body .contents-footer {
+        background-color: extract(@categories-color, @index);
+    }
 
-        #toppage-cnt.@{value} blockquote {
-            padding:0px 10px;
-            border: 3px solid;
-            border-color:extract(@categories-color, @index);
-            background-color:fadeout(extract(@categories-color, @index), 90%);
+    #toppage-cnt.@{value} .menu-btn svg.scroll-btn>rect {
+        fill:extract(@categories-color, @index);
+    }
+
+    #toppage-cnt.@{value} blockquote {
+        padding:0px 10px;
+        border: 3px solid;
+        border-color:extract(@categories-color, @index);
+        background-color:fadeout(extract(@categories-color, @index), 90%);
+    }
+    #toppage-cnt.@{value} s{
+        text-decoration: line-through solid extract(@categories-color, @index);
+        color: fadeout(@color-black,50%);
+    }
+    #toppage-cnt.@{value} .badge {
+        color: lighten(extract(@categories-color, @index), 70%);
+        background-color: extract(@categories-color, @index);
+    }
+    .submenu-panel.@{value} .badge{
+        color: darken(extract(@categories-color, @index), 70%);
+        font-weight: bold;
+        background-color: lighten(extract(@categories-color, @index), 30%);
+    }
+    #toppage-cnt.@{value} .updated {
+        padding-left:15px;
+        padding-right:15px;
+        padding-bottom:10px;
+        background-color: fadein(lighten(extract(@categories-color, @index), 40%),70%);
+    }
+    #toppage-cnt.@{value} .updated::before{
+        .font-univia(900,italic);
+        color:extract(@categories-color, @index);
+        opacity:.5;
+        margin-bottom:20px;
+        text-align:right;
+        font-size:1.6em;
+        display:block;
+        content:attr(x-title);
+    }
+    #toppage-cnt.@{value} table {
+        th{
+            background-color:extract(@categories-color, @index);
+            color:@color-white;
+            padding:10px;
+            border:0px;
+            &:first-child{
+                border-radius: 10px 0px 0px 0px;
+            }
+            &:last-child{
+                border-radius: 0px 10px 0px 0px;
+            }
         }
-        #toppage-cnt.@{value} s{
-            text-decoration: line-through solid extract(@categories-color, @index);
-            color: fadeout(@color-black,50%);
+        tr{
+            td {
+                padding:10px 20px;
+            }
+            &:nth-child(odd){
+                background-color:lighten(extract(@categories-color, @index),50%);
+            }
+            &:nth-child(even){
+                background-color:lighten(extract(@categories-color, @index),30%);
+            }
         }
-        #toppage-cnt.@{value} .badge {
-            color: lighten(extract(@categories-color, @index), 70%);
-            background-color: extract(@categories-color, @index);
+    }
+    #toppage-cnt.@{value} .portrait{
+        padding:10px;
+        small{
+            font-size:0.8em;
         }
-        .submenu-panel.@{value} .badge{
-            color: darken(extract(@categories-color, @index), 70%);
-            font-weight: bold;
-            background-color: lighten(extract(@categories-color, @index), 30%);
+        large{
+            font-size:1.2em;
         }
-        #toppage-cnt.@{value} .updated {
-            padding-left:15px;
-            padding-right:15px;
-            padding-bottom:10px;
-            background-color: fadein(lighten(extract(@categories-color, @index), 40%),70%);
+        .header{
+            background-color:extract(@categories-color, @index);
+            color:@color-white;
+            border-radius: 10px 10px 0px 0px;
+            font-size:1.5rem;
+            line-height:2rem;
+            padding:5px;
+            text-align: center;
+            .font-univia(700);
         }
-        #toppage-cnt.@{value} .updated::before{
-            .font-univia(900,italic);
-            color:extract(@categories-color, @index);
-            opacity:.5;
-            margin-bottom:20px;
-            text-align:right;
-            font-size:1.6em;
+        .name{
+            background-color:fadeout(extract(@categories-color, @index),80%);
+            font-size:2rem;
+            line-height:2rem;
+            padding:5px;
+            text-align: center;
+            text-shadow:1px 1px 0 @color-white,-1px 1px 0 @color-white,1px -1px 0 @color-white,-1px -1px 0 @color-white;
+            .font-industry(700);
+        }
+        img{
             display:block;
-            content:attr(x-title);
+        }
+        .talk{
+            background-color:fadeout(extract(@categories-color, @index),80%);
+            padding:5px;
+        }
+        .footer{
+            background-color:extract(@categories-color, @index);
+            color:@color-white;
+            border-radius: 0px 0px 10px 10px;
+            padding:5px 10px;
+            text-align: center;
+            .font-museo(300);
+            a.icon{
+                color:@color-white;
+                font-size:3em;
+                text-decoration: none;
+                float: left;
+            }
         }
     }
 
-);
+});
+
