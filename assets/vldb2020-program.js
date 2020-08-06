@@ -489,6 +489,9 @@
                             document.getElementById("contents-body").scrollTop +
                             top -
                             120,
+                        complete: function (anim) {
+                            alert('detail show?: ', document.getElementById("detail_" + id).style.display);
+                        }
                     });
                 };
                 let hideModal = (id) => {
