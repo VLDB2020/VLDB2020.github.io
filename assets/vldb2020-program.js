@@ -483,6 +483,9 @@
                     tl.add({
                         targets: "#detail_" + id,
                         opacity: ["0%", "100%"],
+                        complete: function (anim) {
+                            alert('detail show?: ' + document.getElementById("detail_" + id).style.display);
+                        }
                     }).add({
                         targets: "#contents-body",
                         scrollTop:
@@ -490,7 +493,7 @@
                             top -
                             120,
                         complete: function (anim) {
-                            alert('detail show?: ', document.getElementById("detail_" + id).style.display);
+                            alert('scroll end?: ' + document.getElementById("detail_" + id).style.display);
                         }
                     });
                 };
