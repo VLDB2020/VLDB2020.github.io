@@ -482,19 +482,13 @@
                     });
                     tl.add({
                         targets: "#detail_" + id,
-                        opacity: ["0%", "100%"],
-                        complete: function (anim) {
-                            alert('detail show?: ' + document.getElementById("detail_" + id).style.display);
-                        }
+                        opacity: [0, 1]
                     }).add({
                         targets: "#contents-body",
                         scrollTop:
                             document.getElementById("contents-body").scrollTop +
                             top -
-                            120,
-                        complete: function (anim) {
-                            alert('scroll end?: ' + document.getElementById("detail_" + id).style.display);
-                        }
+                            120
                     });
                 };
                 let hideModal = (id) => {
