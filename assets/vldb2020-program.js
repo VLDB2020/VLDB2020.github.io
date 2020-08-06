@@ -8,9 +8,52 @@
         video: "Pre-recorded Video",
         workshop: "Click here to see the program of the workshop"
     };
+    let createDateTimeSpan = (timestamp, appendUTC = false) => {
+        return (
+            '<span x-datetime="yes" x-timestamp="' +
+            timestamp +
+            '" x-timeutc="' +
+            (appendUTC ? "yes" : "no") +
+            '">' +
+            createDateTimeString(timestamp, appendUTC) +
+            "</span>"
+        );
+    };
+    let createDateTimeString = (timestamp, appendUTC = false) => {
+        let gap =
+            Number(document.getElementById("utcOffset").value) * 60;
+        let localtime = moment(timestamp).utcOffset(gap);
+        let utc = moment.utc(timestamp);
+        let date =
+            localtime.format("DD") == utc.format("DD")
+                ? ""
+                : utc.format("ddd, MMM Do, ");
+        let str =
+            localtime.format("dddd, MMMM Do YYYY, h:mm a") +
+            (appendUTC
+                ? " [" + date + utc.format("h:mm a") + " UTC]"
+                : "");
+        return str;
+    };
     const onLoadFn = () => {
         if (document.getElementById("programFlat") !== null) {
             const params = new URLSearchParams(window.location.search);
+            if (!document.getElementById("programFrameLess")) {
+                var link = document.createElement("link");
+                link.id = "programFrameLess";
+                link.rel = "stylesheet/less";
+                link.type = "text/css";
+                link.href = "/assets/vldb2020-program.less";
+                document.getElementsByTagName("HEAD")[0].appendChild(link);
+                less.sheets.push(
+                    document.querySelector(
+                        'link[href="/assets/vldb2020-program.less"]'
+                    )
+                );
+                less.refresh();
+            } else {
+                console.log("Skip loading .less for a session table");
+            }
             let start = () => {
                 let countdowns = document.querySelectorAll(".countdown");
                 countdowns.forEach((cd) => {
@@ -86,7 +129,7 @@
                 raw_timeslots.forEach((t) => {
                     timeslots.push({
                         slot: t.slot,
-                        start: moment(t.start),
+                        start: t.start,
                         day: t.day,
                         block: t.block,
                     });
@@ -104,12 +147,58 @@
                         if (papers.hasOwnProperty(session.id)) {
                             papers[session.id].forEach((paper, idx) => {
                                 if (full || filter_paper.includes(paper.pid)) {
-                                    console.log(idx, paper);
+                                    //console.log(idx, paper);
+                                    timeslot["hit"] = true;
+                                    session["hit"] = true;
+                                    paper["hit"] = true;
                                 }
                             });
                         }
                     });
                 });
+                const base = document.getElementById("programFlat");
+                let start = null;
+                timeslots.forEach((timeslot) => {
+                    if (timeslot.hit) {
+                        console.log("[timeslot]", timeslot);
+                    }
+                    sessions[timeslot.slot].forEach((session) => {
+                        let sess = null;
+                        if (session.hit) {
+                            console.log("", "[session]", session);
+                            sess = document.createElement("div");
+                            let t = document.createElement("div");
+                            sess.classList.add(session.room);
+                            t.classList.add("sessionId");
+                            let tim = document.createElement("div");
+                            tim.classList.add("time");
+                            tim.innerHTML = '<span class="block">' + timeslot.day + "-" + timeslot.block + "</span> " + createDateTimeSpan(timeslot.start, true) + '<span class="duration"><i class="fas fa-clock"></i>' + session.duration + "min</span>";
+                            let ttl = document.createElement("div");
+                            ttl.appendChild(document.createTextNode(session.title));
+                            t.appendChild(tim);
+                            t.appendChild(ttl);
+                            sess.appendChild(t);
+                            base.appendChild(sess);
+                        }
+                        if (papers.hasOwnProperty(session.id)) {
+                            papers[session.id].forEach((paper, idx) => {
+                                if (paper.hit) {
+                                    let div = document.createElement("div");
+                                    let pTitle = document.createElement("div");
+                                    pTitle.classList.add("title");
+                                    pTitle.appendChild(document.createTextNode(paper.title));
+                                    let pAuthor = document.createElement("div");
+                                    pAuthor.appendChild(document.createTextNode(paper.author));
+                                    pAuthor.classList.add("author");
+                                    div.appendChild(pTitle);
+                                    div.appendChild(pAuthor);
+                                    sess.appendChild(div);
+                                }
+                            });
+                        }
+                    });
+                });
+
             });
         }
         if (document.querySelectorAll(".programTimeTable") !== null) {
@@ -255,33 +344,7 @@
                     s: 60,
                 });
             };
-            let createDateTimeSpan = (timestamp, appendUTC = false) => {
-                return (
-                    '<span x-datetime="yes" x-timestamp="' +
-                    timestamp +
-                    '" x-timeutc="' +
-                    (appendUTC ? "yes" : "no") +
-                    '">' +
-                    createDateTimeString(timestamp, appendUTC) +
-                    "</span>"
-                );
-            };
-            let createDateTimeString = (timestamp, appendUTC = false) => {
-                let gap =
-                    Number(document.getElementById("utcOffset").value) * 60;
-                let localtime = moment(timestamp).utcOffset(gap);
-                let utc = moment.utc(timestamp);
-                let date =
-                    localtime.format("DD") == utc.format("DD")
-                        ? ""
-                        : utc.format("ddd, MMM Do, ");
-                let str =
-                    localtime.format("dddd, MMMM Do YYYY, h:mm a") +
-                    (appendUTC
-                        ? " [" + date + utc.format("h:mm a") + " UTC]"
-                        : "");
-                return str;
-            };
+
             let start = () => {
                 let countdowns = document.querySelectorAll(".countdown");
                 countdowns.forEach((cd) => {
@@ -689,8 +752,8 @@
                 sButton.addEventListener("click", (e) => {
                     if (sHidden.value != "") {
                         location.href =
-                            "program_flat.html?p=" +
-                            encodeURIComponent(sHidden.value);
+                            "program_flat.html?p=" + encodeURIComponent(sHidden.value) +
+                            "&q=" + encodeURIComponent(sInput.value);
                         console.log(sHidden.value);
                     }
                     e.stopPropagation();

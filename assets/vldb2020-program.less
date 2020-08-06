@@ -2,6 +2,7 @@
     font-size: 0.8em;
     line-height: 1.5em;
 }
+#programFlat,
 #programFrame > div {
     padding: 0.5em;
 }
@@ -23,6 +24,7 @@
     font-style: normal;
 }
 each(@blocks,{
+    #programFlat .@{value} ,
     #programFrame .@{value} {
         background-color: extract(@bg-colors, @index);
         color: @color-white;
@@ -68,6 +70,30 @@ each(@blocks,{
     font-family: adso, sans-serif;
     font-weight: @weight;
     font-style: @style;
+}
+
+#programFlat{
+    .time{
+        font-size:0.8em;
+    }
+    .duration{
+        margin-left:1em;
+    }
+    .block{
+        .font-industry(700);
+        margin-right:1em;
+    }
+    .title{
+        .font-museo(500,nomal,@color-black);
+        margin-top:0.5em;
+        margin-left:1em;
+    }
+    .author{
+        .font-museo(500,nomal,@color-black);
+        font-size:0.8em;
+        margin-bottom: 0.5em;
+        margin-left:1em;
+    }
 }
 
 .session(@color:@color-white,@bgcolor:@color-free,@weight:500,@style:normal) {
@@ -169,6 +195,7 @@ each(@blocks,{
     }
 }
 
+#programFlat,
 #programFrame {
     .NONE {
         display: none;
