@@ -88,6 +88,11 @@
             }
             let filter_paper = [];
             let filter_session = [];
+            let filter_word = [];
+            if (params.has("q")) {
+                filter_word = params.get("q").split(/[,\s]+/);
+            }
+            console.log("Marker Words:", filter_word);
             if (params.has("p")) {
                 filter_paper = params.get("p").split("!");
                 let s = {};
@@ -150,13 +155,24 @@
                                     //console.log(idx, paper);
                                     timeslot["hit"] = true;
                                     session["hit"] = true;
-                                    paper["hit"] = true;
+                                    if (!full) {
+                                        paper["hit"] = true;
+                                    }
                                 }
                             });
                         }
                     });
                 });
                 const base = document.getElementById("programFlat");
+                if (full) {
+                } else {
+                    let h = document.createElement("h2");
+                    h.appendChild(document.createTextNode("Search Results: " + filter_word.join(", ")));
+                    base.appendChild(h);
+                    let reset = document.createElement("div");
+                    reset.innerHTML = '[<a href="?">Reset Filter</a>]';
+                    base.appendChild(reset);
+                }
                 let start = null;
                 timeslots.forEach((timeslot) => {
                     if (timeslot.hit) {
@@ -179,22 +195,32 @@
                             t.appendChild(ttl);
                             sess.appendChild(t);
                             base.appendChild(sess);
-                        }
-                        if (papers.hasOwnProperty(session.id)) {
-                            papers[session.id].forEach((paper, idx) => {
-                                if (paper.hit) {
+                            if (papers.hasOwnProperty(session.id)) {
+                                papers[session.id].forEach((paper, idx) => {
+
                                     let div = document.createElement("div");
+                                    if (paper.hit) {
+                                        div.classList.add("hit");
+                                    }
                                     let pTitle = document.createElement("div");
                                     pTitle.classList.add("title");
-                                    pTitle.appendChild(document.createTextNode(paper.title));
                                     let pAuthor = document.createElement("div");
-                                    pAuthor.appendChild(document.createTextNode(paper.author));
                                     pAuthor.classList.add("author");
+                                    let srtTitle = paper.title;
+                                    let srtAuthor = paper.author;
+                                    filter_word.forEach((marker) => {
+                                        console.log("search", marker);
+                                        srtTitle = srtTitle.toLowerCase().replace(marker.toLowerCase(), '<span class="marker">' + marker + '</span>');
+                                        srtAuthor = srtAuthor.toLowerCase().replace(marker.toLowerCase(), '<span class="marker">' + marker + '</span>');
+                                    });
+                                    pTitle.innerHTML = srtTitle;
+                                    pAuthor.innerHTML = srtAuthor;
                                     div.appendChild(pTitle);
                                     div.appendChild(pAuthor);
                                     sess.appendChild(div);
-                                }
-                            });
+
+                                });
+                            }
                         }
                     });
                 });
