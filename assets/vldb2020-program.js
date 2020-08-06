@@ -194,6 +194,39 @@
                             t.appendChild(tim);
                             t.appendChild(ttl);
                             sess.appendChild(t);
+                            const button = (target, go, key, id) => {
+                                const url =
+                                    "//tokyo.vldb2020.org/?tg=" +
+                                    target +
+                                    "&go=" +
+                                    go +
+                                    "&id=" +
+                                    key +
+                                    "!" +
+                                    id;
+                                let btn = document.createElement("a");
+                                btn.classList.add("btn");
+                                btn.classList.add("btn-small");
+                                btn.classList.add("btn-" + go);
+                                btn.href = url;
+                                btn.appendChild(
+                                    document.createTextNode(
+                                        buttonTitles.hasOwnProperty(go)
+                                            ? buttonTitles[go]
+                                            : go
+                                    )
+                                );
+                                return btn;
+                            };
+                            let buttons = document.createElement("div");
+                            buttons.classList.add("buttonbar");
+                            session.urls.forEach((go) => {
+                                console.log("button", go);
+                                buttons.appendChild(
+                                    button("session", go, "id", session["id"])
+                                );
+                            });
+                            sess.appendChild(buttons);
                             base.appendChild(sess);
                             if (papers.hasOwnProperty(session.id)) {
                                 papers[session.id].forEach((paper, idx) => {
