@@ -164,15 +164,15 @@
                     });
                 });
                 const base = document.getElementById("programFlat");
-                if (full) {
-                } else {
+                if (!full) {
                     let h = document.createElement("h2");
                     h.appendChild(document.createTextNode("Search Results: " + filter_word.join(", ")));
                     base.appendChild(h);
-                    let reset = document.createElement("div");
-                    reset.innerHTML = '[<a href="?">Reset Filter</a>]';
-                    base.appendChild(reset);
                 }
+                let reset = document.createElement("div");
+                reset.innerHTML = '[<a href="program.html">VLDB2020 Program Structure</a>] ' + (full ? '[<a href="?">Reset Filter</a>]' : '');
+                base.appendChild(reset);
+
                 let start = null;
                 timeslots.forEach((timeslot) => {
                     if (timeslot.hit) {
