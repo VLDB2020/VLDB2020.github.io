@@ -11,7 +11,7 @@
     let createDateTimeSpan = (timestamp, appendUTC = false) => {
         return (
             '<span x-datetime="yes" x-timestamp="' +
-            timestamp +
+            moment(timestamp) +
             '" x-timeutc="' +
             (appendUTC ? "yes" : "no") +
             '">' +
@@ -74,7 +74,18 @@
             if (utcOffset) {
                 utcOffset.addEventListener("change", (e) => {
                     start();
-                    e.stopPropagation();
+                    let dateTime = document.querySelectorAll(
+                        "span[x-datetime='yes']"
+                    );
+                    dateTime.forEach((div) => {
+                        let st = Number(div.getAttribute("x-timestamp"));
+                        div.innerHTML = createDateTimeString(
+                            st,
+                            div.hasAttribute("x-timeutc") &&
+                            div.getAttribute("x-timeutc") == "yes"
+                        );
+                    });
+                    //e.stopPropagation();
                 });
                 utcOffset.value = moment().utcOffset() / 60;
                 let nowTime = document.querySelectorAll(".nowTime");
