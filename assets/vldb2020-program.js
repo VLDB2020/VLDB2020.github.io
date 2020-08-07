@@ -151,11 +151,11 @@
                     sessions[timeslot.slot].forEach((session) => {
                         if (papers.hasOwnProperty(session.id)) {
                             papers[session.id].forEach((paper, idx) => {
-                                if (full || filter_paper.includes(paper.pid)) {
+                                if (full || filter_session.includes(session.id) || filter_paper.includes(paper.pid)) {
                                     //console.log(idx, paper);
                                     timeslot["hit"] = true;
                                     session["hit"] = true;
-                                    if (!full) {
+                                    if (filter_paper.includes(paper.pid)) {
                                         paper["hit"] = true;
                                     }
                                 }
@@ -166,7 +166,17 @@
                 const base = document.getElementById("programFlat");
                 if (!full) {
                     let h = document.createElement("h2");
-                    h.appendChild(document.createTextNode("Search Results: " + filter_word.join(", ")));
+                    let resultof = '';
+                    if (filter_word.length > 0) {
+                        resultof += filter_word.join(", ");
+                    }
+                    if (filter_session.length > 0) {
+                        if (resultof != '') {
+                            resultof += ' on ';
+                        }
+                        resultof += 'Session ' + filter_session.join(", ");
+                    }
+                    h.appendChild(document.createTextNode("Search Results: " + resultof));
                     base.appendChild(h);
                 }
                 let reset = document.createElement("div");
