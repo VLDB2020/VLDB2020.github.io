@@ -6,7 +6,7 @@
         chat: "Slack Channel",
         inquiry: "Support",
         video: "Pre-recorded Video",
-        workshop: "Click here to see the program of the workshop"
+        workshop: 'Workshop Program&emsp;<i class="fas fa-external-link-alt"></i>'
     };
     let createDateTimeSpan = (timestamp, appendUTC = false) => {
         return (
@@ -180,7 +180,7 @@
                     base.appendChild(h);
                 }
                 let reset = document.createElement("div");
-                reset.innerHTML = '[<a href="program.html">VLDB2020 Program Structure</a>] ' + (full ? '[<a href="?">Reset Filter</a>]' : '');
+                reset.innerHTML = '[<a href="program.html">VLDB2020 Program Structure</a>] ' + (!full ? '[<a href="?">Reset Filter</a>]' : '');
                 base.appendChild(reset);
 
                 let start = null;
@@ -205,33 +205,50 @@
                             t.appendChild(ttl);
                             sess.appendChild(t);
                             const button = (target, go, key, id) => {
-                                const url =
-                                    "//tokyo.vldb2020.org/?tg=" +
-                                    target +
-                                    "&go=" +
-                                    go +
-                                    "&id=" +
-                                    key +
-                                    "!" +
-                                    id;
-                                let btn = document.createElement("a");
-                                btn.classList.add("btn");
-                                btn.classList.add("btn-small");
-                                btn.classList.add("btn-" + go);
-                                btn.href = url;
-                                btn.appendChild(
-                                    document.createTextNode(
-                                        buttonTitles.hasOwnProperty(go)
-                                            ? buttonTitles[go]
-                                            : go
-                                    )
-                                );
-                                return btn;
+                                if (target != "ical") {
+                                    const url =
+                                        "//tokyo.vldb2020.org/?tg=" +
+                                        target +
+                                        "&go=" +
+                                        go +
+                                        "&id=" +
+                                        key +
+                                        "!" +
+                                        id;
+                                    let btn = document.createElement("a");
+                                    btn.classList.add("btn");
+                                    btn.classList.add("btn-small");
+                                    btn.classList.add("btn-" + go);
+                                    btn.href = url;
+                                    btn.innerHTML = buttonTitles.hasOwnProperty(go)
+                                        ? buttonTitles[go]
+                                        : go;
+                                    /*
+                                    btn.appendChild(
+                                        document.createTextNode(
+                                            buttonTitles.hasOwnProperty(go)
+                                                ? buttonTitles[go]
+                                                : go
+                                        )
+                                    );*/
+                                    return btn;
+                                } else {
+                                    const url = 'https://tokyo.vldb2020.org/ical.php?s=' + id;
+                                    let btn = document.createElement("a");
+                                    btn.classList.add("btn");
+                                    btn.classList.add("btn-cal");
+                                    btn.classList.add("btn-small");
+                                    btn.href = url;
+                                    btn.innerHTML = '<i class="far fa-calendar-plus"></i>&emsp;iCal';
+                                    return btn;
+                                }
                             };
                             let buttons = document.createElement("div");
                             buttons.classList.add("buttonbar");
+                            buttons.appendChild(
+                                button("ical", null, null, session["id"])
+                            );
                             session.urls.forEach((go) => {
-                                console.log("button", go);
                                 buttons.appendChild(
                                     button("session", go, "id", session["id"])
                                 );
@@ -338,7 +355,7 @@
                             end.utcOffset(gap * 60).format("h:mm a") +
                             '</span><span class="block' +
                             tzDiv.getAttribute("x-block") +
-                            '">&nbsp;&nbsp;</span>';
+                            '">&emsp;</span>';
                     }
                 }
             });
@@ -571,7 +588,6 @@
                             console.warn("No Original Session", s.inherit);
                         }
                     }
-                    console.log("URLS", s.urls);
                     session[s.id] = {
                         id: s.id,
                         slot: s.slot,
@@ -747,7 +763,7 @@
                     sResult.innerHTML = "";
                     sHidden.value = "";
                     if (results.length == 0) {
-                        sResult.innerHTML = "&nbsp;";
+                        sResult.innerHTML = "&emsp;";
                         sButton.classList.add("btn-disabled");
                     } else {
                         sButton.classList.remove("btn-disabled");
@@ -829,7 +845,7 @@
                 });
                 let sResult = document.createElement("div");
                 sResult.style.flexBasis = "100%";
-                sResult.innerHTML = "&nbsp;";
+                sResult.innerHTML = "&emsp;";
                 let sHidden = document.createElement("input");
                 sHidden.id = "searchResult";
                 sHidden.value = "";
@@ -966,32 +982,40 @@
                     }
                     maskDescription.innerHTML = description;
                     const button = (target, go, key, id) => {
-                        const url =
-                            "//tokyo.vldb2020.org/?tg=" +
-                            target +
-                            "&go=" +
-                            go +
-                            "&id=" +
-                            key +
-                            "!" +
-                            id;
-                        let btn = document.createElement("a");
-                        btn.classList.add("btn");
-                        btn.classList.add("btn-" + go);
-                        btn.href = url;
-                        btn.appendChild(
-                            document.createTextNode(
-                                buttonTitles.hasOwnProperty(go)
-                                    ? buttonTitles[go]
-                                    : go
-                            )
-                        );
-                        return btn;
+                        if (target != "ical") {
+                            const url =
+                                "//tokyo.vldb2020.org/?tg=" +
+                                target +
+                                "&go=" +
+                                go +
+                                "&id=" +
+                                key +
+                                "!" +
+                                id;
+                            let btn = document.createElement("a");
+                            btn.classList.add("btn");
+                            btn.classList.add("btn-" + go);
+                            btn.href = url;
+                            btn.innerHTML = buttonTitles.hasOwnProperty(go)
+                                ? buttonTitles[go]
+                                : go;
+                            return btn;
+                        } else {
+                            const url = 'https://tokyo.vldb2020.org/ical.php?s=' + id;
+                            let btn = document.createElement("a");
+                            btn.classList.add("btn");
+                            btn.classList.add("btn-cal");
+                            btn.href = url;
+                            btn.innerHTML = '<i class="far fa-calendar-plus"></i>&emsp;iCal';
+                            return btn;
+                        }
                     };
                     let maskButtons = document.createElement("div");
                     let isWorkshop = false;
+                    maskButtons.appendChild(
+                        button("ical", null, null, s["id"])
+                    );
                     s.urls.forEach((go) => {
-                        console.log("button", go);
                         maskButtons.appendChild(
                             button("session", go, "id", s["id"])
                         );

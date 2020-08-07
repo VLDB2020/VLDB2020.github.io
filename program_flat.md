@@ -1,6 +1,6 @@
 ---
 layout: default
-title: VLDB2020 Program (Flat Version)
+title: Conference Program (Flat Version)
 category: forparticipants
 ---
 
