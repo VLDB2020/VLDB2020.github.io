@@ -277,18 +277,24 @@
                                     pTitle.classList.add("title");
                                     let pAuthor = document.createElement("div");
                                     pAuthor.classList.add("author");
+                                    let pAbstract = document.createElement("div");
+                                    pAbstract.classList.add("abstract");
                                     let srtTitle = paper.title;
                                     let srtAuthor = paper.author;
-                                    console.log("AUTHOR", srtAuthor);
+                                    let srtAbstract = paper.description;
                                     filter_word.forEach((marker) => {
-                                        console.log("search", marker);
-                                        srtTitle = srtTitle.toLowerCase().replace(marker.toLowerCase(), '<span class="marker">' + marker + '</span>');
-                                        srtAuthor = srtAuthor.toLowerCase().replace(marker.toLowerCase(), '<span class="marker">' + marker + '</span>');
+                                        //console.log("search", marker);
+                                        //srtTitle = srtTitle.toLowerCase().replace(marker.toLowerCase(), '<span class="marker">' + marker + '</span>');
+                                        //srtAuthor = srtAuthor.toLowerCase().replace(marker.toLowerCase(), '<span class="marker">' + marker + '</span>');
+                                        srtTitle = srtTitle.replace(new RegExp("(" + marker + ")", "gi"), '<span class="marker">$1</span>');
+                                        srtAuthor = srtAuthor.replace(new RegExp("(" + marker + ")", "gi"), '<span class="marker">$1</span>');
+                                        srtAbstract = srtAbstract.replace(new RegExp("(" + marker + ")", "gi"), '<span class="marker">$1</span>');
                                     });
-                                    pTitle.innerHTML = srtTitle;
+                                    pTitle.innerHTML = '<span style="margin-right:1em;" class="badge">' + paper.order + "</span>" + srtTitle;
                                     pAuthor.innerHTML = srtAuthor;
                                     div.appendChild(pTitle);
                                     div.appendChild(pAuthor);
+                                    div.appendChild(pAbstract);
                                     sess.appendChild(div);
 
                                 });
@@ -1056,6 +1062,8 @@
                             pButton.classList.add("button");
                             let pTitle = document.createElement("div");
                             pTitle.classList.add("title");
+                            let pMore = document.createElement("div");
+                            pMore.classList.add("more");
                             let pAbstract = document.createElement("div");
                             pAbstract.classList.add("abstract");
 
@@ -1064,12 +1072,14 @@
                                     button("paper", go, "pid", paper["pid"])
                                 );
                             });
+                            pMore.innerHTML = '<a href="program_flat.html?p=' + paper["pid"] + '">More Detail</a>';
                             pTitle.appendChild(
                                 document.createTextNode(paper.title)
                             );
                             pAbstract.innerHTML = paper.author.replace(/\;/g, '\n<br>');
                             pDiv.appendChild(pButton);
                             pDiv.appendChild(pTitle);
+                            pDiv.appendChild(pMore);
                             pDiv.appendChild(pAbstract);
                             return pDiv;
                         };

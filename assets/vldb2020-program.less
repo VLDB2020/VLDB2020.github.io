@@ -76,6 +76,11 @@ each(@blocks,{
     .buttonbar{
         background-color: fadeout(@color-white,50%);
         padding:5px;
+        display: flex;
+        a {
+            flex-grow: 1;
+            margin: 6px;
+        }
     }
     .hit{
         border:1px solid #ecfb00;
@@ -94,15 +99,26 @@ each(@blocks,{
         margin-right:1em;
     }
     .title{
-        .font-museo(500,nomal,@color-black);
+        .font-museo(700,nomal,@color-black);
+        font-size:1.2em;
+        line-height:1.3em;
         margin-top:0.5em;
-        margin-left:1em;
+        margin-left:2.5rem;
+        text-indent: -2em;
     }
     .author{
-        .font-museo(500,nomal,@color-black);
-        font-size:0.8em;
+        .font-museo(300,nomal,@color-black);
+        font-size:1em;
+        line-height:1.1em;
         margin-bottom: 0.5em;
-        margin-left:1em;
+        margin-left:3rem;
+    }
+    .abstract{
+        .font-museo(300,nomal,@color-black);
+        font-size:1em;
+        line-height:1.1em;
+        margin-bottom: 0.5em;
+        margin-left:3rem;
     }
 }
 
@@ -154,7 +170,8 @@ each(@blocks,{
                         0px -1px 2px fadeout(@color-inverse,80%);
         }
         .description {
-            padding: 2em;
+            padding: 0.5em;
+            text-align:right;
             font-size:1.2em;
             border-left: 2px @color solid;
             border-right: 2px @color solid;
@@ -203,7 +220,7 @@ each(@blocks,{
                     border-bottom: unset;
                     border-radius: unset;
                     background-color: darken(@bgcolor, 20%);
-                    padding: 1em 0.5em;
+                    padding: 1em 0.5em 0.5em 0em;
                     text-shadow    : 
                         1px  1px 2px fadeout(@color-inverse,80%),
                     -1px  1px 2px fadeout(@color-inverse,80%),
@@ -213,6 +230,16 @@ each(@blocks,{
                         0px  1px 2px fadeout(@color-inverse,80%),
                     -1px  0px 2px fadeout(@color-inverse,80%),
                         0px -1px 2px fadeout(@color-inverse,80%);
+                }
+                div.more{
+                    border-left: 2px @color solid;
+                    border-right: 2px @color solid;
+                    background-color: darken(@bgcolor, 20%);
+                    padding:5px;
+                    text-align:right;
+                    a {
+                        color:@color;
+                    }
                 }
                 div.abstract {
                     font-weight: 100;
