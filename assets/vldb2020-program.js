@@ -279,6 +279,7 @@
                                     pAuthor.classList.add("author");
                                     let srtTitle = paper.title;
                                     let srtAuthor = paper.author;
+                                    console.log("AUTHOR", srtAuthor);
                                     filter_word.forEach((marker) => {
                                         console.log("search", marker);
                                         srtTitle = srtTitle.toLowerCase().replace(marker.toLowerCase(), '<span class="marker">' + marker + '</span>');
@@ -1041,7 +1042,11 @@
                         mask.appendChild(maskDescription);
                     }
                     mask.appendChild(maskButtons);
-                    if (!isWorkshop && papers[s.id] && papers[s.id].length > 0) {
+                    let ID = s.id;
+                    if (s.inherit != "") {
+                        ID = s.inherit;
+                    }
+                    if (!isWorkshop && papers[ID] && papers[ID].length > 0) {
                         let maskPapers = document.createElement("div");
                         maskPapers.classList.add("paperbox");
                         let paperCard = (paper) => {
@@ -1062,16 +1067,13 @@
                             pTitle.appendChild(
                                 document.createTextNode(paper.title)
                             );
-                            pAbstract.appendChild(
-                                document.createTextNode(paper.description)
-                            );
-
+                            pAbstract.innerHTML = paper.author.replace(/\;/g, '\n<br>');
                             pDiv.appendChild(pButton);
                             pDiv.appendChild(pTitle);
                             pDiv.appendChild(pAbstract);
                             return pDiv;
                         };
-                        papers[s.id].forEach((paper) => {
+                        papers[ID].forEach((paper) => {
                             maskPapers.appendChild(paperCard(paper));
                         });
                         mask.appendChild(maskPapers);

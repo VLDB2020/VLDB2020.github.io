@@ -106,7 +106,7 @@ each(@blocks,{
     }
 }
 
-.session(@color:@color-white,@bgcolor:@color-free,@weight:500,@style:normal) {
+.session(@color:@color-white,@color-inverse:@color-white,@bgcolor:@color-free,@weight:500,@style:normal) {
     background-color: @bgcolor;
     border: 3px solid #00000000;
     .font-museo(@weight,@style,@color);
@@ -135,15 +135,27 @@ each(@blocks,{
             margin-bottom: 1em;
         }
         .title {
+            font-size:1.5em;
+            font-weight:900;
             padding: 1em 2em;
             border-top: 2px @color solid;
             border-left: 2px @color solid;
             border-right: 2px @color solid;
             background-color: darken(@bgcolor, 20%);
             border-radius: 1em 1em 0 0;
+            text-shadow    : 
+                        1px  1px 2px fadeout(@color-inverse,80%),
+                    -1px  1px 2px fadeout(@color-inverse,80%),
+                        1px -1px 2px fadeout(@color-inverse,80%),
+                    -1px -1px 2px fadeout(@color-inverse,80%),
+                        1px  0px 2px fadeout(@color-inverse,80%),
+                        0px  1px 2px fadeout(@color-inverse,80%),
+                    -1px  0px 2px fadeout(@color-inverse,80%),
+                        0px -1px 2px fadeout(@color-inverse,80%);
         }
         .description {
             padding: 2em;
+            font-size:1.2em;
             border-left: 2px @color solid;
             border-right: 2px @color solid;
             background-color: desaturate(@bgcolor, 30%);
@@ -182,6 +194,9 @@ each(@blocks,{
                     }
                 }
                 div.title {
+                    font-size:1.2em;
+                    .font-museo(900,nomal,@color-black);
+                    text-align:left;
                     border-top: unset;
                     border-left: 2px @color solid;
                     border-right: 2px @color solid;
@@ -189,8 +204,18 @@ each(@blocks,{
                     border-radius: unset;
                     background-color: darken(@bgcolor, 20%);
                     padding: 1em 0.5em;
+                    text-shadow    : 
+                        1px  1px 2px fadeout(@color-inverse,80%),
+                    -1px  1px 2px fadeout(@color-inverse,80%),
+                        1px -1px 2px fadeout(@color-inverse,80%),
+                    -1px -1px 2px fadeout(@color-inverse,80%),
+                        1px  0px 2px fadeout(@color-inverse,80%),
+                        0px  1px 2px fadeout(@color-inverse,80%),
+                    -1px  0px 2px fadeout(@color-inverse,80%),
+                        0px -1px 2px fadeout(@color-inverse,80%);
                 }
                 div.abstract {
+                    font-weight: 100;
                     border-top: unset;
                     border-bottom: 2px @color solid;
                     border-left: 2px @color solid;
@@ -217,7 +242,7 @@ each(@blocks,{
     ._5,
     ._6,
     ._7 {
-        .session(@color-black,@color-workshop);
+        .session(@color-black,@color-white,@color-workshop);
     }
     .A,
     .B,
@@ -225,39 +250,39 @@ each(@blocks,{
     .D,
     .E,
     .F {
-        .session(@color-black,@color-oral);
+        .session(@color-black,@color-white,@color-oral);
     }
     .a,
     .b,
     .c,
     .d,
     .e {
-        .session(@color-black,@color-demo);
+        .session(@color-black,@color-white,@color-demo);
     }
     .T {
-        .session(@color-white,@color-tutrial);
+        .session(@color-white,@color-black,@color-tutrial);
     }
     .P {
-        .session(@color-white,@color-prenary,700);
+        .session(@color-white,@color-black,@color-prenary,700);
     }
     .V {
-        .session(@color-white,@color-vldbj);
+        .session(@color-white,@color-black,@color-vldbj);
     }
     .J {
-        .session(@color-white,@color-japan,900);
+        .session(@color-white,@color-black,@color-japan,900);
     }
     .r,
     .R {
-        .session(@color-black,@color-round-table);
+        .session(@color-black,@color-white,@color-round-table);
     }
     .Q {
-        .session(@color-white,@color-party);
+        .session(@color-white,@color-black,@color-party);
     }
     .S {
-        .session(@color-black,@color-sponsor);
+        .session(@color-black,@color-white,@color-sponsor);
     }
     .Z {
-        .session(@color-white,@color-free);
+        .session(@color-white,@color-black,@color-free);
     }
     #timeZone {
         background-color: lighten(@color-free, 50%);
