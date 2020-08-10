@@ -80,6 +80,7 @@
                 atendee: "https://vldb2020.org/instructions/guide-attendee.md",
                 presenter:
                     "https://vldb2020.org/instructions/guide-presenter.md",
+                video: "https://vldb2020.org/instructions/guide-video-upload.md",
                 chair:
                     "https://vldb2020.org/instructions/guide-session-chair.md",
             };
