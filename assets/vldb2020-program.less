@@ -196,12 +196,13 @@ each(@blocks,{
         }
         .paperbox {
             margin: 1em 0;
-            display: inline-flex;
-            flex-wrap: wrap;
-            flex-basis: 30%;
-            gap: 1em;
+            //display: flex;
+            //flex-wrap: wrap;
+            //align-items: stretch;
+            //gap: 1em;
             div.paper {
-                flex: 1;
+                //flex: 1;
+                margin-top:1em;
                 div.button {
                     border-top: 2px @color solid;
                     border-left: 2px @color solid;
@@ -217,7 +218,7 @@ each(@blocks,{
                 }
                 div.title {
                     font-size:1.2em;
-                    .font-museo(900,nomal,@color-black);
+                    .font-museo(900,nomal,@color);
                     text-align:left;
                     border-top: unset;
                     border-left: 2px @color solid;

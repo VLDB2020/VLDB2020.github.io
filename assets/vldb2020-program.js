@@ -959,6 +959,10 @@
                     mask.style.gridColumnStart =
                         blockMask[s.slot].gridColumnStart;
                     mask.style.gridColumnEnd = blockMask[s.slot].gridColumnEnd;
+                    let blockHeight = document.getElementsByClassName("search")[0].getBoundingClientRect().height * (1 + blockMask[s.slot].gridRowEnd - blockMask[s.slot].gridRowStart);
+                    console.log("Block Height", blockHeight);
+                    mask.style.maxHeight = blockHeight + "px";
+                    mask.style.overflowY = 'scroll';
                     mask.classList.add(s.room);
                     mask.classList.add("mask");
                     let maskTime = document.createElement("div");
