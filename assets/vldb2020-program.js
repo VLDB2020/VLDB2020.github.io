@@ -279,7 +279,7 @@
                                     pAuthor.classList.add("author");
                                     let pAbstract = document.createElement("div");
                                     pAbstract.classList.add("abstract");
-                                    let srtTitle = pTitle.innerHTML = '<span class="badge">' + paper.pid + '</span> ' + paper.title;
+                                    let srtTitle = paper.title;
                                     let srtAuthor = paper.author;
                                     let srtAbstract = paper.description;
                                     filter_word.forEach((marker) => {
@@ -290,7 +290,7 @@
                                         srtAuthor = srtAuthor.replace(new RegExp("(" + marker + ")", "gi"), '<span class="marker">$1</span>');
                                         srtAbstract = srtAbstract.replace(new RegExp("(" + marker + ")", "gi"), '<span class="marker">$1</span>');
                                     });
-                                    pTitle.innerHTML = '<span style="margin-right:1em;" class="badge">' + paper.order + "</span>" + srtTitle;
+                                    pTitle.innerHTML = '<span style="margin-right:1em;" class="badge">' + paper.pid + "</span>" + srtTitle;
                                     pAuthor.innerHTML = srtAuthor;
                                     div.appendChild(pTitle);
                                     div.appendChild(pAuthor);
