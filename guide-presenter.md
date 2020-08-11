@@ -1,6 +1,6 @@
 ---
 layout: default
-title: VLDB2020 Guide For Presenters
+title: VLDB2020 Talk Recording Instructions
 category: forparticipants
 ---
 
