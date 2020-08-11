@@ -2,6 +2,7 @@
 //-- Basic Color Scheme
 @color-white: #f3f3f2;
 @color-black: #180614;
+@color-link: #1e50a2;
 @color-red: #a22041;
 @color-pink: #fe019a;
 @color-violet: #9d5b8b;
@@ -111,10 +112,6 @@
     font-style: @style;
 }
 
-//
-//
-//
-
 html,
 div,
 body,
@@ -127,11 +124,18 @@ html {
     height: 100%;
     overflow: hidden;
 }
-
+a {
+    color: @color-link;
+}
 body {
     font-family: @main-font;
     font-weight: @main-font-weight;
     font-style: normal;
+}
+
+input,
+button {
+    .font-museo();
 }
 
 article {

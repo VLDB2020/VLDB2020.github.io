@@ -1,12 +1,13 @@
 ---
 layout: default
-title: VLDB2020 Program Structure
+title: Conference Program
 category: forparticipants
 ---
 
-# VLDB2020: Conference Program Structure
+# VLDB2020: Tentative Conference Program (Interactive Version)
 
--   [VLDB2020 Conference Time Zone Conversion Chart](program_timetable.html)
+- [VLDB2020 Conference Time Zone Conversion Chart](program_timetable.html)
+- [VLDB2020 Conference Program (Flat Version)](program_flat.html)
 
 <div id="timeZone">
 The Estimated UTC Offset is <input type="number" id="utcOffset" name="utcOffset" value="0" min="-12" max="14" step="0.25"> hours.<br>

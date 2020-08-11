@@ -2,14 +2,21 @@
     font-size: 0.8em;
     line-height: 1.5em;
 }
+#programFlat,
 #programFrame > div {
     padding: 0.5em;
 }
 
 @color-white: #f3f3f2;
 @color-black: #180614;
+@color-link: #1e50a2;
 @blocks: Workshop, Block1, Block2, Block3, Block4;
 @bg-colors: #4c5f84, #e9531a, #f5b616, #2696d4, #78b32b;
+
+//-- Color Palette for Program Button
+@linkcolors: conference, chat, inquiry, video, workshop, cal;
+@linkcolors-color: #017dd4, #edb625, #6f7769, #d02525, #4c5f84, #203744;
+
 .Block() {
     text-shadow: 1px 0 5px black;
     font-family: museo, serif;
@@ -17,6 +24,7 @@
     font-style: normal;
 }
 each(@blocks,{
+    #programFlat .@{value} ,
     #programFrame .@{value} {
         background-color: extract(@bg-colors, @index);
         color: @color-white;
@@ -36,6 +44,7 @@ each(@blocks,{
 @color-workshop: #f8f4e6;
 @color-free: #4e454a;
 @color-time: #bcbace;
+@color-search: #bee0ce;
 
 .font-museo(@weight:100,@style:normal,@color:@color-white) {
     color: @color;
@@ -63,8 +72,62 @@ each(@blocks,{
     font-style: @style;
 }
 
-.session(@color:@color-white,@bgcolor:@color-free,@weight:500,@style:normal) {
+#programFlat{
+    .buttonbar{
+        background-color: fadeout(@color-white,50%);
+        padding:5px;
+        display: flex;
+        a {
+            flex-grow: 1;
+            margin: 6px;
+        }
+    }
+    .hit{
+        border:1px solid #ecfb00;
+    }
+    .marker{
+        background:	#ecfb00ee;
+    }
+    .time{
+        font-size:0.8em;
+    }
+    .duration{
+        margin-left:1em;
+    }
+    .block{
+        .font-industry(700);
+        margin-right:1em;
+    }
+    .title{
+        .font-museo(700,nomal,@color-black);
+        font-size:1.2em;
+        line-height:1.3em;
+        margin-top:0.5em;
+        margin-left:2.5rem;
+        margin-right:1rem;
+        text-indent: -2em;
+    }
+    .author{
+        .font-museo(300,nomal,@color-black);
+        font-size:1em;
+        line-height:1.1em;
+        margin-bottom: 0.5em;
+        margin-left:3rem;
+        margin-right:1rem;
+    }
+    .abstract{
+        .font-museo(300,nomal,@color-black);
+        font-size:1em;
+        line-height:1.1em;
+        margin-bottom: 0.5em;
+        margin-left:3rem;
+        margin-right:1rem;
+    }
+}
+
+.session(@color:@color-white,@color-inverse:@color-white,@bgcolor:@color-free,@weight:500,@style:normal) {
     background-color: @bgcolor;
+    border: 3px solid #00000000;
     .font-museo(@weight,@style,@color);
     div.sessionId {
         background-color: darken(@bgcolor, 20%);
@@ -79,6 +142,9 @@ each(@blocks,{
         background-color: lighten(@bgcolor, 10%);
         .font-museo(300,italic,@color);
     }
+    &.selected {
+        border: 3px solid#ff007f;
+    }
     &.mask {
         &:hover {
             cursor: unset;
@@ -88,15 +154,29 @@ each(@blocks,{
             margin-bottom: 1em;
         }
         .title {
+            color:@color;
+            font-size:1.5em;
+            font-weight:900;
             padding: 1em 2em;
             border-top: 2px @color solid;
             border-left: 2px @color solid;
             border-right: 2px @color solid;
             background-color: darken(@bgcolor, 20%);
             border-radius: 1em 1em 0 0;
+            text-shadow    : 
+                        1px  1px 2px fadeout(@color-inverse,80%),
+                    -1px  1px 2px fadeout(@color-inverse,80%),
+                        1px -1px 2px fadeout(@color-inverse,80%),
+                    -1px -1px 2px fadeout(@color-inverse,80%),
+                        1px  0px 2px fadeout(@color-inverse,80%),
+                        0px  1px 2px fadeout(@color-inverse,80%),
+                    -1px  0px 2px fadeout(@color-inverse,80%),
+                        0px -1px 2px fadeout(@color-inverse,80%);
         }
         .description {
-            padding: 2em;
+            padding: 0.5em;
+            text-align:right;
+            font-size:1.2em;
             border-left: 2px @color solid;
             border-right: 2px @color solid;
             background-color: desaturate(@bgcolor, 30%);
@@ -116,11 +196,13 @@ each(@blocks,{
         }
         .paperbox {
             margin: 1em 0;
-            display: inline-flex;
-            flex-wrap: wrap;
-            gap: 1em;
+            //display: flex;
+            //flex-wrap: wrap;
+            //align-items: stretch;
+            //gap: 1em;
             div.paper {
-                flex: 1;
+                //flex: 1;
+                margin-top:1em;
                 div.button {
                     border-top: 2px @color solid;
                     border-left: 2px @color solid;
@@ -135,15 +217,38 @@ each(@blocks,{
                     }
                 }
                 div.title {
+                    font-size:1.2em;
+                    .font-museo(900,nomal,@color);
+                    text-align:left;
                     border-top: unset;
                     border-left: 2px @color solid;
                     border-right: 2px @color solid;
                     border-bottom: unset;
                     border-radius: unset;
                     background-color: darken(@bgcolor, 20%);
-                    padding: 1em 0.5em;
+                    padding: 1em 0.5em 0.5em 1em;
+                    text-shadow    : 
+                        1px  1px 2px fadeout(@color-inverse,80%),
+                    -1px  1px 2px fadeout(@color-inverse,80%),
+                        1px -1px 2px fadeout(@color-inverse,80%),
+                    -1px -1px 2px fadeout(@color-inverse,80%),
+                        1px  0px 2px fadeout(@color-inverse,80%),
+                        0px  1px 2px fadeout(@color-inverse,80%),
+                    -1px  0px 2px fadeout(@color-inverse,80%),
+                        0px -1px 2px fadeout(@color-inverse,80%);
+                }
+                div.more{
+                    border-left: 2px @color solid;
+                    border-right: 2px @color solid;
+                    background-color: darken(@bgcolor, 20%);
+                    padding:5px;
+                    text-align:right;
+                    a {
+                        color:@color;
+                    }
                 }
                 div.abstract {
+                    font-weight: 100;
                     border-top: unset;
                     border-bottom: 2px @color solid;
                     border-left: 2px @color solid;
@@ -158,98 +263,152 @@ each(@blocks,{
     }
 }
 
-.NONE {
-    display: none;
-}
-._1,
-._2,
-._3,
-._4,
-._5,
-._6,
-._7 {
-    .session(@color-black,@color-workshop);
-}
-.A,
-.B,
-.C,
-.D,
-.E,
-.F {
-    .session(@color-black,@color-oral);
-}
-.a,
-.b,
-.c,
-.d,
-.e {
-    .session(@color-black,@color-demo);
-}
-.T {
-    .session(@color-white,@color-tutrial);
-}
-.P {
-    .session(@color-white,@color-prenary,700);
-}
-.V {
-    .session(@color-white,@color-vldbj);
-}
-.J {
-    .session(@color-white,@color-japan,900);
-}
-.r,
-.R {
-    .session(@color-black,@color-round-table);
-}
-.Q {
-    .session(@color-white,@color-party);
-}
-.S {
-    .session(@color-black,@color-sponsor);
-}
-.Z {
-    .session(@color-white,@color-free);
-}
-#timeZone {
-    background-color: lighten(@color-free, 50%);
-    .nowTime {
+#programFlat,
+#programFrame {
+    .NONE {
+        display: none;
+    }
+    ._1,
+    ._2,
+    ._3,
+    ._4,
+    ._5,
+    ._6,
+    ._7 {
+        .session(@color-black,@color-white,@color-workshop);
+    }
+    .A,
+    .B,
+    .C,
+    .D,
+    .E,
+    .F {
+        .session(@color-black,@color-white,@color-oral);
+    }
+    .a,
+    .b,
+    .c,
+    .d,
+    .e {
+        .session(@color-black,@color-white,@color-demo);
+    }
+    .T {
+        .session(@color-white,@color-black,@color-tutrial);
+    }
+    .P {
+        .session(@color-white,@color-black,@color-prenary,700);
+    }
+    .V {
+        .session(@color-white,@color-black,@color-vldbj);
+    }
+    .J {
+        .session(@color-white,@color-black,@color-japan,900);
+    }
+    .r,
+    .R {
+        .session(@color-black,@color-white,@color-round-table);
+    }
+    .Q {
+        .session(@color-white,@color-black,@color-party);
+    }
+    .S {
+        .session(@color-black,@color-white,@color-sponsor);
+    }
+    .Z {
+        .session(@color-white,@color-black,@color-free);
+    }
+    #timeZone {
+        background-color: lighten(@color-free, 50%);
+        .nowTime {
+            background-color: @color-free;
+            padding: 1px;
+            .font-industry();
+        }
+    }
+    .time {
         background-color: @color-free;
-        padding: 1px;
         .font-industry();
+        display: flex;
+        font-size: 1.2em;
+        div:first-child {
+            margin-right: auto;
+            cursor: pointer;
+        }
+    }
+    .mask {
+        display: none;
+        opacity: 0;
+        z-index: 60;
+    }
+    .blockFolder {
+        display: flex;
+        font-size: 1.2em;
+        div:first-child {
+            margin-right: auto;
+        }
+        div:nth-child(2) {
+            margin: 0 1em;
+            .font-industry();
+        }
+    }
+    .cell {
+        z-index: 50;
+        text-align: start;
+        .sessionDuration {
+            .font-industry();
+            color: unset;
+            opacity: 70%;
+        }
+    }
+    .search {
+        background-color: @color-search;
+        font-size: 1.5em;
+        & > div,
+        & > input,
+        & > a {
+            margin-left: 1em;
+        }
+        & > div:last-child {
+            background-color: darken(@color-search, 50%);
+            color: @color-white;
+            margin: 2px;
+            padding: 5px;
+            font-size: 0.75em;
+            overflow-y: hidden;
+            overflow-x: hidden;
+            white-space: nowrap;
+            & > .markedSession {
+                background-color: @color-search;
+                text-decoration: underline @color-link;
+                cursor: pointer;
+                padding: 2px 10px;
+                margin: 0px 5px;
+                border-radius: 5px;
+                .font-museo(900, normal,@color-link);
+            }
+        }
     }
 }
-.time {
-    background-color: @color-free;
-    .font-industry();
-    display: flex;
-    font-size: 1.2em;
-    div:first-child {
-        margin-right: auto;
-        cursor: pointer;
-    }
-}
-.mask {
-    display: none;
-    opacity: 0;
-    z-index: 60;
-}
-.blockFolder {
-    display: flex;
-    font-size: 1.2em;
-    div:first-child {
-        margin-right: auto;
-    }
-    div:nth-child(2) {
-        margin: 0 1em;
-        .font-industry();
-    }
-}
-.cell {
-    z-index: 50;
-    text-align: start;
-    .sessionDuration {
-        .font-industry();
-        color: unset;
-        opacity: 70%;
-    }
-}
+
+each(@linkcolors,{
+    .btn-@{value} {
+        border-color: extract(@linkcolors-color, @index);
+        color: @color-white;
+        box-shadow: 0 0 40px 40px extract(@linkcolors-color, @index) inset, 0 0 0 0 extract(@linkcolors-color, @index);
+        transition: all 150ms ease-in-out;
+        
+        &:hover {
+            color: extract(@linkcolors-color, @index);
+            box-shadow: 0 0 10px 0 extract(@linkcolors-color, @index) inset, 0 0 10px 4px extract(@linkcolors-color, @index);
+        }
+    }    
+    .btn-@{value}.btn-disabled {
+        border-color: Greyscalee(extract(@linkcolors-color, @index));
+        box-shadow: 0 0 40px 40px Greyscale(extract(@linkcolors-color, @index)) inset, 0 0 0 0 Greyscale(extract(@linkcolors-color, @index));
+        cursor: no-drop;
+        &:hover {
+            color: unset;
+            box-shadow: unset;
+        }
+    } 
+});
