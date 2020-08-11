@@ -279,7 +279,7 @@
                                     pAuthor.classList.add("author");
                                     let pAbstract = document.createElement("div");
                                     pAbstract.classList.add("abstract");
-                                    let srtTitle = paper.title;
+                                    let srtTitle = pTitle.innerHTML = '<span class="badge">' + paper.pid + '</span> ' + paper.title;
                                     let srtAuthor = paper.author;
                                     let srtAbstract = paper.description;
                                     filter_word.forEach((marker) => {
@@ -769,7 +769,7 @@
                 sInput.setAttribute("type", "text");
                 sInput.setAttribute(
                     "placeholder",
-                    "Enter keywords you're interested in"
+                    "Enter a keyword or an author you're interested in"
                 );
                 let timerSearch = null;
                 let searchResult = (results) => {
@@ -1077,9 +1077,7 @@
                                 );
                             });
                             pMore.innerHTML = '<a href="program_flat.html?p=' + paper["pid"] + '">More Detail</a>';
-                            pTitle.appendChild(
-                                document.createTextNode(paper.title)
-                            );
+                            pTitle.innerHTML = '<span class="badge">' + paper.pid + '</span> ' + paper.title;
                             pAbstract.innerHTML = paper.author.replace(/\;/g, '\n<br>');
                             pDiv.appendChild(pButton);
                             pDiv.appendChild(pTitle);
