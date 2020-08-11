@@ -4,7 +4,7 @@ title: Conference Program
 category: forparticipants
 ---
 
-# VLDB2020: Conference Program (Interactive Version)
+# VLDB2020: Tentative Conference Program (Interactive Version)
 
 - [VLDB2020 Conference Time Zone Conversion Chart](program_timetable.html)
 - [VLDB2020 Conference Program (Flat Version)](program_flat.html)
