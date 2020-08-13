@@ -309,7 +309,11 @@
     let onLoadFn = () => {
         let Bowser = window.bowser;
         let userInfo = Bowser.getParser(window.navigator.userAgent);
-        if (userInfo.getPlatformType() != "desktop" && !document.getElementById("toppage-toggle") && document.getElementById("toppage-toggle").checked) {
+        console.log(userInfo.getPlatformType());
+        if (userInfo.getPlatformType() == "desktop" &&
+            document.getElementById("toppage-toggle") &&
+            !document.getElementById("toppage-toggle").checked) {
+            console.log("open!");
             document.getElementById("toppage-toggle").click();
         }
         let times = document.querySelectorAll(".timeUTC");
