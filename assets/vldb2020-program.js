@@ -196,13 +196,12 @@
 
                 let start = null;
                 timeslots.forEach((timeslot) => {
-                    if (timeslot.hit) {
+                    /*if (timeslot.hit) {
                         console.log("[timeslot]", timeslot);
-                    }
+                    }*/
                     sessions[timeslot.slot].forEach((session) => {
                         let sess = null;
                         if (session.hit) {
-                            console.log("", "[session]", session);
                             sess = document.createElement("div");
                             let t = document.createElement("div");
                             sess.classList.add(session.room);
@@ -512,7 +511,7 @@
             Promise.all(
                 files.map(async (file) => {
                     const response = await fetch(file);
-                    console.log(response);
+                    //console.log(response);
                     return response.json();
                 })
             ).then((response) => {
@@ -559,10 +558,9 @@
                         easing: "easeInOutSine",
                         duration: 750,
                     });
-                    let blockHeight = document.getElementsByClassName("search")[0].getBoundingClientRect().height * 10;
+                    let blockHeight = Math.floor(document.getElementsByClassName("bar")[0].getBoundingClientRect().height);
                     document.getElementById("detail_" + id).style.maxHeight = blockHeight + "px";
                     document.getElementById("detail_" + id).style.height = blockHeight + "px";
-                    console.log(blockHeight);
                     tl.add({
                         targets: "#detail_" + id,
                         opacity: [0, 1]
@@ -685,7 +683,7 @@
                                 gridRowEnd: i,
                                 gridColumnStart: 1,
                                 gridColumnEnd: 2,
-                                class: extra[extra.length - 1].class,
+                                class: [extra[extra.length - 1].class, 'bar'],
                                 title: "",
                                 anchor: false,
                             });
@@ -886,7 +884,13 @@
                     div.style.gridRowEnd = e.gridRowEnd;
                     div.style.gridColumnStart = e.gridColumnStart;
                     div.style.gridColumnEnd = e.gridColumnEnd;
-                    div.classList.add(e.class);
+                    if (Array.isArray(e.class)) {
+                        e.class.forEach((c) => {
+                            div.classList.add(c);
+                        });
+                    } else {
+                        div.classList.add(e.class);
+                    }
                     if (e.anchor) {
                         let anchor = document.createElement("a");
                         anchor.setAttribute("neme", e.class);
@@ -964,7 +968,7 @@
                     mask.style.gridColumnStart =
                         blockMask[s.slot].gridColumnStart;
                     mask.style.gridColumnEnd = blockMask[s.slot].gridColumnEnd;
-                    let blockHeight = document.getElementsByClassName("search")[0].getBoundingClientRect().height * (1 + blockMask[s.slot].gridRowEnd - blockMask[s.slot].gridRowStart);
+                    let blockHeight = document.getElementsByClassName("bar")[0].getBoundingClientRect().height;
                     //console.log("Block Height", blockHeight);
                     mask.style.maxHeight = blockHeight + "px";
                     mask.style.overflowY = 'auto';
