@@ -266,7 +266,7 @@
     };
 
     Barba.Pjax.start();
-    Barba.Dispatcher.on("linkClicked", function () {});
+    Barba.Dispatcher.on("linkClicked", function () { });
     Barba.Dispatcher.on("newPageReady", function (
         currentStatus,
         oldStatus,
@@ -307,6 +307,15 @@
         links[i].addEventListener("click", cbk);
     }
     let onLoadFn = () => {
+        let Bowser = window.bowser;
+        let userInfo = Bowser.getParser(window.navigator.userAgent);
+        console.log(userInfo.getPlatformType());
+        if (userInfo.getPlatformType() != "desktop" &&
+            document.getElementById("toppage-toggle") &&
+            !document.getElementById("toppage-toggle").checked) {
+            console.log("open!");
+            document.getElementById("toppage-toggle").click();
+        }
         let times = document.querySelectorAll(".timeUTC");
         times.forEach((t) => {
             let st = moment(t.innerHTML);

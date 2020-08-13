@@ -559,6 +559,10 @@
                         easing: "easeInOutSine",
                         duration: 750,
                     });
+                    let blockHeight = document.getElementsByClassName("search")[0].getBoundingClientRect().height * 10;
+                    document.getElementById("detail_" + id).style.maxHeight = blockHeight + "px";
+                    document.getElementById("detail_" + id).style.height = blockHeight + "px";
+                    console.log(blockHeight);
                     tl.add({
                         targets: "#detail_" + id,
                         opacity: [0, 1]
@@ -835,7 +839,7 @@
                     }
                     timerSearch = setTimeout(() => {
                         timerSearch = null;
-                        console.log("Search", sInput.value);
+                        //console.log("Search", sInput.value);
                         let results = index.search({
                             query: sInput.value,
                             field: ["title", "author", "description"],
@@ -858,7 +862,7 @@
                         location.href =
                             "program_flat.html?p=" + encodeURIComponent(sHidden.value) +
                             "&q=" + encodeURIComponent(sInput.value);
-                        console.log(sHidden.value);
+                        //console.log(sHidden.value);
                     }
                     e.stopPropagation();
                 });
@@ -961,9 +965,9 @@
                         blockMask[s.slot].gridColumnStart;
                     mask.style.gridColumnEnd = blockMask[s.slot].gridColumnEnd;
                     let blockHeight = document.getElementsByClassName("search")[0].getBoundingClientRect().height * (1 + blockMask[s.slot].gridRowEnd - blockMask[s.slot].gridRowStart);
-                    console.log("Block Height", blockHeight);
+                    //console.log("Block Height", blockHeight);
                     mask.style.maxHeight = blockHeight + "px";
-                    mask.style.overflowY = 'scroll';
+                    mask.style.overflowY = 'auto';
                     mask.classList.add(s.room);
                     mask.classList.add("mask");
                     let maskTime = document.createElement("div");
