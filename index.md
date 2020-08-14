@@ -16,7 +16,7 @@ VLDB is a premier annual international forum for data management and database re
 ## VLDB 2020 Updates
 <div class="col-group whatsnew">
     <div class="col-2 id-head">August 14th</div>
-    <div class="col-10 id-col"><span class="badge">New!!</span>  <a href="invited-talk.html">Invited Talk</a></div>
+    <div class="col-10 id-col"><span class="badge">New!!</span>  <a href="invited-talk.html">Invited Talk</a> on Racism & Technology</div>
 </div>
 <div class="col-group whatsnew">
     <div class="col-2 id-head">August 11th</div>
