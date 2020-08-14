@@ -124,6 +124,7 @@
                         easing: "easeOutQuint",
                         duration: 1000,
                         complete: () => {
+                            setTimeout(scrollTo, 100, 0, 1);
                             document.getElementById(panelID).style.zIndex = 90;
                             resolve();
                         },
