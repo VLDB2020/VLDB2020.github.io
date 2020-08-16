@@ -216,8 +216,17 @@
                             t.appendChild(tim);
                             t.appendChild(ttl);
                             sess.appendChild(t);
-                            const button = (target, go, key, id) => {
-                                if (target != "ical") {
+                            const button = (target, go, key, id, disabled) => {
+                                if (target == "abstract") {
+                                    const url = 'https://tokyo.vldb2020.org/abstract.php?s=' + id;
+                                    let btn = document.createElement("a");
+                                    btn.classList.add("btn");
+                                    btn.classList.add("btn-abstract");
+                                    btn.classList.add("btn-small");
+                                    btn.href = url;
+                                    btn.innerHTML = 'Abstract';
+                                    return btn;
+                                } else if (target != "ical") {
                                     const url =
                                         "//tokyo.vldb2020.org/?tg=" +
                                         target +
@@ -231,7 +240,12 @@
                                     btn.classList.add("btn");
                                     btn.classList.add("btn-small");
                                     btn.classList.add("btn-" + go);
-                                    btn.href = url;
+                                    if (disabled) {
+                                        btn.href = "#";
+                                        btn.classList.add("btn-disabled");
+                                    } else {
+                                        btn.href = url;
+                                    }
                                     btn.innerHTML = buttonTitles.hasOwnProperty(go)
                                         ? buttonTitles[go]
                                         : go;
@@ -260,20 +274,45 @@
                             buttons.appendChild(
                                 button("ical", null, null, session["id"])
                             );
+                            session.allurls.forEach((go, idx) => {
+                                if (go == "workshop") {
+                                    if (!session.nourls[idx]) {
+                                        buttons.appendChild(
+                                            button("session", go, "id", session["id"], session.nourls[idx])
+                                        );
+                                        isWorkshop = true;
+                                    }
+                                } else {
+                                    console.log(go);
+                                    buttons.appendChild(
+                                        button("session", go, "id", session["id"], session.nourls[idx])
+                                    );
+                                }
+                            });
+                            /*
                             session.urls.forEach((go) => {
                                 buttons.appendChild(
                                     button("session", go, "id", session["id"])
                                 );
-                            });
+                            });*/
                             sess.appendChild(buttons);
                             base.appendChild(sess);
                             if (papers.hasOwnProperty(session.id)) {
                                 papers[session.id].forEach((paper, idx) => {
 
                                     let div = document.createElement("div");
+                                    div.classList.add("paperbox");
                                     if (paper.hit) {
                                         div.classList.add("hit");
                                     }
+                                    let pButtons = document.createElement("div");
+                                    pButtons.classList.add("buttonbar");
+                                    pButtons.appendChild(button('abstract'));
+                                    paper.allurls.forEach((go, idx) => {
+                                        pButtons.appendChild(
+                                            button("paper", go, "pid", paper["pid"], paper.nourls[idx])
+                                        );
+                                    });
                                     let pTitle = document.createElement("div");
                                     pTitle.classList.add("title");
                                     let pAuthor = document.createElement("div");
@@ -295,6 +334,7 @@
                                     pAuthor.innerHTML = srtAuthor;
                                     div.appendChild(pTitle);
                                     div.appendChild(pAuthor);
+                                    div.appendChild(pButtons);
                                     div.appendChild(pAbstract);
                                     sess.appendChild(div);
 

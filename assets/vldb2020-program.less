@@ -14,8 +14,8 @@
 @bg-colors: #4c5f84, #e9531a, #f5b616, #2696d4, #78b32b;
 
 //-- Color Palette for Program Button
-@linkcolors: conference, chat, inquiry, video, video2, paper, workshop, cal;
-@linkcolors-color: #028760, #edb625, #6f7769, #d02525, #b94047, #007bbb, #4c5f84, #203744;
+@linkcolors: conference, chat, inquiry, video, video2, paper, workshop, cal, abstract;
+@linkcolors-color: #028760, #006a6c, #6f7769, #d02525, #b94047, #007bbb, #4c5f84, #203744,#203744;
 
 .Block() {
     text-shadow: 1px 0 5px black;
@@ -114,7 +114,7 @@ each(@blocks,{
         font-size:1em;
         line-height:1.1em;
         margin-bottom: 0.5em;
-        margin-left:3rem;
+        margin-left:4rem;
         margin-right:1rem;
     }
     .abstract{
@@ -124,6 +124,9 @@ each(@blocks,{
         margin-bottom: 0.5em;
         margin-left:3rem;
         margin-right:1rem;
+    }
+    .paperbox{
+        border-top: @color-black 1px dotted;
     }
 }
 
