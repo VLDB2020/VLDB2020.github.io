@@ -14,8 +14,8 @@
 @bg-colors: #4c5f84, #e9531a, #f5b616, #2696d4, #78b32b;
 
 //-- Color Palette for Program Button
-@linkcolors: conference, chat, inquiry, video, workshop, cal;
-@linkcolors-color: #017dd4, #edb625, #6f7769, #d02525, #4c5f84, #203744;
+@linkcolors: conference, chat, inquiry, video, video2, paper, workshop, cal;
+@linkcolors-color: #028760, #edb625, #6f7769, #d02525, #b94047, #007bbb, #4c5f84, #203744;
 
 .Block() {
     text-shadow: 1px 0 5px black;
@@ -78,8 +78,10 @@ each(@blocks,{
         padding:5px;
         display: flex;
         a {
+            display: flex;
+            align-items: center;
             flex-grow: 1;
-            margin: 6px;
+            margin: 0 0.5em;
         }
     }
     .hit{
@@ -187,11 +189,14 @@ each(@blocks,{
             border-left: 2px @color solid;
             border-right: 2px @color solid;
             display: flex;
+            justify-content: space-between;
             border-radius: 0 0 1em 1em;
             background-color: screen(@bgcolor, #aaa);
             a {
+                display: flex;
+                align-items: center;
                 flex-grow: 1;
-                margin: 6px;
+                margin: 0 0.5em;
             }
         }
         .paperbox {
@@ -210,10 +215,14 @@ each(@blocks,{
                     border-bottom: unset;
                     background-color: screen(@bgcolor, #aaa);
                     border-radius: 1em 1em 0 0;
-                    padding: 1em;
+                    padding: 0.5em;
                     display: flex;
+                    justify-content: space-between;
                     a.btn {
+                        display: flex;
+                        align-items: center;
                         flex-grow: 1;
+                        margin: 0 0.5em;
                     }
                 }
                 div.title {
@@ -403,8 +412,8 @@ each(@linkcolors,{
         }
     }    
     .btn-@{value}.btn-disabled {
-        border-color: Greyscalee(extract(@linkcolors-color, @index));
-        box-shadow: 0 0 40px 40px Greyscale(extract(@linkcolors-color, @index)) inset, 0 0 0 0 Greyscale(extract(@linkcolors-color, @index));
+        //border-color: Greyscalee(extract(@linkcolors-color, @index));
+        //box-shadow: 0 0 40px 40px Greyscale(extract(@linkcolors-color, @index)) inset, 0 0 0 0 Greyscale(extract(@linkcolors-color, @index));
         cursor: no-drop;
         &:hover {
             color: unset;

@@ -5,7 +5,9 @@
         conference: "Virtual Conference Room",
         chat: "Slack Channel",
         inquiry: "Support",
-        video: "Pre-recorded Video",
+        video: "Video [YouTube]",
+        video2: "Video [哔哩哔哩]",
+        paper: "Download PDF",
         workshop: 'Workshop Program&emsp;<i class="fas fa-external-link-alt"></i>'
     };
     let createDateTimeSpan = (timestamp, appendUTC = false) => {
@@ -548,7 +550,9 @@
                     papers[p.session].push(p);
                     index.add(p);
                 });
-                let showModal = (id) => {
+                let showModal = (id, dayblock) => {
+                    console.log("Show ", id, "on", dayblock);
+                    let blockHeight = Math.floor(document.getElementsByClassName(dayblock)[0].getBoundingClientRect().height - 6);
                     document.getElementById("detail_" + id).style.display =
                         "block";
                     let top = document
@@ -558,7 +562,6 @@
                         easing: "easeInOutSine",
                         duration: 750,
                     });
-                    let blockHeight = Math.floor(document.getElementsByClassName("bar")[0].getBoundingClientRect().height);
                     document.getElementById("detail_" + id).style.maxHeight = blockHeight + "px";
                     document.getElementById("detail_" + id).style.height = blockHeight + "px";
                     tl.add({
@@ -638,7 +641,9 @@
                             s.inherit == "" || s.chair != ""
                                 ? s.chair
                                 : h.chair,
-                        urls: s.inherit == "" || s.urls != "" ? s.urls : h.urls,
+                        //urls: s.inherit == "" || s.urls != "" ? s.urls : h.urls,
+                        nourls: s.inherit == "" || s.nourls != "" ? s.nourls : h.norls,
+                        allurls: s.inherit == "" || s.allurls != "" ? s.allurls : h.allurls,
                         /*,
                         url_conference:
                             s.inherit == "" || s.url_conference != ""
@@ -655,6 +660,7 @@
                     };
                 });
                 let gridIdx = [];
+                let dayBlock = [];
                 let templateRows = [];
                 let i = 1;
                 let block = "";
@@ -683,7 +689,7 @@
                                 gridRowEnd: i,
                                 gridColumnStart: 1,
                                 gridColumnEnd: 2,
-                                class: [extra[extra.length - 1].class, 'bar'],
+                                class: [extra[extra.length - 1].class, 'bar', extra[extra.length - 1].dayBlock],
                                 title: "",
                                 anchor: false,
                             });
@@ -699,6 +705,7 @@
                             gridColumnStart: 1,
                             gridColumnEnd: maxParallel + 2,
                             class: t.block,
+                            dayBlock: t.day + t.block,
                             title:
                                 "<div>" +
                                 t.day +
@@ -718,6 +725,7 @@
                         block = t.block;
                     }
                     gridIdx[idx] = i;
+                    dayBlock[idx] = t.day + t.block;
                     templateRows.push(frTime + "fr");
                     i++;
                     templateRows.push(frSession + "fr");
@@ -930,7 +938,7 @@
                     div.style.gridColumnStart = 1 + s.roomIdx;
                     div.classList.add(s.room);
                     div.classList.add("cell");
-
+                    div.setAttribute("x-dayblock", dayBlock[s.timeslotIdx]);
                     if (s.inherit != "") {
                         div.classList.add("repeat");
                     }
@@ -941,7 +949,7 @@
                     }
                     if (DETAIL) {
                         div.addEventListener("click", (e) => {
-                            showModal(e.currentTarget.id);
+                            showModal(e.currentTarget.id, e.currentTarget.getAttribute("x-dayblock"));
                             e.stopPropagation();
                         });
                     }
@@ -968,9 +976,6 @@
                     mask.style.gridColumnStart =
                         blockMask[s.slot].gridColumnStart;
                     mask.style.gridColumnEnd = blockMask[s.slot].gridColumnEnd;
-                    let blockHeight = document.getElementsByClassName("bar")[0].getBoundingClientRect().height;
-                    //console.log("Block Height", blockHeight);
-                    mask.style.maxHeight = blockHeight + "px";
                     mask.style.overflowY = 'auto';
                     mask.classList.add(s.room);
                     mask.classList.add("mask");
@@ -1012,7 +1017,7 @@
                         description += "<p>" + s.description + "</p>";
                     }
                     maskDescription.innerHTML = description;
-                    const button = (target, go, key, id) => {
+                    const button = (target, go, key, id, disabled = false) => {
                         if (target != "ical") {
                             const url =
                                 "//tokyo.vldb2020.org/?tg=" +
@@ -1026,7 +1031,12 @@
                             let btn = document.createElement("a");
                             btn.classList.add("btn");
                             btn.classList.add("btn-" + go);
-                            btn.href = url;
+                            if (disabled) {
+                                btn.classList.add("btn-disabled");
+                                btn.href = "#";
+                            } else {
+                                btn.href = url;
+                            }
                             btn.innerHTML = buttonTitles.hasOwnProperty(go)
                                 ? buttonTitles[go]
                                 : go;
@@ -1046,6 +1056,21 @@
                     maskButtons.appendChild(
                         button("ical", null, null, s["id"])
                     );
+                    s.allurls.forEach((go, idx) => {
+                        if (go == "workshop") {
+                            if (!s.nourls[idx]) {
+                                maskButtons.appendChild(
+                                    button("session", go, "id", s["id"], s.nourls[idx])
+                                );
+                                isWorkshop = true;
+                            }
+                        } else {
+                            maskButtons.appendChild(
+                                button("session", go, "id", s["id"], s.nourls[idx])
+                            );
+                        }
+                    });
+                    /*
                     s.urls.forEach((go) => {
                         maskButtons.appendChild(
                             button("session", go, "id", s["id"])
@@ -1054,6 +1079,7 @@
                             isWorkshop = true;
                         }
                     });
+                    */
                     maskButtons.classList.add("buttons");
                     mask.appendChild(maskTime);
                     mask.appendChild(maskTitle);
@@ -1079,10 +1105,16 @@
                             pMore.classList.add("more");
                             let pAbstract = document.createElement("div");
                             pAbstract.classList.add("abstract");
-
+                            /*
                             paper.urls.forEach((go) => {
                                 pButton.appendChild(
                                     button("paper", go, "pid", paper["pid"])
+                                );
+                            });
+                            */
+                            paper.allurls.forEach((go, idx) => {
+                                pButton.appendChild(
+                                    button("paper", go, "pid", paper["pid"], paper.nourls[idx])
                                 );
                             });
                             pMore.innerHTML = '<a href="program_flat.html?p=' + paper["pid"] + '">More Detail</a>';
