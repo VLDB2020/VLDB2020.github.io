@@ -338,7 +338,7 @@
                                     let pAbstract = document.createElement("div");
                                     pAbstract.id = "abstract" + paper.pid;
                                     pAbstract.classList.add("abstract");
-                                    let srtTitle = paper.title;
+                                    let srtTitle = (paper.type == "Industry" ? "[Industry] " : "") + paper.title;
                                     let srtAuthor = paper.author;
                                     let srtAbstract = "";
                                     filter_word.forEach((marker) => {
@@ -1178,7 +1178,7 @@
                                 );
                             });
                             pMore.innerHTML = '<a href="program_flat.html?p=' + paper["pid"] + '">More Detail</a>';
-                            pTitle.innerHTML = '<span class="badge">' + paper.pid + '</span> ' + paper.title;
+                            pTitle.innerHTML = '<span class="badge">' + paper.pid + '</span> ' + (paper.type = "Industry" ? "[Industry] " : "") + paper.title;
                             pAbstract.innerHTML = paper.author.replace(/\;/g, '\n<br>');
                             pDiv.appendChild(pButton);
                             pDiv.appendChild(pTitle);
