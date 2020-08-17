@@ -135,8 +135,10 @@
                 let raw_sessions = response[0];
                 let raw_timeslots = response[1];
                 let raw_papers = response[2];
+                let repeatSessions = {};
                 let papers = {};
                 let timeslots = [];
+                let slotBar = {};
                 let sessions = [];
                 raw_papers.forEach((p) => {
                     if (!papers.hasOwnProperty(p.session)) {
@@ -151,6 +153,9 @@
                         day: t.day,
                         block: t.block,
                     });
+                    slotBar[t.slot] = '<span class="block">' +
+                        t.day + "-" + t.block + "</span> " +
+                        createDateTimeSpan(t.start, true);
                 });
                 raw_sessions.forEach((s) => {
                     if (s.room != "NONE") {
@@ -158,6 +163,9 @@
                             sessions[s.slot] = [];
                         }
                         sessions[s.slot].push(s);
+                        if (s.inherit != "") {
+                            repeatSessions[s.inherit] = s.slot;
+                        }
                     }
                 });
                 timeslots.forEach((timeslot) => {
@@ -200,24 +208,59 @@
                 timeslots.forEach((timeslot) => {
                     /*if (timeslot.hit) {
                         console.log("[timeslot]", timeslot);
-                    }*/
+                    }*/;
                     sessions[timeslot.slot].forEach((session) => {
                         let sess = null;
                         if (session.hit) {
                             sess = document.createElement("div");
-                            let t = document.createElement("div");
                             sess.classList.add(session.room);
+                            let t = document.createElement("div");
                             t.classList.add("sessionId");
                             let tim = document.createElement("div");
                             tim.classList.add("time");
-                            tim.innerHTML = '<span class="block">' + timeslot.day + "-" + timeslot.block + "</span> " + createDateTimeSpan(timeslot.start, true) + '<span class="duration"><i class="fas fa-clock"></i>' + session.duration + "min</span>";
-                            let ttl = document.createElement("div");
-                            ttl.appendChild(document.createTextNode(session.title));
+                            tim.innerHTML = '<span"><i class="fas fa-dice-one"></i></span>' + slotBar[session.slot] + '<span class="duration"><i class="fas fa-clock"></i>' + session.duration + "min</span>";
                             t.appendChild(tim);
+                            console.log(session.slot, repeatSessions[session.id]);
+                            if (repeatSessions.hasOwnProperty(session.id)) {
+                                let tim2 = document.createElement("div");
+                                tim2.classList.add("time");
+                                tim2.classList.add("timeRepeat");
+                                tim2.innerHTML = '<span><i class="fas fa-dice-two"></i></span>' + slotBar[repeatSessions[session.id]] + '<span class="duration"><i class="fas fa-clock"></i>' + session.duration + "min</span>";
+                                t.appendChild(tim2);
+                            }
+                            let ttl = document.createElement("div");
+                            ttl.classList.add("title");
+                            ttl.appendChild(document.createTextNode(session.title));
                             t.appendChild(ttl);
                             sess.appendChild(t);
-                            const button = (target, go, key, id) => {
-                                if (target != "ical") {
+                            const button = (target, go, key, id, disabled = false) => {
+                                if (target == "abstract") {
+                                    const url = 'https://tokyo.vldb2020.org/abstract/' + id + '.txt';
+                                    let btn = document.createElement("a");
+                                    btn.classList.add("btn");
+                                    btn.classList.add("btn-abstract");
+                                    btn.classList.add("btn-small");
+                                    btn.href = '#';
+                                    btn.setAttribute("x-href", url);
+                                    btn.setAttribute("x-pid", id);
+                                    btn.innerHTML = 'Abstract';
+                                    btn.addEventListener("click", (e) => {
+                                        //showModal(e.currentTarget.id, e.currentTarget.getAttribute("x-dayblock"));
+                                        let url = e.currentTarget.getAttribute("x-href");
+                                        let pid = e.currentTarget.getAttribute("x-pid");
+                                        e.stopPropagation();
+                                        if (document.getElementById("abstract" + pid).innerText == "") {
+                                            fetch(url)
+                                                .then(response => response.text())
+                                                .then(data => {
+                                                    document.getElementById("abstract" + pid).innerText = data;
+                                                });
+                                        } else {
+                                            document.getElementById("abstract" + pid).innerText = "";
+                                        }
+                                    });
+                                    return btn;
+                                } else if (target != "ical") {
                                     const url =
                                         "//tokyo.vldb2020.org/?tg=" +
                                         target +
@@ -231,7 +274,12 @@
                                     btn.classList.add("btn");
                                     btn.classList.add("btn-small");
                                     btn.classList.add("btn-" + go);
-                                    btn.href = url;
+                                    if (disabled) {
+                                        btn.href = "#";
+                                        btn.classList.add("btn-disabled");
+                                    } else {
+                                        btn.href = url;
+                                    }
                                     btn.innerHTML = buttonTitles.hasOwnProperty(go)
                                         ? buttonTitles[go]
                                         : go;
@@ -260,43 +308,74 @@
                             buttons.appendChild(
                                 button("ical", null, null, session["id"])
                             );
+                            session.allurls.forEach((go, idx) => {
+                                if (go == "workshop") {
+                                    if (!session.nourls[idx]) {
+                                        buttons.appendChild(
+                                            button("session", go, "id", session["id"], session.nourls[idx])
+                                        );
+                                        isWorkshop = true;
+                                    }
+                                } else {
+                                    buttons.appendChild(
+                                        button("session", go, "id", session["id"], session.nourls[idx])
+                                    );
+                                }
+                            });
+                            /*
                             session.urls.forEach((go) => {
                                 buttons.appendChild(
                                     button("session", go, "id", session["id"])
                                 );
-                            });
+                            });*/
                             sess.appendChild(buttons);
                             base.appendChild(sess);
                             if (papers.hasOwnProperty(session.id)) {
                                 papers[session.id].forEach((paper, idx) => {
-
                                     let div = document.createElement("div");
+                                    div.classList.add("paper");
                                     if (paper.hit) {
                                         div.classList.add("hit");
                                     }
+                                    let pButtons = document.createElement("div");
+                                    pButtons.classList.add("buttonbar");
+                                    if (paper["abstract"]) {
+                                        pButtons.appendChild(button('abstract', null, null, paper["pid"]));
+                                    }
+                                    paper.allurls.forEach((go, idx) => {
+                                        pButtons.appendChild(
+                                            button("paper", go, "pid", paper["pid"], paper.nourls[idx])
+                                        );
+                                    });
                                     let pTitle = document.createElement("div");
                                     pTitle.classList.add("title");
                                     let pAuthor = document.createElement("div");
                                     pAuthor.classList.add("author");
                                     let pAbstract = document.createElement("div");
+                                    pAbstract.id = "abstract" + paper.pid;
                                     pAbstract.classList.add("abstract");
-                                    let srtTitle = paper.title;
+                                    let srtTitle = (paper.type == "Industry" ? "[Industry] " : "") + paper.title;
                                     let srtAuthor = paper.author;
-                                    let srtAbstract = paper.description;
+                                    let srtAbstract = "";
                                     filter_word.forEach((marker) => {
                                         //console.log("search", marker);
                                         //srtTitle = srtTitle.toLowerCase().replace(marker.toLowerCase(), '<span class="marker">' + marker + '</span>');
                                         //srtAuthor = srtAuthor.toLowerCase().replace(marker.toLowerCase(), '<span class="marker">' + marker + '</span>');
                                         srtTitle = srtTitle.replace(new RegExp("(" + marker + ")", "gi"), '<span class="marker">$1</span>');
                                         srtAuthor = srtAuthor.replace(new RegExp("(" + marker + ")", "gi"), '<span class="marker">$1</span>');
-                                        srtAbstract = srtAbstract.replace(new RegExp("(" + marker + ")", "gi"), '<span class="marker">$1</span>');
+                                        //srtAbstract = srtAbstract.replace(new RegExp("(" + marker + ")", "gi"), '<span class="marker">$1</span>');
                                     });
                                     pTitle.innerHTML = '<span style="margin-right:1em;" class="badge">' + paper.pid + "</span>" + srtTitle;
                                     pAuthor.innerHTML = srtAuthor;
+                                    pAbstract.innerHTML = srtAbstract;
                                     div.appendChild(pTitle);
                                     div.appendChild(pAuthor);
                                     div.appendChild(pAbstract);
-                                    sess.appendChild(div);
+                                    div.appendChild(pButtons);
+                                    let divE = document.createElement("div");
+                                    divE.classList.add("paperbox");
+                                    divE.appendChild(div);
+                                    sess.appendChild(divE);
 
                                 });
                             }
@@ -533,7 +612,7 @@
                 let index = new FlexSearch({
                     doc: {
                         id: "idx",
-                        field: ["title", "author", "description"],
+                        field: ["title", "author"/*, "abstract"*/],
                     },
                 });
                 let papers = {};
@@ -551,7 +630,7 @@
                     index.add(p);
                 });
                 let showModal = (id, dayblock) => {
-                    console.log("Show ", id, "on", dayblock);
+                    //console.log("Show ", id, "on", dayblock);
                     let blockHeight = Math.floor(document.getElementsByClassName(dayblock)[0].getBoundingClientRect().height - 6);
                     document.getElementById("detail_" + id).style.display =
                         "block";
@@ -848,7 +927,7 @@
                         //console.log("Search", sInput.value);
                         let results = index.search({
                             query: sInput.value,
-                            field: ["title", "author", "description"],
+                            field: ["title", "author"/*, "abstract"*/],
                             bool: "or",
                         });
                         searchResult(results);
@@ -1016,9 +1095,35 @@
                     if (s.description && s.description != "") {
                         description += "<p>" + s.description + "</p>";
                     }
+                    description += '<a href="program_flat.html?s=' + s.id + '">Persistent Link</a>';
                     maskDescription.innerHTML = description;
                     const button = (target, go, key, id, disabled = false) => {
-                        if (target != "ical") {
+                        if (target == "abstract") {
+                            const url = 'https://tokyo.vldb2020.org/abstract/' + id + '.txt';
+                            let btn = document.createElement("a");
+                            btn.classList.add("btn");
+                            btn.classList.add("btn-abstract");
+                            btn.href = '#';
+                            btn.setAttribute("x-href", url);
+                            btn.setAttribute("x-pid", id);
+                            btn.innerHTML = 'Abstract';
+                            btn.addEventListener("click", (e) => {
+                                //showModal(e.currentTarget.id, e.currentTarget.getAttribute("x-dayblock"));
+                                let url = e.currentTarget.getAttribute("x-href");
+                                let pid = e.currentTarget.getAttribute("x-pid");
+                                e.stopPropagation();
+                                if (document.getElementById("abstract" + pid).innerText == "") {
+                                    fetch(url)
+                                        .then(response => response.text())
+                                        .then(data => {
+                                            document.getElementById("abstract" + pid).innerText = data;
+                                        });
+                                } else {
+                                    document.getElementById("abstract" + pid).innerText = "";
+                                }
+                            });
+                            return btn;
+                        } else if (target != "ical") {
                             const url =
                                 "//tokyo.vldb2020.org/?tg=" +
                                 target +
@@ -1104,7 +1209,13 @@
                             let pMore = document.createElement("div");
                             pMore.classList.add("more");
                             let pAbstract = document.createElement("div");
+                            pAbstract.id = "abstract" + paper.pid;
                             pAbstract.classList.add("abstract");
+                            let pAuthor = document.createElement("div");
+                            pAuthor.classList.add("author");
+                            if (paper["abstract"]) {
+                                pButton.appendChild(button('abstract', null, null, paper["pid"]));
+                            }
                             /*
                             paper.urls.forEach((go) => {
                                 pButton.appendChild(
@@ -1117,13 +1228,14 @@
                                     button("paper", go, "pid", paper["pid"], paper.nourls[idx])
                                 );
                             });
-                            pMore.innerHTML = '<a href="program_flat.html?p=' + paper["pid"] + '">More Detail</a>';
-                            pTitle.innerHTML = '<span class="badge">' + paper.pid + '</span> ' + paper.title;
-                            pAbstract.innerHTML = paper.author.replace(/\;/g, '\n<br>');
+                            pMore.innerHTML = '<a href="program_flat.html?p=' + paper["pid"] + '">Persistent Link</a>';
+                            pTitle.innerHTML = '<span class="badge">' + paper.pid + '</span> ' + (paper.type = "Industry" ? "[Industry] " : "") + paper.title;
+                            pAuthor.innerHTML = paper.author.replace(/\;/g, '\n<br>');
                             pDiv.appendChild(pButton);
                             pDiv.appendChild(pTitle);
                             pDiv.appendChild(pMore);
                             pDiv.appendChild(pAbstract);
+                            pDiv.appendChild(pAuthor);
                             return pDiv;
                         };
                         papers[ID].forEach((paper) => {
