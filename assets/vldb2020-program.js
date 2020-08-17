@@ -1229,7 +1229,7 @@
                                 );
                             });
                             pMore.innerHTML = '<a href="program_flat.html?p=' + paper["pid"] + '">Persistent Link</a>';
-                            pTitle.innerHTML = '<span class="badge">' + paper.pid + '</span> ' + (paper.type = "Industry" ? "[Industry] " : "") + paper.title;
+                            pTitle.innerHTML = '<span class="badge">' + paper.pid + '</span> ' + (paper.type == "Industry" ? "[Industry] " : "") + paper.title;
                             pAuthor.innerHTML = paper.author.replace(/\;/g, '\n<br>');
                             pDiv.appendChild(pButton);
                             pDiv.appendChild(pTitle);
