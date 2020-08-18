@@ -164,15 +164,18 @@
                         }
                         sessions[s.slot].push(s);
                         if (s.inherit != "") {
-                            repeatSessions[s.inherit] = s.slot;
+                            repeatSessions[s.inherit] = s;
                         }
                     }
                 });
                 timeslots.forEach((timeslot) => {
                     sessions[timeslot.slot].forEach((session) => {
                         if (papers.hasOwnProperty(session.id)) {
+                            if (repeatSessions[session.id] && repeatSessions[session.id].id == "32E") {
+                                console.log(session.id, repeatSessions[session.id].id);
+                            }
                             papers[session.id].forEach((paper, idx) => {
-                                if (full || filter_session.includes(session.id) || filter_paper.includes(paper.pid)) {
+                                if (full || filter_session.includes(session.id) || (repeatSessions.hasOwnProperty(session.id) && filter_session.includes(repeatSessions[session.id].id)) || filter_paper.includes(paper.pid)) {
                                     //console.log(idx, paper);
                                     timeslot["hit"] = true;
                                     session["hit"] = true;
@@ -214,25 +217,7 @@
                         if (session.hit) {
                             sess = document.createElement("div");
                             sess.classList.add(session.room);
-                            let t = document.createElement("div");
-                            t.classList.add("sessionId");
-                            let tim = document.createElement("div");
-                            tim.classList.add("time");
-                            tim.innerHTML = '<span"><i class="fas fa-dice-one"></i></span>' + slotBar[session.slot] + '<span class="duration"><i class="fas fa-clock"></i>' + session.duration + "min</span>";
-                            t.appendChild(tim);
-                            console.log(session.slot, repeatSessions[session.id]);
-                            if (repeatSessions.hasOwnProperty(session.id)) {
-                                let tim2 = document.createElement("div");
-                                tim2.classList.add("time");
-                                tim2.classList.add("timeRepeat");
-                                tim2.innerHTML = '<span><i class="fas fa-dice-two"></i></span>' + slotBar[repeatSessions[session.id]] + '<span class="duration"><i class="fas fa-clock"></i>' + session.duration + "min</span>";
-                                t.appendChild(tim2);
-                            }
-                            let ttl = document.createElement("div");
-                            ttl.classList.add("title");
-                            ttl.appendChild(document.createTextNode(session.title));
-                            t.appendChild(ttl);
-                            sess.appendChild(t);
+                            sess.style.marginTop = "2em";
                             const button = (target, go, key, id, disabled = false) => {
                                 if (target == "abstract") {
                                     const url = 'https://tokyo.vldb2020.org/abstract/' + id + '.txt';
@@ -303,6 +288,18 @@
                                     return btn;
                                 }
                             };
+                            let t = document.createElement("div");
+                            t.classList.add("sessionId");
+                            let ttl = document.createElement("div");
+                            ttl.classList.add("title");
+                            ttl.appendChild(document.createTextNode(session.title));
+                            t.appendChild(ttl);
+                            sess.appendChild(t);
+                            let tim = document.createElement("div");
+                            tim.classList.add("time");
+                            tim.innerHTML = '<span"><i class="fas fa-dice-one"></i></span>' + slotBar[session.slot] + '<span class="duration"><i class="fas fa-clock"></i>' + session.duration + "min</span>";
+                            sess.appendChild(tim);
+
                             let buttons = document.createElement("div");
                             buttons.classList.add("buttonbar");
                             buttons.appendChild(
@@ -322,13 +319,36 @@
                                     );
                                 }
                             });
-                            /*
-                            session.urls.forEach((go) => {
-                                buttons.appendChild(
-                                    button("session", go, "id", session["id"])
-                                );
-                            });*/
                             sess.appendChild(buttons);
+                            //console.log(session.slot, repeatSessions[session.id]);
+                            if (repeatSessions.hasOwnProperty(session.id)) {
+                                repeatSession = repeatSessions[session.id];
+                                let tim2 = document.createElement("div");
+                                tim2.classList.add("time");
+                                tim2.classList.add("timeRepeat");
+                                tim2.innerHTML = '<span><i class="fas fa-dice-two"></i></span>' + slotBar[repeatSession.slot] + '<span class="duration"><i class="fas fa-clock"></i>' + repeatSession.duration + "min</span>";
+                                sess.appendChild(tim2);
+                                let buttons = document.createElement("div");
+                                buttons.classList.add("buttonbar");
+                                buttons.appendChild(
+                                    button("ical", null, null, repeatSession.id)
+                                );
+                                repeatSession.allurls.forEach((go, idx) => {
+                                    if (go == "workshop") {
+                                        if (!repeatSession.nourls[idx]) {
+                                            buttons.appendChild(
+                                                button("session", go, "id", repeatSession["id"], repeatSession.nourls[idx])
+                                            );
+                                            isWorkshop = true;
+                                        }
+                                    } else {
+                                        buttons.appendChild(
+                                            button("session", go, "id", repeatSession["id"], repeatSession.nourls[idx])
+                                        );
+                                    }
+                                });
+                                sess.appendChild(buttons);
+                            }
                             base.appendChild(sess);
                             if (papers.hasOwnProperty(session.id)) {
                                 papers[session.id].forEach((paper, idx) => {
@@ -711,7 +731,7 @@
                         title:
                             s.inherit == "" || s.title != ""
                                 ? s.title
-                                : h.title + " (repeat)",
+                                : h.title + " (" + s.inherit + " repeat)",
                         announce:
                             s.inherit == "" || s.announce != ""
                                 ? s.announce
@@ -1105,7 +1125,7 @@
                             btn.classList.add("btn-abstract");
                             btn.href = '#';
                             btn.setAttribute("x-href", url);
-                            btn.setAttribute("x-pid", id);
+                            btn.setAttribute("x-pid", id + (key ? "repeat" : ""));
                             btn.innerHTML = 'Abstract';
                             btn.addEventListener("click", (e) => {
                                 //showModal(e.currentTarget.id, e.currentTarget.getAttribute("x-dayblock"));
@@ -1209,12 +1229,12 @@
                             let pMore = document.createElement("div");
                             pMore.classList.add("more");
                             let pAbstract = document.createElement("div");
-                            pAbstract.id = "abstract" + paper.pid;
+                            pAbstract.id = "abstract" + paper.pid + (s.inherit != "" ? "repeat" : "");
                             pAbstract.classList.add("abstract");
                             let pAuthor = document.createElement("div");
                             pAuthor.classList.add("author");
                             if (paper["abstract"]) {
-                                pButton.appendChild(button('abstract', null, null, paper["pid"]));
+                                pButton.appendChild(button('abstract', null, (s.inherit != ""), paper["pid"]));
                             }
                             /*
                             paper.urls.forEach((go) => {
