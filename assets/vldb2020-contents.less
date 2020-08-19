@@ -187,6 +187,13 @@ each(@selectors, {
     font-size: 0.8em;
     padding: 0.4em 0.8em;
 }
+.btn-large {
+    font-size: 1.5em;
+}
+.btn-block {
+    width:100%;
+    text-align: center;
+}
 
 each(@colors,{
     .btn-@{value} {
@@ -332,4 +339,3 @@ each(@categories, {
     }
 
 });
-
