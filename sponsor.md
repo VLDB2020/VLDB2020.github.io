@@ -22,14 +22,14 @@ category: sponsorship
 ## Platinum
 
 <div class="col-group">
+    <div class="col-4" style="padding:.5%;"><a href=" https://www.alibabagroup.com/en/about/overview"><img src="assets/logo/logo_alibaba.svg" width="100%"></a></div>
     <div class="col-4" style="padding:0px;"><a href="https://research.google/"><img src="assets/logo/logo_google.svg" width="100%"></a></div>
-    <div class="col-4" style="padding:0px;"><a href="https://megagon.ai/"><img src="assets/logo/logo_megagon_labs.svg" width="100%"></a></div>
-    <div class="col-4" style="padding:0px;"><a href="https://recruit-tech.co.jp/company/about_us.html"><img src="assets/logo/logo_r_tech.svg" width="100%"></a></div>
+    <div class="col-4" style="padding:0px;"><a href="https://megagon.ai/"><img src="assets/logo/logo_megagon_labs.svg" width="100%"></a></div>    
 </div>
 
 <div class="col-group">
-    <div class="col-4" style="padding:.5%;"><a href=" https://www.alibabagroup.com/en/about/overview"><img src="assets/logo/logo_alibaba.svg" width="100%"></a></div>
     <div class="col-4" style="padding:0px;"><a href="https://developer.oracle.com/databases/"><img src="assets/logo/logo_oracle.svg" width="100%"></a></div>
+    <div class="col-4" style="padding:0px;"><a href="https://recruit-tech.co.jp/company/about_us.html"><img src="assets/logo/logo_r_tech.svg" width="100%"></a></div>
     <div class="col-4" style="padding:0px;"><img src="assets/logo/logo_empty.svg" width="100%"></div> 
 </div>
 
