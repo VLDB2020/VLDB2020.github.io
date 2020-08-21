@@ -4,7 +4,7 @@ title: Registration Support
 category: forparticipants
 ---
 
-# VLDB2020: Registration Support <span class="badge"> Deadline Extended!</span>
+# VLDB2020: Registration Support
 
 Due to the effect of Covid-19, VLDB 2020 conference will be held online. Instead of travel grants, we are very happy to announce registration support opportunities for students and faculty to present their papers in VLDB 2020. The grants provide financial support to students and faculty affiliated with universities with limited funding opportunities. Awards have a strong focus on universities in developing countries to present papers in the VLDB 2020 conference hold in Tokyo, Japan, August 31 – September 4, 2020. 
 
