@@ -1034,6 +1034,7 @@
                         gridIdx[s.timeslotIdx] +
                         2 +
                         (s.span > 2 ? (s.span - 1) * 2 : 0);
+                    let colSpan = div.style.gridRowEnd - div.style.gridRowStart;
                     div.style.gridColumnStart = 1 + s.roomIdx;
                     div.classList.add(s.room);
                     div.classList.add("cell");
@@ -1046,6 +1047,7 @@
                     } else {
                         div.style.gridColumnEnd = maxParallel + 2;
                     }
+                    let rowSpan = div.style.gridColumnEnd - div.style.gridColumnStart;
                     if (DETAIL) {
                         div.addEventListener("click", (e) => {
                             showModal(e.currentTarget.id, e.currentTarget.getAttribute("x-dayblock"));
@@ -1056,7 +1058,15 @@
                     span.classList.add("sessionId");
                     span.appendChild(document.createTextNode(s.id));
                     div.appendChild(span);
-                    div.appendChild(document.createTextNode(" " + s.title));
+                    console.log(s);
+                    let title = s.title.split(" ");
+                    let safix = "";
+                    if (colSpan == 1 || rowSpan == 1) {
+                        for (; title.join(" ").length > 60; title.pop()) {
+                            safix = "..."
+                        }
+                    }
+                    div.appendChild(document.createTextNode(" " + title.join(" ") + safix));
                     let dur = document.createElement("div");
                     dur.classList.add("sessionDuration");
                     dur.appendChild(
@@ -1106,7 +1116,7 @@
                     maskDescription.classList.add("description");
                     let description = "";
                     if (s.chair && s.chair != "") {
-                        description += "<p><b>Chair:</b> " + s.chair + "</p>";
+                        description += "<p><b>Chair" + (s.chair.indexOf(",") === -1 ? "" : "s") + ":</b> " + s.chair + "</p>";
                     }
                     if (s.announce && s.announce != "") {
                         description +=

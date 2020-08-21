@@ -6,7 +6,7 @@ category: forparticipants
 
 # VLDB2020:  Paper Registration
 
-Paper registration for VLDB 2020 will start on August 3, 2020 and will close on **August 17, 2020**. 
+Paper registration for VLDB 2020 will start on August 3, 2020 and will close on **August 24, 2020**. 
 
 <a href="https://secure101.jtbcom.co.jp/vldb2020/" class="btn btn-red">Paper Registration</a>
 
