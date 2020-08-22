@@ -1061,7 +1061,7 @@
                     console.log(s);
                     let title = s.title.split(" ");
                     let safix = "";
-                    if (colSpan == 1 || rowSpan == 1) {
+                    if (colSpan == 1 && rowSpan == 1) {
                         for (; title.join(" ").length > 60; title.pop()) {
                             safix = "..."
                         }
