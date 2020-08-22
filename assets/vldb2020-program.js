@@ -486,6 +486,8 @@
                 video: "https://vldb2020.org/instructions/guide-video-upload.md",
                 chair:
                     "https://vldb2020.org/instructions/guide-session-chair.md",
+                sponsor:
+                    "https://vldb2020.org/instructions/sponsor-message.md"
             };
             document
                 .querySelectorAll(".VLDB2020Instructions")
