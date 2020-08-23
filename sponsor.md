@@ -44,14 +44,21 @@ category: sponsorship
 <div class="col-group">
     <div class="col-3" style="padding:.5%;"><a href="https://research.fb.com/"><img src="assets/logo/logo_facebook.svg" width="100%"></a></div>
     <div class="col-3" style="padding:0px;"><a href="https://www.hitachi.com/"><img src="assets/logo/logo_hitachi.svg" width="100%"></a></div>
+    <div class="col-3" style="padding:0px;"><a href="https://www.draco.res.ibm.com/"><img src="assets/logo/logo_ibm.svg" width="100%"></a></div>
     <div class="col-3" style="padding:.5%;"><a href="https://linecorp.com/en"><img src="assets/logo/logo_line.svg" width="100%"></a></div>  
-    <div class="col-3" style="padding:.5%;"><a href="https://www.microsoft.com/research"><img src="assets/logo/logo_microsoft.svg" width="100%"></a></div>  
 </div>
 <div class="col-group">
+    <div class="col-3" style="padding:.5%;"><a href="https://www.microsoft.com/research"><img src="assets/logo/logo_microsoft.svg" width="100%"></a></div>  
     <div class="col-3" style="padding:.5%;"><a href="https://www.mongodb.com/"><img src="assets/logo/logo_mongodb.svg" width="100%"></a></div>
-     <div class="col-3" style="padding:.5%;"><a href="http://www.snowflake.com"><img src="assets/logo/logo_snowflake.svg" width="100%"></a></div>
+    <div class="col-3" style="padding:.5%;"><a href="http://www.snowflake.com"><img src="assets/logo/logo_snowflake.svg" width="100%"></a></div>
     <div class="col-3" style="padding:.5%;"><a href="http://www.toshiba.co.jp/worldwide/index.html"><img src="assets/logo/logo_toshiba.svg" width="100%"></a></div>
+    
+</div>
+<div class="col-group">
     <div class="col-3" style="padding:.5%;"><a href="https://about.yahoo.co.jp/info/en/company/"><img src="assets/logo/logo_yahoo_j.svg" width="100%"></a></div>
+    <div class="col-3" style="padding:.5%;"><img src="assets/logo/logo_empty.svg" width="100%"></div>
+    <div class="col-3" style="padding:.5%;"><img src="assets/logo/logo_empty.svg" width="100%"></div>
+    <div class="col-3" style="padding:.5%;"><img src="assets/logo/logo_empty.svg" width="100%"></div>
 </div>
 
 ## Sliver
