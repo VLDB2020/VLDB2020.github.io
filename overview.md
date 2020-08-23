@@ -21,7 +21,7 @@ VLDB 2020 will take place in <s>Tokyo, Japan</s> Online, from Monday, August 31t
 **Co-organizer:**
 * Database Society of Japan (DBSJ)
 
-<a href="https://dbsj.org/en/"><img src="assets/logo/logo_dbsj.svg" width="100%"></a>
+<a href="https://dbsj.org/en/"><img src="assets/logo/logo_dbsj.svg" width="50%"></a>
 
 # VLDB 2020: Venue
 
