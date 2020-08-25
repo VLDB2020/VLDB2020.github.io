@@ -487,7 +487,9 @@
                 chair:
                     "https://vldb2020.org/instructions/guide-session-chair.md",
                 sponsor:
-                    "https://vldb2020.org/instructions/sponsor-message.md"
+                    "https://vldb2020.org/instructions/sponsor-message.md",
+                phdworkshop:
+                    "https://vldb2020.org/instructions/phd-workshop.md"
             };
             document
                 .querySelectorAll(".VLDB2020Instructions")
@@ -501,6 +503,7 @@
                                 //console.log(response);
                                 response.text().then((t) => {
                                     instruction.innerHTML = marked(t);
+                                    UTCTime();
                                 });
                             }
                         );
