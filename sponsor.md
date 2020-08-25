@@ -68,16 +68,27 @@ category: sponsorship
 <div class="col-group">
     <div class="col-2" style="padding:.5%;"><a href="https://www.tencent.com/"><img src="assets/logo/logo_tencent.svg" width="100%"></a></div>
     <div class="col-2" style="padding:.5%;"><a href="https://www.treasuredata.com/"><img src="assets/logo/logo_arm_td.svg" width="100%"></a></div>
-    <div class="col-2" style="padding:.5%;"><img src="assets/logo/logo_unknown.svg" width="100%"></div>
-    <div class="col-2" style="padding:.5%;"><img src="assets/logo/logo_unknown.svg" width="100%"></div>
-    <div class="col-2" style="padding:.5%;"><img src="assets/logo/logo_unknown.svg" width="100%"></div>
-    <div class="col-2" style="padding:.5%;"><img src="assets/logo/logo_unknown.svg" width="100%"></div>
+    <div class="col-2" style="padding:.5%;"><img src="assets/logo/logo_empty.svg" width="100%"></div>
+    <div class="col-2" style="padding:.5%;"><img src="assets/logo/logo_empty.svg" width="100%"></div>
+    <div class="col-2" style="padding:.5%;"><img src="assets/logo/logo_empty.svg" width="100%"></div>
+    <div class="col-2" style="padding:.5%;"><img src="assets/logo/logo_empty.svg" width="100%"></div>
 </div>
 
 ## Bronze
 
 <div class="col-group">
     <div class="col-2" style="padding:0;"><a href="https://www.twosigma.com/"><img src="assets/logo/logo_two_sigma.svg" width="80%"></a></div>
+    <div class="col-2" style="padding:0;"><img src="assets/logo/logo_empty.svg" width="100%"></div>
+    <div class="col-2" style="padding:0;"><img src="assets/logo/logo_empty.svg" width="100%"></div>
+    <div class="col-2" style="padding:0;"><img src="assets/logo/logo_empty.svg" width="100%"></div>
+    <div class="col-2" style="padding:0;"><img src="assets/logo/logo_empty.svg" width="100%"></div>
+    <div class="col-2" style="padding:0;"><img src="assets/logo/logo_empty.svg" width="100%"></div>
+</div>
+
+## Publisher Sponsors
+
+<div class="col-group">
+    <div class="col-2" style="padding:0;"><a href="https://nowpublishers.com/"><img src="assets/logo/logo_now.svg" width="80%"></a></div>
     <div class="col-2" style="padding:0;"><img src="assets/logo/logo_empty.svg" width="100%"></div>
     <div class="col-2" style="padding:0;"><img src="assets/logo/logo_empty.svg" width="100%"></div>
     <div class="col-2" style="padding:0;"><img src="assets/logo/logo_empty.svg" width="100%"></div>
