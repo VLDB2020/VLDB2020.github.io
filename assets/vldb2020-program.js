@@ -69,7 +69,7 @@
                 nowTime.forEach((nt) => {
                     nt.innerHTML = moment()
                         .utcOffset(gap)
-                        .format("dddd, MMMM Do YYYY, h:mm a");
+                        .format("dddd, MMMM Do YYYY, h:mm a (UTCZ)");
                 });
             };
             let utcOffset = document.getElementById("utcOffset");
