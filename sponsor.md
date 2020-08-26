@@ -66,9 +66,9 @@ category: sponsorship
 <!-- Fujitsu -->
 <!-- Nochirasu -->
 <div class="col-group">
+    <div class="col-2" style="padding:.5%;"><a href="https://www.nautilus-technologies.com"><img src="assets/logo/logo_nautilus.svg" width="100%"></a></div>
     <div class="col-2" style="padding:.5%;"><a href="https://www.tencent.com/"><img src="assets/logo/logo_tencent.svg" width="100%"></a></div>
     <div class="col-2" style="padding:.5%;"><a href="https://www.treasuredata.com/"><img src="assets/logo/logo_arm_td.svg" width="100%"></a></div>
-    <div class="col-2" style="padding:.5%;"><img src="assets/logo/logo_empty.svg" width="100%"></div>
     <div class="col-2" style="padding:.5%;"><img src="assets/logo/logo_empty.svg" width="100%"></div>
     <div class="col-2" style="padding:.5%;"><img src="assets/logo/logo_empty.svg" width="100%"></div>
     <div class="col-2" style="padding:.5%;"><img src="assets/logo/logo_empty.svg" width="100%"></div>
