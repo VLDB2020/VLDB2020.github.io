@@ -297,7 +297,7 @@
                             sess.appendChild(t);
                             let tim = document.createElement("div");
                             tim.classList.add("time");
-                            tim.innerHTML = '<span"><i class="fas fa-dice-one"></i></span>' + slotBar[session.slot] + '<span class="duration"><i class="fas fa-clock"></i>' + session.duration + "min</span>";
+                            tim.innerHTML = '<span"><i class="fas fa-dice-one"></i></span>[' + session.id + '] ' + slotBar[session.slot] + '<span class="duration"><i class="fas fa-clock"></i>' + session.duration + "min</span>";
                             sess.appendChild(tim);
 
                             let buttons = document.createElement("div");
@@ -326,7 +326,7 @@
                                 let tim2 = document.createElement("div");
                                 tim2.classList.add("time");
                                 tim2.classList.add("timeRepeat");
-                                tim2.innerHTML = '<span><i class="fas fa-dice-two"></i></span>' + slotBar[repeatSession.slot] + '<span class="duration"><i class="fas fa-clock"></i>' + repeatSession.duration + "min</span>";
+                                tim2.innerHTML = '<span><i class="fas fa-dice-two"></i></span>[' + repeatSession.id + '] ' + slotBar[repeatSession.slot] + '<span class="duration"><i class="fas fa-clock"></i>' + repeatSession.duration + "min</span>";
                                 sess.appendChild(tim2);
                                 let buttons = document.createElement("div");
                                 buttons.classList.add("buttonbar");
