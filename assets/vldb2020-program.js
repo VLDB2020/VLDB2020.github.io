@@ -31,10 +31,10 @@
                 ? ""
                 : utc.format("ddd, MMM Do, ");
         let str =
-            localtime.format("dddd, MMMM Do YYYY, h:mm a") +
+            localtime.format("dddd, MMMM Do YYYY, h:mm") +
             (appendUTC
                 ? " [" + date + utc.format("h:mm a") + " UTC]"
-                : "");
+                : " [UTCZ]");
         return str;
     };
     const onLoadFn = () => {
