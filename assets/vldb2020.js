@@ -331,7 +331,7 @@ const UTCTime = () => {
                 ? ""
                 : utc.format("ddd, MMM Do, ");
         t.innerHTML =
-            st.format("dddd, MMMM Do YYYY, h:mm a Z") +
+            st.format("dddd, MMMM Do YYYY, H:mm Z") +
             " [" +
             date +
             utc.format("h:mm a") +
