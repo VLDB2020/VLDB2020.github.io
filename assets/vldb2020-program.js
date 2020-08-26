@@ -1268,7 +1268,7 @@
                             });
                             pMore.innerHTML = '<a href="program_flat.html?p=' + paper["pid"] + '">Persistent Link</a>';
                             pTitle.innerHTML = '<span class="badge">' + paper.pid + '</span> ' + (paper.type == "Industry" ? "[Industry] " : "") + paper.title;
-                            let presenter = (s.inherit != "") ? paper.presenter2 : paper.presenter2;
+                            let presenter = (s.inherit != "") ? paper.presenter2 : paper.presenter1;
                             pAuthor.innerHTML = (presenter == "" ? "" : "<b>Presenter:" + presenter + "</b><br>Authors:<br>") + paper.author.replace(/\;/g, '\n<br>');
                             pDiv.appendChild(pButton);
                             pDiv.appendChild(pTitle);
