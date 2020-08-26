@@ -31,9 +31,9 @@
                 ? ""
                 : utc.format("ddd, MMM Do, ");
         let str =
-            localtime.format("dddd, MMMM Do YYYY, h:mm") +
+            localtime.format("dddd, MMMM Do YYYY, H:mm") +
             (appendUTC
-                ? " [" + date + utc.format("h:mm a") + " UTC]"
+                ? " [" + date + utc.format("H:mm") + " UTC]"
                 : " [UTCZ]");
         return str;
     };
