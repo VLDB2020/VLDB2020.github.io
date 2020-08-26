@@ -34,7 +34,7 @@
             localtime.format("dddd, MMMM Do YYYY, H:mm") +
             (appendUTC
                 ? " [" + date + utc.format("H:mm") + " UTC]"
-                : " [UTCZ]");
+                : " [UTC" + localtime.format("Z") + "]");
         return str;
     };
     const onLoadFn = () => {
