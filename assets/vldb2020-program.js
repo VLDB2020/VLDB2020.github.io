@@ -375,9 +375,9 @@
                                     pAbstract.id = "abstract" + paper.pid;
                                     pAbstract.classList.add("abstract");
                                     let srtTitle = (paper.type == "Industry" ? "[Industry] " : "") + paper.title;
-                                    let pPresenter = (paper.presenter1 == "" ? "" : ("(Primary)" + paper.presenter1));
-                                    let rPresenter = ((pPresenter == "" || paper.presenter2 == "") ? "" : " / ") + (paper.presenter2 == "" ? "" : ("(Repeat)" + paper.presenter2));
-                                    let srtAuthor = (pPresenter + rPresenter) == "" ? "" : "<b>Presenter: " + pPresenter + rPresenter + "</b><br>";
+                                    let pPresenter = (paper.presenter1 == "" ? "" : ('<i class="fas fa-dice-one"></i> Primary Session: <b>' + paper.presenter1 + "</b>"));
+                                    let rPresenter = ((pPresenter == "" || paper.presenter2 == "") ? "" : " / ") + (paper.presenter2 == "" ? "" : ('<i class="fas fa-dice-two"></i> Repeat Session: <b>' + paper.presenter2 + "</b>"));
+                                    let srtAuthor = (pPresenter + rPresenter) == "" ? "" : "<b>Live Q&A: </b>" + pPresenter + rPresenter + "<br>";
                                     srtAuthor += "Authors:" + paper.author;
                                     let srtAbstract = "";
                                     filter_word.forEach((marker) => {
@@ -1269,7 +1269,7 @@
                             pMore.innerHTML = '<a href="program_flat.html?p=' + paper["pid"] + '">Persistent Link</a>';
                             pTitle.innerHTML = '<span class="badge">' + paper.pid + '</span> ' + (paper.type == "Industry" ? "[Industry] " : "") + paper.title;
                             let presenter = (s.inherit != "") ? paper.presenter2 : paper.presenter1;
-                            pAuthor.innerHTML = (presenter == "" ? "" : "<b>Presenter:" + presenter + "</b><br>Authors:<br>") + paper.author.replace(/\;/g, '\n<br>');
+                            pAuthor.innerHTML = (presenter == "" ? "" : "<b>Live Q&A:" + presenter + "</b><br>Authors:<br>") + paper.author.replace(/\;/g, '\n<br>');
                             pDiv.appendChild(pButton);
                             pDiv.appendChild(pTitle);
                             pDiv.appendChild(pMore);
