@@ -1070,7 +1070,7 @@
                     let title = s.title.split(" ");
                     let safix = "";
                     if (colSpan == 1 && rowSpan == 1) {
-                        for (; title.join(" ").length > 60; title.pop()) {
+                        for (; title.join(" ").length > 45; title.pop()) {
                             safix = "..."
                         }
                     }
