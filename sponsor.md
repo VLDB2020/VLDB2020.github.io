@@ -88,12 +88,9 @@ category: sponsorship
 ## Publisher Sponsors
 
 <div class="col-group">
-    <div class="col-2" style="padding:0;"><a href="https://nowpublishers.com/"><img src="assets/logo/logo_now.svg" width="80%"></a></div>
-    <div class="col-2" style="padding:0;"><img src="assets/logo/logo_empty.svg" width="100%"></div>
-    <div class="col-2" style="padding:0;"><img src="assets/logo/logo_empty.svg" width="100%"></div>
-    <div class="col-2" style="padding:0;"><img src="assets/logo/logo_empty.svg" width="100%"></div>
-    <div class="col-2" style="padding:0;"><img src="assets/logo/logo_empty.svg" width="100%"></div>
-    <div class="col-2" style="padding:0;"><img src="assets/logo/logo_empty.svg" width="100%"></div>
+    <div class="col-4" style="padding:0;"><a href="https://nowpublishers.com/"><img src="assets/logo/logo_now.svg" width="80%"></a></div>
+    <div class="col-4" style="padding:0;"><a href="https://www.morganclaypool.com/"><img src="assets/logo/logo_morgan_claypool.svg" width="80%"></a></div>
+    <div class="col-4" style="padding:0;"><img src="assets/logo/logo_empty.svg" width="100%"></div>
 </div>
 
 ## Institutional Sponsors
