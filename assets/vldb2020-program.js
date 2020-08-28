@@ -489,6 +489,7 @@
                 video: "https://vldb2020.org/instructions/guide-video-upload.md",
                 presentation: "https://vldb2020.org/instructions/guide-session-presenter.md",
                 volunteer: "https://vldb2020.org/instructions/guide-student-volunteer.md",
+                roundtable: "https://vldb2020.org/instructions/round-table.md",
                 chair:
                     "https://vldb2020.org/instructions/guide-session-chair.md",
                 workshop:
