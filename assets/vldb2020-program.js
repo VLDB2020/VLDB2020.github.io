@@ -488,6 +488,7 @@
                     "https://vldb2020.org/instructions/guide-presenter.md",
                 video: "https://vldb2020.org/instructions/guide-video-upload.md",
                 presentation: "https://vldb2020.org/instructions/guide-session-presenter.md",
+                volunteer: "https://vldb2020.org/instructions/guide-student-volunteer.md",
                 chair:
                     "https://vldb2020.org/instructions/guide-session-chair.md",
                 workshop:
@@ -499,7 +500,7 @@
                 sponsorguide:
                     "https://vldb2020.org/instructions/guide-sponsor-session.md",
                 phdworkshop:
-                    "https://vldb2020.org/instructions/phd-workshop.md"
+                    "https://vldb2020.org/instructions/phd-workshop.md",
             };
             document
                 .querySelectorAll(".VLDB2020Instructions")
