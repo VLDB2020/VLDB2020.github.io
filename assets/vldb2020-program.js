@@ -493,6 +493,8 @@
                     "https://vldb2020.org/instructions/guide-workshop-chair.md",
                 sponsor:
                     "https://vldb2020.org/instructions/sponsor-message.md",
+                sponsortalk:
+                    "https://vldb2020.org/instructions/sponsor-talk.md",
                 sponsorguide:
                     "https://vldb2020.org/instructions/guide-sponsor-session.md",
                 phdworkshop:
@@ -1140,18 +1142,7 @@
                     description += '<a href="program_flat.html?s=' + s.id + '">Persistent Link</a>';
                     maskDescription.innerHTML = description;
                     const button = (target, go, key, id, disabled = false) => {
-                        if (target == "urls") {
-                            let btn = document.createElement("a");
-                            btn.classList.add("btn");
-                            btn.classList.add("btn-abstract");
-                            btn.href = '#';
-                            btn.innerHTML = '<i class="fas fa-share-square"></i> URLs';
-                            btn.addEventListener("click", (e) => {
-                                e.stopPropagation();
-                                e.preventDefault();
-                            });
-                            return btn;
-                        } else if (target == "abstract") {
+                        if (target == "abstract") {
                             const url = 'https://tokyo.vldb2020.org/abstract/' + id + '.txt';
                             let btn = document.createElement("a");
                             btn.classList.add("btn");
@@ -1270,7 +1261,6 @@
                             if (paper["abstract"]) {
                                 pButton.appendChild(button('abstract', null, (s.inherit != ""), paper["pid"]));
                             }
-                            pButton.appendChild(button('urls', null, null, paper["pid"]));
                             /*
                             paper.urls.forEach((go) => {
                                 pButton.appendChild(
