@@ -1,10 +1,10 @@
 ---
 layout: default
-title: VLDB2020 Guide
+title: VLDB2020 Instructions
 category: forparticipants
 ---
 
-# VLDB2020: Instracutions
+# VLDB2020: Instruction
 
 ## Public Information
 
