@@ -458,7 +458,7 @@
                             break;
                         case "3":
                             start = moment("2020-09-01T21:00:00Z");
-                            end = moment("2020-09-02T01:00:00Z");
+                            end = moment("2020-09-02T02:00:00Z");
                             break;
                         default:
                             start = moment("2020-09-02T03:00:00Z");
