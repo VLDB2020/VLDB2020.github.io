@@ -31,10 +31,10 @@
                 ? ""
                 : utc.format("ddd, MMM Do, ");
         let str =
-            localtime.format("dddd, MMMM Do YYYY, h:mm a") +
+            localtime.format("dddd, MMMM Do YYYY, H:mm") +
             (appendUTC
-                ? " [" + date + utc.format("h:mm a") + " UTC]"
-                : "");
+                ? " [" + date + utc.format("H:mm") + " UTC]"
+                : " [UTC" + localtime.format("Z") + "]");
         return str;
     };
     const onLoadFn = () => {
@@ -69,7 +69,7 @@
                 nowTime.forEach((nt) => {
                     nt.innerHTML = moment()
                         .utcOffset(gap)
-                        .format("dddd, MMMM Do YYYY, h:mm a");
+                        .format("dddd, MMMM Do YYYY, h:mm a (UTCZ)");
                 });
             };
             let utcOffset = document.getElementById("utcOffset");
@@ -95,7 +95,7 @@
                 nowTime.forEach((nt) => {
                     nt.innerHTML = moment()
                         .utcOffset(gap)
-                        .format("dddd, MMMM Do YYYY, h:mm a");
+                        .format("dddd, MMMM Do YYYY, h:mm a (UTCZ)");
                 });
                 timers["session"] = setInterval(start, 30000);
             }
@@ -297,7 +297,7 @@
                             sess.appendChild(t);
                             let tim = document.createElement("div");
                             tim.classList.add("time");
-                            tim.innerHTML = '<span"><i class="fas fa-dice-one"></i></span>' + slotBar[session.slot] + '<span class="duration"><i class="fas fa-clock"></i>' + session.duration + "min</span>";
+                            tim.innerHTML = '<span"><i class="fas fa-dice-one"></i></span>[' + session.id + '] ' + slotBar[session.slot] + '<span class="duration"><i class="fas fa-clock"></i>' + session.duration + "min</span>";
                             sess.appendChild(tim);
 
                             let buttons = document.createElement("div");
@@ -326,7 +326,7 @@
                                 let tim2 = document.createElement("div");
                                 tim2.classList.add("time");
                                 tim2.classList.add("timeRepeat");
-                                tim2.innerHTML = '<span><i class="fas fa-dice-two"></i></span>' + slotBar[repeatSession.slot] + '<span class="duration"><i class="fas fa-clock"></i>' + repeatSession.duration + "min</span>";
+                                tim2.innerHTML = '<span><i class="fas fa-dice-two"></i></span>[' + repeatSession.id + '] ' + slotBar[repeatSession.slot] + '<span class="duration"><i class="fas fa-clock"></i>' + repeatSession.duration + "min</span>";
                                 sess.appendChild(tim2);
                                 let buttons = document.createElement("div");
                                 buttons.classList.add("buttonbar");
@@ -375,7 +375,10 @@
                                     pAbstract.id = "abstract" + paper.pid;
                                     pAbstract.classList.add("abstract");
                                     let srtTitle = (paper.type == "Industry" ? "[Industry] " : "") + paper.title;
-                                    let srtAuthor = paper.author;
+                                    let pPresenter = (paper.presenter1 == "" ? "" : ('<i class="fas fa-dice-one"></i> Primary Session: <b>' + paper.presenter1 + "</b>"));
+                                    let rPresenter = ((pPresenter == "" || paper.presenter2 == "") ? "" : " / ") + (paper.presenter2 == "" ? "" : ('<i class="fas fa-dice-two"></i> Repeat Session: <b>' + paper.presenter2 + "</b>"));
+                                    let srtAuthor = (pPresenter + rPresenter) == "" ? "" : "<b>Live Q&A: </b>" + pPresenter + rPresenter + "<br>";
+                                    srtAuthor += "Authors:" + paper.author;
                                     let srtAbstract = "";
                                     filter_word.forEach((marker) => {
                                         //console.log("search", marker);
@@ -486,6 +489,14 @@
                 video: "https://vldb2020.org/instructions/guide-video-upload.md",
                 chair:
                     "https://vldb2020.org/instructions/guide-session-chair.md",
+                workshop:
+                    "https://vldb2020.org/instructions/guide-workshop-chair.md",
+                sponsor:
+                    "https://vldb2020.org/instructions/sponsor-message.md",
+                sponsorguide:
+                    "https://vldb2020.org/instructions/guide-sponsor-session.md",
+                phdworkshop:
+                    "https://vldb2020.org/instructions/phd-workshop.md"
             };
             document
                 .querySelectorAll(".VLDB2020Instructions")
@@ -499,6 +510,7 @@
                                 //console.log(response);
                                 response.text().then((t) => {
                                     instruction.innerHTML = marked(t);
+                                    UTCTime();
                                 });
                             }
                         );
@@ -563,7 +575,7 @@
                 nowTime.forEach((nt) => {
                     nt.innerHTML = moment()
                         .utcOffset(gap)
-                        .format("dddd, MMMM Do YYYY, h:mm a");
+                        .format("dddd, MMMM Do YYYY, h:mm a (UTCZ)");
                 });
             };
             let utcOffset = document.getElementById("utcOffset");
@@ -1034,6 +1046,7 @@
                         gridIdx[s.timeslotIdx] +
                         2 +
                         (s.span > 2 ? (s.span - 1) * 2 : 0);
+                    let colSpan = div.style.gridRowEnd - div.style.gridRowStart;
                     div.style.gridColumnStart = 1 + s.roomIdx;
                     div.classList.add(s.room);
                     div.classList.add("cell");
@@ -1046,6 +1059,7 @@
                     } else {
                         div.style.gridColumnEnd = maxParallel + 2;
                     }
+                    let rowSpan = div.style.gridColumnEnd - div.style.gridColumnStart;
                     if (DETAIL) {
                         div.addEventListener("click", (e) => {
                             showModal(e.currentTarget.id, e.currentTarget.getAttribute("x-dayblock"));
@@ -1056,7 +1070,15 @@
                     span.classList.add("sessionId");
                     span.appendChild(document.createTextNode(s.id));
                     div.appendChild(span);
-                    div.appendChild(document.createTextNode(" " + s.title));
+                    console.log(s);
+                    let title = s.title.split(" ");
+                    let safix = "";
+                    if (colSpan == 1 && rowSpan == 1) {
+                        for (; title.join(" ").length > 45; title.pop()) {
+                            safix = "..."
+                        }
+                    }
+                    div.appendChild(document.createTextNode(" " + title.join(" ") + safix));
                     let dur = document.createElement("div");
                     dur.classList.add("sessionDuration");
                     dur.appendChild(
@@ -1106,7 +1128,7 @@
                     maskDescription.classList.add("description");
                     let description = "";
                     if (s.chair && s.chair != "") {
-                        description += "<p><b>Chair:</b> " + s.chair + "</p>";
+                        description += "<p><b>Chair" + (s.chair.indexOf(",") === -1 ? "" : "s") + ":</b> " + s.chair + "</p>";
                     }
                     if (s.announce && s.announce != "") {
                         description +=
@@ -1118,7 +1140,18 @@
                     description += '<a href="program_flat.html?s=' + s.id + '">Persistent Link</a>';
                     maskDescription.innerHTML = description;
                     const button = (target, go, key, id, disabled = false) => {
-                        if (target == "abstract") {
+                        if (target == "urls") {
+                            let btn = document.createElement("a");
+                            btn.classList.add("btn");
+                            btn.classList.add("btn-abstract");
+                            btn.href = '#';
+                            btn.innerHTML = '<i class="fas fa-share-square"></i> URLs';
+                            btn.addEventListener("click", (e) => {
+                                e.stopPropagation();
+                                e.preventDefault();
+                            });
+                            return btn;
+                        } else if (target == "abstract") {
                             const url = 'https://tokyo.vldb2020.org/abstract/' + id + '.txt';
                             let btn = document.createElement("a");
                             btn.classList.add("btn");
@@ -1132,6 +1165,7 @@
                                 let url = e.currentTarget.getAttribute("x-href");
                                 let pid = e.currentTarget.getAttribute("x-pid");
                                 e.stopPropagation();
+                                e.preventDefault();
                                 if (document.getElementById("abstract" + pid).innerText == "") {
                                     fetch(url)
                                         .then(response => response.text())
@@ -1236,6 +1270,7 @@
                             if (paper["abstract"]) {
                                 pButton.appendChild(button('abstract', null, (s.inherit != ""), paper["pid"]));
                             }
+                            pButton.appendChild(button('urls', null, null, paper["pid"]));
                             /*
                             paper.urls.forEach((go) => {
                                 pButton.appendChild(
@@ -1250,7 +1285,8 @@
                             });
                             pMore.innerHTML = '<a href="program_flat.html?p=' + paper["pid"] + '">Persistent Link</a>';
                             pTitle.innerHTML = '<span class="badge">' + paper.pid + '</span> ' + (paper.type == "Industry" ? "[Industry] " : "") + paper.title;
-                            pAuthor.innerHTML = paper.author.replace(/\;/g, '\n<br>');
+                            let presenter = (s.inherit != "") ? paper.presenter2 : paper.presenter1;
+                            pAuthor.innerHTML = (presenter == "" ? "" : "<b>Live Q&A:" + presenter + "</b><br>") + "Authors:<br>" + paper.author.replace(/\;/g, '\n<br>');
                             pDiv.appendChild(pButton);
                             pDiv.appendChild(pTitle);
                             pDiv.appendChild(pMore);

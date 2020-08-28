@@ -316,22 +316,25 @@
             console.log("open!");
             document.getElementById("toppage-toggle").click();
         }
-        let times = document.querySelectorAll(".timeUTC");
-        times.forEach((t) => {
-            let st = moment(t.innerHTML);
-            let utc = moment.utc(t.innerHTML);
-            let date =
-                st.format("DD") == utc.format("DD")
-                    ? ""
-                    : utc.format("ddd, MMM Do, ");
-            t.innerHTML =
-                st.format("dddd, MMMM Do YYYY, h:mm a") +
-                " [" +
-                date +
-                utc.format("h:mm a") +
-                " UTC]";
-        });
+        UTCTime();
     };
     Barba.Dispatcher.on("transitionCompleted", onLoadFn);
     document.addEventListener("DOMContentLoaded", onLoadFn);
 })();
+const UTCTime = () => {
+    let times = document.querySelectorAll(".timeUTC");
+    times.forEach((t) => {
+        let st = moment(t.innerHTML);
+        let utc = moment.utc(t.innerHTML);
+        let date =
+            st.format("DD") == utc.format("DD")
+                ? ""
+                : utc.format("ddd, MMM Do, ");
+        t.innerHTML =
+            st.format("dddd, MMMM Do YYYY, H:mm Z") +
+            " [" +
+            date +
+            utc.format("h:mm a") +
+            " UTC]";
+    });
+}

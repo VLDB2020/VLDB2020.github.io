@@ -6,6 +6,33 @@ category: forparticipants
 
 # VLDB2020: Materials
 
+## Virtual Background with Sponsor logos
+
+1. **VLDB 2020 Grid**
+    - [Download](https://github.com/VLDB2020/artworks/blob/master/background/vldb2020-background-grid-sponsors.jpg)
+    - ![](https://raw.githubusercontent.com/VLDB2020/artworks/master/background/vldb2020-background-grid-sponsors-thumbnail.jpg)
+1. **TOKYO Night**
+    - [Download](https://github.com/VLDB2020/artworks/blob/master/background/vldb2020-background-night-sponsors.jpg)
+    - [Location](https://goo.gl/maps/viiumGZS1R8DUMwJA)
+    - ![](https://raw.githubusercontent.com/VLDB2020/artworks/master/background/vldb2020-background-night-sponsors-thumbnail.jpg)
+1. **TOKYO Neon**
+    - [Download](https://github.com/VLDB2020/artworks/blob/master/background/vldb2020-background-neon-sponsors.jpg)
+    - [Location](https://goo.gl/maps/RnLmxeKUptpvJiwx9)
+    - ![](https://raw.githubusercontent.com/VLDB2020/artworks/master/background/vldb2020-background-neon-sponsors-thumbnail.jpg)
+1. **TOKYO Skyline**
+    - [Download](https://github.com/VLDB2020/artworks/blob/master/background/vldb2020-background-skyline-sponsors.jpg)
+    - [Grater Tokyo Area](https://en.wikipedia.org/wiki/Greater_Tokyo_Area)
+    - ![](https://raw.githubusercontent.com/VLDB2020/artworks/master/background/vldb2020-background-skyline-sponsors-thumbnail.jpg)
+1. **TOKYO Riverside**
+    - [Download](https://github.com/VLDB2020/artworks/blob/master/background/vldb2020-background-sumida-river-sponsors.jpg)
+    - [Location](https://en.wikipedia.org/wiki/Asahi_Beer_Hall)
+    - ![](https://raw.githubusercontent.com/VLDB2020/artworks/master/background/vldb2020-background-sumida-river-sponsors-thumbnail.jpg)
+1. **Shinkansen (Bullet train)**
+    - [Download](https://github.com/VLDB2020/artworks/blob/master/background/vldb2020-background-shinkansen-sponsors.jpg)
+    - [Shinkansen](https://en.wikipedia.org/wiki/Shinkansen)
+    - ![](https://raw.githubusercontent.com/VLDB2020/artworks/master/background/vldb2020-background-shinkansen-sponsors-thumbnail.jpg)
+
+
 ## Virtual Background (16:9 Images for Zoom)
 
 1. **VLDB 2020 Grid**
