@@ -493,6 +493,8 @@
                     "https://vldb2020.org/instructions/guide-workshop-chair.md",
                 sponsor:
                     "https://vldb2020.org/instructions/sponsor-message.md",
+                sponsortalk:
+                    "https://vldb2020.org/instructions/sponsor-talk.md",
                 sponsorguide:
                     "https://vldb2020.org/instructions/guide-sponsor-session.md",
                 phdworkshop:
