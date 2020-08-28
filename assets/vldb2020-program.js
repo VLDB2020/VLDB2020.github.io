@@ -1,9 +1,18 @@
 (() => {
     let timers = {};
     const DETAIL = true;
+    const buttonTooltip = {
+        conference: 'Zoom, Gather, etc.',
+        chat: 'Chat with authors and session chairs',
+        inquiry: "VLDB2020 Technical Support",
+        video: "Link to the presentation video on YouTube",
+        video2: "Link to the presentation video on BiliBili",
+        paper: "Download the paper",
+        workshop: 'For more information, please visit the workshop program.'
+    };
     const buttonTitles = {
-        conference: "Virtual Conference Room",
-        chat: "Slack Channel",
+        conference: 'Virtual Conference Room&emsp;<i class="fas fa-video"></i>',
+        chat: 'Slack Channel&emsp;<i class="fas fa-comments"></i>',
         inquiry: "Support",
         video: "Video [YouTube]",
         video2: "Video [哔哩哔哩]",
@@ -265,6 +274,10 @@
                                     } else {
                                         btn.href = url;
                                     }
+
+                                    btn.setAttribute("title", buttonTooltip[buttonTooltip.hasOwnProperty(go)
+                                        ? buttonTooltip[go]
+                                        : go]);
                                     btn.innerHTML = buttonTitles.hasOwnProperty(go)
                                         ? buttonTitles[go]
                                         : go;
@@ -1190,6 +1203,9 @@
                             } else {
                                 btn.href = url;
                             }
+                            btn.setAttribute("title", buttonTooltip.hasOwnProperty(go)
+                                ? buttonTooltip[go]
+                                : go);
                             btn.innerHTML = buttonTitles.hasOwnProperty(go)
                                 ? buttonTitles[go]
                                 : go;
