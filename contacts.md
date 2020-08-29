@@ -6,7 +6,13 @@ category: information
 
 # VLDB2020: Contacts
 
-## The chairperson in charge of each block
+## Official Slack Channel
+
+* Slack Tech Support Channel: [https://app.slack.com/client/T0185PK0B6D/C019G8X7VDH](https://app.slack.com/client/T0185PK0B6D/C019G8X7VDH)
+* Slack Announcements Channel: [https://app.slack.com/client/T0185PK0B6D/C0191AHGAH5](https://app.slack.com/client/T0185PK0B6D/C0191AHGAH5)
+* Slack General Channel: [https://app.slack.com/client/T0185PK0B6D/C018H0G5880](https://app.slack.com/client/T0185PK0B6D/C018H0G5880)
+
+## Chairperson in charge of each block
 
 * BLOCK 1
     * General Chair: <a href="Christian S. Jensen">Christian S. Jensen</a>
