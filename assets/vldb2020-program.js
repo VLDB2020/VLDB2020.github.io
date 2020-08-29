@@ -17,7 +17,7 @@
         video: "Video [YouTube]",
         video2: "Video [哔哩哔哩]",
         paper: "Download PDF",
-        workshop: 'Workshop Program&emsp;<i class="fas fa-external-link-alt"></i>'
+        workshop: '<div>Workshop&emsp;<i class="fas fa-external-link-alt"></i></div><div>Program</div>'
     };
     let createDateTimeSpan = (timestamp, appendUTC = false) => {
         return (
