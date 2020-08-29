@@ -9,6 +9,7 @@ category: forparticipants
 ## Public Information
 
 * [Instructions for Attendees](/guide-attendee.html) 
+* [Instructions of Gather](/guide-gather.html)
 * [Talk Recording Instructions for All Presenters](/guide-presenter.html)
 * [Talk Upload Instructions for all presenters](/guide-video-upload.html)
 
