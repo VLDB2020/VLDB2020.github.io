@@ -11,7 +11,7 @@
         workshop: 'For more information, please visit the workshop program.'
     };
     const buttonTitles = {
-        conference: 'Virtual Conference Room &emsp;<i class="fas fa-video"></i>',
+        conference: '<div>Virtual Conference Room &emsp;<i class="fas fa-video"></i></div><div>(Zoom, Gather, etc.)</div>',
         chat: 'Slack Channel&emsp;<i class="fas fa-comments"></i>',
         inquiry: "Support",
         video: "Video [YouTube]",
@@ -301,6 +301,7 @@
                                     return btn;
                                 }
                             };
+                            let isWorkshop = false;
                             let t = document.createElement("div");
                             t.classList.add("sessionId");
                             let ttl = document.createElement("div");
@@ -312,7 +313,10 @@
                             tim.classList.add("time");
                             tim.innerHTML = '<span"><i class="fas fa-dice-one"></i></span>[' + session.id + '] ' + slotBar[session.slot] + '<span class="duration"><i class="fas fa-clock"></i>' + session.duration + "min</span>";
                             sess.appendChild(tim);
-
+                            let chairs = document.createElement("div");
+                            chairs.style.textAlign = "right";
+                            chairs.innerHTML = session.chair == "" ? "" : "Chair:" + session.chair;
+                            sess.appendChild(chairs);
                             let buttons = document.createElement("div");
                             buttons.classList.add("buttonbar");
                             buttons.appendChild(
@@ -334,13 +338,19 @@
                             });
                             sess.appendChild(buttons);
                             //console.log(session.slot, repeatSessions[session.id]);
+                            let hasRepeatSession = false;
                             if (repeatSessions.hasOwnProperty(session.id)) {
+                                hasRepeatSession = true;
                                 repeatSession = repeatSessions[session.id];
                                 let tim2 = document.createElement("div");
                                 tim2.classList.add("time");
                                 tim2.classList.add("timeRepeat");
                                 tim2.innerHTML = '<span><i class="fas fa-dice-two"></i></span>[' + repeatSession.id + '] ' + slotBar[repeatSession.slot] + '<span class="duration"><i class="fas fa-clock"></i>' + repeatSession.duration + "min</span>";
                                 sess.appendChild(tim2);
+                                let rChairs = document.createElement("div");
+                                rChairs.style.textAlign = "right";
+                                rChairs.innerHTML = repeatSession.chair == "" ? "" : "Chair:" + repeatSession.chair;
+                                sess.appendChild(rChairs);
                                 let buttons = document.createElement("div");
                                 buttons.classList.add("buttonbar");
                                 buttons.appendChild(
@@ -388,9 +398,16 @@
                                     pAbstract.id = "abstract" + paper.pid;
                                     pAbstract.classList.add("abstract");
                                     let srtTitle = (paper.type == "Industry" ? "[Industry] " : "") + paper.title;
-                                    let pPresenter = (paper.presenter1 == "" ? "" : ('<i class="fas fa-dice-one"></i> Primary Session: <b>' + paper.presenter1 + "</b>"));
-                                    let rPresenter = ((pPresenter == "" || paper.presenter2 == "") ? "" : " / ") + (paper.presenter2 == "" ? "" : ('<i class="fas fa-dice-two"></i> Repeat Session: <b>' + paper.presenter2 + "</b>"));
-                                    let srtAuthor = (pPresenter + rPresenter) == "" ? "" : "<b>Live Q&A: </b>" + pPresenter + rPresenter + "<br>";
+                                    let srtAuthor = "";
+                                    if (['A', 'B', 'C', 'D', 'E', 'F', 'a', 'b', 'c', 'd', 'e'].indexOf(session.room) >= 0) {
+                                        let pPresenter = '<i class="fas fa-dice-one"></i> Primary Session: <b>' + (paper.presenter1 == "" ? "No live Q&A" : paper.presenter1) + "</b>";
+                                        let rPresenter = '<i class="fas fa-dice-two"></i> Repeat Session: <b>' + (paper.presenter2 == "" ? "No live Q&A" : paper.presenter2) + "</b>";
+                                        if (hasRepeatSession) {
+                                            srtAuthor += "<b>Live Q&A: </b>" + pPresenter + "&emsp;/&emsp;" + rPresenter + "<br>";
+                                        } else {
+                                            srtAuthor += "<b>Live Q&A: </b>" + pPresenter + "<br>";
+                                        }
+                                    }
                                     srtAuthor += "Authors:" + paper.author;
                                     let srtAbstract = "";
                                     filter_word.forEach((marker) => {
