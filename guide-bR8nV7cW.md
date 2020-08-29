@@ -1,6 +1,6 @@
 ---
 layout: default
-title: VLDB2020 Guide
+title: VLDB2020 Instructions
 category: forparticipants
 ---
 
