@@ -1,14 +1,23 @@
 (() => {
     let timers = {};
     const DETAIL = true;
+    const buttonTooltip = {
+        conference: 'Zoom, Gather, etc.',
+        chat: 'Chat with authors and session chairs',
+        inquiry: "VLDB2020 Technical Support",
+        video: "Link to the presentation video on YouTube",
+        video2: "Link to the presentation video on BiliBili",
+        paper: "Download the paper",
+        workshop: 'For more information, please visit the workshop program.'
+    };
     const buttonTitles = {
-        conference: "Virtual Conference Room",
-        chat: "Slack Channel",
+        conference: '<div>Virtual Conference Room &emsp;<i class="fas fa-video"></i></div><div>(Zoom or other)</div>',
+        chat: 'Slack Channel&emsp;<i class="fas fa-comments"></i>',
         inquiry: "Support",
         video: "Video [YouTube]",
         video2: "Video [哔哩哔哩]",
         paper: "Download PDF",
-        workshop: 'Workshop Program&emsp;<i class="fas fa-external-link-alt"></i>'
+        workshop: '<div>Workshop&emsp;<i class="fas fa-external-link-alt"></i></div><div>Program</div>'
     };
     let createDateTimeSpan = (timestamp, appendUTC = false) => {
         return (
@@ -265,6 +274,10 @@
                                     } else {
                                         btn.href = url;
                                     }
+
+                                    btn.setAttribute("title", buttonTooltip[buttonTooltip.hasOwnProperty(go)
+                                        ? buttonTooltip[go]
+                                        : go]);
                                     btn.innerHTML = buttonTitles.hasOwnProperty(go)
                                         ? buttonTitles[go]
                                         : go;
@@ -288,6 +301,7 @@
                                     return btn;
                                 }
                             };
+                            let isWorkshop = false;
                             let t = document.createElement("div");
                             t.classList.add("sessionId");
                             let ttl = document.createElement("div");
@@ -299,7 +313,10 @@
                             tim.classList.add("time");
                             tim.innerHTML = '<span"><i class="fas fa-dice-one"></i></span>[' + session.id + '] ' + slotBar[session.slot] + '<span class="duration"><i class="fas fa-clock"></i>' + session.duration + "min</span>";
                             sess.appendChild(tim);
-
+                            let chairs = document.createElement("div");
+                            chairs.style.textAlign = "right";
+                            chairs.innerHTML = session.chair == "" ? "" : '<span class="chair">Chair:' + session.chair + '</chair';
+                            sess.appendChild(chairs);
                             let buttons = document.createElement("div");
                             buttons.classList.add("buttonbar");
                             buttons.appendChild(
@@ -321,13 +338,19 @@
                             });
                             sess.appendChild(buttons);
                             //console.log(session.slot, repeatSessions[session.id]);
+                            let hasRepeatSession = false;
                             if (repeatSessions.hasOwnProperty(session.id)) {
+                                hasRepeatSession = true;
                                 repeatSession = repeatSessions[session.id];
                                 let tim2 = document.createElement("div");
                                 tim2.classList.add("time");
                                 tim2.classList.add("timeRepeat");
                                 tim2.innerHTML = '<span><i class="fas fa-dice-two"></i></span>[' + repeatSession.id + '] ' + slotBar[repeatSession.slot] + '<span class="duration"><i class="fas fa-clock"></i>' + repeatSession.duration + "min</span>";
                                 sess.appendChild(tim2);
+                                let rChairs = document.createElement("div");
+                                rChairs.style.textAlign = "right";
+                                rChairs.innerHTML = repeatSession.chair == "" ? "" : '<span class="chair">Chair:' + repeatSession.chair + "</span>";
+                                sess.appendChild(rChairs);
                                 let buttons = document.createElement("div");
                                 buttons.classList.add("buttonbar");
                                 buttons.appendChild(
@@ -375,9 +398,16 @@
                                     pAbstract.id = "abstract" + paper.pid;
                                     pAbstract.classList.add("abstract");
                                     let srtTitle = (paper.type == "Industry" ? "[Industry] " : "") + paper.title;
-                                    let pPresenter = (paper.presenter1 == "" ? "" : ('<i class="fas fa-dice-one"></i> Primary Session: <b>' + paper.presenter1 + "</b>"));
-                                    let rPresenter = ((pPresenter == "" || paper.presenter2 == "") ? "" : " / ") + (paper.presenter2 == "" ? "" : ('<i class="fas fa-dice-two"></i> Repeat Session: <b>' + paper.presenter2 + "</b>"));
-                                    let srtAuthor = (pPresenter + rPresenter) == "" ? "" : "<b>Live Q&A: </b>" + pPresenter + rPresenter + "<br>";
+                                    let srtAuthor = "";
+                                    if (['A', 'B', 'C', 'D', 'E', 'F', 'a', 'b', 'c', 'd', 'e'].indexOf(session.room) >= 0) {
+                                        let pPresenter = '<i class="fas fa-dice-one"></i> Primary Session: <b>' + (paper.presenter1 == "" ? "No live Q&A" : paper.presenter1) + "</b>";
+                                        let rPresenter = '<i class="fas fa-dice-two"></i> Repeat Session: <b>' + (paper.presenter2 == "" ? "No live Q&A" : paper.presenter2) + "</b>";
+                                        if (hasRepeatSession) {
+                                            srtAuthor += "<b>Live Q&A: </b>" + pPresenter + "&emsp;/&emsp;" + rPresenter + "<br>";
+                                        } else {
+                                            srtAuthor += "<b>Live Q&A: </b>" + pPresenter + "<br>";
+                                        }
+                                    }
                                     srtAuthor += "Authors:" + paper.author;
                                     let srtAbstract = "";
                                     filter_word.forEach((marker) => {
@@ -458,7 +488,7 @@
                             break;
                         case "3":
                             start = moment("2020-09-01T21:00:00Z");
-                            end = moment("2020-09-02T01:00:00Z");
+                            end = moment("2020-09-02T02:00:00Z");
                             break;
                         default:
                             start = moment("2020-09-02T03:00:00Z");
@@ -487,16 +517,21 @@
                 presenter:
                     "https://vldb2020.org/instructions/guide-presenter.md",
                 video: "https://vldb2020.org/instructions/guide-video-upload.md",
+                presentation: "https://vldb2020.org/instructions/guide-session-presenter.md",
+                volunteer: "https://vldb2020.org/instructions/guide-student-volunteer.md",
+                roundtable: "https://vldb2020.org/instructions/round-table.md",
                 chair:
                     "https://vldb2020.org/instructions/guide-session-chair.md",
                 workshop:
                     "https://vldb2020.org/instructions/guide-workshop-chair.md",
                 sponsor:
                     "https://vldb2020.org/instructions/sponsor-message.md",
+                sponsortalk:
+                    "https://vldb2020.org/instructions/sponsor-talk.md",
                 sponsorguide:
                     "https://vldb2020.org/instructions/guide-sponsor-session.md",
                 phdworkshop:
-                    "https://vldb2020.org/instructions/phd-workshop.md"
+                    "https://vldb2020.org/instructions/phd-workshop.md",
             };
             document
                 .querySelectorAll(".VLDB2020Instructions")
@@ -1140,18 +1175,7 @@
                     description += '<a href="program_flat.html?s=' + s.id + '">Persistent Link</a>';
                     maskDescription.innerHTML = description;
                     const button = (target, go, key, id, disabled = false) => {
-                        if (target == "urls") {
-                            let btn = document.createElement("a");
-                            btn.classList.add("btn");
-                            btn.classList.add("btn-abstract");
-                            btn.href = '#';
-                            btn.innerHTML = '<i class="fas fa-share-square"></i> URLs';
-                            btn.addEventListener("click", (e) => {
-                                e.stopPropagation();
-                                e.preventDefault();
-                            });
-                            return btn;
-                        } else if (target == "abstract") {
+                        if (target == "abstract") {
                             const url = 'https://tokyo.vldb2020.org/abstract/' + id + '.txt';
                             let btn = document.createElement("a");
                             btn.classList.add("btn");
@@ -1196,6 +1220,9 @@
                             } else {
                                 btn.href = url;
                             }
+                            btn.setAttribute("title", buttonTooltip.hasOwnProperty(go)
+                                ? buttonTooltip[go]
+                                : go);
                             btn.innerHTML = buttonTitles.hasOwnProperty(go)
                                 ? buttonTitles[go]
                                 : go;
@@ -1270,7 +1297,6 @@
                             if (paper["abstract"]) {
                                 pButton.appendChild(button('abstract', null, (s.inherit != ""), paper["pid"]));
                             }
-                            pButton.appendChild(button('urls', null, null, paper["pid"]));
                             /*
                             paper.urls.forEach((go) => {
                                 pButton.appendChild(

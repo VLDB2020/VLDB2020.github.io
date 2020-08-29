@@ -1,6 +1,6 @@
 ---
 layout: default
-title: VLDB2020 Guide For Session Chairs
+title: VLDB2020 Guide For Sponsors
 category: forparticipants
 ---
 

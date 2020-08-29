@@ -76,12 +76,12 @@ each(@blocks,{
     .buttonbar{
         background-color: fadeout(@color-white,50%);
         padding:5px;
-        display: flex;
+        display:flex;
         a {
-            display: flex;
-            align-items: center;
+            display :block;
             flex-grow: 1;
-            margin: 0 0.5em;
+            margin: auto 0.5em;
+            height:3em;
         }
     }
     .hit{
@@ -200,10 +200,10 @@ each(@blocks,{
             border-radius: 0 0 1em 1em;
             background-color: screen(@bgcolor, #aaa);
             a {
-                display: flex;
-                align-items: center;
+                display: block;
                 flex-grow: 1;
-                margin: 0 0.5em;
+                margin: auto 0.5em;
+                height:4em;
             }
         }
         .paperbox {
@@ -303,6 +303,9 @@ each(@blocks,{
     ._6,
     ._7 {
         .session(@color-black,@color-white,@color-workshop);
+        .chair a{
+            color:@color-black;
+        }
     }
     .A,
     .B,
@@ -311,6 +314,9 @@ each(@blocks,{
     .E,
     .F {
         .session(@color-black,@color-white,@color-oral);
+        .chair a{
+            color:@color-black;
+        }
     }
     .a,
     .b,
@@ -318,31 +324,64 @@ each(@blocks,{
     .d,
     .e {
         .session(@color-black,@color-white,@color-demo);
+        .chair a{
+            color:@color-black;
+        }
     }
     .T {
         .session(@color-white,@color-black,@color-tutrial);
+        .chair a{
+            color:@color-white;
+        }
     }
     .P {
         .session(@color-white,@color-black,@color-prenary,700);
+        .chair a{
+            color:@color-white;
+        }
     }
     .V {
         .session(@color-white,@color-black,@color-vldbj);
+        .chair a{
+            color:@color-white;
+        }
     }
     .J {
         .session(@color-white,@color-black,@color-japan,900);
+        .chair a{
+            color:@color-white;
+        }
     }
     .r,
     .R {
         .session(@color-black,@color-white,@color-round-table);
+        .chair a{
+            color:@color-black;
+        }
     }
     .Q {
         .session(@color-white,@color-black,@color-party);
+        .chair a{
+            color:@color-white;
+        }
+    }
+    .s {
+        .session(@color-black,@color-white,darken(@color-sponsor,10%));
+        .chair a{
+            color:@color-black;
+        }
     }
     .S {
         .session(@color-black,@color-white,@color-sponsor);
+        .chair a{
+            color:@color-black;
+        }
     }
     .Z {
         .session(@color-white,@color-black,@color-free);
+        .chair a{
+            color:@color-white;
+        }
     }
     #timeZone {
         background-color: lighten(@color-free, 50%);
