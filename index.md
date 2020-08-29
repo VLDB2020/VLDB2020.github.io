@@ -11,7 +11,12 @@ category: conference
     <li><span class="fa-li"><i class="far fa-calendar-alt"></i></span>Monday, August 31 <i class="fas fa-arrow-right"></i>Friday, September 4, 2020</li>
 </ul>
 
-<a href="https://tokyo.vldb2020.org/" class="btn btn-red btn-large btn-block">VLDB 2020 Virtual Conference Sign Up</a>
+<p>
+<a href="https://tokyo.vldb2020.org/" class="btn btn-red btn-large btn-block">Step 1: VLDB 2020 Virtual Conference Sign Up</a>
+</p>
+<p>
+<a href="https://tokyo.vldb2020.org/?slack=signup" class="btn btn-red btn-large btn-block">Step 2: VLDB 2020 Slack Channels Sign Up</a>
+</p>
 
 VLDB is a premier annual international forum for data management and database researchers, vendors, practitioners, application developers, and users. The VLDB 2020 conference will feature research talks, tutorials, demonstrations, and workshops. It will cover issues in data management, database and information systems research, since they are the technological cornerstones of the emerging applications of the 21st century.
 
