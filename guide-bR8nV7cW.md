@@ -4,11 +4,7 @@ title: VLDB2020 Instructions
 category: forparticipants
 ---
 
-<<<<<<< HEAD
-# VLDB2020: Instruction
-=======
 # VLDB2020: Instructions
->>>>>>> b91350550f0f93a24a9db5bbeaa3d667e858d61c
 
 ## Public Information
 
