@@ -11,7 +11,7 @@
         workshop: 'For more information, please visit the workshop program.'
     };
     const buttonTitles = {
-        conference: 'Virtual Conference Room (Zoom or other)&emsp;<i class="fas fa-video"></i>',
+        conference: 'Virtual Conference Room &emsp;<i class="fas fa-video"></i>',
         chat: 'Slack Channel&emsp;<i class="fas fa-comments"></i>',
         inquiry: "Support",
         video: "Video [YouTube]",
