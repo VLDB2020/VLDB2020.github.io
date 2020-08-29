@@ -303,7 +303,7 @@ each(@blocks,{
     ._6,
     ._7 {
         .session(@color-black,@color-white,@color-workshop);
-        a{
+        .chair a{
             color:@color-black;
         }
     }
@@ -314,7 +314,7 @@ each(@blocks,{
     .E,
     .F {
         .session(@color-black,@color-white,@color-oral);
-        a{
+        .chair a{
             color:@color-black;
         }
     }
@@ -324,62 +324,62 @@ each(@blocks,{
     .d,
     .e {
         .session(@color-black,@color-white,@color-demo);
-        a{
+        .chair a{
             color:@color-black;
         }
     }
     .T {
         .session(@color-white,@color-black,@color-tutrial);
-        a{
+        .chair a{
             color:@color-white;
         }
     }
     .P {
         .session(@color-white,@color-black,@color-prenary,700);
-        a{
+        .chair a{
             color:@color-white;
         }
     }
     .V {
         .session(@color-white,@color-black,@color-vldbj);
-        a{
+        .chair a{
             color:@color-white;
         }
     }
     .J {
         .session(@color-white,@color-black,@color-japan,900);
-        a{
+        .chair a{
             color:@color-white;
         }
     }
     .r,
     .R {
         .session(@color-black,@color-white,@color-round-table);
-        a{
+        .chair a{
             color:@color-black;
         }
     }
     .Q {
         .session(@color-white,@color-black,@color-party);
-        a{
+        .chair a{
             color:@color-white;
         }
     }
     .s {
         .session(@color-black,@color-white,darken(@color-sponsor,10%));
-        a{
+        .chair a{
             color:@color-black;
         }
     }
     .S {
         .session(@color-black,@color-white,@color-sponsor);
-        a{
+        .chair a{
             color:@color-black;
         }
     }
     .Z {
         .session(@color-white,@color-black,@color-free);
-        a{
+        .chair a{
             color:@color-white;
         }
     }
@@ -463,7 +463,7 @@ each(@blocks,{
 each(@linkcolors,{
     .btn-@{value} {
         border-color: extract(@linkcolors-color, @index);
-        color: @color-white!important;
+        color: @color-white;
         box-shadow: 0 0 40px 40px extract(@linkcolors-color, @index) inset, 0 0 0 0 extract(@linkcolors-color, @index);
         transition: all 150ms ease-in-out;
         
