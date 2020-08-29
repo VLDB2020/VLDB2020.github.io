@@ -514,7 +514,7 @@
         if (document.querySelectorAll(".VLDB2020Instructions") !== null) {
             let md = {
                 atendee: "https://vldb2020.org/instructions/guide-attendee.md",
-                gather: "https://vldb2020.org/instructions/guide-gather.html",
+                gather: "https://vldb2020.org/instructions/guide-gather.md",
                 presenter:
                     "https://vldb2020.org/instructions/guide-presenter.md",
                 video: "https://vldb2020.org/instructions/guide-video-upload.md",
