@@ -11,7 +11,7 @@
         workshop: 'For more information, please visit the workshop program.'
     };
     const buttonTitles = {
-        conference: '<div>Virtual Conference Room &emsp;<i class="fas fa-video"></i></div><div>(Zoom, Gather, etc.)</div>',
+        conference: '<div>Virtual Conference Room &emsp;<i class="fas fa-video"></i></div><div>(Zoom or other)</div>',
         chat: 'Slack Channel&emsp;<i class="fas fa-comments"></i>',
         inquiry: "Support",
         video: "Video [YouTube]",
@@ -315,7 +315,7 @@
                             sess.appendChild(tim);
                             let chairs = document.createElement("div");
                             chairs.style.textAlign = "right";
-                            chairs.innerHTML = session.chair == "" ? "" : "Chair:" + session.chair;
+                            chairs.innerHTML = session.chair == "" ? "" : '<span class="chair">Chair:' + session.chair + '</chair';
                             sess.appendChild(chairs);
                             let buttons = document.createElement("div");
                             buttons.classList.add("buttonbar");
@@ -349,7 +349,7 @@
                                 sess.appendChild(tim2);
                                 let rChairs = document.createElement("div");
                                 rChairs.style.textAlign = "right";
-                                rChairs.innerHTML = repeatSession.chair == "" ? "" : "Chair:" + repeatSession.chair;
+                                rChairs.innerHTML = repeatSession.chair == "" ? "" : '<span class="chair">Chair:' + repeatSession.chair + "</span>";
                                 sess.appendChild(rChairs);
                                 let buttons = document.createElement("div");
                                 buttons.classList.add("buttonbar");
