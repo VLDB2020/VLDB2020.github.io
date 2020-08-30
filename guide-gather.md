@@ -1,6 +1,6 @@
 ---
 layout: default
-title: VLDB2020 Gather Guide 
+title: VLDB2020 Gather Instructions
 category: forparticipants
 ---
 
