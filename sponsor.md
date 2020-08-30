@@ -88,9 +88,10 @@ category: sponsorship
 ## Publisher Sponsors
 
 <div class="col-group">
-    <div class="col-4" style="padding:0;"><a href="https://nowpublishers.com/"><img src="assets/logo/logo_now.svg" width="100%"></a></div>
-    <div class="col-4" style="padding:0;"><a href="https://www.morganclaypool.com/"><img src="assets/logo/logo_morgan_claypool.svg" width="100%"></a></div>
-    <div class="col-4" style="padding:0;"><a href="https://www.springer.com/"><img src="assets/logo/logo_springer.svg" width="100%"></a></div>
+    <div class="col-3" style="padding:0;"><a href="https://nowpublishers.com/"><img src="assets/logo/logo_now.svg" width="100%"></a></div>
+    <div class="col-3" style="padding:0;"><a href="https://www.morganclaypool.com/"><img src="assets/logo/logo_morgan_claypool.svg" width="100%"></a></div>
+    <div class="col-3" style="padding:0;"><a href="https://www.springer.com/"><img src="assets/logo/logo_springer.svg" width="100%"></a></div>
+    <div class="col-3" style="padding:0;"><a href="https://www.cambridge.org/"><img src="assets/logo/logo_cambridge_u_press.svg" width="100%"></a></div>
 </div>
 
 ## Institutional Sponsors

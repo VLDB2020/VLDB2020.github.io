@@ -1,6 +1,6 @@
 ---
 layout: default
-title: VLDB2020 Guide For Sponsors
+title: VLDB2020 Gather Instructions
 category: forparticipants
 ---
 
