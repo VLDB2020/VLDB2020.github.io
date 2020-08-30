@@ -26,6 +26,10 @@ VLDB is a premier annual international forum for data management and database re
 
 ## VLDB 2020 Updates
 <div class="col-group whatsnew">
+    <div class="col-2 id-head">August 30th</div>
+    <div class="col-10 id-col"><a href="prpgram.html">VLDB2020 Final Conference Program</a> is now ready.</div>
+</div>
+<div class="col-group whatsnew">
     <div class="col-2 id-head">August 17th</div>
     <div class="col-10 id-col"><span class="badge">New!!</span> VLDB 2020 <a href="https://tokyo.vldb2020.org/">Virtual Conference Sign up</a> has started for all participants.</div>
 </div>
