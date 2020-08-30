@@ -1162,9 +1162,10 @@
                     maskTime.appendChild(t);
                     let maskTitle = document.createElement("div");
                     maskTitle.classList.add("title");
-                    maskTitle.appendChild(
-                        document.createTextNode("[" + s.id + "] " + s.title)
-                    );
+                    maskTitle.innerHTML = "[" + s.id + "] " + s.title;
+                    //maskTitle.appendChild(
+                    //    document.createTextNode("[" + s.id + "] " + s.title)
+                    //);
                     let maskDescription = document.createElement("div");
                     maskDescription.classList.add("description");
                     let description = "";
@@ -1275,9 +1276,9 @@
                     maskButtons.classList.add("buttons");
                     mask.appendChild(maskTime);
                     mask.appendChild(maskTitle);
-                    if (!isWorkshop) {
-                        mask.appendChild(maskDescription);
-                    }
+                    //if (!isWorkshop) {
+                    mask.appendChild(maskDescription);
+                    //}
                     mask.appendChild(maskButtons);
                     let ID = s.id;
                     if (s.inherit != "") {
