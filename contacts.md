@@ -8,9 +8,8 @@ category: information
 
 ## Official Slack Channel
 
-## Official Slack Channel
-
-> To sign in to the **VLDB2020 official Slack channels**, you must first <a class="btn btn-red" href="https://tokyo.vldb2020.org/?slack=signup">sign up HERE</a>.
+> To sign in to the **VLDB2020 official Slack channels**, you must first <a class="btn btn-red" href="https://tokyo.vldb2020.org/?slack=signup">sign up for Slack HERE</a>.<br>
+> Forgot workspace URL? Use **vldb2020conference.slack.com**.
 
 * [Announcements Channel](https://tokyo.vldb2020.org/?slack=announcements)
 * [Tech Support Channel](https://tokyo.vldb2020.org/?slack=support)
