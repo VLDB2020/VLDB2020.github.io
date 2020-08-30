@@ -4,7 +4,7 @@ title: VLDB2020 Instructions
 category: forparticipants
 ---
 
-# VLDB2020: Instruction
+# VLDB2020: Instructions
 
 ## Public Information
 
