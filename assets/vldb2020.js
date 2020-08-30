@@ -331,10 +331,21 @@ const UTCTime = () => {
                 ? ""
                 : utc.format("ddd, MMM Do, ");
         t.innerHTML =
-            st.format("dddd, MMMM Do YYYY, H:mm Z") +
+            st.format("dddd, MMMM Do YYYY, H:mm") +
             " [" +
             date +
-            utc.format("h:mm a") +
+            utc.format("H:mm") +
+            " UTC]";
+    });
+    let timess = document.querySelectorAll(".timeUTCs");
+    timess.forEach((t) => {
+        let st = moment(t.innerHTML);
+        let utc = moment.utc(t.innerHTML);
+        t.innerHTML =
+            st.format("H:mm") +
+            " [" +
+            date +
+            utc.format("H:mm") +
             " UTC]";
     });
 }
