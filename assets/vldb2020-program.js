@@ -1168,7 +1168,7 @@
                     }
                     if (s.announce && s.announce != "") {
                         description +=
-                            "<p><b>Announce:</b> " + s.announce + "</p>";
+                            '<p style="text-align:left"><b>Announce:</b> ' + s.announce + "</p>";
                     }
                     if (s.description && s.description != "") {
                         description += "<p>" + s.description + "</p>";
