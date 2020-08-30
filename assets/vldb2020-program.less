@@ -81,7 +81,7 @@ each(@blocks,{
             display :block;
             flex-grow: 1;
             margin: auto 0.5em;
-            height:3em;
+            height:3.5em;
         }
     }
     .hit{
@@ -200,10 +200,10 @@ each(@blocks,{
             border-radius: 0 0 1em 1em;
             background-color: screen(@bgcolor, #aaa);
             a {
-                display: block;
+                display :block;
                 flex-grow: 1;
                 margin: auto 0.5em;
-                height:4em;
+                height:3.5em;
             }
         }
         .paperbox {
@@ -224,12 +224,11 @@ each(@blocks,{
                     border-radius: 1em 1em 0 0;
                     padding: 0.5em;
                     display: flex;
-                    justify-content: space-between;
                     a.btn {
-                        display: flex;
-                        align-items: center;
+                        display :block;
                         flex-grow: 1;
-                        margin: 0 0.5em;
+                        margin: auto 0.5em;
+                        height:3.5em;
                     }
                 }
                 div.title {
@@ -366,9 +365,9 @@ each(@blocks,{
         }
     }
     .s {
-        .session(@color-black,@color-white,darken(@color-sponsor,10%));
+        .session(@color-white,@color-black,darken(@color-sponsor,20%));
         .chair a{
-            color:@color-black;
+            color:@color-white;
         }
     }
     .S {
@@ -475,7 +474,7 @@ each(@linkcolors,{
     .btn-@{value}.btn-disabled {
         //border-color: Greyscalee(extract(@linkcolors-color, @index));
         //box-shadow: 0 0 40px 40px Greyscale(extract(@linkcolors-color, @index)) inset, 0 0 0 0 Greyscale(extract(@linkcolors-color, @index));
-        //display:none!important;
+        display:none!important;
         cursor: no-drop;
         &:hover {
             color: unset;
