@@ -531,6 +531,8 @@
                     "https://vldb2020.org/instructions/sponsor-talk.md",
                 sponsorpublisher:
                     "https://vldb2020.org/instructions/sponsor-publisher.md",
+                sponsorbooth:
+                    "https://vldb2020.org/instructions/sponsor-booths.md",
                 sponsorguide:
                     "https://vldb2020.org/instructions/guide-sponsor-session.md",
                 phdworkshop:
