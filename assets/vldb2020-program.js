@@ -180,9 +180,9 @@
                 timeslots.forEach((timeslot) => {
                     sessions[timeslot.slot].forEach((session) => {
                         if (papers.hasOwnProperty(session.id)) {
-                            if (repeatSessions[session.id] && repeatSessions[session.id].id == "32E") {
-                                console.log(session.id, repeatSessions[session.id].id);
-                            }
+                            //if (repeatSessions[session.id] && repeatSessions[session.id].id == "32E") {
+                            //    console.log(session.id, repeatSessions[session.id].id);
+                            //}
                             papers[session.id].forEach((paper, idx) => {
                                 if (full || filter_session.includes(session.id) || (repeatSessions.hasOwnProperty(session.id) && filter_session.includes(repeatSessions[session.id].id)) || filter_paper.includes(paper.pid)) {
                                     //console.log(idx, paper);
@@ -834,6 +834,7 @@
                                     gridColumnEnd: maxParallel + 2,
                                 };
                             });
+                            //console.log([extra[extra.length - 1].class, 'bar', extra[extra.length - 1].dayBlock]);
                             extra.push({
                                 gridRowStart:
                                     extra[extra.length - 1].gridRowEnd,
@@ -896,7 +897,7 @@
                         gridRowEnd: i,
                         gridColumnStart: 1,
                         gridColumnEnd: 2,
-                        class: extra[extra.length - 1].class,
+                        class: [extra[extra.length - 1].class, 'bar', extra[extra.length - 1].dayBlock],
                         title: "",
                     });
                     stackSlot = [];
@@ -1110,7 +1111,7 @@
                     span.classList.add("sessionId");
                     span.appendChild(document.createTextNode(s.id));
                     div.appendChild(span);
-                    console.log(s);
+                    //console.log(s);
                     let title = s.title.split(" ");
                     let safix = "";
                     if (colSpan == 1 && rowSpan == 1) {
