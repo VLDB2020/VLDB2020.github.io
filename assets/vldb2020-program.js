@@ -8,7 +8,8 @@
         video: "Link to the presentation video on YouTube",
         video2: "Link to the presentation video on BiliBili",
         paper: "Download the paper",
-        workshop: 'For more information, please visit the workshop program.'
+        workshop: 'For more information, please visit the workshop program.',
+        party: "Let's Party!"
     };
     const buttonTitles = {
         conference: '<div>Virtual Conference Room &emsp;<i class="fas fa-video"></i></div><div>(Zoom or other)</div>',
@@ -17,7 +18,8 @@
         video: "Video [YouTube]",
         video2: "Video [哔哩哔哩]",
         paper: "Download PDF",
-        workshop: '<div>Workshop&emsp;<i class="fas fa-external-link-alt"></i></div><div>Program</div>'
+        workshop: '<div>Workshop&emsp;<i class="fas fa-external-link-alt"></i></div><div>Program</div>',
+        party: '<div>Virtual Party Room&emsp;<i class="fas fa-glass-cheers"></i></div><div>(Gather Town)</div>'
     };
     let createDateTimeSpan = (timestamp, appendUTC = false) => {
         return (
@@ -330,6 +332,10 @@
                                         );
                                         isWorkshop = true;
                                     }
+                                } else if (go == "conference" && session.room == "Q") {
+                                    buttons.appendChild(
+                                        button("session", "party", "id", session["id"], session.nourls[idx])
+                                    );
                                 } else {
                                     buttons.appendChild(
                                         button("session", go, "id", session["id"], session.nourls[idx])
@@ -1257,6 +1263,10 @@
                                 );
                                 isWorkshop = true;
                             }
+                        } else if (go == "conference" && s.room == "Q") {
+                            maskButtons.appendChild(
+                                button("session", "party", "id", s["id"], s.nourls[idx])
+                            );
                         } else {
                             maskButtons.appendChild(
                                 button("session", go, "id", s["id"], s.nourls[idx])
