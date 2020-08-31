@@ -111,10 +111,6 @@
     <a href="{% link program_workshops.md %}">
         <div class="submenu-item">Workshops</div>
     </a>
-    <hr>
-    <a href="{% link vldb-endowment-awards.md %}">
-        <div class="submenu-item">2020 VLDB Endowment Awards</div>
-    </a>
 </div>
 <div id="submenu-panel-forauthors" class="submenu-panel forauthors right-submenu-panel bgcol-forauthors-dark">
     <div>
@@ -154,6 +150,7 @@
             </svg>
         </div>
     </div>
+    <!--
     <a href="{% link registration-support.md %}">
         <div class="submenu-item">Registration Support <span class="badge">Closed</span></div>
     </a>
@@ -161,13 +158,21 @@
     <a href="{% link registration.md %}">
         <div class="submenu-item">Paper Registration</div>
     </a>
+    -->
     <a href="//tokyo.vldb2020.org">
         <div class="submenu-item">Virtual Conference Sign up</div>
     </a>
     <a href="//tokyo.vldb2020.org?signout">
         <div class="submenu-item">Virtual Conference Sign out</div>
     </a>
-    <hr />
+    <hr>
+    <a x-href="{% link vldb-2020-awards.md %}">
+        <div class="submenu-item link-disable">VLDB 2020 Awards</div>
+    </a>
+    <a href="{% link vldb-endowment-awards.md %}">
+        <div class="submenu-item">2020 VLDB Endowment Awards</div>
+    </a>
+    <hr>
     <a href="{% link program.md %}">
         <div class="submenu-item">Conference Program (Interactive Version)</div>
     </a>
@@ -180,9 +185,11 @@
     <a href="{% link invited-talk.md %}">
         <div class="submenu-item">Special Session on Racism & Technology, Invited Talk</div>
     </a>
-    <a href="{% link round-table.md %}">
-        <div class="submenu-item">Round Tables</div>
-    </a>
+    <div style="display:flex;justify-content: space-around;">
+        <div class="submenu-item"><a style="display:block" href="{% link panel.md %}">Panel</a></div>
+        <div class="submenu-item"><a style="display:block" href="tutorial.html">Tutorials</a></div>
+        <div class="submenu-item"><a style="display:block" href="{% link round-table.md %}">Round Tables</a></div>
+    </div>
     <a href="{% link program_phdworkshop.md %}">
         <div class="submenu-item">VLDB2020 Ph.D. Workshop</div>
     </a>
@@ -197,7 +204,13 @@
             Talk Upload Instructions for All Presenters
         </div>
     </a>
-    <div class="submenu-item link-disable">Instructions for Attendees</div>
+    <a href="{% link guide-attendee.md %}">
+        <div class="submenu-item">Instructions for Attendees</div>
+    </a>
+    <a href="{% link guide-gather.md %}">
+        <div class="submenu-item">Instructions for Parties on Gather</div>
+    </a>
+
     <a href="{% link material.md %}">
         <div class="submenu-item">VLDB2020 Virtual Backgrounds and Logos</div>
     </a>

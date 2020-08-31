@@ -8,7 +8,8 @@
         video: "Link to the presentation video on YouTube",
         video2: "Link to the presentation video on BiliBili",
         paper: "Download the paper",
-        workshop: 'For more information, please visit the workshop program.'
+        workshop: 'For more information, please visit the workshop program.',
+        party: "Let's Party!"
     };
     const buttonTitles = {
         conference: '<div>Virtual Conference Room &emsp;<i class="fas fa-video"></i></div><div>(Zoom or other)</div>',
@@ -17,7 +18,8 @@
         video: "Video [YouTube]",
         video2: "Video [哔哩哔哩]",
         paper: "Download PDF",
-        workshop: '<div>Workshop&emsp;<i class="fas fa-external-link-alt"></i></div><div>Program</div>'
+        workshop: '<div>Workshop&emsp;<i class="fas fa-external-link-alt"></i></div><div>Program</div>',
+        party: '<div>Virtual Party Room&emsp;<i class="fas fa-glass-cheers"></i></div><div>(Gather Town)</div>'
     };
     let createDateTimeSpan = (timestamp, appendUTC = false) => {
         return (
@@ -180,9 +182,9 @@
                 timeslots.forEach((timeslot) => {
                     sessions[timeslot.slot].forEach((session) => {
                         if (papers.hasOwnProperty(session.id)) {
-                            if (repeatSessions[session.id] && repeatSessions[session.id].id == "32E") {
-                                console.log(session.id, repeatSessions[session.id].id);
-                            }
+                            //if (repeatSessions[session.id] && repeatSessions[session.id].id == "32E") {
+                            //    console.log(session.id, repeatSessions[session.id].id);
+                            //}
                             papers[session.id].forEach((paper, idx) => {
                                 if (full || filter_session.includes(session.id) || (repeatSessions.hasOwnProperty(session.id) && filter_session.includes(repeatSessions[session.id].id)) || filter_paper.includes(paper.pid)) {
                                     //console.log(idx, paper);
@@ -259,7 +261,7 @@
                                         "//tokyo.vldb2020.org/?tg=" +
                                         target +
                                         "&go=" +
-                                        go +
+                                        (go == "party" ? "conference" : go) +
                                         "&id=" +
                                         key +
                                         "!" +
@@ -330,6 +332,10 @@
                                         );
                                         isWorkshop = true;
                                     }
+                                } else if (go == "conference" && session.room == "Q") {
+                                    buttons.appendChild(
+                                        button("session", "party", "id", session["id"], session.nourls[idx])
+                                    );
                                 } else {
                                     buttons.appendChild(
                                         button("session", go, "id", session["id"], session.nourls[idx])
@@ -408,7 +414,9 @@
                                             srtAuthor += "<b>Live Q&A: </b>" + pPresenter + "<br>";
                                         }
                                     }
-                                    srtAuthor += "Authors:" + paper.author;
+                                    if (paper.author != "") {
+                                        srtAuthor += "Authors:" + paper.author;
+                                    }
                                     let srtAbstract = "";
                                     filter_word.forEach((marker) => {
                                         //console.log("search", marker);
@@ -834,6 +842,7 @@
                                     gridColumnEnd: maxParallel + 2,
                                 };
                             });
+                            //console.log([extra[extra.length - 1].class, 'bar', extra[extra.length - 1].dayBlock]);
                             extra.push({
                                 gridRowStart:
                                     extra[extra.length - 1].gridRowEnd,
@@ -896,7 +905,7 @@
                         gridRowEnd: i,
                         gridColumnStart: 1,
                         gridColumnEnd: 2,
-                        class: extra[extra.length - 1].class,
+                        class: [extra[extra.length - 1].class, 'bar', extra[extra.length - 1].dayBlock],
                         title: "",
                     });
                     stackSlot = [];
@@ -1110,7 +1119,7 @@
                     span.classList.add("sessionId");
                     span.appendChild(document.createTextNode(s.id));
                     div.appendChild(span);
-                    console.log(s);
+                    //console.log(s);
                     let title = s.title.split(" ");
                     let safix = "";
                     if (colSpan == 1 && rowSpan == 1) {
@@ -1161,9 +1170,10 @@
                     maskTime.appendChild(t);
                     let maskTitle = document.createElement("div");
                     maskTitle.classList.add("title");
-                    maskTitle.appendChild(
-                        document.createTextNode("[" + s.id + "] " + s.title)
-                    );
+                    maskTitle.innerHTML = "[" + s.id + "] " + s.title;
+                    //maskTitle.appendChild(
+                    //    document.createTextNode("[" + s.id + "] " + s.title)
+                    //);
                     let maskDescription = document.createElement("div");
                     maskDescription.classList.add("description");
                     let description = "";
@@ -1211,7 +1221,7 @@
                                 "//tokyo.vldb2020.org/?tg=" +
                                 target +
                                 "&go=" +
-                                go +
+                                (go == "party" ? "conference" : go) +
                                 "&id=" +
                                 key +
                                 "!" +
@@ -1255,6 +1265,10 @@
                                 );
                                 isWorkshop = true;
                             }
+                        } else if (go == "conference" && s.room == "Q") {
+                            maskButtons.appendChild(
+                                button("session", "party", "id", s["id"], s.nourls[idx])
+                            );
                         } else {
                             maskButtons.appendChild(
                                 button("session", go, "id", s["id"], s.nourls[idx])
@@ -1274,9 +1288,9 @@
                     maskButtons.classList.add("buttons");
                     mask.appendChild(maskTime);
                     mask.appendChild(maskTitle);
-                    if (!isWorkshop) {
-                        mask.appendChild(maskDescription);
-                    }
+                    //if (!isWorkshop) {
+                    mask.appendChild(maskDescription);
+                    //}
                     mask.appendChild(maskButtons);
                     let ID = s.id;
                     if (s.inherit != "") {
@@ -1317,7 +1331,8 @@
                             pMore.innerHTML = '<a href="program_flat.html?p=' + paper["pid"] + '">Persistent Link</a>';
                             pTitle.innerHTML = '<span class="badge">' + paper.pid + '</span> ' + (paper.type == "Industry" ? "[Industry] " : "") + paper.title;
                             let presenter = (s.inherit != "") ? paper.presenter2 : paper.presenter1;
-                            pAuthor.innerHTML = (presenter == "" ? "" : "<b>Live Q&A:" + presenter + "</b><br>") + "Authors:<br>" + paper.author.replace(/\;/g, '\n<br>');
+                            let authorz = paper.author.replace(/\;/g, '\n<br>');
+                            pAuthor.innerHTML = (presenter == "" ? "" : "<b>Live Q&A:" + presenter + "</b><br>") + (authorz != "" ? "Authors:<br>" + authorz : "");
                             pDiv.appendChild(pButton);
                             pDiv.appendChild(pTitle);
                             pDiv.appendChild(pMore);
