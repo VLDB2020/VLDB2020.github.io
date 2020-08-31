@@ -1,7 +1,7 @@
 ---
 layout: default
 title: 2020 VLDB Endowment Awards
-category: information
+category: forparticipants
 ---
 
 # 2020 VLDB Endowment Awards
