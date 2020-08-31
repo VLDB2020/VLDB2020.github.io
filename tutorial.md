@@ -1,8 +1,9 @@
-    ---
+---
 layout: default
 title: VLDB2020 Tutorials
 category: forparticipants
 ---
+
 # VLDB2020: Tutorials
 
 ## Tutorial 1 - Building High Throughput Permissioned Blockchain Fabrics: Challenges and Opportunities (Day 1, Block 2) [07T]
