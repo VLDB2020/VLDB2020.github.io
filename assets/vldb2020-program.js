@@ -261,7 +261,7 @@
                                         "//tokyo.vldb2020.org/?tg=" +
                                         target +
                                         "&go=" +
-                                        go +
+                                        (go == "party" ? "conference" : go) +
                                         "&id=" +
                                         key +
                                         "!" +
@@ -414,7 +414,9 @@
                                             srtAuthor += "<b>Live Q&A: </b>" + pPresenter + "<br>";
                                         }
                                     }
-                                    srtAuthor += "Authors:" + paper.author;
+                                    if (paper.author != "") {
+                                        srtAuthor += "Authors:" + paper.author;
+                                    }
                                     let srtAbstract = "";
                                     filter_word.forEach((marker) => {
                                         //console.log("search", marker);
@@ -1219,7 +1221,7 @@
                                 "//tokyo.vldb2020.org/?tg=" +
                                 target +
                                 "&go=" +
-                                go +
+                                (go == "party" ? "conference" : go) +
                                 "&id=" +
                                 key +
                                 "!" +
@@ -1329,7 +1331,8 @@
                             pMore.innerHTML = '<a href="program_flat.html?p=' + paper["pid"] + '">Persistent Link</a>';
                             pTitle.innerHTML = '<span class="badge">' + paper.pid + '</span> ' + (paper.type == "Industry" ? "[Industry] " : "") + paper.title;
                             let presenter = (s.inherit != "") ? paper.presenter2 : paper.presenter1;
-                            pAuthor.innerHTML = (presenter == "" ? "" : "<b>Live Q&A:" + presenter + "</b><br>") + "Authors:<br>" + paper.author.replace(/\;/g, '\n<br>');
+                            let authorz = paper.author.replace(/\;/g, '\n<br>');
+                            pAuthor.innerHTML = (presenter == "" ? "" : "<b>Live Q&A:" + presenter + "</b><br>") + (authorz != "" ? "Authors:<br>" + authorz : "");
                             pDiv.appendChild(pButton);
                             pDiv.appendChild(pTitle);
                             pDiv.appendChild(pMore);
