@@ -288,6 +288,68 @@ each(@categories, {
             }
         }
     }
+    #toppage-cnt.@{value} .award{
+        padding:10px;
+        small{
+            font-size:0.8em;
+        }
+        large{
+            font-size:1.2em;
+        }
+        .header{
+            background-color:extract(@categories-color, @index);
+            color:@color-white;
+            border-radius: 10px 10px 0px 0px;
+            font-size:1.5rem;
+            line-height:2rem;
+            padding:5px;
+            text-align: center;
+            .font-univia(700);
+        }
+        .title{
+            background-color:fadeout(extract(@categories-color, @index),80%);
+            font-size:2rem;
+            line-height:2rem;
+            padding:5px;
+            text-align: center;
+            text-shadow:1px 1px 0 @color-white,-1px 1px 0 @color-white,1px -1px 0 @color-white,-1px -1px 0 @color-white;
+            .font-industry(700);
+        }
+        .name{
+            background-color:fadeout(extract(@categories-color, @index),80%);
+            font-size:1.5rem;
+            line-height:1.6rem;
+            padding:5px;
+            text-align: center;
+            text-shadow:1px 1px 0 @color-white,-1px 1px 0 @color-white,1px -1px 0 @color-white,-1px -1px 0 @color-white;
+            .font-industry(700);
+        }
+        .talk{
+            background-color:fadeout(extract(@categories-color, @index),80%);
+            padding:5px;
+        }
+        .footer{
+            background-color:extract(@categories-color, @index);
+            color:@color-white;
+            border-radius: 0px 0px 10px 10px;
+            padding:5px 10px;
+            text-align: center;
+            .font-museo(300);
+            display:flex;
+            justify-content: space-between;
+            a {
+                flex-grow:1;
+                margin:0.5em;                
+            }
+            a.icon{
+                color:@color-white;
+                font-size:3em;
+                text-decoration: none;
+                float: left;
+            }
+            
+        }
+    }
     #toppage-cnt.@{value} .portrait{
         padding:10px;
         small{
