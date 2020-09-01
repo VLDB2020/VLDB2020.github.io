@@ -149,7 +149,8 @@ category: forparticipants
 <div class="col-group">
     <div class="award col-12">
         <div class="header">Honorable Mention</div>
-        <div class="title">MyRocks: Migrating to a LSM-Tree Database Optimized for Facebook’s Social Graph</div>
+        <div class="title">MyRocks: LSM-Tree Database Storage Engine Serving
+Facebook's Social Graph</div>
         <div class="name">Yoshinori Matsunobu (Facebook)</div>
         <div class="name">Siying Dong (Facebook)</div>
         <div class="name">Herman Lee (Facebook)</div>
