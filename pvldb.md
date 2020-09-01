@@ -197,8 +197,37 @@ category: information
 
 ## Industrial Track Program Committee
 
-* (TBD )
+- Allison Holloway (Oracle, USA)
+- Altigran da Silva (Universidade Federal do Amazonas, Brazil)
+- Anja Gruenheid (Google Inc., USA)
+- Azza Abouzied (New York University Abu Dhabi, United Arab Emirates)
+- Danica Porobic (Oracle, USA)
+- Entong Shen (Amazon Web Services, USA)
+- Fabrizio Silvestri (Facebook, United Kingdom)
+- Fatma Ozcan (IBM Research - Almaden, USA)
+- Feifei Li (Alibaba Group, China)
+- Guoliang Li (Tsinghua University, China)
+- Heiko Schuldt (University of Basel, Switzerland) 
+- Irini Fundulaki (ICS FORTH, Greece)
+- Jana Giceva (TU Munich, Germany) 
+- Jianguo Wang (Amazon Web Services, USA)
+- Johannes Gehrke (Microsoft, USA)
+- Meihui Zhang (Beijing Institute of Technology, China)
+- Monica Scannapieco (ISTAT, Italy)
+- Norman May (SAP SE, Germany)
+- Olga Poppe (Microsoft, USA)
+- Roberto Zicari (Goethe University Frankfurt, Germany)
+- Russell Sears (Apple, USA)
+- Sameer Agarwal (Facebook, USA)
+- Sang Cha (Seoul National University, South Korea)
+- Sihem Amer-Yahia (CNRS, France)
+- Songtao Guo (LinkedIn, USA)
+- Sonia Bergamaschi (Università di Modena e Reggio Emilia, Italy)
+- Wolfram Wingerath (Baqend, Germany)
+- Yaron Kanza (AT&T Labs-Research, USA)
+- Yasushi Sakurai (Osaka University, Japan)
+
 
 ## Demonstration Track Program Committee
 
-* (TBD )
+* (TBD)
