@@ -221,3 +221,53 @@ category: forparticipants
         <div class="footer"><a class="icon" href="http://www.vldb.org/pvldb/vol12/p933-bogatov.pdf"><i class="fas fa-file-download"></i></a><large>Proceedings of the VLDB Endowment, 12(8), April 2019, pp. 933-947. </large></div>
     </div>
 </div>
+
+## PVLDB Vol 13 - Distinguished Reviewers
+
+<div class="col-group">
+    <div class="award col-12">
+        <div class="header">Distinguished Reviewers</div>
+        <div class="col-group name">
+            <div class="col-6" style="font-size:0.8em;">
+                <div>
+                    Arvind Arasu <small>Microsoft</small>
+                </div>
+                <div>Ashraf Aboulnaga <small>Qatar Computing Research Institute, HBKU</small></div>
+                <div>Carsten Binning <small>TU Darmstadt</small></div>
+                <div>Dan Kifer <small>Pennsylvania State University</small></div>
+                <div>A. Erdem Sariyuce <small>University at Buffalo</small></div>
+                <div>Eugene Wu <small>Columbia University</small></div>
+                <div>Faisal Nawab <small>UC Santa Cruz</small></div>
+                <div>Floris Geerts <small>University of Antwerp</small></div>
+                <div>George Papadakis <small>University of Athens</small></div>
+                <div>Hideaki <small>Kimura Oracle</small></div>
+                <div>Holger Pirk <small>Imperial College London</small></div>
+                <div>Ioana Manolescu <small>Inria and Institut Polytechnique de Paris</small></div>
+                <div>Jiannan Wang <small>Simon Fraser University</small></div>
+                <div>Jose Faleiro <small>Microsoft Research</small></div>
+                <div>Ken Salem <small>University of Waterloo</small></div>
+                <div>Maximilian <small>Schleich University of Washington</small></div>
+                <div>Melanie Herschel <small>Universität Stuttgart</small></div>
+            </div>
+            <div class="col-6" style="font-size:0.8em;">
+                <div>Michael Hay <small>Colgate University</small></div>
+                <div>Mourad Ouzzani <small>Qatar Computing Research Institute, HBKU</small></div>
+                <div>Oktie Hassanzadeh <small>IBM Research</small></div>
+                <div>Oliver Kennedy <small>University at Buffalo</small></div>
+                <div>Paolo Papotti <small>Eurecom</small></div>
+                <div>Peter Pietzuch <small>Imperial College London</small></div>
+                <div>Prashant Shiralkar <small>Amazon</small></div>
+                <div>Sanjay Krishnan <small>University of Chicago</small></div>
+                <div>Semih Salihoglu <small>University of Waterloo</small></div>
+                <div>Sourav S Bhowmick <small>Nanyang Technological University</small></div>
+                <div>Thorsten Papenbrock <small>Hasso Plattner Institute</small></div>
+                <div>Tingjian Ge <small>University of Massachusetts, Lowell</small></div>
+                <div>Torsten Grust <small>Universität Tübingen</small></div>
+                <div>Xu Chu <small>Georgia Tech</small></div>
+                <div>Yongxin Tong <small>Beihang University</small></div>
+                <div>Yuefei Tao Chinese <small>University of Hong Kong</small></div>
+            </div>
+        </div>
+        <div class="footer"><a class="icon" href="http://vldb.org/pvldb/vol13.html"><i class="fas fa-file-download"></i></a><large>Proceedings of the VLDB Endowment, vol. 13</large></div>
+    </div>
+</div>
