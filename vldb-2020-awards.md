@@ -44,7 +44,7 @@ category: forparticipants
 
 <div class="col-group">
     <div class="award col-12">
-        <div class="header">Best Paper Runner-Ups (1)</div>
+        <div class="header">Best Paper Runner-Up (1)</div>
         <div class="title">Pushing Data-Induced Predicates Through Joins in Big-Data Clusters </div>
         <div class="name">Srikanth Kandula (Microsoft Research)</div>
         <div class="name">Laurel Orr (Stanford University)</div>
@@ -76,7 +76,7 @@ category: forparticipants
 
 <div class="col-group">
     <div class="award col-12">
-        <div class="header">Best Paper Runner-Ups (2)</div>
+        <div class="header">Best Paper Runner-Up (2)</div>
         <div class="title">Maximum Biclique Search at Billion Scale</div>
         <div class="name">Bingqing Lyu (Alibaba Group)</div>
         <div class="name">Lu Qin (Uiversity of Technology Sydney)</div>
