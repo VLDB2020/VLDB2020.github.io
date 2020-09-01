@@ -9,7 +9,7 @@ category: forparticipants
 ## Panel - Winds from Seattle: Database Research Directions (Day 2, Block 2) [27P] & (Day2, Block 4) [37P]
 
 > Start at <span class="timeUTC">2020-09-02T16:00:00Z</span>
-> Start at <span class="timeUTC">2020-09-03T4:00:00Z</span> (27P repeat)
+> Start at <span class="timeUTC">2020-09-03T04:00:00Z</span> (27P repeat)
 
 * Panelists: Peter Bailis, Magda Balazinska, Xin Luna Dong, Juliana Freire, Raghu Ramakrishnan, Michael Stonebraker 
 * Moderator: Joseph M. Hellerstein 
