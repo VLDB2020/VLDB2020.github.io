@@ -23,6 +23,10 @@ Because the online mode for the conference is still pretty new, we provide the f
 
 ## VLDB 2020 Updates
 <div class="col-group whatsnew">
+    <div class="col-2 id-head">September 1st</div>
+    <div class="col-10 id-col"><span class="badge">New!!</span> <a href="vldb-2000-awards.html">VLDB 2020 Awards</a></div>
+</div>
+<div class="col-group whatsnew">
     <div class="col-2 id-head">August 30th</div>
     <div class="col-10 id-col"><a href="program.html">VLDB2020 Final Conference Program</a> is now ready.</div>
 </div>
