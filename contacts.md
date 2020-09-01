@@ -18,20 +18,20 @@ category: information
 ## Chairperson in charge of each block
 
 * BLOCK 1
-    * General Chair: <a href="Christian S. Jensen">Christian S. Jensen</a>
-    * PC Chair: <a href="uqxzhou@uq.edu.au">Xiaofang Zhou</a>
+    * General Chair: <a href="mailto:csj@cs.aau.dk">Christian S. Jensen</a>
+    * PC Chair: <a href="mailto:uqxzhou@uq.edu.au">Xiaofang Zhou</a>
     * Technical Chair: <a href="mailto:miyazaki@cs.titech.ac.jp">Jun Miyazaki</a> 
 * BLOCK 2
-    * General Chair: <a href="Christian S. Jensen">Christian S. Jensen</a>
-    * PC Chair: <a href="magda@cs.washington.edu">Magdalena Balazinska</a>
-    * Technical Chair: <a href="okennedy@buffalo.edu">Oliver Kennedy</a>
+    * General Chair: <a href="mailto:csj@cs.aau.dk">Christian S. Jensen</a>
+    * PC Chair: <a href="mailto:magda@cs.washington.edu">Magdalena Balazinska</a>
+    * Technical Chair: <a href="mailto:okennedy@buffalo.edu">Oliver Kennedy</a>
 * BLOCK 3
-    * General Chair: <a href="ishikawa@i.nagoya-u.ac.jp">Yoshiharu Ishikawa</a>
-    * PC Chair: <a href="magda@cs.washington.edu">Magdalena Balazinska</a>
-    * Technical Chair: <a href="okennedy@buffalo.edu">Oliver Kennedy</a>
+    * General Chair: <a href="mailto:ishikawa@i.nagoya-u.ac.jp">Yoshiharu Ishikawa</a>
+    * PC Chair: <a href="mailto:magda@cs.washington.edu">Magdalena Balazinska</a>
+    * Technical Chair: <a href="mailto:kennedy@buffalo.edu">Oliver Kennedy</a>
 * BLOCK 4
-    * General Chair: <a href="ishikawa@i.nagoya-u.ac.jp">Yoshiharu Ishikawa</a>
-    * PC Chair: <a href="uqxzhou@uq.edu.au">Xiaofang Zhou</a>
+    * General Chair: <a href="mailto:ishikawa@i.nagoya-u.ac.jp">Yoshiharu Ishikawa</a>
+    * PC Chair: <a href="mailto:uqxzhou@uq.edu.au">Xiaofang Zhou</a>
     * Technical Chair: <a href="mailto:miyazaki@cs.titech.ac.jp">Jun Miyazaki</a> 
 
 
@@ -46,7 +46,7 @@ category: information
 ## Scientific Host
 
 <ul class="fa-ul">
-    <li><span class="fa-li"><i class="fas fa-external-link-alt"></i></span><strong><a href="vldb.org" target="_blank">Very Large Data Base Endowment Inc.</a></strong></li>
+    <li><span class="fa-li"><i class="fas fa-external-link-alt"></i></span><strong><a href="//vldb.org/" target="_blank">Very Large Data Base Endowment Inc.</a></strong></li>
 </ul>
 
 ## Venue
