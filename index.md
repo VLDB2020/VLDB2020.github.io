@@ -23,6 +23,10 @@ Because the online mode for the conference is still pretty new, we provide the f
 
 ## VLDB 2020 Updates
 <div class="col-group whatsnew">
+    <div class="col-2 id-head">September 3rd</div>
+    <div class="col-10 id-col"><a class="btn btn-red btn-small" href="https://tokyo.vldb2020.org/?tg=paper&go=video&id=pid!05J-1">Virtual Japan on YouTube</a> By popular demand, the <a href="https://tokyo.vldb2020.org/?tg=paper&go=video&id=pid!05J-1">VirtualJapan video will be available via YouTube</a> until the end of the conference.</div>
+</div>
+<div class="col-group whatsnew">
     <div class="col-2 id-head">September 1st</div>
     <div class="col-10 id-col"><span class="badge">New!!</span> <a href="vldb-2020-awards.html">VLDB 2020 Awards</a></div>
 </div>
