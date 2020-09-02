@@ -71,6 +71,7 @@
                                 let ss = document.createElement("div");
                                 s.classList.add(session.room);
                                 s.classList.add("cell");
+
                                 ss.classList.add("session");
                                 let inner = "";
 
@@ -80,10 +81,20 @@
                                     }
                                 } else {
                                     session.urls.forEach((url) => {
-                                        inner += '<a class="btn btn-small btn-' + url + '" href="//tokyo.vldb2020.org/?tg=session&go=' + url + '&id=id!' + session.id + '">' + buttonTitlesMin[url] + '</a>&emsp;'
+                                        if (session.room == "Q") {
+                                            if (url == "conference") {
+                                                inner += '<a class="btn btn-party" href="//tokyo.vldb2020.org/?tg=session&go=' + url + '&id=id!' + session.id + '">Party on Gather</a>&emsp;'
+                                            }
+                                        } else {
+                                            inner += '<a class="btn btn-small btn-' + url + '" href="//tokyo.vldb2020.org/?tg=session&go=' + url + '&id=id!' + session.id + '">' + buttonTitlesMin[url] + '</a>&emsp;'
+                                        }
                                     });
                                 }
-                                inner += "<span style=\"font-size:1em;\">[" + session.id + "] " + session.title + "</span>";
+                                if (session.room == "Q") {
+                                    inner += "<span style=\"font-size:2.8em;\">VLDB2020 Official Party</span>";
+                                } else {
+                                    inner += "<span style=\"font-size:1em;\">[" + session.id + "] " + session.title + "</span>";
+                                }
                                 ss.innerHTML = inner;
                                 s.appendChild(ss);
                                 base.appendChild(s);
