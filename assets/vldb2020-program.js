@@ -75,7 +75,9 @@
                                 let inner = "";
 
                                 if (session.urls.length == 0) {
-                                    inner += '<a class="btn btn-small btn-red" href="program_flat.php?s=' + session.id + '">Program!</a>&emsp;'
+                                    if (session.room == "s") {
+                                        inner += '<a class="btn btn-small btn-red" href="program_flat.html?s=' + session.id + '">Program!</a>&emsp;'
+                                    }
                                 } else {
                                     session.urls.forEach((url) => {
                                         inner += '<a class="btn btn-small btn-' + url + '" href="//tokyo.vldb2020.org/?tg=session&go=' + url + '&id=id!' + session.id + '">' + buttonTitlesMin[url] + '</a>&emsp;'
