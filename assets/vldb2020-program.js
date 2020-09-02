@@ -11,6 +11,10 @@
         workshop: 'For more information, please visit the workshop program.',
         party: "Let's Party!"
     };
+    const buttonTitlesMin = {
+        conference: 'Virtual Conference Room&emsp;<i class="fas fa-video"></i>',
+        chat: 'Slack Channel<i class="fas fa-comments"></i>'
+    }
     const buttonTitles = {
         conference: '<div>Virtual Conference Room &emsp;<i class="fas fa-video"></i></div><div>(Zoom or other)</div>',
         chat: 'Slack Channel&emsp;<i class="fas fa-comments"></i>',
@@ -74,10 +78,10 @@
                                     inner += '<a class="btn btn-small btn-red" href="program_flat.php?s=' + session.id + '">Program!</a>&emsp;'
                                 } else {
                                     session.urls.forEach((url) => {
-                                        inner += '<a class="btn btn-small btn-' + url + '" href="//tokyo.vldb2020.org/?tg=session&go=' + url + '&id=id!' + session.id + '">' + buttonTitles[url] + '</a>&emsp;'
+                                        inner += '<a class="btn btn-small btn-' + url + '" href="//tokyo.vldb2020.org/?tg=session&go=' + url + '&id=id!' + session.id + '">' + buttonTitlesMin[url] + '</a>&emsp;'
                                     });
                                 }
-                                inner += "<br><span style=\"font-size:1em;\">[" + session.id + "] " + session.title + "</span>";
+                                inner += "<span style=\"font-size:1em;\">[" + session.id + "] " + session.title + "</span>";
                                 ss.innerHTML = inner;
                                 s.appendChild(ss);
                                 base.appendChild(s);
