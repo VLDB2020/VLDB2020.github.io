@@ -49,6 +49,43 @@
         return str;
     };
     const onLoadFn = () => {
+        if (document.getElementById("CurrentSessions") !== null) {
+            if (document.getElementById("programFlat") !== null ||
+                document.getElementById("programFrame") !== null) {
+                document.getElementById("alert-bar").style.display = "none";
+            } else {
+                const response = fetch("https://tokyo.vldb2020.org/current.php")
+                    .then(response => response.json())
+                    .then(current => {
+                        let base = document.getElementById("CurrentSessions");
+                        if (current.length == 0) {
+                            base.innerHTML = '<span style="font-size:4em;">Let\'s take a break!</span>';
+                        } else {
+                            current.forEach(session => {
+                                let s = document.createElement("div");
+                                s.style.padding = "0.2em";
+                                let ss = document.createElement("div");
+                                s.classList.add(session.room);
+                                s.classList.add("cell");
+                                ss.classList.add("session");
+                                let inner = "";
+
+                                if (session.urls.length == 0) {
+                                    inner += '<a class="btn btn-small btn-red" href="program_flat.php?s=' + session.id + '">Program!</a>&emsp;'
+                                } else {
+                                    session.urls.forEach((url) => {
+                                        inner += '<a class="btn btn-small btn-' + url + '" href="//tokyo.vldb2020.org/?tg=session&go=' + url + '&id=id!' + session.id + '">' + buttonTitles[url] + '</a>&emsp;'
+                                    });
+                                }
+                                inner += "<br><span style=\"font-size:1em;\">[" + session.id + "] " + session.title + "</span>";
+                                ss.innerHTML = inner;
+                                s.appendChild(ss);
+                                base.appendChild(s);
+                            });
+                        }
+                    });
+            }
+        }
         if (document.getElementById("programFlat") !== null) {
             const params = new URLSearchParams(window.location.search);
             if (!document.getElementById("programFrameLess")) {
