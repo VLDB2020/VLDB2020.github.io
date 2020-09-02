@@ -76,7 +76,7 @@
 
                                 if (session.urls.length == 0) {
                                     if (session.room == "s") {
-                                        inner += '<a class="btn btn-small btn-red" href="program_flat.php?s=' + session.id + '">Program!</a>&emsp;'
+                                        inner += '<a class="btn btn-small btn-red" href="program_flat.html?s=' + session.id + '">Program!</a>&emsp;'
                                     }
                                 } else {
                                     session.urls.forEach((url) => {
