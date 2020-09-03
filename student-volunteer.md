@@ -40,7 +40,7 @@ category: information
                 <div> Hao Cheng <small style="color:gray;"> The University of Maryland </small></div>
                 <div> Jianhong Tu <small style="color:gray;"> Renmin University of China </small></div>
                 <div> Jing Ao <small style="color:gray;"> NC State University </small></div>
-                <div> Joﾃ｣o Felipe Pimentel <small style="color:gray;"> Universidade Federal Fluminense </small></div>
+                <div> João Felipe Pimentel <small style="color:gray;"> Universidade Federal Fluminense </small></div>
                 <div> Justin Namba <small style="color:gray;"> Rochester Institute of Technology </small></div>
                 <div> Kajetan Maliszewski <small style="color:gray;"> Technische Universitﾃ､t Berlin </small></div>
             </div>
