@@ -82,6 +82,31 @@ category: information
 * Ziawasch Abedjan (TU Berlin)
 * Katja Hose (Aalborg University)
 
+## Best Paper Award Committee
+
+* Gustavo Alonso (ETH Zurich, Switzerland) 
+* Beng Chin Ooi (National University of Singapore, Singapore): **Chair**
+* Jignesh M. Patel (University of Wisconsin-Madison, USA) 
+* Wang-Chiew Tan (Megagon Labs, USA) 
+* Meihui Zhang (Beijing Institute of Technology, China)
+
+## Best Industry Paper Award Committee
+
+* Anastasia Ailamaki (EPFL, Switzerland): **Chair**
+* Phil Bernstein (Microsoft Research, USA) 
+* Elisa Bertino (Purdue University, USA) 
+* Alon Halevy (Facebook AI, USA) 
+* Laura Haas (University of Massachusetts Amherst, USA)
+
+## Best Demonstration Award Committee
+
+* Angelos Anadiotis (Ecole Polytechnique , France)
+* Ahmed Eldawy (University of California at Riverside, USA)
+* Yasuhiro Fujiwara (NTT Communication Science Laboratories, Japan)
+* Boris Glavic (Illinois Institute of Technology, USA)
+* Ioana Manolescu (Inria, France)
+* Chaokun Wang (Tsinghua University, China)
+
 ## Sponsorship Committee Chairs
 
 * Xiaoyong Du (Renmin University)

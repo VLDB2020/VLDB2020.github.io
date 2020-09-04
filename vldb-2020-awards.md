@@ -20,17 +20,11 @@ category: forparticipants
         <div class="talk">
             <div class="col-group important-dates">
                 <div class="col-2 id-head">Primary[12B]</div>
-                <div class="col-2 id-col">
-                    <a class="btn btn-small btn-conference" href="//tokyo.vldb2020.org/?tg=session&amp;go=conference&amp;id=id!12B">Zoom</a> <a class="btn btn-small btn-chat" href="//tokyo.vldb2020.org/?tg=session&amp;go=chat&amp;id=id!12B">Slack</a>
-                </div>
-                <div class="col-8 id-col timeUTC">2020-09-01T22:00:00Z</div>
+                <div class="col-10 id-col timeUTC">2020-09-01T22:00:00Z</div>
             </div>
             <div class="col-group important-dates">
                 <div class="col-2 id-head">Repeat[42B]</div>
-                <div class="col-2 id-col">
-                    <a class="btn btn-small btn-conference" href="//tokyo.vldb2020.org/?tg=session&amp;go=conference&amp;id=id!42B">Zoom</a> <a class="btn btn-small btn-chat" href="//tokyo.vldb2020.org/?tg=session&amp;go=chat&amp;id=id!42B">Slack</a>
-                </div>
-                <div class="col-8 id-col timeUTC">2020-09-03T09:00:00Z</div>
+                <div class="col-10 id-col timeUTC">2020-09-03T09:00:00Z</div>
             </div>
         </div>
         <div class="footer">
@@ -52,17 +46,11 @@ category: forparticipants
         <div class="talk">
             <div class="col-group important-dates">
                 <div class="col-2 id-head">Primary[07A]</div>
-                <div class="col-2 id-col">
-                    <a class="btn btn-small btn-conference" href="//tokyo.vldb2020.org/?tg=session&amp;go=conference&amp;id=id!07A">Zoom</a> <a class="btn btn-small btn-chat" href="//tokyo.vldb2020.org/?tg=session&amp;go=chat&amp;id=id!07A">Slack</a>
-                </div>
-                <div class="col-8 id-col timeUTC">2020-09-01T16:00:00Z</div>
+                <div class="col-10 id-col timeUTC">2020-09-01T16:00:00Z</div>
             </div>
             <div class="col-group important-dates">
                 <div class="col-2 id-head">Repeat[57A]</div>
-                <div class="col-2 id-col">
-                    <a class="btn btn-small btn-conference" href="//tokyo.vldb2020.org/?tg=session&amp;go=conference&amp;id=id!57A">Zoom</a> <a class="btn btn-small btn-chat" href="//tokyo.vldb2020.org/?tg=session&amp;go=chat&amp;id=id!57A">Slack</a>
-                </div>
-                <div class="col-8 id-col timeUTC">2020-09-04T04:00:00Z</div>
+                <div class="col-10 id-col timeUTC">2020-09-04T04:00:00Z</div>
             </div>
         </div>
         <div class="footer">
@@ -87,17 +75,11 @@ category: forparticipants
         <div class="talk">
             <div class="col-group important-dates">
                 <div class="col-2 id-head">Primary[09D]</div>
-                <div class="col-2 id-col">
-                    <a class="btn btn-small btn-conference" href="//tokyo.vldb2020.org/?tg=session&amp;go=conference&amp;id=id!09D">Zoom</a> <a class="btn btn-small btn-chat" href="//tokyo.vldb2020.org/?tg=session&amp;go=chat&amp;id=id!09D">Slack</a>
-                </div>
-                <div class="col-8 id-col timeUTC">2020-09-01T18:00:00Z</div>
+                <div class="col-10 id-col timeUTC">2020-09-01T18:00:00Z</div>
             </div>
             <div class="col-group important-dates">
                 <div class="col-2 id-head">Repeat[59D]</div>
-                <div class="col-2 id-col">
-                    <a class="btn btn-small btn-conference" href="//tokyo.vldb2020.org/?tg=session&amp;go=conference&amp;id=id!59D">Zoom</a> <a class="btn btn-small btn-chat" href="//tokyo.vldb2020.org/?tg=session&amp;go=chat&amp;id=id!59D">Slack</a>
-                </div>
-                <div class="col-8 id-col timeUTC">2020-09-04T06:00:00Z</div>
+                <div class="col-10 id-col timeUTC">2020-09-04T06:00:00Z</div>
             </div>
         </div>
         <div class="footer">
@@ -124,17 +106,11 @@ category: forparticipants
         <div class="talk">
             <div class="col-group important-dates">
                 <div class="col-2 id-head">Primary[18E]</div>
-                <div class="col-2 id-col">
-                    <a class="btn btn-small btn-conference" href="//tokyo.vldb2020.org/?tg=session&amp;go=conference&amp;id=id!18E">Zoom</a> <a class="btn btn-small btn-chat" href="//tokyo.vldb2020.org/?tg=session&amp;go=chat&amp;id=id!18E">Slack</a>
-                </div>
-                <div class="col-8 id-col timeUTC">2020-09-02T05:00:00Z</div>
+                <div class="col-10 id-col timeUTC">2020-09-02T05:00:00Z</div>
             </div>
             <div class="col-group important-dates">
                 <div class="col-2 id-head">Repeat[49E]</div>
-                <div class="col-2 id-col">
-                    <a class="btn btn-small btn-conference" href="//tokyo.vldb2020.org/?tg=session&amp;go=conference&amp;id=id!49E">Zoom</a> <a class="btn btn-small btn-chat" href="//tokyo.vldb2020.org/?tg=session&amp;go=chat&amp;id=id!49E">Slack</a>
-                </div>
-                <div class="col-8 id-col timeUTC">2020-09-03T18:00:00Z</div>
+                <div class="col-10 id-col timeUTC">2020-09-03T18:00:00Z</div>
             </div>
         </div>
         <div class="footer">
@@ -157,17 +133,11 @@ Facebook's Social Graph</div>
         <div class="talk">
             <div class="col-group important-dates">
                 <div class="col-2 id-head">Primary[14C]</div>
-                <div class="col-2 id-col">
-                    <a class="btn btn-small btn-conference" href="//tokyo.vldb2020.org/?tg=session&amp;go=conference&amp;id=id!14C">Zoom</a> <a class="btn btn-small btn-chat" href="//tokyo.vldb2020.org/?tg=session&amp;go=chat&amp;id=id!14C">Slack</a>
-                </div>
-                <div class="col-8 id-col timeUTC">2020-09-03T11:00:00Z</div>
+                <div class="col-10 id-col timeUTC">2020-09-03T11:00:00Z</div>
             </div>
             <div class="col-group important-dates">
                 <div class="col-2 id-head">Repeat[44C]</div>
-                <div class="col-2 id-col">
-                    <a class="btn btn-small btn-conference" href="//tokyo.vldb2020.org/?tg=session&amp;go=conference&amp;id=id!44C">Zoom</a> <a class="btn btn-small btn-chat" href="//tokyo.vldb2020.org/?tg=session&amp;go=chat&amp;id=id!44C">Slack</a>
-                </div>
-                <div class="col-8 id-col timeUTC">2020-09-03T18:00:00Z</div>
+                <div class="col-10 id-col timeUTC">2020-09-03T18:00:00Z</div>
             </div>
         </div>
         <div class="footer">
@@ -177,6 +147,62 @@ Facebook's Social Graph</div>
         </div>
     </div>
 </div>
+
+## Best Demonstration
+
+<div class="col-group">
+    <div class="award col-12">
+        <div class="header">Best Demonstration</div>
+        <div class="title">sPaQLTooLs: A Stochastic Package Query Interface for Scalable Constrained Optimization</div>
+        <div class="name">Matteo Brucato (University of Massachusetts Amherst)</div>
+        <div class="name">Miro Mannino (New York University Abu Dhabi)</div>
+        <div class="name">Azza Abouzied (New York University Abu Dhabi)</div>
+        <div class="name">Peter J. Haas (University of Massachusetts Amherst)</div>
+        <div class="name">Alexandra Meliou (University of Massachusetts Amherst)</div>
+        <div class="talk">
+            <div class="col-group important-dates">
+                <div class="col-2 id-head">Primary[28b]</div>
+                <div class="col-10 id-col timeUTC">2020-09-02T17:30:00Z</div>
+            </div>
+            <div class="col-group important-dates">
+                <div class="col-2 id-head">Repeat[38b]</div>
+                <div class="col-10 id-col timeUTC">2020-09-03T14:30:00Z</div>
+            </div>
+        </div>
+        <div class="footer">
+        <a class="btn btn-video" href="//tokyo.vldb2020.org/?tg=paper&amp;go=video&amp;id=pid!28b-4" title="undefined">Video [YouTube]</a>
+        <a class="btn btn-video2" href="//tokyo.vldb2020.org/?tg=paper&amp;go=video2&amp;id=pid!28b-4" title="undefined">Video [哔哩哔哩]</a>
+        <a class="btn btn-paper" href="//tokyo.vldb2020.org/?tg=paper&amp;go=paper&amp;id=pid!28b-4" title="undefined">Download PDF</a>
+        </div>
+    </div>
+</div>
+
+<div class="col-group">
+    <div class="award col-12">
+        <div class="header">Best Demonstration Runner-up</div>
+        <div class="title">SuDocu: Summarizing Documents by Example</div>
+        <div class="name">Anna Fariha (University of Massachusetts Amherst)</div>
+        <div class="name">Matteo Brucato (University of Massachusetts Amherst)</div>
+        <div class="name">Peter J. Haas (University of Massachusetts Amherst)</div>
+        <div class="name">Alexandra Meliou (University of Massachusetts Amherst)</div>
+        <div class="talk">
+            <div class="col-group important-dates">
+                <div class="col-2 id-head">Primary[28a]</div>
+                <div class="col-10 id-col timeUTC">2020-09-02T17:30:00Z</div>
+            </div>
+            <div class="col-group important-dates">
+                <div class="col-2 id-head">Repeat[38a]</div>
+                <div class="col-10 id-col timeUTC">2020-09-03T14:30:00Z</div>
+            </div>
+        </div>
+        <div class="footer">
+        <a class="btn btn-video" href="//tokyo.vldb2020.org/?tg=paper&amp;go=video&amp;id=pid!28a-2" title="undefined">Video [YouTube]</a>
+        <a class="btn btn-video2" href="//tokyo.vldb2020.org/?tg=paper&amp;go=video2&amp;id=pid!28a-2" title="undefined">Video [哔哩哔哩]</a>
+        <a class="btn btn-paper" href="//tokyo.vldb2020.org/?tg=paper&amp;go=paper&amp;id=pid!28a-2" title="undefined">Download PDF</a>
+        </div>
+    </div>
+</div>
+
 
 ## “Most Reproducible Paper” Award
 
@@ -191,17 +217,11 @@ Facebook's Social Graph</div>
         <div class="talk">
             <div class="col-group important-dates">
                 <div class="col-2 id-head">Primary[24E]</div>
-                <div class="col-2 id-col">
-                    <a class="btn btn-small btn-conference" href="//tokyo.vldb2020.org/?tg=session&amp;go=conference&amp;id=id!24E">Zoom</a> <a class="btn btn-small btn-chat" href="//tokyo.vldb2020.org/?tg=session&amp;go=chat&amp;id=id!24E">Slack</a>
-                </div>
-                <div class="col-8 id-col timeUTC">2020-09-02T11:00:00Z</div>
+                <div class="col-10 id-col timeUTC">2020-09-02T11:00:00Z</div>
             </div>
             <div class="col-group important-dates">
                 <div class="col-2 id-head">Repeat[33E]</div>
-                <div class="col-2 id-col">
-                    <a class="btn btn-small btn-conference" href="//tokyo.vldb2020.org/?tg=session&amp;go=conference&amp;id=id!33E">Zoom</a> <a class="btn btn-small btn-chat" href="//tokyo.vldb2020.org/?tg=session&amp;go=chat&amp;id=id!33E">Slack</a>
-                </div>
-                <div class="col-8 id-col timeUTC">2020-09-02T23:00:00Z</div>
+                <div class="col-10 id-col timeUTC">2020-09-02T23:00:00Z</div>
             </div>
         </div>
         <div class="footer">
