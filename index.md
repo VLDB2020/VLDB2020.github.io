@@ -24,7 +24,7 @@ Because the online mode for the conference is still pretty new, we provide the f
 ## VLDB 2020 Updates
 <div class="col-group whatsnew">
     <div class="col-2 id-head">September 4th</div>
-    <div class="col-10 id-col"><span class="badge"><i class="fas fa-chevron-circle-right"></i> Have a safe flight back home!</span> Thank you very much for attending VLDB 2020 in Virtual Tokyo. We hope to see you again in next conference, <a href="/assets/files/VLDB%202021.pdf">VLDB 2021 in Copenhagen</a>.</div>
+    <div class="col-10 id-col"><span class="badge"><i class="fas fa-chevron-circle-right"></i> Have a safe flight back home!</span> Thank you very much for attending VLDB 2020 in Virtual Tokyo. We hope to see you again in next conference, <a href="https://vldb2020.org/assets/files/VLDB%202021.pdf">VLDB 2021 in Copenhagen</a>.</div>
 </div>
 <div class="col-group whatsnew">
     <div class="col-2 id-head">September 4th</div>
