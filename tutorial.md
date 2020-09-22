@@ -17,6 +17,9 @@ category: forparticipants
 Since the introduction of Bitcoin – the first widespread application driven by blockchains – the interest in the design of blockchain-based applications has increased tremendously. At the core of these applications are consensus protocols that securely replicate client requests among all replicas, even if some replicas are Byzantine faulty. Unfortunately, these consensus protocols typically have low throughput, and this lack of performance is often cited as the reason for the slow wider adoption of blockchain technology. Consequently, many works focus on designing more efficient consensus protocols to increase throughput of consensus.
 We believe that this focus on consensus protocols only explains part of the story. To investigate this belief, we raise a simple question: Can a well-crafted system using a classical consensus protocol outperform systems using modern protocols? In this tutorial, we answer this question by diving deep into the design of blockchain systems. Further, we take an in-depth look at the theory behind consensus, which can help users select the protocol that best-fits their requirements. Finally, we share our vision of high-throughput blockchain systems that operate at large scales.
 
+* [tutorial1_part1_theory.pdf](https://vldb2020.org/assets/files/tutorial1_part1_theory.pdf)
+* [tutorial1_part2_system.pdf](https://vldb2020.org/assets/files/tutorial1_part2_system.pdf)
+
 ----
 
 ## Tutorial 2 - Tutorial 2: Robust Query Processing: Mission Possible (Day 1, Block 3) [12T]
@@ -28,6 +31,8 @@ We believe that this focus on consensus protocols only explains part of the stor
 
 Robust query processing with strong performance guarantees is an extremely desirable objective in the design of industrial-strength database engines. However, it has proved to be a largely intractable and elusive challenge in spite of sustained efforts spanning several decades. The good news is that in recent times, there have been a host of exciting technical advances, at different levels in the database architecture, that collectively promise to materially address this problem. In this tutorial, we will present these novel research approaches, characterize their strengths and limitations,
 and enumerate open technical problems that remain to be solved to make robust query processing a contemporary reality.
+
+* [https://dsl.cds.iisc.ac.in/projects/RQP/](https://dsl.cds.iisc.ac.in/projects/RQP/)
 
 ----
 
@@ -68,6 +73,8 @@ Valuable high-precision data are often published in the form of tables in both s
 To extract useful data from tables, data cells must be correctly extracted and linked to all relevant headers, units of measure and in-text references. Table extraction involves identifying the border and cell structure for each document table, while table understanding provides context by linking cells with semantic information inside and outside the table, such as row and column headers, footnotes, titles, and references in surrounding text.
 The objective of this tutorial is to provide a detailed synopsis of existing approaches for table extraction and understanding, highlight open research problems, and provide an overview of potential applications.
 
+* [https://researcher.watson.ibm.com/researcher/view_group.php?id=10211](https://researcher.watson.ibm.com/researcher/view_group.php?id=10211)
+
 ----
 
 ## Tutorial 6 - Fairly Evaluating and Scoring Items in a Data Set (Day 3, Block 2) [47T]
@@ -81,5 +88,5 @@ The objective of this tutorial is to provide a detailed synopsis of existing app
 We frequently compute a score for each item in a data set, sometimes for its intrinsic value, but more often as a step towards classification, ranking, and so forth.
 The importance of computing this score fairly cannot be overstated. In this tutorial, we will develop a framework for how to think about this task, and then present techniques for responsible scoring and link these to traditional data management challenges.
 
-
+* [https://www.cs.uic.edu/~indexlab/tutorial20.htm](https://www.cs.uic.edu/~indexlab/tutorial20.htm)
 
