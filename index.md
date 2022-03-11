@@ -32,7 +32,7 @@ Because the online mode for the conference is still pretty new, we provide the f
 </div>
 <div class="col-group whatsnew">
     <div class="col-2 id-head">September 3rd</div>
-    <div class="col-10 id-col"><a class="btn btn-red btn-small" href="https://tokyo.vldb2020.org/?tg=paper&go=video&id=pid!05J-1">Virtual Japan on YouTube</a> By popular demand, the <a href="https://tokyo.vldb2020.org/?tg=paper&go=video&id=pid!05J-1">VirtualJapan video will be available via YouTube</a> until the end of the conference.</div>
+    <div class="col-10 id-col"><!--a class="btn btn-red btn-small" href="https://tokyo.vldb2020.org/?tg=paper&go=video&id=pid!05J-1"--><s>Virtual Japan on YouTube</s><!--/a--> By popular demand, the <!--a href="https://tokyo.vldb2020.org/?tg=paper&go=video&id=pid!05J-1"--><s>VirtualJapan video will be available via YouTube</s><!--/a--> until the end of the conference.</div>
 </div>
 <div class="col-group whatsnew">
     <div class="col-2 id-head">September 1st</div>
@@ -44,7 +44,7 @@ Because the online mode for the conference is still pretty new, we provide the f
 </div>
 <div class="col-group whatsnew">
     <div class="col-2 id-head">August 17th</div>
-    <div class="col-10 id-col"><span class="badge">New!!</span> VLDB 2020 <a href="https://tokyo.vldb2020.org/">Virtual Conference Sign up</a> has started for all participants.</div>
+    <div class="col-10 id-col"><span class="badge">New!!</span> VLDB 2020 <!--a href="https://tokyo.vldb2020.org/"--><s>Virtual Conference Sign up</s><!--/a--> has started for all participants.</div>
 </div>
 <div class="col-group whatsnew">
     <div class="col-2 id-head">August 14th</div>

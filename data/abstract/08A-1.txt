@@ -1,0 +1,22 @@
+Due to the falling costs of data acquisition and storage, research and
+industrial groups are interested in accurately finding all instances of rare
+events in large datasets.
+For instance, scientists can cheaply capture thousands of hours of video, but
+are limited by the need to manually inspect all the video to identify
+relevant objects and events.
+To reduce this cost, recent work proposes to use cheap proxy models, such as
+image classifiers, to identify an approximate set of data points satisfying a
+data selection filter.
+Unfortunately, this recent work does not provide the statistical accuracy
+guarantees necessary in scientific and production settings that have strong
+accuracy requirements.
+
+In this work, we introduce novel algorithms for approximate selection queries
+with statistical accuracy guarantees.
+Namely, given a limited number of exact data inspections from an oracle, often a
+human or an expensive machine learning model, our algorithms meet a minimum
+precision or recall target with high probability.
+In contrast, existing approaches can catastrophically fail in satisfying these
+recall and precision targets.
+We show that our algorithms can improve query result quality by up to 30x
+for both the precision and recall targets in both real and synthetic datasets.

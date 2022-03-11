@@ -1,0 +1,9 @@
+With the booming of mobile Internet and sharing economy, spatial crowdsourcing is becoming an infrastructure of our daily life. 
+Existing studies about spatial crowdsourcing usually focus on the platform interests and customer experiences. In this work, we study the worker fairness issue in assignment. 
+That is, we aim to solve the problem of how to assign tasks, considered as some resource in short supply, to individual spatial workers who need to be treated in a fair manner. 
+
+The first challenge of this problem is how to formally define the fairness and combine it with existing utility based goals, and the second challenge is how to do assignment with both fairness and utility considered. 
+To address these challenges, we formally define an online bi-objective matching problem, named the worker-fairness-aware assignment problem (WFAA), as well as some special cases/variants of it to fit in most spatial crowdsourcing scenarios.
+We give corresponding solutions for difference cases of WFAA. 
+Particularly, we show that the dynamic sequential case, which is a generalization of an existing fairness scheduling problem, can be solved within an $O(n)$ fairness loss bound with $n$ as the total worker number, and give a  $O(\frac{n}{m})$ bound for the $m$-sized general batch case with $m$ as the minimum batch size.  
+Finally, we evaluate the effectiveness and efficiency of our algorithm on both synthetic and real data sets.

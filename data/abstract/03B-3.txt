@@ -1,0 +1,6 @@
+Blockchains are distributed secure ledgers to which transactions are issued continuously and each block of transactions is tightly coupled to its predecessors.
+Permissioned  blockchains place special emphasis on transactions throughput.
+In this paper we present FireLedger, which leverages the iterative nature of blockchains in order to improve their throughput in optimistic execution scenarios.
+FireLedger trades latency for throughput in the sense that in FireLedger the last f + 1 blocks of each node's blockchain are considered tentative, i.e., they may be rescinded in case one of the last f + 1 blocks proposers was Byzantine. 
+Yet, when optimistic assumptions are met, a new block is decided in each communication step, which consists of a proposer that sends only its proposal and all other participants are sending a single bit each. 
+In our performance study FireLedger obtained 20%--600% better throughput than state of the art protocols like HotStuff and BFT-SMaRt, depending on the configuration.

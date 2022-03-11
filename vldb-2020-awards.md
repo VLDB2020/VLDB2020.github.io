@@ -28,9 +28,9 @@ category: forparticipants
             </div>
         </div>
         <div class="footer">
-        <a class="btn btn-video" href="//tokyo.vldb2020.org/?tg=paper&amp;go=video&amp;id=pid!12B-2" title="undefined">Video [YouTube]</a>
-        <a class="btn btn-video2" href="//tokyo.vldb2020.org/?tg=paper&amp;go=video2&amp;id=pid!12B-2" title="undefined">Video [哔哩哔哩]</a>
-        <a class="btn btn-paper" href="//tokyo.vldb2020.org/?tg=paper&amp;go=paper&amp;id=pid!12B-2" title="undefined">Download PDF</a>
+        <!--a class="btn btn-video" href="" title="undefined"--><s>Video [YouTube]</s><!--/a-->
+        <!--a class="btn btn-video2" href="https://www.bilibili.com/video/av329339128?p=98" title="undefined"--><s>Video [哔哩哔哩]</s><!--/a-->
+        <a class="btn btn-paper" href="http://www.vldb.org/pvldb/vol13/p629-huang.pdf" title="undefined">Download PDF</a>
         </div>
     </div>
 </div>
@@ -54,9 +54,9 @@ category: forparticipants
             </div>
         </div>
         <div class="footer">
-        <a class="btn btn-video" href="//tokyo.vldb2020.org/?tg=paper&amp;go=video&amp;id=pid!07A-1">Video [YouTube]</a>
-        <a class="btn btn-video2" href="//tokyo.vldb2020.org/?tg=paper&amp;go=video2&amp;id=pid!07A-1">Video [哔哩哔哩]</a>
-        <a class="btn btn-paper" href="//tokyo.vldb2020.org/?tg=paper&amp;go=paper&amp;id=pid!07A-1">Download PDF</a>
+        <a class="btn btn-video" href="https://www.youtube.com/watch?v=XrtYA1UadGs">Video [YouTube]</a>
+        <!--a class="btn btn-video2" href="https://www.bilibili.com/video/av329339128?p=40"--><s>Video [哔哩哔哩]</s><!--/a-->
+        <a class="btn btn-paper" href="http://www.vldb.org/pvldb/vol13/p252-orr.pdf">Download PDF</a>
         </div>
     </div>
 </div>
@@ -83,9 +83,9 @@ category: forparticipants
             </div>
         </div>
         <div class="footer">
-        <a class="btn btn-video" href="//tokyo.vldb2020.org/?tg=paper&amp;go=video&amp;id=pid!09D-3">Video [YouTube]</a>
-        <a class="btn btn-video2" href="//tokyo.vldb2020.org/?tg=paper&amp;go=video2&amp;id=pid!09D-3">Video [哔哩哔哩]</a>
-        <a class="btn btn-paper" href="//tokyo.vldb2020.org/?tg=paper&amp;go=paper&amp;id=pid!09D-3">Download PDF</a>
+        <!--a class="btn btn-video" href="https://www.youtube.com/watch?v=AsoAUwoTvAs"--><s>Video [YouTube]</s><!--/a-->
+        <!--a class="btn btn-video2" href="https://www.bilibili.com/video/av329339128?p=87"--><s>Video [哔哩哔哩]</s><!--/a-->
+        <a class="btn btn-paper" href="https://www.vldb.org/pvldb/vol13/p1359-lyu.pdf">Download PDF</a>
         </div>
     </div>
 </div>
@@ -114,9 +114,9 @@ category: forparticipants
             </div>
         </div>
         <div class="footer">
-        <a class="btn btn-video" href="//tokyo.vldb2020.org/?tg=paper&amp;go=video&amp;id=pid!18E-3">Video [YouTube]</a>
-        <a class="btn btn-video2" href="//tokyo.vldb2020.org/?tg=paper&amp;go=video2&amp;id=pid!18E-3">Video [哔哩哔哩]</a>
-        <a class="btn btn-paper" href="//tokyo.vldb2020.org/?tg=paper&amp;go=paper&amp;id=pid!18E-3">Download PDF</a>
+        <!--a class="btn btn-video" href=""--><s>Video [YouTube]</s><!--/a-->
+        <!--a class="btn btn-video2" href=""--><s>Video [哔哩哔哩]</s><!--/a-->
+        <a class="btn btn-paper" href="https://www.vldb.org/pvldb/vol13/p3285-gruenheid.pdf">Download PDF</a>
         </div>
     </div>
 </div>
@@ -141,9 +141,9 @@ Facebook's Social Graph</div>
             </div>
         </div>
         <div class="footer">
-        <a class="btn btn-video" href="//tokyo.vldb2020.org/?tg=paper&amp;go=video&amp;id=pid!14C-1">Video [YouTube]</a>
-        <a class="btn btn-video2" href="//tokyo.vldb2020.org/?tg=paper&amp;go=video2&amp;id=pid!14C-1">Video [哔哩哔哩]</a>
-        <a class="btn btn-paper" href="//tokyo.vldb2020.org/?tg=paper&amp;go=paper&amp;id=pid!14C-1">Download PDF</a>
+        <a class="btn btn-video" href="https://www.youtube.com/watch?v=LM6bQiiN9Cw">Video [YouTube]</a>
+        <!--a class="btn btn-video2" href=""--><s>Video [哔哩哔哩]</s><!--/a-->
+        <a class="btn btn-paper" href="https://www.vldb.org/pvldb/vol13/p3217-matsunobu.pdf">Download PDF</a>
         </div>
     </div>
 </div>
@@ -170,9 +170,9 @@ Facebook's Social Graph</div>
             </div>
         </div>
         <div class="footer">
-        <a class="btn btn-video" href="//tokyo.vldb2020.org/?tg=paper&amp;go=video&amp;id=pid!28b-4" title="undefined">Video [YouTube]</a>
-        <a class="btn btn-video2" href="//tokyo.vldb2020.org/?tg=paper&amp;go=video2&amp;id=pid!28b-4" title="undefined">Video [哔哩哔哩]</a>
-        <a class="btn btn-paper" href="//tokyo.vldb2020.org/?tg=paper&amp;go=paper&amp;id=pid!28b-4" title="undefined">Download PDF</a>
+        <!--a class="btn btn-video" href="" title="undefined"--><s>Video [YouTube]</s><!--/a-->
+        <!--a class="btn btn-video2" href="" title="undefined"--><s>Video [哔哩哔哩]</s><!--/a-->
+        <a class="btn btn-paper" href="http://www.vldb.org/pvldb/vol13/p2881-brucato.pdf" title="undefined">Download PDF</a>
         </div>
     </div>
 </div>
@@ -196,9 +196,9 @@ Facebook's Social Graph</div>
             </div>
         </div>
         <div class="footer">
-        <a class="btn btn-video" href="//tokyo.vldb2020.org/?tg=paper&amp;go=video&amp;id=pid!28a-2" title="undefined">Video [YouTube]</a>
-        <a class="btn btn-video2" href="//tokyo.vldb2020.org/?tg=paper&amp;go=video2&amp;id=pid!28a-2" title="undefined">Video [哔哩哔哩]</a>
-        <a class="btn btn-paper" href="//tokyo.vldb2020.org/?tg=paper&amp;go=paper&amp;id=pid!28a-2" title="undefined">Download PDF</a>
+        <a class="btn btn-video" href="https://www.youtube.com/watch?v=ZGzF6cBSYjo" title="undefined">Video [YouTube]</a>
+        <!--a class="btn btn-video2" href="" title="undefined"--><s>Video [哔哩哔哩]</s><!--/a-->
+        <a class="btn btn-paper" href="http://www.vldb.org/pvldb/vol13/p2861-fariha.pdf" title="undefined">Download PDF</a>
         </div>
     </div>
 </div>
@@ -225,9 +225,9 @@ Facebook's Social Graph</div>
             </div>
         </div>
         <div class="footer">
-        <a class="btn btn-video" href="//tokyo.vldb2020.org/?tg=paper&amp;go=video&amp;id=pid!24E-2">Video [YouTube]</a>
-        <a class="btn btn-video2" href="//tokyo.vldb2020.org/?tg=paper&amp;go=video2&amp;id=pid!24E-2">Video [哔哩哔哩]</a>
-        <a class="btn btn-paper" href="//tokyo.vldb2020.org/?tg=paper&amp;go=paper&amp;id=pid!24E-2">Download PDF</a>
+        <a class="btn btn-video" href="https://www.youtube.com/watch?v=oJ0FzJ6GneM">Video [YouTube]</a>
+        <!--a class="btn btn-video2" href="/"--><s>Video [哔哩哔哩]</s><!--/a-->
+        <a class="btn btn-paper" href="http://www.vldb.org/pvldb/vol13/p768-khayati.pdf">Download PDF</a>
         </div>
     </div>
 </div>

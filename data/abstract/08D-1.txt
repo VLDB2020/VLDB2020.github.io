@@ -1,0 +1,8 @@
+Listing all maximal cliques of a given graph has important applications in the analysis of social and biological networks.
+Parallelisation of maximal clique enumeration (MCE) algorithms on modern manycore processors is challenging due to the task-level parallelism that unfolds dynamically.
+Moreover, the execution time of such algorithms is known to be dominated by intersections between dynamically-created vertex sets.
+In this paper, we prove that the use of a hash-join-based set-intersection algorithm within MCE leads to Pareto-optimal implementations in terms of runtime and memory space compared to those based on merge joins.
+Building on this theoretical result, we develop a scalable parallel implementation of MCE that exploits both data parallelism, by using SIMD-accelerated hash-join-based set intersections, and task parallelism, by using a shared-memory parallel processing framework that supports dynamic load balancing.
+Overall, our implementation is an order of magnitude faster than a state-of-the-art manycore MCE algorithm.
+We also show that a careful scheduling of the execution of the tasks leads to a two orders of magnitude reduction of the peak dynamic memory usage.
+In practice, we can execute MCE on graphs with tens of millions of vertices and up to two billion edges in just a few minutes on a single CPU.

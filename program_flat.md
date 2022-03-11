@@ -6,8 +6,8 @@ category: forparticipants
 
 # VLDB2020: Conference Program (Flat Version)
 
-> To sign in to the **VLDB2020 official Slack channels**, you must first <a class="btn btn-red" href="https://tokyo.vldb2020.org/?slack=signup">sign up for Slack HERE</a>.<br>
-> Forgot workspace URL? Use **vldb2020conference.slack.com**.
+> To sign in to the **VLDB2020 official Slack channels**, you must first <!--a class="btn btn-red" href="https://tokyo.vldb2020.org/?slack=signup"--><s>sign up for Slack HERE</s><!--/a-->.<br>
+> Forgot workspace URL? Use <s>**vldb2020conference.slack.com**</s>.
 
 -   [VLDB2020 Conference Time Zone Conversion Chart](program_timetable.html)
 -   [VLDB2020 Conference Program (Interactive Version)](program.html)

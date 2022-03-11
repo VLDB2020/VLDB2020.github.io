@@ -1,0 +1,10 @@
+Last-mile delivery (LMD) refers to movement of goods from transportation origins to the final destinations.
+It has widespread applications such as urban logistics, e-commerce and so on.
+One fundamental problem in last-mile delivery is route planning, which schedules multiple couriers' routes, i.e., sequences of origins and destinations of the requests under certain optimization objectives.
+Prior studies usually designed heuristic solutions to two strongly NP-hard optimization objectives: minimizing the makespan (i.e., maxmimum travel time) of couriers and total latency (i.e., waiting time) of requesters.
+There is no algorithm with theoretical guarantees for either optimization objective in practical cases.
+In this paper, we propose a theoretically guaranteed solution framework for both objectives.
+It achieves both approximation ratios of $6\rho$, where $\rho$ is the approximation ratio of a core operation, called $k$LMD, which plans for one courier a route consisting of $k$ requests.
+Leveraging a spatial index called hierarchically separated tree, we further design an efficient approximation algorithm for $k$LMD with $\rho = O(\log{n})$, where $n$ is the number of requests.
+Experimental results show that our approach outperforms the state-of-the-art methods by averagely 48.4\%-96.0\% and 49.7\%-96.1\% for both objectives.
+Especially in large-scale real datasets, our algorithm yields $29.3\times$-$108.9\times$ shorter makespan and $20.2\times$-$175.1\times$ lower total latency than the state-of-the-art algorithms.

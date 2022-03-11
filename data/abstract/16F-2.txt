@@ -1,0 +1,18 @@
+Systems continue to grow in complexity in response to the need to
+support vast quantities of data and a wide variety of workloads.
+Small changes in workloads and system configuration can result in
+significantly different system behaviour and performance
+characteristics. As a result, system administrators and developers
+spend many hours diagnosing and debugging performance problems in
+data systems and the applications that use them. In this paper, we
+present Sentinel, an analysis tool that assists these users by
+constructing fine-grained models of system behaviour and comparing
+them to pinpoint differences in system behaviour for different
+workloads and system configurations. Importantly, Sentinel's
+insights are derived from built-in debug logging libraries without
+necessitating that their log messages be written to disk, thereby
+generalizing to all systems that use debug logging without incurring
+its overheads.  Our experiments demonstrate Sentinel's superiority
+in analyzing the execution behaviour and performance characteristics
+of database systems, client applications, and web servers compared
+to prior approaches.

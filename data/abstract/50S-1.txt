@@ -1,0 +1,5 @@
+Today’s developers love JSON. Its schema flexible nature increases productivity: “change your app, not your database schema”. Avoiding normalization into rows and columns yields low latency – critical for web apps.
+
+What’s been forgotten is that we’ve been there: 50 years ago, JSON was called IMS and its shortcomings lead to relational databases.
+
+At Oracle, we want to combine the benefits of both data models in one converged database: We allow the storage of schema-less JSON with simple no-SQL style CRUD operations as well as SQL – at the same time we derive the schema from instance documents and automatically generate relational views over JSON. Similarly, the result of a SQL query can be returned as a JSON aggregate – for instance to serve a micro-service. As a consequence, ‘schema’ becomes somewhat ‘fluid’ – with each database user able to select the rigidness based on her requirements. This talk gives an overview how JSON and rows’n columns play well together in Oracle Autonomous JSON Database – the latest offering in Oracle’s autonomous and converged database cloud portfolio.

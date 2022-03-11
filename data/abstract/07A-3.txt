@@ -1,0 +1,11 @@
+Clustering is a fundamental primitive in manifold applications.
+In order to achieve valuable results, parameters of the clustering algorithm, e.g., the number of clusters, have to be set appropriately, which is a tremendous pitfall.
+To this end, analysts rely on their domain knowledge in order to define parameter search spaces.
+While experienced analysts may be able to define a small search space, especially novice analysts often define rather large search spaces due to the lack of in-depth domain knowledge.
+These search spaces can be explored in different ways by estimation methods for the number of clusters.
+In the worst case, estimation methods perform an exhaustive search in the given search space, which leads to infeasible runtimes for large datasets and large search spaces.
+We propose LOG-Means, which is able to overcome these issues of existing methods.
+We show that LOG-Means provides estimates in sublinear time regarding the defined search space, thus being a strong fit for large datasets and large search spaces.
+In our comprehensive evaluation on an Apache Spark cluster, we compare LOG-Means to 13 existing estimation methods.
+The evaluation shows that LOG-Means significantly outperforms these methods in terms of runtime and accuracy. 
+To the best of our knowledge, this is the most systematic comparison on large datasets and search spaces as of today. 

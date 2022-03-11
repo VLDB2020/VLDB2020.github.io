@@ -1,0 +1,11 @@
+Efficient Top-$k$ query evaluation relies on practices that utilize auxiliary data structures to enable early termination.
+Such techniques were designed to trade-off complex work in the buffer pool against costly access to disk-resident data.
+Parallel in-memory Top-$k$ selection with support for early termination presents a novel challenge because computation shifts higher up in the memory hierarchy.
+In this environment, data scan methods using SIMD instructions and multithreading perform well despite requiring evaluation of the complete dataset.
+Early termination schemes that favor simplicity require random access to resolve score ambiguity while those optimized for sequential access incur too many object evaluations.
+In addition, the vast collection of proposed solutions makes it difficult to identify those procedures suitable for optimal parallel in-memory execution.
+In this work, we introduce the concept of \textit{rank uncertainty}, a measure of work efficiency that enables classifying existing solutions according to their potential for efficient parallel in-memory Top-$k$ selection.
+We identify data reordering and layering strategies as those having the highest potential and provide practical guidelines on how to adapt them for high throughput parallel execution.
+In addition, we propose using angle space partitioning to further improve work-efficiency.
+We empirically demonstrate its potential for lowering object evaluations and \textit{rank uncertainty} while maintaining high throughput.
+Our extensive experimental evaluation on varying query parameters using both synthetic and real data, validate  the effectiveness of our guidelines while showcasing between $2$ and $4$ orders of magnitude better query latency, and throughput when compared to prior state-of-the-art work.
